@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg px-md-5 position-absolute top-0 start-0 end-0">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ asset('build/images/logos/white.png') }}" alt="Kodkodkod" width="65" height="65">
+        </a>
+        <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="bi bi-list fs-1"></i>
+        </button>
+        <div class="offcanvas offcanvas-end w-100 bg-black text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <div class="d-flex justify-content-center align-items-center flex-grow-1">
+                    <img src="{{ asset('build/images/logos/white.png') }}" alt="Kodkodkod" width="65" height="65">
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav nav-underline justify-content-center flex-grow-1 pe-3 align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if app.request.attributes.get('_route') =='app_home'  %} active {% endif %}" aria-current="page" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact Us</a>
+                    </li>
+
+                </ul>
+                <button class="btn btn-outline-light rounded-pill d-block mx-auto mt-5 mt-md-0 px-5 px-md-3" type="button" aria-label="Phone">
+                   <i class="bi bi-telephone-fill me-2"></i> 04 51 20 24 24
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

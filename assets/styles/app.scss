@@ -1,0 +1,72 @@
+@import "bootstrap-icons";
+@import "fonts";
+
+// Override Bootstrap font variable
+$font-family-base: 'Outfit', sans-serif;
+
+// Override Bootstrap primary color variable
+$primary: #E9204F;
+
+@import "bootstrap";
+
+.plus-jakarta-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.space-grotesk {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+}
+
+@media (max-width: 768px) {
+  .display-2 {
+    font-size: 1.8rem;
+  }
+}
+
+.text-gradiant {
+  background: linear-gradient(68deg, #e9204f 11.17%, #ffd708 76.43%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-underline .nav-link.active::after,
+.nav-underline .nav-link:hover::after {
+  background-color: #E9204F !important;
+}
+
+.nav-underline .nav-link.active,
+.nav-underline .nav-link:hover {
+  color: #E9204F !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+/*
+.navbar-nav .nav-link {
+    position: relative;
+}
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; !* Adjust as needed *!
+    left: 35%; !* Center the underline *!
+    width: 25%; !* Adjust as needed *!
+    height: 2px; !* Adjust as needed *!
+    background-color: #007bff; !* Adjust color as needed *!
+    transition: width 0.3s ease; !* Optional: Add transition effect *!
+    opacity: 0;
+}
+.navbar-nav .nav-link:hover::after {
+    opacity: 1;
+}
+.navbar-nav .active::after {
+    opacity: 1;
+}*/

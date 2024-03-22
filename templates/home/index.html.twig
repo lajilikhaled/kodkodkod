@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "home.title" | trans }}{% endblock %}
+
+{% block body %}
+    <div class="position-relative">
+        {{ include('_navbar.html.twig') }}
+        {{ include('home/_hero.html.twig') }}
+    </div>
+    {{ include('home/_intro.html.twig') }}
+    {{ include('home/_story.html.twig') }}
+    {{ include('home/_numbers.html.twig') }}
+    {{ include('home/_services.html.twig') }}
+{% endblock %}
