@@ -3,8 +3,22 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="msapplication-TileColor" content="#E9204F">
+        <meta name="theme-color" content="#E9204F">
+        <meta property="og:title" content= "{% block ogmetatitle %}{{ "head.title" | trans }}{% endblock %}" >
+        <meta property="og:site_name" content="KodKodKod Studio">
+        <meta property="og:url" content="https://kodkodkod.studio">
+        <meta property="og:description" content="{% block ogmetadesc %}{{ "head.desc1" | trans }}{% endblock %}">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ asset('build/images/newLandingPage/new_logo.png') }}">
         <title>{% block title %}{{ "home.title" | trans }}{% endblock %}</title>
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/images/logos/favicon-32x32.png') }}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/images/icons/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/images/logos/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('build/images/site.webmanifest') }}">
+		<link rel="alternate" hreflang="ko" href="https://kodkodkod.studio/ko" />
+		<link rel="alternate" hreflang="en" href="https://kodkodkod.studio/en" />
+        <link rel="alternate" hreflang="fr" href="https://kodkodkod.studio/fr" />
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}

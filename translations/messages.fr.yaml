@@ -1,2 +1,92 @@
 # home page
 home.title: "Agence de Développement Web & Web3 | Kodkodkod"
+
+pageHome:
+  introLine1: "Améliorez vos process"
+  introLine2: "en intégrant l’IA."
+  detail1: "Kodkodkod, agence IA au service de vos équipes. Nous accompagnons votre entreprise à gagner "
+  detail2: "en productivité et qualité grâce à l’intégration de l’IA dans vos process métiers."
+  bookConsultation: "Prendre RDV"
+  peopleTrustUs: "Ils nous font confiance"
+welcomeSection:
+  intro:
+    text1: "Avec plus de "
+    text2: "150 clients "
+    text3: "accompagnés dans 6 pays, "
+    text4: "kodkodkod "
+    text5: "est le partenaire idéal pour former vos équipes à l’usage de l’IA, accompagner votre entreprise à augmenter ses process et développer vos propres IA."
+  bookConsultation: "Réserver une consultation"
+  ourStoryTitle: "Notre histoire"
+  ourStoryContent1: "Fondée en 2019, avec l’objectif de coder ensemble le monde demain, Kodkodkod c’est une équipe de développeurs et passionnés d’IA, experte en accompagnement et intégration de solutions IA sur-mesure pour les entreprises qui veulent propulser leur productivité."
+  ourStoryContent2: "Chez KodKodKod, nous comprenons l'importance de fournir des résultats tangibles. Au lieu de faire des promesses en l'air, nous nous concentrons sur ce que nous faisons de mieux : produire un code de haute qualité qui permet à votre entreprise de réussir."
+  ourStoryContent3: "Chez KodKodKod, nous comprenons l'importance de fournir des résultats tangibles. Au lieu de faire des promesses en l'air, nous nous concentrons sur ce que nous faisons de mieux."
+  completedProjects:
+    text1: "Plus de"
+    text2: "entreprises accompagnées"
+  bestProductsClients:
+    text1: "Plus de"
+    text2: "200+"
+    text3: "conférences IA réalisées en France et à l’étranger"
+  yearsInAi:
+    text1: "Plus de"
+    text2: "15 ans"
+    text3: "d’expérience en développement de produits"
+  skilledAiExperts:
+    text1: "Plus de"
+    text2: "50+"
+    text3: "experts IA (consultants et développeurs)"
+
+services:
+  title: "Comment pouvons-nous vous aider ?"
+  consulting:
+    title: "Audit & Conseil"
+    description: "Nous vous accompagnons à l’intégration et au déploiement de l’IA dans votre entreprise et au sein de vos équipes, pas à pas."
+    button: "Réserver une consultation"
+
+  aiWorkshops:
+    title: "Atelier & Formation"
+    description: "Nous formons vos équipes lors d’ateliers, à comprendre les enjeux liés à l’usage de l’IA ainsi qu’à l’utilisation elle-même de l’IA, dans leur quotidien au travail."
+    button: "Réserver une consultation"
+
+  llm:
+    title: "Développement LLM"
+    description: "Nous avons les compétences et développeurs IA pour développer vos LLM sur-mesure. Un besoin ? Nous pouvons le réaliser."
+    button: "Réserver une consultation"
+
+  aiDevelopers:
+    title: "Développeurs IA"
+    description: "Nous pouvons vous mettre à disposition un développeur IA pour vous accompagner au quotidien dans vos développements."
+    button: "Réserver une consultation"
+
+  integrations:
+    title: "Intégration et API "
+    description: "Nous nous occupons de marier vos outils métiers actuels (CRM, ERP, Service clients…) avec des outils IA existants ou développés sur-mesure."
+    button: "Réserver une consultation"
+
+elevateYourBusiness:
+  title: "Nos offres pour vous accompagner pas à pas"
+  consulting:
+    title: "Audits &"
+    secondTitle: "Conseil"
+    description: "Nous vous soutenons dans votre parcours vers l'IA en fournissant notre expertise."
+    points:
+      point1: "Audit métier(s) & process"
+      point2: "Identification des bons cas d'usages"
+      point3: "Identification des outils adaptés"
+      point4: "Mapping complet"
+  workshops:
+    title: "Formation et intégration"
+    description: "Un programme de cadrage conçu pour développer votre stratégie IA sans risque."
+    points:
+      point1: "Mise en place du résultat audit"
+      point2: "Setup des outils"
+      point3: "Formation des collaborateurs"
+      point4: "Ateliers et suivi (SAV)"
+  development:
+    title: "Développement spécifique"
+    description: "Nous prenons en charge toute l'intégration de l'IA chez vous."
+    points:
+      point1: "Développement IA/LLM"
+      point2: "Développement d'interfaces"
+      point3: "Développement API"
+      point4: "..."

@@ -1,142 +1,106 @@
 <section class="container py-5">
-    <div class="row py-5">
-        <div class="col-lg-6 space-grotesk">
-            <h1 class="display-4 fw-medium mb-5">What we can help <br> you with?</h1>
-        </div>
-        <div class="row justify-content-between py-5 border-bottom">
-            <div class="col-lg-6 space-grotesk">
-                <h1 class="fw-medium mb-4">Consulting</h1>
-            </div>
-            <div class="col-lg-6 text-justify">
-                <p class="fs-5 text-secondary">From day one, we provide AI strategy, Proof of Concept assistance,
-                    and consulting services to support your project. Let's shape the future together with AI.</p>
-                <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                    Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow"
-                                           class="ms-2" width="25"/>
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-between py-5 border-bottom">
-            <div class="col-lg-6 space-grotesk">
-                <h1 class="fw-medium mb-4">Ai Workshops</h1>
-            </div>
-            <div class="col-lg-6 text-justify">
-                <p class="fs-5 text-secondary">From day one, we provide AI strategy, Proof of Concept assistance,
-                    and consulting services to support your project. Let's shape the future together with AI.</p>
-                <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                    Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow"
-                                           class="ms-2" width="25"/>
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-between py-5 border-bottom">
-            <div class="col-lg-6 space-grotesk">
-                <h1 class="fw-medium mb-4">LLM</h1>
-            </div>
-            <div class="col-lg-6 text-justify">
-                <p class="fs-5 text-secondary">From day one, we provide AI strategy, Proof of Concept assistance,
-                    and consulting services to support your project. Let's shape the future together with AI.</p>
-                <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                    Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow"
-                                           class="ms-2" width="25"/>
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-between py-5 border-bottom">
-            <div class="col-lg-6 space-grotesk">
-                <h1 class="fw-medium mb-4">Ai Developpers</h1>
-            </div>
-            <div class="col-lg-6 text-justify">
-                <p class="fs-5 text-secondary">From day one, we provide AI strategy, Proof of Concept assistance,
-                    and consulting services to support your project. Let's shape the future together with AI.</p>
-                <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                    Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow"
-                                           class="ms-2" width="25"/>
-                </a>
-            </div>
-        </div>
-        <div class="row justify-content-between py-5 border-bottom">
-            <div class="col-lg-6 space-grotesk">
-                <h1 class="fw-medium mb-4">Integrations</h1>
-            </div>
-            <div class="col-lg-6 text-justify">
-                <p class="fs-5 text-secondary">From day one, we provide AI strategy, Proof of Concept assistance,
-                    and consulting services to support your project. Let's shape the future together with AI.</p>
-                <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                    Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow"
-                                           class="ms-2" width="25"/>
-                </a>
-            </div>
-        </div>
-    </div>
+	<div class="row py-5">
+		<div class="col-lg-5 space-grotesk">
+			<h1 class="display-4 fw-medium mb-5">{{ "services.title" | trans }}
+			</h1>
+		</div>
+		<div class="row justify-content-between py-5 border-bottom">
+			<div class="col-lg-6 space-grotesk">
+				<h1 class="fw-medium mb-4">{{ 'services.consulting.title'|trans }}</h1>
+			</div>
+			<div class="col-lg-6 text-justify">
+				<p class="fs-5 text-secondary">{{ 'services.consulting.description'|trans }}</p>
+				<a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+					{{ 'services.integrations.button'|trans }}
+					<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+				</a>
+			</div>
+		</div>
+		<div class="row justify-content-between py-5 border-bottom">
+			<div class="col-lg-6 space-grotesk">
+				<h1 class="fw-medium mb-4">{{ 'services.aiWorkshops.title'|trans }}</h1>
+			</div>
+			<div class="col-lg-6 text-justify">
+				<p class="fs-5 text-secondary">{{ 'services.aiWorkshops.description'|trans }}</p>
+				<a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+					{{ 'services.integrations.button'|trans }}
+					<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+				</a>
+			</div>
+		</div>
+		<div class="row justify-content-between py-5 border-bottom">
+			<div class="col-lg-6 space-grotesk">
+				<h1 class="fw-medium mb-4">{{ 'services.llm.title'|trans }}</h1>
+			</div>
+			<div class="col-lg-6 text-justify">
+				<p class="fs-5 text-secondary">{{ 'services.llm.description'|trans }}</p>
+				<a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+					{{ 'services.integrations.button'|trans }}
+					<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+				</a>
+			</div>
+		</div>
+		<div class="row justify-content-between py-5 border-bottom">
+			<div class="col-lg-6 space-grotesk">
+				<h1 class="fw-medium mb-4">{{ 'services.aiDevelopers.title'|trans }}</h1>
+			</div>
+			<div class="col-lg-6 text-justify">
+				<p class="fs-5 text-secondary">{{ 'services.aiDevelopers.description'|trans }}</p>
+				<a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+					{{ 'services.integrations.button'|trans }}
+					<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+				</a>
+			</div>
+		</div>
+		<div class="row justify-content-between py-5 border-bottom">
+			<div class="col-lg-6 space-grotesk">
+				<h1 class="fw-medium mb-4">{{ 'services.integrations.title'|trans }}</h1>
+			</div>
+			<div class="col-lg-6 text-justify">
+				<p class="fs-5 text-secondary">{{ 'services.integrations.description'|trans }}</p>
+				<a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+					{{ 'services.integrations.button'|trans }}
+					<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+				</a>
+			</div>
+		</div>
+	</div>
 </section>
 <section class="container py-5">
-    <div class="row py-5">
-        <div class="col-lg-6 space-grotesk">
-            <h1 class="display-4 fw-medium mb-5">Elevate Your <br> Business with AI</h1>
-        </div>
-    </div>
-    <div class="row justify-content-between">
-        <div class="col-lg-4 pe-5">
-            <h3 class="space-grotesk fw-medium mb-3">Consulting</h3>
-            <p class="fs-5 mb-4">We support you on your path to AI by providing our expertise.</p>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Advice and answers to your questions</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Provision of experts</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Feasibility study</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Search for solutions and tools</p>
-            </div>
-        </div>
-        <div class="col-lg-4 pe-5">
-            <h3 class="space-grotesk fw-medium mb-3">Workshop</h3>
-            <p class="fs-5 mb-4">A scoping program designed to develop your AI strategy risk-free.</p>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Translating business objectives into a tech problem that AI
-                    solves</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Resources needed for the project</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Project system and infrastructure</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Roadmap and Scop of Deliverables</p>
-            </div>
-        </div>
-        <div class="col-lg-4 pe-5">
-            <h3 class="space-grotesk fw-medium mb-3">Developement</h3>
-            <p class="fs-5 mb-4">We take care of all integration of AI into your home.</p>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Site/platform development</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">API development / integration</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">Development of interactive AI features</p>
-            </div>
-            <div class="d-flex justify-content-start align-items-start mb-3">
-                <i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
-                <p class="fs-5 text-secondary mt-1 ms-3">AI application development</p>
-            </div>
-        </div>
-    </div>
-</section>
+	<div class="row py-5">
+		<div class="col-lg-7 space-grotesk">
+			<h1 class="display-4 fw-medium mb-5">{{ 'elevateYourBusiness.title'|trans }}</h1>
+		</div>
+	</div>
+	<div class="row justify-content-between">
+		<div class="col-lg-4 pe-5">
+			<h3 class="space-grotesk fw-medium mb-3">{{ 'elevateYourBusiness.consulting.title'|trans }}
+			</br>
+			{{ 'elevateYourBusiness.consulting.secondTitle'|trans }}
+		</h3>
+		{% for i in 1..4 %}
+			<div class="d-flex justify-content-start align-items-start mb-3">
+				<i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
+				<p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="col-lg-4 pe-5">
+		<h3 class="space-grotesk fw-medium mb-5">{{ 'elevateYourBusiness.workshops.title'|trans }}</h3>
+		{% for i in 1..4 %}
+			<div class="d-flex justify-content-start align-items-start mb-3">
+				<i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
+				<p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.workshops.points.point' ~ i)|trans }}</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="col-lg-4 pe-5">
+		<h3 class="space-grotesk fw-medium mb-5">{{ 'elevateYourBusiness.development.title'|trans }}</h3>
+		{% for i in 1..4 %}
+			<div class="d-flex justify-content-start align-items-start mb-3">
+				<i class="bi bi-check-circle-fill text-gradiant fs-4"></i>
+				<p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.development.points.point' ~ i)|trans }}</p>
+			</div>
+		{% endfor %}
+	</div>
+</div></section>

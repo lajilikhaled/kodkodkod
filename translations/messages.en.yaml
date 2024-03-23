@@ -1,2 +1,92 @@
 # home page
 home.title: "Web development Studio | Kodkodkod"
+
+pageHome:
+  introLine1: "Improve your processes"
+  introLine2: "by integrating AI."
+  detail1: "We specialize in tailoring solutions to meet your unique challenges, ensuring"
+  detail2: "you harness the full potential of this technological revolution."
+  bookConsultation: "Book a Consultation"
+  peopleTrustUs: "People who trust us"
+
+welcomeSection:
+  intro:
+    text1: "Welcome to "
+    text2: "KodKodKod"
+    text3: ", where expert web development meets tailored solutions. With."
+    text4: "300+ satisfied customers"
+    text5: "we drive your business's digital success."
+  bookConsultation: "Book Consultation"
+  ourStoryTitle: "Our Story"
+  ourStoryContent1: "Welcome to Kodkokod, where expert web development meets tailored solutions. With 300+ satisfied customers, we drive your business's digital success."
+  ourStoryContent2: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best: producing top-quality code that empowers your business to succeed."
+  ourStoryContent3: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best."
+  completedProjects:
+    text1: "Successfully completed"
+    text2: "projects"
+  bestProductsClients:
+    text1: "Delivered the best ever products to"
+    text2: "200+"
+    text3: "clients"
+  yearsInAi:
+    text1: "We have experience of more than"
+    text2: "15 years"
+    text3: "in Ai space"
+  skilledAiExperts:
+    text1: "More than"
+    text2: "50+"
+    text3: "skilled Ai experts to help you"
+
+services:
+  title: "What we can help you with?"
+  consulting:
+    title: "Consulting"
+    description: "From day one, we provide AI strategy, Proof of Concept assistance, and consulting services to support your project. Let's shape the future together with AI."
+    button: "Book Consultation"
+
+  aiWorkshops:
+    title: "AI Workshops"
+    description: "We provide AI workshops to detect and understand where AI can impact your business processes the most. Let's optimize together."
+    button: "Book Consultation"
+
+  llm:
+    title: "LLM"
+    description: "We develop LLMs in-house, leveraging your data. Let's craft customized solutions to enhance your operations and address your specific needs effectively."
+    button: "Book Consultation"
+
+  aiDevelopers:
+    title: "AI Developers"
+    description: "We handle all development tasks by assigning our skilled developers to you. Let us streamline the process and bring your vision to life."
+    button: "Book Consultation"
+
+  integrations:
+    title: "Integrations"
+    description: "We seamlessly integrate and deploy AI solutions into your current systems and platforms. Let's optimize your operations with cutting-edge technology."
+    button: "Book Consultation"
+elevateYourBusiness:
+  title: "Elevate Your Business with AI"
+  consulting:
+    title: "Audit &"
+    secondTitle: "Consulting"
+    description: "We support you on your path to AI by providing our expertise."
+    points:
+      point1: "Advice and answers to your questions"
+      point2: "Provision of experts"
+      point3: "Feasibility study"
+      point4: "Search for solutions and tools"
+  workshops:
+    title: "Workshops"
+    description: "A scoping program designed to develop your AI strategy risk-free."
+    points:
+      point1: "Translating business objectives into a tech problem that AI solves"
+      point2: "Resources needed for the project"
+      point3: "Project system and infrastructure"
+      point4: "Roadmap and Scope of Deliverables"
+  development:
+    title: "Development"
+    description: "We take care of all integration of AI into your home."
+    points:
+      point1: "Site/platform development"
+      point2: "API development / integration"
+      point3: "Development of interactive AI features"
+      point4: "AI application development"

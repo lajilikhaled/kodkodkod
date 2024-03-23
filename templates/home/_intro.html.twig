@@ -1,12 +1,15 @@
 <section class="container py-5 text-center border-bottom">
-    <div class="row justify-content-center py-5 my-5">
-        <div class="col-lg-10 space-grotesk">
-            <h1 class="display-5 text-secondary fw-medium mb-5">Welcome to <span class="text-black">Kodkokod</span>,
-                where expert web development meets tailored solutions. With <span class="text-black">300+ satisfied customers</span>,
-                we drive your business's digital success.</h1>
-            <a class="h1 text-gradiant text-decoration-none mt-5" href="#">
-                Book Consultation <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2"/>
-            </a>
-        </div>
-    </div>
+	<div class="row justify-content-center py-5 my-5">
+		<div class="col-lg-10 space-grotesk">
+			<h1 class="display-5 text-secondary fw-medium mb-5">{{ "welcomeSection.intro.text1" | trans }}
+				<span class="text-black">{{ "welcomeSection.intro.text2" | trans }}</span>
+				{{ "welcomeSection.intro.text3" | trans }}
+				<span class="text-black">{{ "welcomeSection.intro.text4" | trans }}</span>
+				{{ "welcomeSection.intro.text5" | trans }}</h1>
+			<a class="h1 text-gradiant text-decoration-none mt-5" href="#">
+				{{ 'welcomeSection.bookConsultation'|trans }}
+				<img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2"/>
+			</a>
+		</div>
+	</div>
 </section>
