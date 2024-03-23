@@ -66,8 +66,7 @@ services:
 elevateYourBusiness:
   title: "Elevate Your Business with AI"
   consulting:
-    title: "Audit &"
-    secondTitle: "Consulting"
+    title: "Audit & Consulting"
     description: "We support you on your path to AI by providing our expertise."
     points:
       point1: "Advice and answers to your questions"

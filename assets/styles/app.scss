@@ -49,6 +49,11 @@ $primary: #E9204F;
   text-align: justify !important;
 }
 
+h3 {
+  &.space-grotesk {
+      width: 50%;
+  }
+}
 /*
 .navbar-nav .nav-link {
     position: relative;

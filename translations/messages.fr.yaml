@@ -66,8 +66,7 @@ services:
 elevateYourBusiness:
   title: "Nos offres pour vous accompagner pas à pas"
   consulting:
-    title: "Audits &"
-    secondTitle: "Conseil"
+    title: "Audits & Conseil"
     description: "Nous vous soutenons dans votre parcours vers l'IA en fournissant notre expertise."
     points:
       point1: "Audit métier(s) & process"
