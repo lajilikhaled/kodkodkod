@@ -1,6 +1,11 @@
 # home page
 home.title: "Agence de Développement Web & Web3 | Kodkodkod"
-
+menu:
+    home: "Accueil"
+    services: "Nos services"
+    portfolio: "Portfolio"
+    blog: "Blog"
+    contact: "Contactez-nous"
 pageHome:
   introLine1: "Améliorez vos process"
   introLine2: "en intégrant l’IA."

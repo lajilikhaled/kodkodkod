@@ -1,6 +1,11 @@
 # home page
 home.title: "Web development Studio | Kodkodkod"
-
+menu:
+    home: "Home "
+    services: "Services"
+    portfolio: "Portfolio"
+    blog: "Blog"
+    contact: "Contact"
 pageHome:
   introLine1: "Improve your processes"
   introLine2: "by integrating AI."

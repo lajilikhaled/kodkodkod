@@ -1,6 +1,11 @@
 # home page
 home.title: "Web development Studio | Kodkodkod"
-
+menu:
+    home: "홈"
+    services: "서비스"
+    portfolio: "포트폴리오"
+    blog: "블로그"
+    contact: "문의하기"
 pageHome:
   introLine1: "프로세스를 개선하세요"
   introLine2: "인공지능을 통합하여."
