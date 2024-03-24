@@ -104,4 +104,11 @@ h3 {
 }
 .color-palette {
   height: 500px;
+  @media only screen and (max-width: 912px) {
+    height: 200px;
+  }
+}
+.seeall-btn {
+  padding: 0.7rem 3.5rem;
+  background: #E9204F;
 }

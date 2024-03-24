@@ -6,12 +6,12 @@
 		<button class="navbar-toggler border-0 shadow-none text-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
 			<i class="bi bi-list fs-1"></i>
 		</button>
-		<div class="offcanvas offcanvas-end w-100 bg-black text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+		<div class="offcanvas offcanvas-end w-100 bg-white text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 			<div class="offcanvas-header">
 				<div class="d-flex justify-content-center align-items-center flex-grow-1">
-					<img src="{{ asset('build/images/logos/white.png') }}" alt="Kodkodkod" width="65" height="65">
+					<img src="{{ asset('build/images/logos/black.png') }}" alt="Kodkodkod" width="65" height="65">
 				</div>
-				<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				<button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 			</div>
 			<div class="offcanvas-body">
 				<ul class="navbar-nav nav-underline justify-content-center flex-grow-1 pe-3 align-items-center">
@@ -24,7 +24,7 @@
 						<a class="nav-link text-black" href="#">Services</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-black {% if app.request.attributes.get('_route') =='app_project'  %} active {% endif %}" href="#">Portfolio</a>
+						<a class="nav-link text-black {% if app.request.attributes.get('_route') in ['app_project', 'app_portfolio'] %} active {% endif %}" href="#">Portfolio</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-black" href="#">Blog</a>

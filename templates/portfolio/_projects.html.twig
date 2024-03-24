@@ -1,0 +1,88 @@
+<section class="container space-grotesk">
+	<div class="row justify-content-center align-items-center mb-3">
+		<div class="col col-xs-12">
+			<div class="row ps-0 pe-md-5 flex-column flex-md-row">
+				<div class="col col-xs-12 pb-3">
+					<button class="btn btn-primary filter cat-all active rounded-0 text-white fw-medium seeall-btn w-100">{{ 'See All Projects'|trans }}</button>
+				</div>
+				<div class="col col-xs-12">
+					<select class="form-select form-select-lg mb-3 rounded-0 border border-dark fw-medium" name="category-filter" id="category-filter-1">
+						<option class="fw-medium" selected>{{ 'Web/Mpbile App'|trans }}</option>
+						<option class="fw-medium" value="PHP">PHP</option>
+						<option class="fw-medium" value="React">React</option>
+						<option class="fw-medium" value="Angular">Angular</option>
+						<option class="fw-medium" value="Vue_js">Vue.js</option>
+						<option class="fw-medium" value="JAVA">JAVA</option>
+						<option class="fw-medium" value="Javascript">Javascript</option>
+						<option class="fw-medium" value="Next_js">Next.js</option>
+						<option class="fw-medium" value="Nest_js">Nest.js</option>
+						<option class="fw-medium" value="Nuxt_js">Nuxt.js</option>
+						<option class="fw-medium" value="Node">Node</option>
+						<option class="fw-medium" value="Ionic">Ionic</option>
+						<option class="fw-medium" value="Flutter">Flutter</option>
+						<option class="fw-medium" value="React_Native">React Native</option>
+						<option class="fw-medium" value="Kotlin">Kotlin</option>
+						<option class="fw-medium" value="Android">Android</option>
+						<option class="fw-medium" value="IOS">IOS</option>
+						<option class="fw-medium" value="Autres">Autres</option>
+					</select>
+				</div>
+				<div class="col col-xs-12">
+					<select class="form-select form-select-lg mb-3 rounded-0 border border-dark fw-medium" name="category-filter" id="category-filter-2">
+						<option class="fw-medium" selected>{{ 'E-commerce'|trans }}</option>
+						<option class="fw-medium" value="Shopify">Shopify</option>
+						<option class="fw-medium" value="Cafe24">Cafe24</option>
+						<option class="fw-medium" value="Salesforce">Salesforce</option>
+						<option class="fw-medium" value="Symfony">Symfony</option>
+						<option class="fw-medium" value="Magento">Magento</option>
+						<option class="fw-medium" value="VueStoreFront">VueStoreFront</option>
+
+					</select>
+				</div>
+				<div class="col col-xs-12">
+					<select class="form-select form-select-lg mb-3 rounded-0 border border-dark fw-medium" name="category-filter" id="category-filter-3">
+						<option class="fw-medium" selected>{{ 'Blockchain'|trans }}</option>
+						<option class="fw-medium" value="Blockchain">Blockchain</option>
+						<option class="fw-medium" value="NFT_Metaverse">NFT Metaverse</option>
+						<option class="fw-medium" value="Ethereum">Ethereum</option>
+						<option class="fw-medium" value="Polygon">Polygon</option>
+
+					</select>
+				</div>
+				<div class="col col-xs-12">
+					<select class="form-select form-select-lg mb-3 rounded-0 border border-dark fw-medium" name="category-filter" id="category-filter-3">
+						<option class="fw-medium" selected>{{ 'Développement IA'|trans }}</option>
+						<option class="fw-medium" value="Blockchain">Chatbot</option>
+						<option class="fw-medium" value="NFT_Metaverse">Atelier & Formation</option>
+						<option class="fw-medium" value="Ethereum">Conseil & Audit</option>
+						<option class="fw-medium" value="Polygon">Développement IA</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		{% for project in projects %}
+			<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+				<div class="item project">
+					<img loading="lazy" src="{{ asset('images/project/' ~project.image) }}" class="img-fluid" alt="{{ project.title }}">
+					<div class="project-details pt-3 pe-5">
+						<div class="d-flex justify-content-between mb-3">
+							<span class="h2">{{ project.title }}</span>
+							{# <span>{{ project.category.name }}</span> #}
+						</div>
+						<p>
+							{% if app.request.locale == 'ko' %}
+								{{ project.descriptionKo }}
+							{% elseif app.request.locale == 'fr' %}
+								{{ project.description }}
+							{% else %}
+								{{ project.descriptionEn }}
+							{% endif %}
+						</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>
