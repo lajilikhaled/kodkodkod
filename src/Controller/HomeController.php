@@ -23,4 +23,12 @@ class HomeController extends AbstractController
 
         ]);
     }
+
+    #[Route('/{_locale<%app_locales%>}/projects', name: 'app_project')]
+    public function projects(): Response
+    {
+        return $this->render('portfolio/index.html.twig', [
+
+        ]);
+    }
 }

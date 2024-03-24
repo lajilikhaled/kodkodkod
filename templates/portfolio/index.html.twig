@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}
+	{{ "head.meta" | trans }}
+{% endblock %}
+
+{% block title %}
+	{{ "portfolio.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% if app.request.locale == 'ko' %}
+	{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+{% else %}
+	{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+{% endif %}
+
+{% if hongKong is defined and hongKong %}
+	{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+{% endif %}
+
+{% if app.request.locale == 'fr' %}
+	{% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
+{% endif %}
+
+{% block body %}
+	{{ include('_navbar_white.html.twig') }}
+	{{ include('portfolio/_bio.html.twig') }}
+	{{ include('portfolio/_info.html.twig') }}
+	{{ include('portfolio/_projectImage.html.twig') }}
+	{{ include('portfolio/_intro.html.twig') }}
+	{{ include('portfolio/_intro_gallery.html.twig') }}
+	{{ include('portfolio/_offer.html.twig') }}
+	{{ include('portfolio/_palette.html.twig') }}
+	{{ include('portfolio/_challenge.html.twig') }}
+	{{ include('portfolio/_style.html.twig') }}
+{% endblock %}
