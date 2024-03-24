@@ -26,6 +26,11 @@
 	{% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
 {% endif %}
 
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags('portfolio') }}
+{% endblock %}
+
 {% block body %}
 	{{ include('_navbar_white.html.twig') }}
 	{{ include('portfolio/_bio.html.twig') }}

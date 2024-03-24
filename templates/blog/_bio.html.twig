@@ -1,0 +1,29 @@
+<section
+	class="container pt-5">
+	{# <a href="#"> #}
+	<div class="row justify-content-start py-5 my-5">
+		<div class="col-lg-12 space-grotesk pt-5 w-50">
+			<h1 class="display-3 mb-5 fw-bolder ">Blogs et vision de nos Koders</h1>
+		</div>
+
+		<div class="row">
+			<div class="col col-xs-12 d-flex align-items-start flex-column justify-content-between border-top border-bottom">
+				<div class="display-6 mb-5 fw-bolder ">
+					{{ lastArticle.title }}
+				</div>
+				<div class="date-author d-flex align-items-center">
+					<h6 class="date-text mb-0">{{ lastArticle.posted|date('d/m/Y') }}, </h6>
+					<span class="text-secondary ms-2">by KodKodKod</span>
+				</div>
+
+
+			</div>
+			<div class="col col-xs-12">
+				<img
+				src="{{ asset('build/images/project/blockchain.jpeg') }}" alt="" class="img-fluid">
+			{# <img loading="lazy" src="{{ '/images/blog/' ~ lastArticle.image }}" alt="{{ lastArticle.image }}" class="category-image" /> #}
+			</div>
+		</div>
+	</div>
+	{# </a> #}
+</section>

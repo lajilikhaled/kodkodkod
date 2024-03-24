@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+
+{% set blogsArray1 = [] %}
+{% set blogsArray2 = [] %}
+
+{% if blogs|length >= 6 %}
+	{% set blogsArray1 = blogs|slice(0, 5) %}
+	{% set blogsArray2 = blogs|slice(6) %}
+{% else %}
+	{% if blogs %}
+		{% set blogsArray1 = blogs %}
+	{% endif %}
+{% endif %}
+
+{# ----------------------BLOC 1--------------------------- #}
+{% set totalLines1 = (blogsArray1|length / 3)|round(0, 'floor')  %}
+{% if blogsArray1|length % 3 %}
+	{% set totalLines1 = totalLines1 + 1 %}
+{% endif %}
+
+{# ----------------------BLOC 2--------------------------- #}
+{% if blogsArray2|length > 0 %}
+	{% set totalLines2 = (blogsArray2|length / 4)|round(0, 'floor') %}
+	{% if blogsArray2|length % 4 %}
+		{% set totalLines2 = totalLines2 + 1 %}
+	{% endif %}
+{% endif %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags('portfolio') }}
+{% endblock %}
+
+{% block body %}
+	{{ include('_navbar_white.html.twig') }}
+	{{ include('blog/_bio.html.twig') }}
+	{{ include('blog/_blogs.html.twig') }}
+{% endblock %}

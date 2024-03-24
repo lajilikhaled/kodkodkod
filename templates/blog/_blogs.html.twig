@@ -1,0 +1,26 @@
+<section class="container space-grotesk">
+	<div
+		class="row">
+		{# {% set totalBlogs = blogs|length %} #}
+		{% for blog in blogs %}
+			{# {% if loop.index0 % 3 == 0 %} #}
+			{# {% if not loop.first %}
+												</div>
+									
+												{% endif %} #}
+				<div class="col-lg-4 col-md-4 col-sm-12 mb-4"> <img
+				src="{{ asset('build/images/project/blockchain.jpeg') }}" alt="" class="img-fluid"/>
+				{# <img loading="lazy" src="{{ blog.image }}" alt="{{ blog.image }}" class="image"/> #}
+				<div class="col col-xs-12 d-flex align-items-start flex-column justify-content-between">
+					<div class="display-6 mb-5 ">
+						<span class="h4">{{ blog.title }}</span>
+					</div>
+					<div class="date-author d-flex align-items-center">
+						<h6 class="date-text mb-0">{{ blog.posted|date('d/m/Y') }},
+							<span class="text-secondary ms-2">by KodKodKod</span>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
