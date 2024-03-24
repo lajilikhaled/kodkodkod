@@ -2,24 +2,18 @@
 @import "fonts";
 
 // Override Bootstrap font variable
-$font-family-base: 'Outfit', sans-serif;
+$font-family-base: "Outfit", sans-serif;
 
 // Override Bootstrap primary color variable
-$primary: #E9204F;
+$primary: #e9204f;
 
 @import "bootstrap";
 
 .plus-jakarta-sans {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 .space-grotesk {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.hero {
-  min-height: 100vh;
-  background-size: cover;
-  background-position: bottom;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -29,7 +23,7 @@ $primary: #E9204F;
 }
 
 .text-gradiant {
-  background: linear-gradient(81.68deg, #E9204F 19.34%, #FFD708 156.01%);
+  background: linear-gradient(81.68deg, #e9204f 19.34%, #ffd708 156.01%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,12 +31,12 @@ $primary: #E9204F;
 
 .nav-underline .nav-link.active::after,
 .nav-underline .nav-link:hover::after {
-  background-color: #E9204F !important;
+  background-color: #e9204f !important;
 }
 
 .nav-underline .nav-link.active,
 .nav-underline .nav-link:hover {
-  color: #E9204F !important;
+  color: #e9204f !important;
 }
 
 .text-justify {
@@ -51,7 +45,7 @@ $primary: #E9204F;
 
 h3 {
   &.space-grotesk {
-      width: 50%;
+    width: 50%;
   }
 }
 /*
@@ -75,3 +69,36 @@ h3 {
 .navbar-nav .active::after {
     opacity: 1;
 }*/
+
+.background-circles {
+  background-size: cover;
+  bottom: 0;
+  left: 28%;
+  position: absolute;
+  top: 35px;
+  width: 45%;
+  opacity: 0.5;
+}
+
+.background-ellipse {
+  background: linear-gradient(68.41deg, #9531ff 51.35%, #08fff9 76.43%);
+  border-radius: 50%;
+  filter: blur(300px);
+  height: 45%;
+  left: 15%;
+  position: absolute;
+  top: 40%;
+  width: 70%;
+  z-index: -1;
+  @media only screen and (max-width: 912px) {
+    filter: blur(170px);
+  }
+
+  @media only screen and (max-width: 480px) {
+    filter: blur(200px);
+  }
+}
+.hero {
+  position: relative;
+  z-index: -1;
+}

@@ -1,6 +1,8 @@
-<section class="hero d-flex pt-5" style="background-image: url('{{ asset('build/images/backgrounds/home.png') }}');">
-	<div class="container pt-5">
-		<div class="col-12 text-center mt-md-5 pt-md-5">
+<section class="hero pt-5" style="background-color: black;background-image: url('{{ asset('build/images/backgrounds/home.png') }}');">
+	<div class="row pt-5 position-relative">
+		<div class="background-ellipse"></div> 
+		<div class="background-circles" style="background-image: url('{{ asset('build/images/backgrounds/Circle.png') }}');"></div>
+		<div class="col-12 text-center mt-md-5 pt-md-5 pb-5">
 			<h1 class="text-white plus-jakarta-sans display-2 fw-bold mb-4 mt-5">{{ "pageHome.introLine1" | trans }}
 				<br>
                     <span class="text-gradiant">{{ "pageHome.introLine2" | trans }}.</span>
@@ -16,25 +18,23 @@
 				{{ "pageHome.bookConsultation" | trans }}
 			</button>
 		</div>
-	</div>
-</section>
-<section class="d-none d-lg-flex py-5" style="background: url('{{ asset('build/images/backgrounds/_home.png') }}') top/cover">
-	<div class="container">
-		<div class="row justify-content-between align-items-center">
-			<div class="col-auto text-white fs-2 opacity-50 pe-5 border-end">
-				{{ 'pageHome.peopleTrustUs'|trans }}
-			</div>
-			<div class="col-auto">
-				<img src="{{ asset('build/images/clients/canal.png') }}" alt="canal +" width="150">
-			</div>
-			<div class="col-auto">
-				<img src="{{ asset('build/images/clients/allianz.png') }}" alt="Allianz" width="150">
-			</div>
-			<div class="col-auto">
-				<img src="{{ asset('build/images/clients/bnp.png') }}" alt="BNP Paribas" width="150">
-			</div>
-			<div class="col-auto">
-				<img src="{{ asset('build/images/clients/samusocial.png') }}" alt="Samusocial Paris" width="150">
+		<div class="container">
+			<div class="row justify-content-between pt-5 pb-5">
+				<div class="col-auto text-white fs-4 opacity-50 pe-5 border-end">
+					Ils nous font confiance
+				</div>
+				<div class="col-auto">
+					<img src="/build/images/clients/canal.97833f51.png" alt="canal +" width="80">
+				</div>
+				<div class="col-auto">
+					<img src="/build/images/clients/allianz.9f49a3e3.png" alt="Allianz" width="150">
+				</div>
+				<div class="col-auto">
+					<img src="/build/images/clients/bnp.630f2628.png" alt="BNP Paribas" width="150">
+				</div>
+				<div class="col-auto">
+					<img src="/build/images/clients/samusocial.0fb01a7a.png" alt="Samusocial Paris" width="150">
+				</div>
 			</div>
 		</div>
 	</div>

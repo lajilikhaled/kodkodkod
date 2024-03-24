@@ -63,7 +63,21 @@ Encore
     })
 
     // enables Sass/SCSS support
-    .enableSassLoader()
+    .enableSassLoader(
+        options => {
+            options.sassOptions = {
+                ...options.sassOptions,
+                // options spécifiques à sass-loader
+            };
+            options.sourceMap = true; // Assurez-vous que les source maps sont activées
+            // options pour resolve-url-loader, si nécessaire
+        }, {
+            // Options pour resolve-url-loader ici
+            resolveUrlLoaderOptions: {
+                removeCR: true
+            }
+        })
+    
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
