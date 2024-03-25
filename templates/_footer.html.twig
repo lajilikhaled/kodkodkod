@@ -1,0 +1,118 @@
+<section class="footer pt-5 bg-black text-white">
+    <div class="container border-bottom py-5">
+        <div class="row justify-content-between py-md-5">
+            <div class="col-lg-6 space-grotesk">
+                <div class="col-md-8">
+                    <h1 class="display-5 fw-bolder border-bottom pb-4">Let’s talk about the Ai Project</h1>
+
+                </div>
+                <div class="d-flex justify-content-start align-items-start mt-4 mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-4 text-secondary mt-1 ms-3">Connect with an expert</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-start mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-4 text-secondary mt-1 ms-3">In less than 24 hours</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-start mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-4 text-secondary mt-1 ms-3">Available immediately</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="form-group mt-3">
+                    <label for="exampleInput" class="form-label text-secondary">First name <span
+                                class="text-danger">*</span></label>
+                    <input type="text"
+                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                           id="exampleInput" placeholder="Zudet">
+                </div>
+                <div class="form-group mt-5">
+                    <label for="exampleInput" class="form-label text-secondary">Email <span class="text-danger">*</span></label>
+                    <input type="text"
+                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                           id="exampleInput" placeholder="eg. Alexander">
+                </div>
+                <div class="form-group mt-5">
+                    <label for="exampleInput" class="form-label text-secondary">Message<span
+                                class="text-danger">*</span></label>
+                    <input type="text"
+                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                           id="exampleInput" placeholder="eg. I want to build a website...">
+                </div>
+                <div class="d-flex justify-content-end">
+                    <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+                        Send
+                        <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container border-bottom py-md-5">
+        <div class="row justify-content-between py-5">
+            <div class="col-lg-4 fs-5">
+                <p class="mb-1">Get in touch</p>
+                <a href="" class="text-white">+44 20 4586 3029</a>
+                <p class="text-secondary mt-3">3936 Tennyson St <br>Denver, 80212</p>
+            </div>
+            <div class="col-lg-8">
+                <ul class="navbar-nav nav-underline justify-content-end flex-grow-1 align-items-start flex-md-row flex-column fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if app.request.attributes.get('_route') =='app_home' %} active {% endif %}"
+                           aria-current="page" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Services</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end mb-3 mb-md-0">
+            <a class="text-decoration-none text-white fw-medium" style="min-width: 120px" href="#">
+                Scroll to top <i class="bi bi-arrow-up ms-2"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row justify-content-between">
+
+            <div class="col-lg-9">
+                <ul class="navbar-nav nav-underline flex-grow-1 align-items-start flex-md-row flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Terms & conditions</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Privacy policy</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Cookies</a>
+                    </li>
+                    <li class="nav-item ms-md-4">
+                        <a class="nav-link text-white" href="#">Cookies setting</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 d-flex justify-content-md-end fs-5 mt-5 mt-md-0">
+                <ul class="list-inline social-icons">
+                    <li class="list-inline-item"><a href="#" class="text-white"><i class="bi bi-instagram"></i></a></li>
+                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-facebook"></i></a></li>
+                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
+                    <li class="list-inline-item ms-2"><a href="#" class="text-white"><i class="bi bi-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

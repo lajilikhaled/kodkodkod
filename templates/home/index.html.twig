@@ -1,38 +1,41 @@
 {% extends 'base.html.twig' %}
 
 {% block ogmetatitle %}
-	{{ "head.meta" | trans }}
+    {{ "head.meta" | trans }}
 {% endblock %}
 
 {% block title %}
-	{{ "home.title" | trans }}
+    {{ "home.title" | trans }}
 {% endblock %}
 
 {% block description %}
-	{{ "head.desc2" | trans }}
+    {{ "head.desc2" | trans }}
 {% endblock %}
 
 {% if app.request.locale == 'ko' %}
-	{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+    {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
 {% else %}
-	{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+    {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
 {% endif %}
 
 {% if hongKong is defined and hongKong %}
-	{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+    {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
 {% endif %}
 
 {% if app.request.locale == 'fr' %}
-	{% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
+    {% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
 {% endif %}
 
 {% block body %}
-	<div class="position-relative">
-		{{ include('_navbar.html.twig') }}
-		{{ include('home/_hero.html.twig') }}
-	</div>
-	{{ include('home/_intro.html.twig') }}
-	{{ include('home/_story.html.twig') }}
-	{{ include('home/_numbers.html.twig') }}
-	{{ include('home/_services.html.twig') }}
+    <div class="position-relative">
+        {{ include('_navbar.html.twig') }}
+        {{ include('home/_hero.html.twig') }}
+    </div>
+    {{ include('home/_intro.html.twig') }}
+    {{ include('home/_story.html.twig') }}
+    {{ include('home/_numbers.html.twig') }}
+    {{ include('home/_services.html.twig') }}
+    {{ include('home/_testimonial.html.twig') }}
+    {{ include('_newsletter.html.twig') }}
+    {{ include('_footer.html.twig') }}
 {% endblock %}

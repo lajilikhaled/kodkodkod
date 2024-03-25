@@ -1,4 +1,6 @@
 @import "bootstrap-icons";
+@import "slick-carousel/slick/slick";
+@import "slick-carousel/slick/slick-theme";
 @import "fonts";
 
 // Override Bootstrap font variable
@@ -13,12 +15,23 @@ $primary: #e9204f;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .space-grotesk {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero {
+  background-size: cover;
+  background-position: top;
+  background-image: url('./../images/backgrounds/home.png');
 }
 
 @media (max-width: 768px) {
-  .display-2 {
+  .display-3 {
     font-size: 1.8rem;
+  }
+  .hero {
+    background-size: cover;
+    background-position: center;
+    background-image: url('./../images/backgrounds/home_mobile.png');
   }
 }
 
@@ -43,11 +56,35 @@ $primary: #e9204f;
   text-align: justify !important;
 }
 
-h3 {
-  &.space-grotesk {
-    width: 50%;
-  }
+input:focus {
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
 }
+
+.footer input::placeholder {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.footer .border-bottom {
+  border-bottom: 1px solid rgba(211, 211, 211, 0.25) !important;
+}
+.btn.btn-outline-dark.rounded-circle:hover {
+  background-color: transparent !important;
+}
+
+.testimonial-prev  {
+  position: absolute;
+  left: -50px;
+  top: 40%;
+}
+.testimonial-next  {
+  position: absolute;
+  right: -50px;
+  top: 40%;
+}
+
 /*
 .navbar-nav .nav-link {
     position: relative;
@@ -97,10 +134,6 @@ h3 {
   @media only screen and (max-width: 480px) {
     filter: blur(200px);
   }
-}
-.hero {
-  position: relative;
-  z-index: -1;
 }
 .color-palette {
   height: 500px;
