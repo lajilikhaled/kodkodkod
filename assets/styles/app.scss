@@ -85,6 +85,17 @@ input:focus {
   top: 40%;
 }
 
+.team-prev  {
+  position: absolute;
+  right: 60px;
+  top: -220px;
+}
+.team-next  {
+  position: absolute;
+  right: 0;
+  top: -220px;
+}
+
 /*
 .navbar-nav .nav-link {
     position: relative;
