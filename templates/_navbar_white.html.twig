@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg px-md-5 position-absolute top-0 start-0 end-0">
+<nav class="navbar navbar-expand-lg container position-absolute top-0 start-0 end-0">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="#">
 			<img src="{{ asset('build/images/logos/black.png') }}" alt="Kodkodkod" width="65" height="65">
@@ -16,12 +16,12 @@
 			<div class="offcanvas-body">
 				<ul class="navbar-nav nav-underline justify-content-center flex-grow-1 pe-3 align-items-center">
 					<li class="nav-item">
-						<a class="nav-link text-black" aria-current="page" href="{{ path('app_home') }}">
+						<a class="nav-link text-black {% if app.request.attributes.get('_route') == 'app_home' %} active {% endif %}" aria-current="page" href="{{ path('app_home') }}">
 							{{ 'menu.home'|trans }}
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-black" href="#">{{ 'menu.services'|trans }}</a>
+						<a class="nav-link text-black {% if app.request.attributes.get('_route') == 'app_service' %} active {% endif %}" href="{{ path('app_service') }}">{{ 'menu.services'|trans }}</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-black {% if app.request.attributes.get('_route') in ['app_project', 'app_portfolio'] %} active {% endif %}" href="{{ path('app_portfolio') }}">{{ 'menu.portfolio'|trans }}</a>
@@ -30,7 +30,7 @@
 						<a class="nav-link text-black  {% if app.request.attributes.get('_route') =='app_blog'  %} active {% endif %}"  href="{{ path('app_blog') }}">{{ 'menu.blog'|trans }}</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-black" href="/fr/contact">{{ 'menu.contact'|trans }}</a>
+						<a class="nav-link text-black {% if app.request.attributes.get('_route') == 'app_contact' %} active {% endif %}" href="{{ path('app_contact') }}">{{ 'menu.contact'|trans }}</a>
 					</li>
 
 				</ul>

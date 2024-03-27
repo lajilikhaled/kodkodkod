@@ -24,6 +24,12 @@ $primary: #e9204f;
   background-image: url('./../images/backgrounds/home.png');
 }
 
+.service-hero {
+  background-size: cover;
+  background-position: center;
+  background-image: url('./../images/backgrounds/service.png');
+}
+
 @media (max-width: 768px) {
   .display-3 {
     font-size: 1.8rem;
@@ -33,6 +39,12 @@ $primary: #e9204f;
     background-position: center;
     background-image: url('./../images/backgrounds/home_mobile.png');
   }
+  .service-hero {
+    background-size: cover;
+    background-position: center;
+    background-image: url('./../images/backgrounds/service.png');
+  }
+
 }
 
 .text-gradiant {
@@ -76,12 +88,12 @@ input:focus {
 
 .testimonial-prev  {
   position: absolute;
-  left: -50px;
+  left: -70px;
   top: 40%;
 }
 .testimonial-next  {
   position: absolute;
-  right: -50px;
+  right: -70px;
   top: 40%;
 }
 
@@ -96,6 +108,28 @@ input:focus {
   top: -220px;
 }
 
+.slick-center .opacity-0 {
+  opacity: 1 !important;
+}
+.accordion-item {
+  border: none;
+  border-radius: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Color active item header */
+.accordion-button:not(.collapsed) {
+  background: none;
+  color: black !important;
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) .me-4,
+.accordion-button:not(.collapsed)::after {
+  color: #e9204f !important;
+}
 /*
 .navbar-nav .nav-link {
     position: relative;

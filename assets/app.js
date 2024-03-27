@@ -16,8 +16,8 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: true,
         arrows: true,
-        prevArrow: '<button type="button" class="testimonial-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="build/images/icons/arrow_right.7282cdd7.svg" alt="arrow"/></button>',
-        nextArrow: '<button type="button" class="testimonial-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="build/images/icons/arrow_left.cddca400.svg" alt="arrow"/></button>',
+        prevArrow: '<button type="button" class="testimonial-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_right.svg" alt="arrow"/></button>',
+        nextArrow: '<button type="button" class="testimonial-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_left.svg" alt="arrow"/></button>',
     });
     $('.team-carousel').slick({
         infinite: true,
@@ -25,8 +25,8 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: true,
         arrows: true,
-        prevArrow: '<button type="button" class="team-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="build/images/icons/arrow_right.7282cdd7.svg" alt="arrow"/></button>',
-        nextArrow: '<button type="button" class="team-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="build/images/icons/arrow_left.cddca400.svg" alt="arrow"/></button>',
+        prevArrow: '<button type="button" class="team-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_right.svg" alt="arrow"/></button>',
+        nextArrow: '<button type="button" class="team-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_left.svg" alt="arrow"/></button>',
         responsive: [
             {
                 breakpoint: 768,
@@ -34,6 +34,25 @@ $(document).ready(function(){
                     slidesToShow: 2
                 }
             },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    $('.service-team-carousel').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        infinite: true,
+        slidesToShow: 3, // Number of slides to show at a time
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: '<button type="button" class="testimonial-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_right.svg" alt="arrow"/></button>',
+        nextArrow: '<button type="button" class="testimonial-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_left.svg" alt="arrow"/></button>',
+        responsive: [
             {
                 breakpoint: 576,
                 settings: {

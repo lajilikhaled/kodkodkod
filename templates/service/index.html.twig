@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ "services.title" | trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="position-relative">
+        {{ include('_navbar.html.twig') }}
+        {{ include('service/_hero.html.twig') }}
+    </div>
+    {{ include('service/_clients.html.twig') }}
+    {{ include('service/_services.html.twig') }}
+    {{ include('service/_team.html.twig') }}
+    {{ include('service/_indus.html.twig') }}
+    {{ include('_testimonial.html.twig') }}
+    {{ include('_newsletter.html.twig') }}
+    {{ include('_footer.html.twig') }}
+{% endblock %}
+
