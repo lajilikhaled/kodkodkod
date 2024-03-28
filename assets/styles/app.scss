@@ -2,6 +2,7 @@
 @import "slick-carousel/slick/slick";
 @import "slick-carousel/slick/slick-theme";
 @import "fonts";
+@import "map";
 
 // Override Bootstrap font variable
 $font-family-base: "Outfit", sans-serif;
@@ -130,6 +131,7 @@ input:focus {
 .accordion-button:not(.collapsed)::after {
   color: #e9204f !important;
 }
+
 /*
 .navbar-nav .nav-link {
     position: relative;

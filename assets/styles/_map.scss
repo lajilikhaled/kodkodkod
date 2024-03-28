@@ -1,0 +1,76 @@
+.map-pointer {
+  position: absolute;
+  width: 2.7%;
+  cursor: pointer;
+  z-index: 100;
+}
+.map-pointer:hover + .map-tooltip {
+  display: block !important;
+}
+.map-tooltip {
+  position: absolute;
+  display: none;
+  z-index: 1000;
+}
+
+.paris-pointer {
+  right: 51%;
+  top: 32%;
+}
+
+.paris-tooltip {
+  right: 46.2%;
+  top: 37%;
+}
+
+.tunis-pointer {
+  right: 49.2%;
+  top: 39.7%;
+}
+
+.tunis-tooltip {
+  right: 44.4%;
+  top: 44.5%;
+}
+
+.usa-pointer {
+  right: 77.5%;
+  top: 35%;
+}
+
+.usa-tooltip {
+  right: 72.7%;
+  top: 40%;
+}
+
+.asia1-pointer {
+  right: 34.5%;
+  top: 39.5%;
+}
+
+.asia1-tooltip {
+  right: 29.7%;
+  top: 44.5%;
+}
+
+.asia2-pointer {
+  right: 17.1%;
+  top: 42.5%;
+}
+
+.asia2-tooltip {
+  right: 12.3%;
+  top: 47.5%;
+}
+
+.brazil-pointer {
+  right: 70.2%;
+  top: 61.3%;
+}
+
+.brazil-tooltip {
+  right: 65.4%;
+  top: 66.3%;
+}
+
+
