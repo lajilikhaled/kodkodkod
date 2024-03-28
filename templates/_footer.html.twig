@@ -20,32 +20,33 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="form-group mt-3">
-                    <label for="exampleInput" class="form-label text-secondary">First name <span
-                                class="text-danger">*</span></label>
-                    <input type="text"
-                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
-                           id="exampleInput" placeholder="Zudet">
-                </div>
-                <div class="form-group mt-5">
-                    <label for="exampleInput" class="form-label text-secondary">Email <span class="text-danger">*</span></label>
-                    <input type="text"
-                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
-                           id="exampleInput" placeholder="eg. Alexander">
-                </div>
-                <div class="form-group mt-5">
-                    <label for="exampleInput" class="form-label text-secondary">Message<span
-                                class="text-danger">*</span></label>
-                    <input type="text"
-                           class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
-                           id="exampleInput" placeholder="eg. I want to build a website...">
-                </div>
-                <div class="d-flex justify-content-end">
-                    <a class="h3 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                        Send
-                        <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
-                    </a>
-                </div>
+                <form method="post" id="contactForm" data-url="{{ path('app_contact_footer') }}">
+                    <div class="form-group mt-3">
+                        <label for="firstname" class="form-label text-secondary">First name <span class="text-danger">*</span></label>
+                        <input type="text" name="firstname" id="firstname"
+                               class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                               placeholder="Zudet">
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="email" class="form-label text-secondary">Email <span class="text-danger">*</span></label>
+                        <input type="email" name="email" id="email"
+                               class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                               placeholder="eg. Alexander">
+                    </div>
+                    <div class="form-group mt-5">
+                        <label for="description" class="form-label text-secondary">Message<span class="text-danger">*</span></label>
+                        <input type="text" name="description" id="description"
+                               class="form-control border-0 border-bottom bg-transparent rounded-0 text-white"
+                               placeholder="eg. I want to build a website...">
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="h3 space-grotesk text-gradiant text-decoration-none mt-5 border-0" type="button" id="submitButton">
+                            Send
+                            <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2" width="25"/>
+                        </button>
+                    </div>
+                </form>
+
             </div>
         </div>
     </div>
@@ -108,11 +109,40 @@
             <div class="col-lg-3 d-flex justify-content-md-end fs-5 mt-5 mt-md-0">
                 <ul class="list-inline social-icons">
                     <li class="list-inline-item"><a href="#" class="text-white"><i class="bi bi-instagram"></i></a></li>
-                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-facebook"></i></a></li>
-                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a></li>
-                    <li class="list-inline-item ms-2"><a href="#" class="text-white"><i class="bi bi-youtube"></i></a></li>
+                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item ms-3"><a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </li>
+                    <li class="list-inline-item ms-2"><a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Success Toast -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div class="toast toast-success" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Success</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Message sent successfully!
+        </div>
+    </div>
+</div>
+
+<!-- Error Toast -->
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+    <div class="toast toast-error" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">Error</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Error sending message. Please try again.
+        </div>
+    </div>
+</div>

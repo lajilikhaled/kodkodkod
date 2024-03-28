@@ -61,4 +61,46 @@ $(document).ready(function(){
             }
         ]
     });
+    $('#submitButton').click(function(e) {
+        e.preventDefault();
+
+        let form = $('#contactForm');
+        let url = form.data('url');
+        let formData = form.serialize();
+        // Check if required fields are empty
+        let firstname = $('#firstname').val().trim();
+        let email = $('#email').val().trim();
+        let description = $('#description').val().trim();
+
+        if (firstname === '' || email === '' || description === '') {
+            // Display error toast for empty fields
+            $('.toast-error .toast-body').text('Please fill in all required fields.');
+            $('.toast-error').toast('show');
+            return; // Exit function if fields are empty
+        }
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function(response) {
+                // Handle success, for example, show a success message
+                $('.toast-success .toast-body').text('Message sent successfully!');
+                $('.toast-success').toast('show');
+                form.trigger('reset');  // Reset the form
+            },
+            error: function(xhr, status, error) {
+                // Handle errors, for example, show an error message
+                $('.toast-error .toast-body').text('Error sending message. Please try again.');
+                $('.toast-error').toast('show');
+            }
+        });
+    });
+
+    // Initialize Bootstrap Toasts
+    $('.toast').toast({
+        delay: 3000  // Auto hide after 3 seconds
+    });
 });
+
+
