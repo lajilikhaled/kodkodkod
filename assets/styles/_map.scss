@@ -13,6 +13,11 @@
   display: none;
   z-index: 1000;
 }
+@media (max-width: 768px) {
+  .map-tooltip {
+    width: 18%;
+  }
+}
 
 .paris-pointer {
   right: 51%;
