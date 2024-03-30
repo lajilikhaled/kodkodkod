@@ -14,4 +14,11 @@ class ServiceController extends AbstractController
         return $this->render('service/index.html.twig', [
         ]);
     }
+
+    #[Route('/{_locale<%app_locales%>}/training-and-workshops', name: 'app_training_and_workshops')]
+    public function trainingAndWorkshops(): Response
+    {
+        return $this->render('training_and_workshops/index.html.twig', [
+        ]);
+    }
 }

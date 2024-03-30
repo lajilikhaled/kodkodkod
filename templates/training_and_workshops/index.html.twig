@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ "services.title" | trans }}
+{% endblock %}
+
+{% block body %}
+    <div class="position-relative">
+        {{ include('_navbar.html.twig') }}
+        {{ include('training_and_workshops/_hero.html.twig') }}
+    </div>
+    {{ include('training_and_workshops/_clients.html.twig') }}
+    {{ include('training_and_workshops/_workshop.html.twig') }}
+    {{ include('training_and_workshops/_team.html.twig') }}
+    {{ include('training_and_workshops/_indus.html.twig') }}
+    {{ include('_testimonial.html.twig') }}
+    {{ include('_newsletter.html.twig') }}
+    {{ include('_footer.html.twig') }}
+{% endblock %}
+

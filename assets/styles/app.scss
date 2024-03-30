@@ -31,6 +31,12 @@ $primary: #e9204f;
   background-image: url('./../images/backgrounds/service.png');
 }
 
+.training-hero {
+  background-size: cover;
+  background-position: center;
+  background-image: url('./../images/backgrounds/training-and-workshops.jpg');
+}
+
 @media (max-width: 768px) {
   .display-3 {
     font-size: 1.8rem;
@@ -40,12 +46,6 @@ $primary: #e9204f;
     background-position: center;
     background-image: url('./../images/backgrounds/home_mobile.png');
   }
-  .service-hero {
-    background-size: cover;
-    background-position: center;
-    background-image: url('./../images/backgrounds/service.png');
-  }
-
 }
 
 .text-gradiant {

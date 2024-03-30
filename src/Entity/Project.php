@@ -23,9 +23,8 @@ class Project
     #[ORM\Column(type: "string", length: 255, nullable: true)]
     private $slug;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
-    private $image;
-
+    #[ORM\Column(type: "array", nullable: true)]
+    private array $images = [];
     #[ORM\Column(type: "integer", nullable: true)]
     private $imageSize;
 
@@ -157,21 +156,38 @@ class Project
         return $this;
     }
 
-	/**
-	 * @return mixed
-	 */
-	public function getImage()
-         	{
-         		return $this->image;
-         	}
+    public function getImages(): ?array
+    {
+        return $this->images;
+    }
 
-	/**
-	 * @param mixed $image
-	 */
-	public function setImage($image): void
-         	{
-         		$this->image = $image;
-         	}
+    public function setImages(array $images): self
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+    public function addImage(string $name, string $path): self
+    {
+        $this->images[$name] = $path;
+
+        return $this;
+    }
+
+    public function removeImage(string $name): self
+    {
+        if (isset($this->images[$name])) {
+            unset($this->images[$name]);
+        }
+
+        return $this;
+    }
+
+    public function getImageByName(string $name): ?string
+    {
+        return $this->images[$name] ?? null;
+    }
 
     public function getCategory(): ?Category
     {

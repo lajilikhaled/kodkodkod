@@ -14,7 +14,11 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-	use EntityManagerTrait;
+    private EntityManagerInterface $em;
+    public function __construct(EntityManagerInterface $em)
+    {
+        $this->em = $em;
+    }
 
     #[Route('/')]
     public function indexNoLocal(Request $request): Response
@@ -105,11 +109,27 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/{_locale<%app_locales%>}/projects', name: 'app_project')]
-    public function projects(): Response
+    #[Route('/{_locale<%app_locales%>}/project/{id}', name: 'app_project')]
+    public function projects(Project $project): Response
     {
-        return $this->render('portfolio/project/index.html.twig', [
 
+        /*$project = new Project();
+        $project->setTitle('test');
+        $project->addImage('main', 'uploads/images/projects/image_99.png');
+        $project->addImage('slide1', 'uploads/images/projects/Frame1.png');
+        $project->addImage('slide2', 'uploads/images/projects/Frame2.png');
+        $project->addImage('slide3', 'uploads/images/projects/Frame3.png');
+        $project->addImage('img1', 'uploads/images/projects/image_105.png');
+        $project->addImage('img2', 'uploads/images/projects/image_104.png');
+        $project->addImage('img3', 'uploads/images/projects/texts.png');
+        $project->addImage('img4', 'uploads/images/projects/femme.png');
+        $project->addImage('img5', 'uploads/images/projects/green.png');
+        $project->addImage('img6', 'uploads/images/projects/image.png');
+        $this->em->persist($project);
+        $this->em->flush();
+        dd('mrigel');*/
+        return $this->render('portfolio/project/index.html.twig', [
+            'project' => $project
         ]);
     }
 }
