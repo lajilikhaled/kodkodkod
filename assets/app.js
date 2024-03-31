@@ -19,6 +19,15 @@ $(document).ready(function(){
         prevArrow: '<button type="button" class="testimonial-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_right.svg" alt="arrow"/></button>',
         nextArrow: '<button type="button" class="testimonial-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_left.svg" alt="arrow"/></button>',
     });
+    $('.works-carousel').slick({
+        infinite: true,
+        slidesToShow: 1, // Number of slides to show at a time
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        prevArrow: '<button type="button" class="works-prev d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_right.svg" alt="arrow"/></button>',
+        nextArrow: '<button type="button" class="works-next d-none d-md-block btn btn-outline-dark rounded-circle p-1"><img src="https://127.0.0.1:8000/uploads/images/icons/arrow_left.svg" alt="arrow"/></button>',
+    });
     $('.team-carousel').slick({
         infinite: true,
         slidesToShow: 4, // Number of slides to show at a time

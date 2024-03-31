@@ -1,0 +1,44 @@
+<section class="container py-5 border-bottom">
+    <div class="row justify-content-between py-5">
+        <div class="col-lg-7">
+            <h4 class="space-grotesk fw-medium text-primary mb-2 mt-3">How it works?</h4>
+            <h1 class="space-grotesk display-4 fw-medium mb-5">How it works?</h1>
+            <div class="works-carousel">
+                <div class="carousel-item">
+                    <h3 class="space-grotesk fw-medium mb-4">{{ 'elevateYourBusiness.consulting.title'|trans }}
+                    </h3>
+                    <p class="text-secondary">We support you on your path to AI by providing our expertise.</p>
+                    {% for i in 1..4 %}
+                        <div class="d-flex justify-content-start align-items-center mb-3">
+                            <i class="bi bi-check text-gradiant fs-2"></i>
+                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+                        </div>
+                    {% endfor %}
+                    <a class="h4 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+                        Schedule a Workshop
+                        <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2 d-inline" width="25"/>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="space-grotesk fw-medium mb-4">{{ 'elevateYourBusiness.consulting.title'|trans }}
+                    </h3>
+                    <p class="text-secondary">We support you on your path to AI by providing our expertise.</p>
+                    {% for i in 1..4 %}
+                        <div class="d-flex justify-content-start align-items-center mb-3">
+                            <i class="bi bi-check text-gradiant fs-2"></i>
+                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+                        </div>
+                    {% endfor %}
+                    <a class="h4 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+                        Schedule a Workshop
+                        <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2 d-inline" width="25"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <img src="{{ asset('build/images/works.png') }}" alt="canal +" class="img-fluid">
+        </div>
+
+    </div>
+</section>
