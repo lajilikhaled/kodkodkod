@@ -1,0 +1,22 @@
+.app-home-newLandingPage--thank-page {
+    @include display-flex;
+    padding: 0 20px;
+    flex-direction: column;
+    height: calc(40vh - 40px);
+    
+    .container__text {
+        width: 60%;
+        @media(max-width: 1280px) {
+            width: 100%;
+        }
+        @media(max-width: 600px) {
+            width: 100%;;
+        }
+        p {
+            @include title;
+            @media(max-width: 600px) {
+                font-size: 30px;
+            }
+        }
+    }
+}

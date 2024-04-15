@@ -7,59 +7,108 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-
-#[ORM\Entity(repositoryClass: PageRepository::class)]
-#[Vich\Uploadable]
+/**
+ * @ORM\Entity(repositoryClass=PageRepository::class)
+ * @Vich\Uploadable
+ */
 class Page
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
-    #[ORM\Column(type: "string", length: 500)]
+    /**
+     * @ORM\Column(type="string", length=500)
+     */
     private $title;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
-    private $locale;
+	/**
+	 * @ORM\Column(type="string", length=500,nullable=true)
+	 */
+	private $locale;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
-    private $metaTitle;
+	/**
+	 * @ORM\Column(type="string", length=500,nullable=true)
+	 */
+	private $metaTitle;
 
-    #[ORM\Column(type: "string", length: 1000, nullable: true)]
-    private $metaDescription;
+	/**
+	 * @ORM\Column(type="string", length=1000,nullable=true)
+	 */
+	private $metaDescription;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
+
+	/**
+     * @ORM\Column(type="string", length=255,nullable=true)
+     */
     private $slug;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
-    private $image;
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $image;
 
-    #[ORM\Column(type: "boolean", nullable: true)]
-    private $active = true;
 
-    #[ORM\Column(type: "integer", nullable: true)]
-    private $imageSize;
+	/**
+	 * @ORM\Column(type="boolean", nullable=true)
+	 */
+	private $active = true;
 
-    #[ORM\Column(type: "datetime", nullable: true)]
-    private $updatedAt;
 
-    #[ORM\Column(type: "datetime", nullable: true)]
-    private $posted;
+	/**
+	 * @ORM\Column(type="integer", nullable=true)
+	 *
+	 * @var int|null
+	 */
+	private $imageSize;
 
-    #[Vich\UploadableField(mapping: "blog", fileNameProperty: "image", size: "imageSize")]
-    private $imageFile;
+	/**
+	 * @ORM\Column(type="datetime", nullable=true)
+	 *
+	 * @var \DateTimeInterface|null
+	 */
+	private $updatedAt;
 
-    #[ORM\Column(type: "text", nullable: true)]
+	/**
+	 * @ORM\Column(type="datetime", nullable=true)
+	 *
+	 * @var \DateTimeInterface|null
+	 */
+	private $posted;
+
+
+
+	/**
+	 * NOTE: This is not a mapped field of entity metadata, just a simple property.
+	 *
+	 * @Vich\UploadableField(mapping="blog", fileNameProperty="image", size="imageSize")
+	 *
+	 * @var File|null
+	 */
+	private $imageFile;
+
+
+	/**
+     * @ORM\Column(type="text", nullable=true)
+     */
     private $description;
 
-    #[ORM\Column(type: "array", nullable: true)]
+    /**
+     * @ORM\Column(type="array",nullable=true)
+     */
     private $technology = [];
 
-    #[ORM\Column(type: "text", nullable: true)]
+    /**
+     * @ORM\Column(type="text",nullable=true)
+     */
     private $goal;
 
-    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: "projects")]
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="projects")
+     */
     private $category;
 
     public function getId(): ?int

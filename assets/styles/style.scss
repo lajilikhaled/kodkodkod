@@ -1,0 +1,100 @@
+$dark: #15141A;
+@import "variables.scss";
+@import "mixins.scss";
+@import "normalize.min.css";
+@import "componentsNew/navbar.scss";
+@import "componentsNew/footer.scss";
+@import "componentsNew/newsletter.scss";
+@import "componentsNew/content.scss";
+@import "componentsNew/content2.scss";
+@import "componentsNew/content3.scss";
+@import "componentsNew/team.scss";
+@import "componentsNew/testimonials.scss";
+@import "componentsNew/map.scss";
+@import "pages/index.scss";
+@import "pages/portfolio.scss";
+@import "pages/blog.scss";
+@import "pages/article.scss";
+@import "pages/404.scss";
+@import "contact/contactPage.scss";
+@import "componentsNew/service/content.scss";
+@import "componentsNew/service/content2.scss";
+@import "componentsNew/service/content3.scss";
+@import "pages/service";
+@import "thankYouPage";
+@import "landingPage";
+@import "newLandingPage";
+
+a {
+  color: inherit; /* This makes the link color the same as the parent's text color */
+  text-decoration: none!important; /* Optional: Removes the underline from links */
+}
+
+
+html {
+
+
+
+}
+body {
+  font-family: 'Outfit';
+  &.background{
+    background-image: url('../images/pages/home/background-new.png');
+    background-repeat: no-repeat;
+    background-position: center -100px;
+    background-size: cover;
+    height: 800px;
+
+    @media (max-width: 1360px) {
+      height: 950px;
+    }
+
+    @media (max-width: 991px) {
+      background-position: 0;
+      height: 800px
+    }
+
+
+  }
+
+  &.services{
+    background-image: url('../images/pages/service/background.png');
+    background-repeat: no-repeat;
+    background-position: center -100px;
+    background-size: cover;
+    position: relative;
+    height: 800px;
+
+    @media (max-width: 1360px) {
+      height: 950px;
+    }
+
+    @media (max-width: 991px) {
+      background-position: 0;
+      height: 800px
+    }
+
+
+  }
+}
+
+body {
+  &.services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/pages/service/background2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #0002;
+}

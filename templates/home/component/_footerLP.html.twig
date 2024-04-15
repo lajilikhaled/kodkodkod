@@ -1,0 +1,93 @@
+<footer class="sec-footer">
+	<div class="box">
+		<div class="box__part-1">
+			<div class="part-1__item"><img class="footer-logo" src="{{ asset('build/images/landingPage/footer/kod-logo.png') }}" loading="lazy"/></div>
+			<div class="part-1__item menu">
+				<div class="menu-item">
+					<a href="{{ path('home') }}#">
+						Home
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="{{ path('portfolio') }}">
+						{{ 'link1'|trans }}
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="{{ path('home') }}#testimony">
+						{{ 'link2'|trans }}
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="{{ path('home') }}#process">
+						{{ 'link3'|trans }}
+					</a>
+				</div>
+				<div class="menu-item">
+					<a href="{{ path('home') }}#FAQ">
+						{{ 'link4'|trans }}
+					</a>
+				</div>
+				{% if (app.request.locale != 'ko') %}
+					<div class="menu-item">
+						<a href="{{ path('blog') }}">
+							{{ 'Blog'|trans }}
+						</a>
+					</div>
+				{% endif %}
+
+				{% if ((currentPath == '/fr/blockchain') or (currentPath == '/fr/')) %}
+					<div class="menu-item">
+						<a href="{{ path('blockchain') }}">
+							{{ 'link5'|trans }}
+						</a>
+					</div>
+				{% endif %}
+
+			</div>
+			<div class="part-1__item">
+				<div class="social-network">
+					<a href="https://www.facebook.com/KodKodKodStudio" target="_blank">
+						<svg width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M32.5 16C32.5 7.16344 25.3366 0 16.5 0C7.66344 0 0.5 7.16344 0.5 16C0.5 23.9859 6.35094 30.6053 14 31.8056V20.625H9.9375V16H14V12.475C14 8.465 16.3888 6.25 20.0434 6.25C21.7934 6.25 23.625 6.5625 23.625 6.5625V10.5H21.6075C19.62 10.5 19 11.7334 19 13V16H23.4375L22.7281 20.625H19V31.8056C26.6491 30.6053 32.5 23.9859 32.5 16Z" fill=""/>
+						</svg>
+					</a>
+				</div>
+
+				<div class="social-network">
+					<a href="https://www.linkedin.com/company/kodkodkod-studio" target="_blank">
+						<svg width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M29.2996 28.7989V19.4229C29.2996 14.8149 28.3076 11.2949 22.9316 11.2949C20.3396 11.2949 18.6116 12.7029 17.9076 14.0469H17.8436V11.7109H12.7556V28.7989H18.0676V20.3189C18.0676 18.0789 18.4836 15.9349 21.2356 15.9349C23.9556 15.9349 23.9876 18.4629 23.9876 20.4469V28.7669H29.2996V28.7989Z" fill=""/>
+							<path d="M4.11621 11.7109H9.42821V28.7989H4.11621V11.7109Z" fill=""/>
+							<path d="M6.77171 3.19922C5.07571 3.19922 3.69971 4.57522 3.69971 6.27122C3.69971 7.96722 5.07571 9.37522 6.77171 9.37522C8.46771 9.37522 9.84371 7.96722 9.84371 6.27122C9.84371 4.57522 8.46771 3.19922 6.77171 3.19922Z" fill=""/>
+						</svg>
+					</a>
+				</div>
+				<div class="social-network">
+					<a href="https://twitter.com/KodKodStudio" target="_blank">
+						<svg width="33" height="32" viewbox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M29.267 8.06361C28.307 8.47961 27.315 8.76761 26.259 8.89561C27.347 8.25561 28.179 7.23161 28.563 5.98361C27.539 6.59161 26.419 7.00761 25.235 7.26361C24.275 6.23961 22.899 5.59961 21.395 5.59961C18.483 5.59961 16.147 7.96761 16.147 10.8476C16.147 11.2636 16.179 11.6476 16.275 12.0316C11.923 11.8396 8.08299 9.72761 5.49099 6.55961C3.63499 9.88761 5.71499 12.6396 7.09099 13.5676C6.25899 13.5676 5.42699 13.3116 4.72299 12.9276C4.72299 15.5196 6.54699 17.6636 8.91499 18.1436C8.40299 18.3036 7.25099 18.3996 6.54699 18.2396C7.21899 20.3196 9.17099 21.8556 11.443 21.8876C9.65099 23.2956 7.02699 24.4156 3.66699 24.0636C6.00299 25.5676 8.75499 26.4316 11.731 26.4316C21.395 26.4316 26.643 18.4316 26.643 11.5196C26.643 11.2956 26.643 11.0716 26.611 10.8476C27.699 10.0476 28.595 9.11961 29.267 8.06361Z" fill=""/>
+						</svg>
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="box__part-2">
+			<div class="copyrights">
+				<p>2023 © KodKodKod, All rights reserved.</p>
+			</div>
+			<div class="conditions">
+				<a href="{{ path('conditions') }}">{{ 'Terms of use'|trans }}</a>
+				<a href="{{ path('polique') }}">{{'Privacy policies'|trans}}</a>
+				{% if app.request.locale == 'fr' %}
+					<a href="{{ path('sitemap') }}">{{'Site Map'|trans}}</a>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<!-- Customize Chatbot -->
+	{%if app.request.locale != 'ko'%}
+		{% include "contact/chatbot.html.twig" %}
+	{% endif %}
+</footer>

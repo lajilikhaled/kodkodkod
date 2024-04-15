@@ -1,0 +1,179 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Création et Refonte Site Web e-commerce et marketplace NFT | Kodkodkod{% endblock %}
+ {% block description %}Vous souhaitez créer ou faire une refonte de votre site web e-commerce et marketplace NFT ? Contactez notre studio de développement web Kodkodkod.{% endblock %}
+
+{% block body %}
+
+    <div class="app-homepage-index">
+        <div class="pr__hero__wrap" style="" id="site-hero">
+
+            <header class="pr__header" data-uk-sticky="top: 100vh; animation: uk-animation-slide-top;">
+                <div class="uk-container">
+                    <div class="inner" style="justify-content:center;">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="{{ asset('build/images/logo.png') }}" width="100" height="150" alt="logo kodkodkod" style="margin:20px">
+{#                                <div class="brand"></div>#}
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </header><!-- Site Header End -->
+
+            <section class="pr__hero uk-section" id="pr__hero" style="padding-bottom: 0">
+                <div class="uk-container">
+                    <div class="section-inner">
+                        <div uk-grid>
+                            <div class="uk-width-1-2@m">
+                                <hr class="line pr__hr__primary">
+                                <h2 class="title uk-heading-hero">{{ 'Just code. No Bullshit'|trans }}</h2>
+                                <div style="text-align:justify">
+									{{ 'Kodkodkod is a e-commerce NFT development studio imagined and created by developers.'|trans }}
+                                    <p>
+                                        {{'At a time of democratization of telework, we are connected from France, South Korea, or even Vietnam, and have been able to make time differences a secret weapon for the productivity of our customers.'|trans}}
+                                    </p>
+                                    <p>
+                                        {{'Our values: simplicity, high standards, benevolence, trust, fairness, humility.'|trans }}.
+                                    </p>
+                                    <p>{{'Here, we do not promise you the moon. Our job is (just) to produce code. And we do it well.'|trans}} </p>
+                                </div>
+
+                            </div>
+
+							{% include 'home/_contactTop.html.twig' with {title: 'nft.contactBottom.title', select: 'nft'} %}
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Site Hero End -->
+
+
+        </div><!-- Hero Wrap End -->
+
+        <div class="pr__content" id="site-content">
+
+            <hr class="pr__vr__section">
+			{% include 'home/_service.html.twig' with {title: 'nft.service.title'} %}
+            <!-- Section: Services End -->
+            {{ include('home/calendly.html.twig') }}
+
+			{% include 'home/_expertise.html.twig' with {landing: 'nft'} %}
+
+            <section class="pr__works pr__section section-slider uk-section uk-section-large" id="pr__works">
+                <div class="section-outer">
+					{% include 'home/_headOurProjects.html.twig' %}
+                    <div class="section-inner">
+                        <div class="uk-container uk-container-no">
+                            <div class="items-listing works-boxes works-slider owl-carousel" data-items="4" data-margin="30"
+                                 data-loop="true" data-center="true" data-autoplay="true" data-dots="true">
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/jarvis.png') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Jarvis legal</h3>
+                                            <p class="category">Intégration API / Développement NFT</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                        <div style="padding: 20px;background: white">
+                                            Intégration API / Développement NFT
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/bnp-paribas.jpeg') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Bnp Paribas</h3>
+                                            <p class="category">API</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                    <div style="padding: 20px;background: white">Création d'un outil HR et mise en place d'une API sous API plateform</div>
+
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/work-canal.jpeg') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Canal + International</h3>
+                                            <p class="category">Website / Développement</p>
+                                        </div>
+                                        <div style="padding: 20px;background: white">Création d'un système de bloc multi langue et multi contenu international</div>
+
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/urgence-docteurs-work.png') }}"
+                                             data-uk-img="" style="background-size: contain;"></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Urgence docteurs</h3>
+                                            <p class="category">
+                                                Plateforme de téleconsultation / Maintenance
+
+                                            </p>
+
+                                        </div>
+                                        <div style="padding: 20px;background: white"> Maintenance et évolutions. Mise en place d'une plateforme de téléconsultation en visio avec Twilio</div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Section: Works End -->
+
+
+            <div class="pr__clients__logos pr__section uk-section uk-section-large uk-padding-remove-top" id="pr__clients__logos">
+                <div class="uk-container">
+                    <hr class="pr__hr__section">
+                    <div class="section-outer uk-padding uk-padding-remove-bottom uk-padding-remove-horizontal">
+                        <div class="uk-flex uk-flex-around uk-flex-middle uk-grid uk-grid-large" data-uk-grid="">
+                            <div class="item logo">
+                                <div class="inner">
+                                    <img src="{{ asset('build/images/Works/bnp-paribas-1.svg') }}" alt="Bnp paribas" width="200">
+                                </div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/jarvis.png') }}" alt="Jarvis legal" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/canal+.png') }}" alt="Canal +" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/urgence-docteurs.png') }}" alt="Urgence docteurs" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/rencontre-archi.png') }}" alt="Rencontre un archi" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/prisma-media.png') }}" alt="Prisma media" width="200"></div>
+                            </div>
+                        </div><!-- Grid End -->
+                    </div><!-- Outer End -->
+                </div><!-- Container End -->
+            </div><!-- Section: Clients Logos End -->
+
+			{% include 'home/_beforekod.html.twig' %}
+			{% include 'home/team.html.twig' %}
+
+			{% include 'home/_contactBottom.html.twig' with {title: 'nft.contactBottom.title', select: 'nft'} %}
+
+
+
+
+        </div><!-- Site Content End -->
+    </div>
+
+    <style>
+        .item.feature-box:last-child:before {
+            display: none;
+        }
+    </style>
+{% endblock %}

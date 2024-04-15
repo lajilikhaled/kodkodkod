@@ -1,0 +1,113 @@
+.customize-chatbot {
+    position: fixed;
+    right: 24px;
+    bottom: 20px;
+    background-color: transparent;
+    z-index: 10;
+    // display: none;
+
+    &-icon {
+        width: 60px;
+        height: 60px;
+        background-color: $black;
+        border-radius: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.03);
+        cursor: pointer;
+        z-index: 2;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    }
+
+    &-overlay {
+        transform: translate(9999px);
+        opacity: 0;
+        display: none;
+
+        &.--is-opened {
+            transition: opacity 0.3s linear;
+            transform: translate(0);
+            opacity: 1;
+            display: block;
+            width: 400px;
+            height: 400px;
+            background-color: $white;
+            position: absolute;
+            right: 60px;
+            bottom: 60px;
+            box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.03);
+            border-radius: 8px;
+
+            @media (max-width: 640px) {
+                right: 0;
+                width: calc(100vw - 50px);
+            }
+
+
+            .box {
+                @include display-flex;
+                flex-direction: column;
+                width: 100%;
+                border-radius: 8px;
+                height: 100%;
+                position: relative;
+
+                .icon-close {
+                    position: absolute;
+                    top: 20px;
+                    right: 5%;
+                    cursor: pointer;
+                }
+
+                .title {
+                    margin: 0;
+                    width: 90%;
+                }
+
+                .sub-title {
+                    font: normal normal 400 18px/27px $mainFnt;
+                    line-height: unset;
+                    text-transform: unset;
+                    margin-top: 0;
+                    width: 90%;
+                    text-align: left;
+                }
+
+                .options-list {
+                    @include display-flex($alignItems: flex-start);
+                    flex-direction: column;
+                    font: normal normal 500 15px/21px $mainFnt;
+                    width: 90%;
+                    row-gap: 10px;
+
+                    a {
+                        color: #000 !important;
+                        width: calc(100% - 20px);
+                        background-color: #e9204f21; //mainClr
+                        padding: 20px 10px;
+
+                        .option {
+                            @include display-flex($justifyContent: space-between);
+                            width: 100%;
+
+                            &__text {
+                                max-width: 80%;
+                            }
+                        }
+                        &:hover {
+                            scale: 1.05;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

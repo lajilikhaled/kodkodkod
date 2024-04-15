@@ -1,0 +1,165 @@
+.testimonials{
+  .div {
+    justify-content: center;
+    padding: 0px 60px;
+    background-color: var(--White, #fff);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .div-1 {
+    display: flex;
+    flex-direction: column;
+    //margin-top: 75px;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .div-5 {
+    text-align: start;
+  }
+
+  .div-11 {
+    color: #15141a;
+    font: 600 45px / 80px Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0px 20% 50px;
+  }
+  @media (max-width: 991px) {
+    .div {
+      padding: 0px 20px;
+    }
+    .div-11 {
+        margin: 0px;
+        font: 600 37px / 50px Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
+    }
+  }
+
+  .div-12 {
+    align-items: center;
+    display: flex;
+    gap: 58px;
+    justify-content: end;
+  }
+  @media (max-width: 991px) {
+    .div-12 {
+      margin-top: 20px;
+      display: flex!important;
+      flex-direction: column!important;
+      flex-wrap: wrap!important;
+      align-items: center!important;
+    }
+  }
+
+  // .div-21 {
+  //   position: absolute;
+  //   margin-right: 60%;
+  // }
+  // @media (max-width: 991px) {
+  //   .div-21 {
+  //     position: absolute;
+  //     margin-top: 118%;;
+  //     margin-right: 20%;
+  //   }
+  // }
+
+  .div-22 {
+    width: 80%;
+    text-align: center;
+  }
+
+  .div-23 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 3%;
+
+
+  }
+  @media (max-width: 991px) {
+    .div-23 {
+      margin-bottom: 10%;
+
+    }
+    .icon-testimonial {
+      display: block!important;
+    }
+  }
+
+  .div-24,
+  .div-24 span {
+    color: #15141a;
+    font: 500 23px / 48px Satoshi, sans-serif;
+    text-align: center;
+  }
+  @media (max-width: 991px) {
+    .div-24 {
+      font: inherit;
+    }
+    .div-24 span {
+      font-family: 'Space Grotesk';
+      letter-spacing: -0.02em;
+      font: 500 22px / 36px Satoshi, sans-serif;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .div-25 {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .div-31 {
+      margin-left: 20%;
+      font-weight: bold;
+    }
+  }
+  .next-icon {
+    align-items: center;
+    aspect-ratio: 1;
+    border: 1.5px solid #15141a;
+    border-radius: 40px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    padding: 0 10px;
+    width: 40px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 991px) {
+    .next-icon {
+      width: 30px;
+      height: 50px;
+    }
+  }
+
+  .div-51 {
+    color: var(--Main-color-Gray, #414141);
+    font: 600 20px / 150% Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
+    margin-bottom: 5px;
+  }
+
+  .next-mobile .to-the-left{
+    display: none;
+  }
+  @media (max-width: 991px) {
+    .next-mobile {
+      display: flex;
+    }
+    .mobile-icon {
+      display: none;
+    }
+    .next-mobile .to-the-left{
+      display: block;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .to-the-left.mobile-icon {
+        display: none;
+    }
+}
+}

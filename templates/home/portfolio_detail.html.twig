@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}portfolio{% endblock %}
+{% block description %}portfolio{% endblock %}
+
+
+{% block body %}
+
+    <div class="app-home-portfolio-detail">
+		<section class="jumbotron">
+			<div class="box">
+				<div class="left">
+					<div class="title">
+						{{project.title}}
+					</div>
+					<div class="desc">
+						{{project.description}}
+					</div>
+					<div>
+						Technology : {{ project.technology|join(',')}}
+					</div>
+					<a href="https://calendly.com/kodkodkod/call-projet" >
+						<button class="pink-btn">
+							Estimer votre projet
+						</button>
+					</a>
+				</div>
+				<div class="right">
+					<img class="jumbo-img" src="/build/images/newLandingPage/jumbotron.5df78d63.png">
+				</div>
+			</div>
+		</section>
+    </div>
+
+    <script>
+
+    </script>
+
+
+{% endblock %}

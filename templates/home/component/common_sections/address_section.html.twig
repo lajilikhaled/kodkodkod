@@ -1,0 +1,69 @@
+{# Address Section #}
+<section class="sec-address">
+	<div class="box">
+		<div class="img"><img class="illus-contact-img" src="{{ asset('build/images/landingPage/footer/globe.png') }}" alt="illustration globe address section" loading="lazy" width="300" height="300"/></div>
+
+		<div class="address">
+			{% if app.request.locale == "en" %}
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/us.svg') }}" alt="usa flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">USA</div>
+					<div class="sub-title">Hodora SAS - Kodkodkod Studio<br>99 Wall Street #4404 New York, NY 10005</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/fr.svg') }}" alt="french flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">FRANCE</div>
+					<div class="sub-title">328 rue du Doyen Georges Chapas<br>69009 Lyon</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/gb.svg') }}" alt="uk flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">UK</div>
+					<div class="sub-title">HODORA UK LIMITED<br>Fourth Floor, 4-8 Ludgate Circus, London, EC4M 7LF</div>
+				</div>
+			{% elseif app.request.locale == "fr" %}
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/fr.svg') }}" alt="french flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">PARIS</div>
+					<div class="sub-title">28 rue du Poteau<br>75018 Paris</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/fr.svg') }}" alt="french flag"loading="lazy"  width="50" height="38"/></div>
+					<div class="title">LYON</div>
+					<div class="sub-title">328 rue du Doyen Georges Chapas<br>69009 Lyon</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/gb.svg') }}" alt="uk flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">UK</div>
+					<div class="sub-title">Fourth Floor, 4-8 Ludgate Circus,<br>London, EC4M 7LF</div>
+				</div>
+			{% else %}
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/fr.svg') }}" alt="french flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">FRANCE</div>
+					<div class="sub-title">328 rue du Doyen Georges Chapas<br>69009 Lyon</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/kr.svg') }}" alt="korea flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">SOUTH KOREA</div>
+					<div class="sub-title">서울특별시 강남구 영동대로 602, 미켈란107 6층 K12<br/>주식회사 호도라(592-84-00057)</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/us.svg') }}" alt="us flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">USA</div>
+					<div class="sub-title">Hodora SAS - Kodkodkod Studio<br>99 Wall Street #4404 New York, NY 10005</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/gb.svg') }}" alt="uk flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">UK</div>
+					<div class="sub-title">HODORA UK LIMITED<br>Fourth Floor, 4-8 Ludgate Circus, London, EC4M 7LF</div>
+				</div>
+				<div class="address__box">
+					<div class="img"><img src="{{ asset('build/images/landingPage/footer/vn.svg') }}" alt="vietnam flag" loading="lazy" width="50" height="38"/></div>
+					<div class="title">VIETNAM</div>
+					<div class="sub-title">16 Nguyen Hoi, Nguyen An Ninh ward, Vung Tau city, Vietnam</div>
+				</div>
+
+			{% endif %}
+		</div>
+	</div>
+</section>

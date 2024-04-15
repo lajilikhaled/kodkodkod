@@ -1,0 +1,226 @@
+{% set currentPath = path(app.request.attributes.get('_route'),
+      app.request.attributes.get('_route_params')) %}
+
+{% set prefixPhotoUrl = "build/images/portrait/" %}
+
+{% set listDevelopers = [
+  {
+    'name': 'Maxime',
+    'position': 'team-developpers.section1.baseline1',
+    'skill': 'team-developpers.section1.baseline2',
+    'photoUrl': 'maxime-square.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/maximegastaldo/',
+    'github' : 'https://github.com/maxtor3569'
+  },
+  {
+    'name': 'Morgan',
+    'position': 'team-developpers.section2.baseline1',
+    'skill': 'team-developpers.section2.baseline2',
+    'photoUrl': 'morgan.png',
+    'linkedin' : 'https://www.linkedin.com/in/morganbancel/',
+    'github' : ''
+  },
+  {
+    'name': 'Vuong',
+    'position': 'team-developpers.section3.baseline1',
+    'skill': 'team-developpers.section3.baseline2',
+    'photoUrl': 'vuong.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/nqvuong/',
+    'github' : 'https://gitlab.com/nqvuong'
+  },
+  {
+    'name': 'Dabin',
+    'position': 'team-developpers.section4.baseline1',
+    'skill': 'team-developpers.section4.baseline2',
+    'photoUrl': 'dabin.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/dabin-kim-7a535a140/',
+    'github' : ''
+  },
+  {
+    'name': 'Gary',
+    'position': 'team-developpers.section5.baseline1',
+    'skill': 'team-developpers.section5.baseline2',
+    'photoUrl': 'gary.jpg',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : 'https://github.com/TheGarious'
+  },
+  {
+    'name': 'Damien',
+    'position': 'team-developpers.section6.baseline1',
+    'skill': 'team-developpers.section6.baseline2',
+    'photoUrl': 'damien.jpg',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : 'https://github.com/Smeagolworms4'
+  },
+  {
+    'name': 'Olivier',
+    'position': 'team-developpers.section7.baseline1',
+    'skill': 'team-developpers.section7.baseline2',
+    'photoUrl': 'ohtrinh.jpg',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : 'https://gitlab.com/otrinh'
+  },
+  {
+    'name': 'Dang',
+    'position': 'team-developpers.section8.baseline1',
+    'skill': 'team-developpers.section8.baseline2',
+    'photoUrl': 'dang.jpg',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : ''
+  },
+  {
+    'name': 'Vinh',
+    'position': 'team-developpers.section9.baseline1',
+    'skill': 'team-developpers.section9.baseline2',
+    'photoUrl': 'vinh.jpg',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : ''
+  },
+  {
+    'name': 'Thanh Qui',
+    'position': 'team-developpers.section10.baseline1',
+    'skill': 'team-developpers.section10.baseline2',
+    'photoUrl': 'thanhqui.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/thanh-qui-nguyen/',
+    'github' : 'https://github.com/qui-nguyen'
+  }
+]
+%}
+
+{% set listUrlPage = [
+    {
+      'pageName': '',
+      'routeName': '/',
+      'linkCta': 'link-quote'
+    },
+    {
+      'pageName': 'blockchain',
+      'routeName': '/blockchain',
+      'linkCta': 'link-quote-blockchain'
+    },
+    {
+      'pageName': 'react',
+      'routeName': '/react',
+      'linkCta': 'link-quote-react'
+    },
+    {
+      'pageName': 'vue',
+      'routeName': '/vue',
+      'linkCta': 'link-quote-vue'
+    },
+    {
+      'pageName': 'flutter',
+      'routeName': '/flutter',
+      'linkCta': 'link-quote-flutter'
+    },
+    {
+      'pageName': 'symfony',
+      'routeName': '/symfony',
+      'linkCta': 'link-quote-symfony'
+    },
+    {
+      'pageName': 'magento',
+      'routeName': '/magento',
+      'linkCta': 'link-quote-magento'
+    },
+    {
+      'pageName': 'prestashop',
+      'routeName': '/prestashop',
+      'linkCta': 'link-quote-prestashop'
+    },
+    {
+      'pageName': 'cms',
+      'routeName': '/cms',
+      'linkCta': 'link-quote-cms'
+    }
+] %}
+
+<div id="new-team-developers" class="new-team-developers">
+	<div class="box">
+		<div class="row-1">Une équipe dédiée</div>
+		<div class="row-2">
+			<div class="title">Nos développeurs</div>
+		</div>
+		<div class="cards">
+
+			{% for d in listDevelopers %}
+				<div class="card">
+					<div class="card__img">
+						<img src="{{ asset(prefixPhotoUrl ~ d.photoUrl) }}" alt="img">
+					</div>
+					<div class="card__text">
+						<div class="title">{{d.name}}</div>
+						<div class="sub-title">
+
+							{% if app.request.locale != 'fr'  %}
+								<div class="sub-title__1">{{d.position|trans}}</div>
+							{% endif %}
+
+							{% if app.request.locale != 'ko'  %}
+								<div class="sub-title__2">
+									<p>{{d.skill|trans}}</p>
+								</div>
+							{% endif %}
+
+						</div>
+					</div>
+					<div
+						class="card__contact">
+
+						{# Linkedin #}
+						{% if d.linkedin == '' %}
+							<div class="badge" style="display: none">
+								<a href="" class="icon pr-logo-linkedin" ></a>
+							</div>
+						{% else %}
+							<div class="badge">
+								<a href={{d.linkedin}} class="icon pr-logo-linkedin" ></a>
+							</div>
+						{% endif %}
+
+						{# Github #}
+						{% if d.github == '' %}
+							<div class="badge badge--black" style="display: none">
+								<a href="" class="icon pr-logo-github" ></a>
+							</div>
+						{% else %}
+							<div class="badge badge--black">
+								<a href={{d.github}} class="icon pr-logo-github" ></a>
+							</div>
+						{% endif %}
+
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		{# Button loop #}
+		<div class="btn">
+			{% for p in listUrlPage %}
+				{% if currentPath == '/' ~ app.request.locale ~ p.routeName %}
+					{# Change link quote by country #}
+					{% if app.request.locale == 'ko' %}
+						<a href={{ p.linkCta|trans }} >
+							<button class="pink-btn">
+								{{ 'team-developpers.cta'|trans }}
+							</button>
+						</a>
+					{% else %}
+						<a href={{ '/' ~ app.request.locale ~ '/form-contact' ~ p.routeName|trans }} >
+							{% if p.routeName == '/cms' %}
+								<button class="white-btn white-btn--text-rose white-btn--lg">
+									{{ 'team-developpers.cta'|trans }}
+								</button>
+							{% else %}
+								<button class="pink-btn">
+									{{ 'team-developpers.cta'|trans }}
+								</button>
+							{% endif %}
+						</a>
+					{% endif %}
+				{% endif %}
+
+			{% endfor %}
+		</div>
+	</div>
+</div>

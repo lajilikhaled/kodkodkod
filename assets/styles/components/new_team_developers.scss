@@ -1,0 +1,203 @@
+.pink-btn {
+    @include pink-btn;
+}
+
+.new-team-developers {
+    @include display-flex;
+    padding: 50px 10px 50px 10px;
+    width: 100%;
+
+    @media (max-width: 640px) {
+        padding: 0 10px;
+    }
+
+    .box {
+        @include box;
+
+        .row-1 {
+            text-align: left;
+            font: normal normal bold 36px/55px Poppins;
+            color: $secClr;
+
+            @media (max-width: 640px) {
+                font: normal normal bold 24px/35px Poppins;
+            }
+        }
+
+        .row-2 {
+            @include display-flex;
+            width: 100%;
+
+            @media (max-width: 640px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            justify-content: space-between;
+
+            .title {
+                @include title;
+                text-align: left;
+                font: normal normal 600 20px/30px Poppins;
+                color: $mainClr;
+
+                @media (max-width: 640px) {
+                    margin-bottom: 30px;
+                    text-align: left;
+                    font: normal normal 600 16px/25px Poppins;
+                }
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 30px;
+            width: 100%;
+            justify-items: center;
+
+            @media (max-width: 1280px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 640px) {
+                grid-column-gap: 5px;
+                justify-items: start;
+            }
+
+            .card {
+                @include display-flex($justifyContent: space-evenly);
+                flex-direction: column;
+                color: $secClr;
+                background: $white;
+                box-shadow: 20px 20px 30px rgba(206, 174, 158, 0.2);
+                border-radius: 14px;
+                padding: 0 20px;
+                font-weight: 700;
+                min-height: 400px;
+                min-width: 230px;
+                margin-top: 40px;
+                position: relative;
+
+                @media (max-width: 640px) {
+                    min-height: 250px;
+                    min-width: 120px;
+                }
+
+                &__img {
+                    width: 50%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 5%;
+
+                    @media (max-width: 640px) {
+                        width: 64px;
+                        top: 2%;
+                    }
+                }
+
+                &__text {
+                    @include display-flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 45%;
+
+                    @media (max-width: 640px) {
+                        top: 35%;
+                        width: 80%;
+                    }
+
+                    .title {
+                        font: normal normal bold 31px/47px Poppins;
+                        line-height: 45px;
+
+                        @media (max-width: 640px) {
+                            font: normal normal bold 20px/30px Poppins;
+                        }
+                    }
+
+                    .sub-title {
+                        display: grid;
+                        grid-template-rows: 1fr 2fr;
+                        height: 100px;
+                        justify-items: center;
+                        padding-top: 5px;
+
+                        @media (max-width: 640px) {
+                            height: 60px;
+                        }
+
+                        &__1 {
+                            @include sub-title($fontSize: 20px);
+                            color: $secClr;
+
+                            @media (max-width: 640px) {
+                                margin-bottom: 5px;
+                                font: normal normal 600 12px/15px Poppins;
+                            }
+                        }
+
+                        &__2 {
+                            grid-row: 2 / 2;
+
+                            p {
+                                @include sub-title($fontSize: 16px);
+                                color: $secClr;
+                                text-align: center;
+
+                                @media (max-width: 640px) {
+                                    font: normal normal 600 12px/15px Poppins;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &__contact {
+                    @include display-flex;
+                    position: absolute;
+                    bottom: 5%;
+
+                    .badge {
+                        @include display-flex;
+                        width: 40px;
+                        height: 40px;
+                        z-index: 1;
+
+                        .pr-logo-linkedin {
+                            font-size: 40px;
+                            margin-right: 5px;
+                            color: $secClr;
+                            background-color: $white;
+                        }
+
+                        &--black {
+                            width: 31px;
+                            height: 31px;
+                            background-color: $secClr;
+                            border-radius: 3px;
+
+                            .pr-logo-github {
+                                font-size: 20px;
+                                color: $white;
+                                background-color: $secClr;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+    }
+}

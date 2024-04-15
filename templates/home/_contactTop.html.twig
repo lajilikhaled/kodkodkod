@@ -1,0 +1,66 @@
+<div class="uk-width-1-2@m secondBlock">
+	<div class="form-inner uk-position-relative">
+
+		<h2 class="uk-modal-title uk-h1">{{ title|trans }}</h2>
+		<div class="result"></div>
+		<form class="pr__contact-land pr__form" action="{{ path('send_form') }}" method="post" style="margin-top: 0px">
+			<div uk-grid>
+				<div class="pr__form__group uk-width-1-1@s uk-width-1-2@m uk-width-1-2@l uk-width-1-2@xl">
+					<label for="name">{{'Your name'|trans}}<span class="required">*</span></label>
+					<input class="pr-input" id="name" name="firstname" type="text" required />
+				</div>
+
+				<div class="uk-width-1-1@s uk-width-1-2@m uk-width-1-2@l uk-width-1-2@xl">
+					<label for="subject">{{'Your company'|trans}}<span class="required">*</span></label>
+					<input class="pr-input" id="subject" name="company" type="text" required />
+				</div>
+
+			</div>
+			<div  uk-grid >
+
+				<div class="pr__form__group uk-width-1-1@s uk-width-1-2@m uk-width-1-2@l uk-width-1-2@xl">
+					<label for="subject">{{'Your project type'|trans}}<span class="required">*</span></label>
+					{%if select == 'all'%}
+						<select class="uk-select" id="budget" name="type">
+							<option>{{'Website development'|trans}}</option>
+							<option>{{'App development'|trans}}</option>
+							<option>{{'Website redesign'|trans}}</option>
+							<option>{{'Other'|trans}}</option>
+						</select>
+					{%endif%}
+
+					{% if select == 'blockchain'%}
+						<select class="uk-select" id="budget" name="type">#}
+							<option>Création d’app Blockchain</option>
+							<option>Autre projet Blockchain</option>
+						</select>
+					{%endif%}
+
+					{% if select == 'nft' %}
+						<select class="uk-select" id="budget" name="type">#}
+							<option>Création site web NFT</option>
+							<option>Création application NFT</option>
+							<option>Refonte de site NFT</option>
+							<option>Autre</option>
+						</select>
+					{%endif%}
+				</div>
+
+				<div class="uk-width-1-1@s uk-width-1-2@m uk-width-1-2@l uk-width-1-2@xl">
+					<label for="email">{{'Your email'|trans}}<span class="required">*</span></label>
+					<input class="pr-input" id="email" name="email" type="text" required />
+				</div>
+
+			</div>
+
+			<div class="pr__form__group">
+				<label for="message">{{ 'Project detail'|trans }}<span class="required">*</span></label>
+				<textarea class="pr-textarea" id="message" name="message" required></textarea>
+			</div>
+			<p class="pr__form__group uk-margin-large">
+				<button class="uk-button uk-button-large uk-button-primary" type="submit">{{ 'Validate'|trans }}</button>
+			</p>
+		</form>
+	</div>
+
+</div>

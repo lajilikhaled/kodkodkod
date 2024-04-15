@@ -1,0 +1,173 @@
+.new-footer {
+    @include display-flex;
+    flex-direction: column;
+    background-color: #0A0F1B;
+    color: $footerTxt;
+    overflow-x: hidden;
+
+    @media (max-width: 640px) {
+        padding: 10px 20px 0 20px;
+    }
+
+    &__row-1 {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        max-width: 1250px;
+        width: 100%;
+        grid-gap: 75px;
+
+        @media (max-width: 1180px) {
+            margin-left: 100px;
+            grid-gap: 5%;
+        }
+
+        @media (max-width: 640px) {
+            grid-template-columns: 1fr;
+            margin-left: 0;
+        }
+
+        .infos {
+            &__logo {
+                margin: 30px 0;
+            }
+
+            &__text {
+                margin-top: 30px;
+                color: #FFF;
+                font: normal normal 500 16px/28px Poppins;
+                letter-spacing: 0px;
+
+                @media (max-width: 640px) {
+                    font: normal normal 500 14px/28px Poppins;
+
+                }
+            }
+        }
+
+        .address {
+            @include display-flex($alignItems: flex-start, $justifyContent: space-evenly);
+            margin-top: 70px;
+            flex-wrap: wrap;
+
+            @media (max-width: 1180px) {
+                justify-content: flex-start;
+                column-gap: 5%;
+            }
+
+            @media (max-width: 640px) {
+                margin-top: 15px;
+            }
+
+            &__item {
+                @include display-flex;
+                width: 230px;
+
+                @media (max-width: 1180px) {
+                    width: 40%;
+                    margin-bottom: 5%;
+                }
+
+                @media (max-width: 640px) {
+                    width: 47%;
+                    margin-bottom: 5%;
+                }
+
+                a {
+                    div {
+                        color: #E9204F;
+                        font: normal normal 600 18px/28px Poppins;
+                        letter-spacing: 0px;
+                        text-transform: uppercase;
+                        margin-bottom: 35px;
+
+                        &:hover {
+                            color: white
+                        }
+
+                        @media (max-width: 1180px) {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    span {
+                        color: white;
+                        text-transform: none;
+                        font: normal normal 500 16px/28px Poppins;
+                        letter-spacing: 0px;
+
+                        @media (max-width: 640px) {
+                            font: normal normal 500 14px/28px Poppins;
+                        }
+
+                        &:hover {
+                            color: #E9204F
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__row-2 {
+
+        .conditions {
+            @include display-flex;
+            margin-bottom: 18px;
+
+            @media (max-width: 640px) {
+                margin-top: 50px;
+                flex-wrap: wrap;
+            }
+
+            a {
+                display: inline-flex;
+                font-size: 15px;
+                flex-direction: column;
+                color: #FFF;
+                text-align: center;
+
+                &:hover {
+                    color: #E9204F;
+                }
+
+                &:after {
+                    content: "";
+                    height: 1px;
+                    width: 0;
+                    border-top: 1px solid $mainClr;
+                    @include transitions(700);
+                }
+
+                &:hover:after {
+                    width: 100%;
+                }
+            }
+
+            *+a {
+                margin-left: 1rem;
+            }
+        }
+
+        .copyrights {
+            @include display-flex;
+            background-color: #FFF;
+            width: 100vw;
+            padding: 18px 0;
+
+            @media (max-width: 640px) {
+                padding-bottom: 0;
+            }
+
+            p {
+                color: #000;
+                line-height: 0;
+                font: normal normal 400 16px Poppins;
+                // margin-bottom: 0;
+
+                @media (max-width: 640px) {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}

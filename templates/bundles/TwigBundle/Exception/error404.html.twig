@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-TileColor" content="#E9204F">
+    <meta name="theme-color" content="#E9204F">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/images/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/images/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('build/images/site.webmanifest') }}">
+    <link rel="alternate" hreflang="ko" href="https://kodkodkod.studio/ko" />
+    <link rel="alternate" hreflang="en" href="https://kodkodkod.studio/en" />
+    <link rel="alternate" hreflang="fr" href="https://kodkodkod.studio/fr" />
+
+    <meta property="og:title" content= "{% block ogmetatitle %}{{ "head.title" | trans }}{% endblock %}" >
+    <meta property="og:site_name" content="KodKodKod Studio">
+    <meta property="og:url" content="https://kodkodkod.studio">
+    <meta property="og:description" content="{% block ogmetadesc %}{{ "head.desc1" | trans }}{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('build/images/newLandingPage/new_logo.png') }}">
+
+    <title>{% block title %}KodKodKod{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="google-site-verification" content="4pj0KBdPD6rlDpitVqFGSM_nbSw1byaf3zs3OmzF5uc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
+
+
+</head>
+
+<!--################# BODY ####################-->
+
+<body class="{% if app.request.attributes.get('_route') =='home' %}background{% endif %}" {%if app.request.locale == 'ko'%} style="word-break: keep-all;" {% endif %}>
+{% include 'homeNew/navbarWhite.html.twig' %}
+
+<div class="page404">
+    <div class="page-container">
+        <main class="content">
+            <h1 class="not-found-message">This page does not exist</h1>
+            <p class="description">The content you're looking for cannot be found. Please try one of the links above or go to the home page.</p>
+            <a href="/">
+                <button class="go-home-button">Go to Home</button>
+            </a>
+        </main>
+        <aside class="image-column">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e309654db1d41ea72064f8c8a6a9dcdc1d15889c8dbf5712741ac83c1549cbc?apiKey=e06b077e2ebc4cd1a2157810d0a2230d&" alt="Error page illustration" class="page-image" />
+        </aside>
+    </div>
+</div>
+{% block footer %}
+    {% include 'homeNew/footer.html.twig' %}
+{% endblock %}
+</body>
+</html>

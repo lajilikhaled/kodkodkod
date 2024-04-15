@@ -1,0 +1,198 @@
+{% set listResponsesQuestion1 = [
+    {
+      'pageName': '',
+      'routeName': '/form-contact',
+      'reponses': [
+        'form-contact.question1.baseline1',
+        'form-contact.question1.baseline2',
+        'form-contact.question1.baseline3',
+        'form-contact.question1.baseline4',
+        'form-contact.question1.baseline5',
+        'form-contact.question1.baseline6']
+    },
+    {
+      'pageName': 'blockchain',
+      'routeName': '/form-contact/blockchain',
+      'reponses': [
+        'form-contact.blockchain.question1.baseline1',
+        'form-contact.blockchain.question1.baseline2',
+        'form-contact.blockchain.question1.baseline3',
+        'form-contact.blockchain.question1.baseline4',
+        'form-contact.blockchain.question1.baseline5',
+		'form-contact.question1.baseline6']
+    },
+    {
+      'pageName': 'react',
+      'routeName': '/form-contact/react',
+      'reponses': [
+        'form-contact.question1.baseline1',
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+        'form-contact.question1.baseline2',
+        'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'vue',
+      'routeName': '/form-contact/vue',
+      'reponses': [
+        'form-contact.webapp.question1.baseline',
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+        'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'flutter',
+      'routeName': '/form-contact/flutter',
+      'reponses': [
+        'form-contact.appiOS.question1.baseline',
+        'form-contact.appAndroid.question1.baseline',
+        'form-contact.twoApps.question1.baseline',
+		'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'symfony',
+      'routeName': '/form-contact/symfony',
+      'reponses': [
+        'form-contact.webapp.question1.baseline',
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+        'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'magento',
+      'routeName': '/form-contact/magento',
+      'reponses': [
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+		'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'prestashop',
+      'routeName': '/form-contact/prestashop',
+      'reponses': [
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+		'form-contact.question1.baseline6']
+    },
+	{
+      'pageName': 'cms',
+      'routeName': '/form-contact/cms',
+      'reponses': [
+        'form-contact.ecommerce.question1.baseline',
+        'form-contact.marketplace.question1.baseline',
+		'form-contact.question1.baseline6']
+    }
+] %}
+
+{% set currentPath = path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params')) %}
+
+<div class="responses">
+	{# Question 1 #}
+	<div id="div-question-1-checkbox" class="response question-1">
+		<div class="response__title">{{ "form-contact.question1.title"|trans}}</div>
+		<div class="response__checkboxs">
+			{% for page in listResponsesQuestion1 %}
+				{% if currentPath == '/' ~ app.request.locale ~ page.routeName %}
+					{% for response in page.reponses %}
+						<div class="white-btn checkbox">{{response|trans}}</div>
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+	<div id="div-question-1-input" class="response" style="display: none">
+		<div class="response__title">{{ "form-contact.question1.input-title"|trans}}</div>
+		<div class="response__input">
+			<textarea name="description" id="question-1-input-area" placeholder="Description" rows="7"></textarea>
+		</div>
+		<div class="response__btns">
+			<div id="back-question-1-checkbox" class="btn-back">
+				<button class="white-btn btn--md" style="">{{ "back"|trans}}</button>
+			</div>
+			<div id="submit-question-1" class="btn-submit" style="">
+				<button class="pink-btn btn--md">{{ "next"|trans}}</button>
+			</div>
+		</div>
+	</div>
+
+	{# Question 2 #}
+	<div id="div-question-2-checkbox" class="response question-2" style="display: none">
+		<div class="response__title">{{ "form-contact.question2.title"|trans}}</div>
+		<div class="response__checkboxs">
+			<div class="white-btn checkbox">{{ "form-contact.question2.baseline1"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question2.baseline2"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question2.baseline3"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question2.baseline4"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question2.baseline5"|trans}}</div>
+		</div>
+		<div class="response__btns">
+			<div id="back-question-1" class="btn-back">
+				<button class="white-btn btn--md" style="">{{ "back"|trans}}</button>
+			</div>
+		</div>
+	</div>
+
+	{# Question 3 #}
+	<div id="div-question-3-checkbox" class="response question-3" style="display: none">
+		<div class="response__title">{{ "form-contact.question3.title"|trans}}</div>
+		<div class="response__checkboxs">
+			<div class="white-btn checkbox">{{ "form-contact.question3.baseline1"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question3.baseline2"|trans}}</div>
+			<div class="white-btn checkbox">{{ "form-contact.question3.baseline3"|trans}}</div>
+		</div>
+		<div class="response__btns">
+			<div id="back-question-2" class="btn-back">
+				<button class="white-btn btn--md">{{ "back"|trans}}</button>
+			</div>
+		</div>
+	</div>
+
+	{# Question 4 #}
+	<div id="div-question-4-checkbox" class="response question-4" style="display: none">
+		<div class="response__title">{{ 'form-contact.question4.title'|trans }}</div>
+		<div class="response-contact">
+			<form class="contact-input" method="post">
+				<div class="contact-input__item">
+					<label for="name">{{ 'Name'|trans }}<span class="required">*</span>
+					</label>
+					<input class="" id="name" name="name" type="text" required/>
+				</div>
+				<div class="contact-input__item">
+					<label for="email">{{ 'Email'|trans }}<span class="required">*</span>
+					</label>
+					<input class="" id="email" name="email" type="email" required/>
+				</div>
+				<div class="contact-input__item">
+					<label for="telephone">{{ 'Telephone'|trans }}<span class="required">*</span>
+					</label>
+					<input class="" id="tel-number" name="tel-number" type="text" required/>
+				</div>
+				<div class="contact-input__item">
+					<label for="interprise">{{ 'Enterprise'|trans }}<span class="required">*</span>
+					</label>
+					<input class="" id="enterprise" name="enterprise" required />
+				</div>
+
+				{# Input hidden #}
+				<div class="" style="display: none">
+					<input class="" id="question-1-checkbox" name="type-project" hidden />
+					<input class="" id="question-1-input" name="project-detail" hidden />
+					<input class="" id="question-2-checkbox" name="budget" hidden />
+					<input class="" id="question-3-checkbox" name="time" hidden />
+				</div>
+				{# Btn submit #}
+				<div class="response__btns question-4-btns">
+					<div class="btn-back">
+						<button id="back-question-3" class="white-btn btn--md">{{ "back"|trans}}</button>
+					</div>
+					<div id="submit-questions" class="btn-submit">
+						<button class="pink-btn btn--md" type="submit" data-callback='onSubmit' data-action='submit'>
+							{{ 'send'|trans }}
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

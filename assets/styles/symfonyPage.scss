@@ -1,0 +1,111 @@
+.jumbo-img-symfony {
+    width: fit-content !important;
+    max-width: 70% !important;
+}
+
+.type-project {
+    &--symfony {
+        .box {
+            &__title {
+               margin-left: auto;
+               margin-right: auto; 
+            }
+
+            &__cards {
+                &--symfony {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-column-gap: 40px;
+                    margin-top: 30px;
+                    width: 70%;
+                    align-self: center;
+
+                    @media (max-width: 1280px) {
+                        width: 100%;
+                    }
+    
+                    @media (max-width: 600px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+    
+                    .card {
+                        &--symfony {
+                            @include display-flex($justifyContent: space-around);
+                            flex-direction: column;
+                            padding: 10px 0;
+                            min-height: 150px;
+    
+                            .title--symfony {
+                                position: relative;
+                                left: 0;
+                                right: 0;
+                                top: 0;
+                                text-align: center;
+                            }
+                        }
+                       
+                        .icon-container {
+                            position: relative;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            .icon {
+                                &--mobile {
+                                    margin: 0 5px;
+                                    width: 16px;
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+    
+            &__btn {
+                display: grid;
+                align-self: center;
+                margin-top: 30px;
+            }
+        }
+    }
+
+}
+
+.introduction-symfony {
+    @include center;
+    padding: 10px 10px 50px 10px;
+
+    .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1250px;
+        width: 100%;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 40px;
+        }
+
+        &__left {
+            .title {
+                @include title;
+                text-align: left;
+            }
+
+            .description {
+                @include sub-title;
+            }
+        }
+
+        &__right {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

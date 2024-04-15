@@ -1,0 +1,79 @@
+<section class="pr__features uk-padding-remove-bottom" id="expertises">
+	<div class="uk-container">
+		<div class="section-heading">
+			<div class="uk-container">
+				<div class="inner">
+					<div class="left">
+						<hr class="line pr__hr__secondary">
+						<h2 class="title uk-h1">{{ 'Our expertise'|trans }}</h2>
+{#						<span class="subtitle pr__heading__secondary">{{ 'By our code experts'|trans }}</span>#}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="section-inner">
+			<div class="items-listing features-boxes uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m"
+				 data-uk-grid="">
+				<div class="item feature-box">
+					<div class="inner">
+						<i class="icon pr-chart-bars pr__icon__large"></i>
+						<h3 class="title uk-h4">
+								{{ (landing ~'.expertise.title')|trans }}
+						</h3>
+						<hr class="line pr__hr__secondary">
+						<p class="description">
+							{{ (landing ~'.expertise.baseline')|trans }}
+					</div>
+				</div>
+				<div class="item feature-box">
+					<div class="inner">
+						<i class="icon pr-rocket pr__icon__large"></i>
+						<h3 class="title uk-h4">{{ (landing ~ '.expertise.title2')|trans }}</h3>
+						<hr class="line pr__hr__secondary">
+						<p class="description">
+							{{ (landing ~'.expertise.baseline2')|trans }}
+					</div>
+				</div>
+				<div class="item feature-box" style="height:100%">
+					<div class="inner">
+
+						<p class="description">
+							{%if landing == 'magento'%}
+							<img src="{{ asset('build/images/magento.png') }}" alt="logo magento" />
+							{% endif %}
+							{% if landing == 'nft' %}
+							<img src="{{ asset('build/images/ethereum.png') }}" alt="ethereum"/>
+							{% endif %}
+
+							{% if landing == 'blockchain' %}
+								<img src="{{ asset('build/images/ethereum.png') }}" alt="ethereum"/>
+							{% endif %}
+
+							{% if landing == 'prestashop' %}
+								<img src="{{ asset('build/images/prestashop.png') }}" alt="logo prestashop" />
+							{% endif %}
+							{% if landing == 'react' %}
+								<img src="{{ asset('build/images/react.jpeg') }}" alt="logo react" style="margin-top: 0px"/>
+							{% endif %}
+
+							{% if landing == 'shopify' %}
+								<img src="{{ asset('build/images/Shopify.png') }}" alt="logo shopify" />
+							{% endif %}
+
+							{% if landing == 'symfony' %}
+								<img src="{{ asset('build/images/Symfony.png') }}" alt="logo symfony" />
+							{% endif %}
+
+							{% if landing == 'vue' %}
+								<img src="{{ asset('build/images/vuejs.png') }}" alt="logo Vue.js" style="margin-top: 0px"/>
+							{% endif %}
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

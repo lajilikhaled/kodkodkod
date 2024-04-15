@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.metavers.meta" | trans }}{% endblock %}
+
+{% block title %}
+	{{ "head.metavers.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2.metavers" | trans }}
+{% endblock %}
+
+{% block body %}
+
+	{# Change link quote by country #}
+	{% if app.request.locale == "ko" %}
+		{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+	{% else %}
+		{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+	{% endif %}
+	{% if hongKong is defined and hongKong %}
+		{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+	{% endif %}
+
+	<div
+		class="landingPage">
+
+		{# Jumbotron #}
+		<section class="sec-jumbotron">
+			<div class="bg-img"><img class="blockchain-bg-img" src="{{ asset('build/images/landingPage/bg.png') }}" alt="black bg image"/></div>
+			<div class="img-deco img-deco--left"><img src="{{ asset('build/images/landingPage/rings-1.png') }}" alt="decoration image"/></div>
+
+			<div class="box">
+				{% if app.request.locale == "ko" or app.request.locale == "hk" %}
+					<div class="box__title">
+						<h1>{{ 'section1.blockchain.baseline1'|trans }}&nbsp;</h1>
+					</div>
+				{% else %}
+					<div class="box__title">
+						<h1>
+							{{ 'section1.blockchain.baseline1.part1'|trans }}&nbsp;
+							<span class="highlight">{{ 'section1.metavers.baseline1.part2'|trans }}</span>
+						</h1>
+					</div>
+				{% endif %}
+
+				{# Jumbotron Buttons #}
+				<div class="box__btns">
+					<a href={{ linkQuote }}>
+						<button class="pink-btn">
+							{{ 'cta.top'|trans }}
+						</button>
+					</a>
+
+					{% if app.request.locale == 'fr' %}
+						{# <a href="tel:0451202424">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								04 51 20 24 24
+							</button>
+						</a> #}
+
+					{% elseif app.request.locale == 'en' and not hongKong %}
+						{# <a href="tel:+19292389229">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								+1 929-238-9229
+							</button>
+						</a> #}
+
+					{% elseif app.request.locale == 'ko' %}
+						<a href="tel:1668-5028">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								1668-5028
+							</button>
+						</a>
+					{% elseif app.request.locale == 'hk' or hongKong %}
+						<a href="tel:+19292389229">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								+1 929-238-9229
+							</button>
+						</a>
+					{% endif %}
+				</div>
+
+				{# Jumbotron Illustrations Img #}
+				<div class="box__imgs">
+					<img class="circles-img" src="{{ asset('build/images/landingPage/circles-img.png') }}" alt="circles images"/>
+				</div>
+			</div>
+		</section>
+
+		<section class="illustration-img">
+			<img class="img-principal img-principal--blockchain" src="{{ asset('build/images/blockchain/illustration_blockchain.png') }}" alt="illustration computers"/>
+
+			<div class="animation-img">
+				<img class="techno-logo techno-logo--left-top cryptocurrency-logo matic-logo" src="{{ asset('build/images/blockchain/cryptocurrency_matic.png') }}" alt="cryptocurrency matic logo"/>
+				<img class="techno-logo techno-logo--left-bottom cryptocurrency-logo" src="{{ asset('build/images/blockchain/cryptocurrency_bsc_2.png') }}" alt="cryptocurrency bsc logo"/>
+				<img class="techno-logo techno-logo--right-top cryptocurrency-logo eth-logo" src="{{ asset('build/images/blockchain/cryptocurrency_eth.png') }}" alt="cryptocurrency eth logo"/>
+				<img class="techno-logo techno-logo--right-bottom cryptocurrency-logo" src="{{ asset('build/images/blockchain/cryptocurrency_tezos.png') }}" alt="cryptocurrency tezos logo"/>
+			</div>
+
+		</section>
+
+		{# Common Section #}
+		{% include 'home/blockchain_variants/component/common_sections.html.twig' %}
+
+		{# Address Section #}
+		{% include 'home/component/common_sections/address_section.html.twig' %}
+
+	</div>
+
+	{# ----------------------------------------------------------------- #}
+{% endblock %}

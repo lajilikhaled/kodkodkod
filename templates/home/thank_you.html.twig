@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.thankYou.meta" | trans }}{% endblock %}
+
+{% block title %}
+	{{ "head.thankYou.title" | trans }}
+{% endblock %}
+
+{% block description %}{{ "head.desc2" | trans }}{% endblock %}
+ {% block javascript_header %}
+     <script type="text/javascript">
+		 fbq('track', 'Lead');
+     </script>
+ {% endblock %}
+{% block body %}
+    <div class="app-home-newLandingPage app-home-newLandingPage--thank-page">
+        <div class="container__text">
+                <p>{{ "container.baseline" | trans}}</p>
+        </div>
+        <div class="container__button">
+
+
+        {% set homePagePath = '/' ~ app.request.locale %}
+            <a href= {{ homePagePath }} >
+                <button class="pink-btn">Kodkodkod.studio</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="landingPage">
+	{# Address Section #}
+	{% include 'home/component/common_sections/address_section.html.twig' %}
+    </div>
+{% endblock %}

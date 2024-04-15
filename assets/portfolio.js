@@ -1,4 +1,5 @@
-
+import './styles/style.scss';
+//import './styles/portfolio.scss';
 $(document).ready(function(){
     var activeCat = "";
     function filterGroup(group){

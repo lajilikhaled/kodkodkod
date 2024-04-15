@@ -9,20 +9,16 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
-###> phpunit/phpunit ###
-/phpunit.xml
-.phpunit.result.cache
-###< phpunit/phpunit ###
-
 ###> symfony/phpunit-bridge ###
+.phpunit
 .phpunit.result.cache
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-###> symfony/asset-mapper ###
-/public/assets/
-/assets/vendor/
-###< symfony/asset-mapper ###
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunihttps://goengage.ddev.site:8026/t/phpunit ###https://goengage.ddev.site:8026/
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/
@@ -30,7 +26,8 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+/public/images/
 
-###> PhpStorm/config-dir ###
-/.idea/
-###> PhpStorm/config-dir ###
+*.css
+assets/styles/*/*.css
+assets/*/*.css

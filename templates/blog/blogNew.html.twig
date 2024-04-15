@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+
+{% set blogsArray1 = [] %}
+{% set blogsArray2 = [] %}
+
+{% if blogs|length >= 6 %}
+	{% set blogsArray1 = blogs|slice(0, 5) %}
+	{% set blogsArray2 = blogs|slice(6) %}
+{% else %}
+	{% if blogs %}
+		{% set blogsArray1 = blogs %}
+	{% endif %}
+{% endif %}
+
+{# ----------------------BLOC 1--------------------------- #}
+{% set totalLines1 = (blogsArray1|length / 3)|round(0, 'floor')  %}
+{% if blogsArray1|length % 3 %}
+	{% set totalLines1 = totalLines1 + 1 %}
+{% endif %}
+
+{# ----------------------BLOC 2--------------------------- #}
+{% if blogsArray2|length > 0 %}
+	{% set totalLines2 = (blogsArray2|length / 4)|round(0, 'floor') %}
+	{% if blogsArray2|length % 4 %}
+		{% set totalLines2 = totalLines2 + 1 %}
+	{% endif %}
+{% endif %}
+
+{% block body %}
+
+	<div class="app-blog-index">
+
+		<div class="title">
+			<h1>{{ 'page.title.blog'|trans }}</h1>
+		</div>
+
+		<div class="mainArticle">
+			<a href="{{'/' ~ lastArticle.locale ~ '/article/' ~ lastArticle.slug}}">
+			<section class="content-wrapper">
+
+				<div class="content-column">
+					<div class="separator"></div>
+{#					<div class="category-text">{{ lastArticle.technology }}</div>#}
+					<div class="title-text">
+						{{ lastArticle.title }}
+					</div>
+					<div class="date-author">
+						<div class="date-text">{{ lastArticle.posted|date('d/m/Y') }}</div> {# 05 Sep 2022, #}
+						<div class="author-text">by KodKodKod</div>
+					</div>
+					<div class="bottom-separator"></div>
+				</div>
+				<aside class="image-column">
+					<img loading="lazy" src="{{ '/images/blog/' ~ lastArticle.image }}" alt="{{ lastArticle.image }}" class="category-image" />
+				</aside>
+
+			</section>
+			</a>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="listArticle">
+
+			<div class="container">
+				{% set totalBlogs = blogs|length %}
+				{% for blog in blogs %}
+				{% if loop.index0 % 3 == 0 %}
+				{% if not loop.first %}
+			</div> <!-- Close previous row if it's not the first item -->
+			{% endif %}
+			<div class="content-flex"> <!-- Start a new row for every 3 items -->
+				{% endif %}
+
+				<article class="column">
+					<a href="{{'/' ~ blog.locale ~ '/article/' ~ blog.slug}}">
+						<section class="article-content">
+							<img loading="lazy" src="/images/blog/{{ blog.image }}" alt="{{ blog.image }}" class="image" />
+							<h2 class="title">{{ blog.title }}</h2>
+							<div class="info">
+								<div class="date">{{ blog.posted|date('d/m/Y') }},</div>
+								<div class="author">by KodKodKod</div>
+							</div>
+						</section>
+					</a>
+				</article>
+
+				{% if loop.last %}
+			</div> <!-- Close the last row -->
+			{% endif %}
+			{% endfor %}
+			</div>
+		</div>
+
+	</div>
+
+
+{% endblock %}

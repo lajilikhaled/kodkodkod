@@ -1,0 +1,192 @@
+/* Table of content
+---------------------------------------------------
+01. Body
+02. Typogaphy
+03. Header
+04. Sections
+05. Inner Pages
+06. Footer
+07. Utilities
+08. Responsive
+--------------------------------------------------- */
+@import "normalize.min.css";
+//@import "owl.carousel.min.css";
+//@import "pixeicons.css";
+@import "pr.animation.css";
+@import "uikit.min.css";
+@import "variables";
+@import "mixins";
+
+
+
+/* 01. Body
+--------------------------------------------------- */
+@import "body";
+
+/* 02. Typography
+--------------------------------------------------- */
+@import "typography";
+
+/* 05. Inner Pages
+--------------------------------------------------- */
+@import "components/blog";
+@import "components/post";
+@import "components/page";
+@import "components/sidebar";
+
+/* 06. Footer
+--------------------------------------------------- */
+@import "components/footer";
+
+/* 07. Utilities
+--------------------------------------------------- */
+@import "utilities";
+
+/* 09. Team members
+--------------------------------------------------- */
+//@import "components/_team";
+
+
+/* 10. New Landing Page IN USE
+--------------------------------------------------- */
+@import "newLandingPage";
+
+
+/* 12. Portfolio detail component
+--------------------------------------------------- */
+@import "components/portfolio_detail";
+
+/* 13. Home page projects swiper
+--------------------------------------------------- */
+@import "components/home_projects_swiper";
+
+@import "navbar";
+
+/* 14. Blockchain Page
+--------------------------------------------------- */
+@import "blockchainPage";
+
+@import "components/project_detail";
+
+/* 15. React Page
+--------------------------------------------------- */
+//@import "reactPage";
+
+@import "components/swiper_projects";
+
+/* 16. Team developers component
+--------------------------------------------------- */
+@import "components/team_developers";
+
+/* Hide reCaptcha
+--------------------------------------------------- */
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+/* 17. Flutter Page
+--------------------------------------------------- */
+//@import "flutterPage";
+
+/* 18. Vue Page
+--------------------------------------------------- */
+//@import "vuePage";
+
+/* 19. Thank-you Page
+--------------------------------------------------- */
+@import "thankYouPage";
+
+/* 20. Symfony Page a deporter dans un fichier css a part
+--------------------------------------------------- */
+//@import "symfonyPage";
+
+/* 21. Plan Site Page
+--------------------------------------------------- */
+@import "sitemapPage";
+
+/* 22. Magento Page
+--------------------------------------------------- */
+//@import "magentoPage";
+
+/* 23. Form Contact Page
+--------------------------------------------------- */
+@import "formContactPage";
+
+/* 24. Prestashop Page
+--------------------------------------------------- */
+//@import "prestashopPage";
+
+/* 25. CMS Page
+--------------------------------------------------- */
+@import "cmsPage";
+
+/* 26. New Footer
+--------------------------------------------------- */
+@import "components/new-footer";
+
+/* 27. New Team developers component
+--------------------------------------------------- */
+@import "components/new_team_developers";
+
+/* 28. New Team developers component
+--------------------------------------------------- */
+@import "laBlockchainPage";
+
+/* 29. blog page
+--------------------------------------------------- */
+@import "blog";
+
+/* 30. Landing Page (2023)
+--------------------------------------------------- */
+@import "landingPage";
+
+/* 31. Footer of Landing Page (2023)
+--------------------------------------------------- */
+@import "components/footerLP";
+
+/* 32. Section testimonials
+--------------------------------------------------- */
+@import "components/swiper-card/secTestimonials";
+
+/* 32. Section projects
+--------------------------------------------------- */
+@import "components/swiper-card/secProjects";
+
+/* 33. Portfolio Project Detail Page
+--------------------------------------------------- */
+@import "portfolio-project-detail";
+
+/* 34. Kodwallet Page
+--------------------------------------------------- */
+@import "kodwalletPage";
+
+/* 35. React Page 2023
+--------------------------------------------------- */
+@import "reactLP";
+
+@import "~aos/dist/aos.css";
+
+/* 36. Blockchain Page 2023
+--------------------------------------------------- */
+@import "components/swiper-card/secProjectsBlockchain";
+
+/* 37. Blockchain Page Variants
+--------------------------------------------------- */
+@import "blockchain_variants/smart-contracts";
+
+@import "blockchain_variants/d-apps";
+
+@import "blockchain_variants/data-security-traceability";
+
+/* 37. Blog Page
+--------------------------------------------------- */
+@import "blog/blogPage.scss";
+
+/* 38. Contact
+--------------------------------------------------- */
+@import "contact/contactPage";
+@import "contact/chatBot";
+
+/* 39. Section Dev Team
+--------------------------------------------------- */
+@import "components/swiper-card/secDevTeam";

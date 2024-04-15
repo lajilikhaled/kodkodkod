@@ -1,0 +1,40 @@
+<section class="pt-5 space-grotesk">
+    <div class="container py-5">
+        <div class="row justify-content-center p-3">
+            <h1 class="col-md-6 display-5 text-center fw-bolder pb-5">{{ 'map.title'|trans }}</h1>
+            <div style="position: relative">
+                <img src="{{ asset('build/images/map/map.png') }}" alt="map" class="w-100">
+
+                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="paris-pointer map-pointer">
+                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow paris-tooltip map-tooltip">
+                    <span>Paris / Geneva</span>
+                </div>
+
+                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="tunis-pointer map-pointer">
+                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow tunis-tooltip map-tooltip">
+                    <span>Tunis</span>
+                </div>
+
+                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="usa-pointer map-pointer">
+                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow usa-tooltip map-tooltip">
+                    <span>New York</span>
+                </div>
+
+{#                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="asia1-pointer map-pointer">#}
+{#                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow asia1-tooltip map-tooltip">#}
+{#                    <span>Asia 1</span>#}
+{#                </div>#}
+
+                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="asia2-pointer map-pointer">
+                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow asia2-tooltip map-tooltip">
+                    <span>Seoul</span>
+                </div>
+
+{#                <img src="{{ asset('build/images/map/pointer.png') }}" alt="pointer" class="brazil-pointer map-pointer">#}
+{#                <div class="text-center space-grotesk fs-6 fw-medium p-2 mt-2 bg-white rounded-4 shadow brazil-tooltip map-tooltip">#}
+{#                    <span>Brazil</span>#}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+</section>

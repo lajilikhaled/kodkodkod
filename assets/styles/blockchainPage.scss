@@ -1,0 +1,215 @@
+.pink-btn--lg {
+  max-width: 300px !important;
+  width: 300px !important;
+}
+
+.type-project {
+  @include center;
+  padding: 10px 10px 40px 10px;
+
+  .box {
+    @include box;
+    align-items: center;
+
+    &__title {
+      @include title($fontSize: 30px);
+    }
+
+    &__sub-title {
+      @include sub-title;
+    }
+
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+      margin-top: 30px;
+      width: 65%;
+
+      @media (max-width: 1280px) {
+        width: 100%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 70%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 40px;
+      }
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+      }
+
+      .card {
+        background: $white;
+        box-shadow: 5px 5px 30px rgba(206, 174, 158, 0.2);
+        border-radius: 14px;
+        padding: 0 20px;
+        font-weight: 700;
+        min-height: 250px;
+        position: relative;
+
+        .icon-container {
+          position: absolute;
+          top: 10%;
+          left: 20px;
+          background-color: $mainClr;
+          padding: 14px;
+          border-radius: 10px 10px 10px 10px;
+          box-shadow: 5px 5px 30px rgba(233, 32, 79, 0.2);
+
+          .icon {
+            color: $white;
+            height: auto;
+            width: 25px;
+          }
+        }
+        .title {
+          position: absolute;
+          top: 48%;
+          left: 20px;
+          right: 20px;
+        }
+        .informations {
+          position: absolute;
+          bottom: 20%;
+          left: 20px;
+          span {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 30px;
+            color: $mainClr;
+          }
+        }
+      }
+    }
+  }
+}
+
+.equipe-project {
+  @include display-flex;
+  padding: 10px 10px 20px 10px;
+
+  .box {
+    @include box;
+
+    &__title {
+      @include title;
+    }
+
+    &__sub-title {
+      @include sub-title;
+      width: 50%;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    &__sub-box {
+      @include display-flex($alignItems: flex-start);
+      flex-direction: column;
+      background-color: $backgroundCard;
+      width: auto;
+      padding: 25px;
+      border-radius: 14px;
+
+      .title {
+        @include title($fontSize: 20px);
+        @media (max-width: 1024px) {
+          line-height: 30px;
+        }
+      }
+
+      .row-content-1 {
+        width: 100%;
+        .sub-title {
+          @include sub-title;
+        }
+
+        .cards {
+          @include display-flex($justifyContent: space-evenly);
+          @media (max-width: 600px) {
+            flex-direction: column;
+          }
+
+          .card {
+            @include title($fontSize: 22px);
+            margin: 20px 0;
+            padding: 0 20px;
+            @media (max-width: 1024px) {
+              line-height: 30px;
+            }
+
+            img {
+              width: 80px;
+              height: auto;
+              &.card-img {
+                width: auto;
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+
+      .row-content-2 {
+        margin-top: 20px;
+        .sub-title {
+          @include sub-title;
+          padding-bottom: 20px;
+        }
+
+        .cards {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-column-gap: 30px;
+          //margin-top: 30px;
+          width: 100%;
+
+          @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 40px;
+          }
+
+          @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 40px;
+          }
+
+          .card {
+            @include display-flex();
+            flex-direction: column;
+            background: #ffffff;
+            box-shadow: 0px 10px 45px #f6f6f6;
+            border-radius: 14px;
+            padding: 20px 25px;
+            font-weight: 700;
+            min-height: 200px;
+            min-width: 100px;
+            text-align: center;
+
+            img {
+              width: 80px;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        margin: 0 auto;
+        padding-top: 30px;
+
+      }
+    }
+    
+      .w--95 {
+        width: 95%;
+        @media (max-width: 640px) {
+          width: auto;
+      }
+    }
+  }
+}

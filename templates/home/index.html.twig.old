@@ -1,0 +1,512 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Studio de Développement Web | Kodkodkod{% endblock %}
+{% block description %}Kodkodkod est un studio de développement web expert en création et refonte de site web et d'application, imaginé et créé par des développeurs.{% endblock %}
+
+{% block body %}
+
+    <div class="app-homepage-index">
+        <div class="pr__hero__wrap" style="" id="site-hero">
+
+            <header class="pr__header" data-uk-sticky="top: 100vh; animation: uk-animation-slide-top;">
+                <div class="uk-container">
+                    <div class="inner">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="{{ asset('build/images/logo.png') }}" width="100" height="150" alt="logo kodkodkod"  style="margin:20px">
+{#                                <div class="brand"></div>#}
+                            </a>
+                        </div>
+                        <div class="navbar pr-font-second">
+                            <nav class="menu" data-uk-scrollspy-nav="offset: 0; closest: li; scroll: true">
+                                <ul>
+                                    <li><a href="#pr__hero">{{'Home' |trans }}</a></li>
+                                    <li><a href="#pr__services">{{'Our expertise' |trans }}</a></li>
+                                    <li><a href="#pr__works">{{'Projects' |trans }}</a></li>
+                                    <li><a href="#pr__about">{{'About us' |trans }}</a></li>
+                                    <li><a href="#pr__clients">{{'Clients' |trans }}</a></li>
+{#                                    <li><a href="#pr__blog">Blog</a></li>#}
+{#                                    <li>#}
+{#                                        <a href="#pr__contact__form" class="button uk-button uk-button-large uk-button-default" data-uk-toggle="">Contactez-nous</a>#}
+{#                                    </li>#}
+                                    <li><a href="#pr__contact">{{'Contact us' |trans }}</a></li>
+                                </ul>
+                            </nav>
+                            <div class="lang">
+                                <div data-uk-form-custom="target: true">
+                                    <select id="language-switcher">
+										<option value="fr" {%if app.request.locale == 'fr'%}selected{%endif%}>FR</option>
+                                        <option value="en" {%if app.request.locale == 'en'%}selected{%endif%}>EN</option>
+										<option value="ko" {%if app.request.locale == 'ko'%}selected{%endif%}>KO</option>
+                                    </select>
+                                    <span></span>
+                                    <i class="icon pr-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-tigger" data-uk-toggle="target: #navbar-mobile">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </header><!-- Site Header End -->
+
+            <section class="pr__hero uk-section" id="pr__hero" >
+                <div class="uk-container">
+                    <div class="section-inner">
+                        <div class="hero-content uk-grid" data-uk-grid="" style="justify-content:center">
+                            <div class="uk-width-2-3@s">
+                                <hr class="line pr__hr__primary">
+                                <h2 class="title uk-heading-hero">{{ 'Just code. No Bullshit'|trans }}</h2>
+{#                                <a class="button uk-button uk-button-large uk-button-important uk-margin-bottom" #}
+{#								   href="#pr__contact__form"#}
+{#                                   data-uk-toggle="" >{{'Contact us'|trans}}</a>#}
+								<a class="button uk-button uk-button-large uk-button-important uk-margin-bottom"
+								   href="{%if app.request.locale == 'ko'%}https://whattime.co.kr/kodkodkod/30min{%else%}https://calendly.com/kodkodkod/call-projet{%endif%}" >
+									{{'Contact us'|trans}}
+								</a>
+                                <div style="justify-content: center">
+										{{ 'Kodkodkod is a development studio imagined and created by developers.'|trans}}
+                                    <p>
+										{{'At a time of democratization of telework, we are connected from France, South Korea, or even Vietnam, and have been able to make time differences a secret weapon for the productivity of our customers.'|trans}}
+                                    </p>
+                                    <p>
+										{{'Our values: simplicity, high standards, benevolence, trust, fairness, humility.'|trans}}
+                                    </p>
+                                    <p>
+										{{'Here, we do not promise you the moon. Our job is (just) to produce code. And we do it well.'|trans }}
+									</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Site Hero End -->
+
+            <section class="pr__features uk-section uk-padding-remove-bottom" id="pr_features">
+                <div class="uk-container">
+                    <div class="section-inner">
+                        <div class="items-listing features-boxes uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m"
+                             data-uk-grid="">
+                            <div class="item feature-box uk-active">
+                                <div class="inner">
+                                    <i class="icon pr-chart-bars pr__icon__large"></i>
+                                    <h3 class="title uk-h4">
+										{{'Our vision.'|trans}}
+									</h3>
+                                    <hr class="line pr__hr__secondary">
+                                    <p class="description">
+										{{'We sign an ethical charter with our employees. Our experts are compensated at their fair value, for their expertise.'|trans }}
+									</p>
+                                    <a href="#" class="link uk-position-cover"></a>
+                                </div>
+                            </div>
+                            <div class="item feature-box">
+                                <div class="inner">
+                                    <i class="icon pr-rocket pr__icon__large"></i>
+                                    <h3 class="title uk-h4">{{'Requirement and Speed'|trans}}</h3>
+                                    <hr class="line pr__hr__secondary">
+                                    <p class="description">
+										{{'Our experts produce quality code first and foremost. We have been able to make jet lag a secret weapon for the productivity of our customers.'|trans}}
+									</p>
+                                    <a href="#" class="link uk-position-cover"></a>
+                                </div>
+                            </div>
+                            <div class="item feature-box">
+                                <div class="inner">
+                                    <i class="icon pr-pie-chart pr__icon__large"></i>
+                                    <h3 class="title uk-h4">{{'Expertise'|trans}}.</h3>
+                                    <hr class="line pr__hr__secondary">
+                                    <p class="description">
+										{{'Following our rich work experience in Asia, we have developed a network of experts in South Korea and Vietnam.'|trans }}
+									</p>
+                                    <a href="#" class="link uk-position-cover"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Section: Features End -->
+
+        </div><!-- Hero Wrap End -->
+
+        <div class="pr__content" id="site-content">
+
+            <hr class="pr__vr__section">
+            <section class="pr__services pr__section uk-section uk-section-large" id="pr__services">
+                <div class="section-outer">
+                    <div class="section-heading">
+                        <div class="uk-container">
+                            <div class="inner">
+                                <div class="left">
+                                    <hr class="line pr__hr__secondary">
+                                    <h2 class="title uk-h1">{{ 'Our expertise'|trans }}.</h2>
+                                    <span class="subtitle pr__heading__secondary">{{ 'QUALITY FIRST'|trans }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-inner">
+                        <div class="uk-container">
+                            <div class="items-listing services-boxes uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-child-width-1-2@s"
+                                 data-uk-grid="">
+                                <div class="item service-box style-one uk-active">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-strategy"></i>
+                                        <h5 class="title uk-h5">NFT / Blockchain</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-browser"></i>
+                                        <h5 class="title uk-h5">E-Commerce</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-presentation"></i>
+                                        <h5 class="title uk-h5">Magento 1 & 2</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-clipboard"></i>
+                                        <h5 class="title uk-h5">Symfony</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-tools"></i>
+                                        <h5 class="title uk-h5">Vue.js</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-chat"></i>
+                                        <h5 class="title uk-h5">Angular.js</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-chat"></i>
+                                        <h5 class="title uk-h5">React</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-target"></i>
+                                        <h5 class="title uk-h5">Mobile Application</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-lightbulb"></i>
+                                        <h5 class="title uk-h5">Accompagnement technique </h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                                <div class="item service-box style-one">
+                                    <div class="inner">
+                                        <i class="overlay-icon icon pr-line-search"></i>
+                                        <h5 class="title uk-h5">SEO</h5>
+                                        <i class="icon pr-arrow-right"></i>
+                                        <a href="#" class="link uk-position-cover"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Section: Services End -->
+
+            <hr class="pr__vr__section">
+            <section class="pr__works pr__section section-slider uk-section uk-section-large" id="pr__works">
+                <div class="section-outer">
+                    <div class="section-heading">
+                        <div class="uk-container">
+                            <div class="inner">
+                                <div class="left">
+                                    <hr class="line pr__hr__secondary">
+                                    <h2 class="title uk-h1">{{ 'Our projects'|trans }}.</h2>
+                                    <span class="subtitle pr__heading__secondary">{{ 'By our code experts'|trans }}</span>
+                                </div>
+{#                                <div class="right">#}
+{#                                    <a class="button uk-button uk-button-default" href="#">{{ 'View all'|trans }}</a>#}
+{#                                </div>#}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-inner">
+                        <div class="uk-container uk-container-no">
+                            <div class="items-listing works-boxes works-slider owl-carousel" data-items="4" data-margin="30"
+                                 data-loop="true" data-center="true" data-autoplay="true" data-dots="true">
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/bnp-paribas.jpeg') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Bnp Paribas</h3>
+                                            <p class="category">Projet complet : HR Outil de gestion de compétences</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/jarvis.png') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Jarvis Legal</h3>
+                                            <p class="category">Intégration API / Développement Symfony</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/work-canal.jpeg') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Canal + International</h3>
+                                            <p class="category">Website / Développement</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/durance-work.png') }}" style="background-size: contain;"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Durance</h3>
+                                            <p class="category">Magento 1 / 2 Développement</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item work-box">
+                                    <div class="outer">
+                                        <div class="image pr__image__cover pr__ratio__square" data-src="{{ asset('build/images/Works/urgence-docteurs-work.png') }}"
+                                             data-uk-img=""></div>
+                                        <div class="inner">
+                                            <h3 class="title uk-h4">Urgence docteurs</h3>
+                                            <p class="category">Plateforme de téleconsultation / Maintenance Symfony</p>
+                                            <a href="#" class="link uk-position-cover"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- Section: Works End -->
+
+            <hr class="pr__vr__section">
+            <section class="pr__about pr__section uk-section uk-section-large" id="pr__about">
+                <div class="section-outer">
+                    <div class="section-heading">
+                        <div class="outer">
+                            <div class="uk-container">
+                                <div class="inner uk-grid" data-uk-grid="">
+                                    <div class="left uk-width-expand">
+                                        <hr class="line pr__hr__secondary">
+                                        <h2 class="title uk-h1">{{ 'About us'|trans}}.</h2>
+                                        <span class="subtitle pr__heading__secondary">
+											{{'Our job is (just) to produce code. And we do it well.'|trans}}
+										</span>
+                                    </div>
+                                    <div class="right uk-width-3-5@s">
+                                        <p>
+											{{ 'At a time of democratization of telework, we are connected from France, South Korea, or even Vietnam, and have been able to make time differences a secret weapon for the productivity of our customers.'|trans}}
+                                        <p>
+											{{ 'Our values: simplicity, high standards, benevolence, trust, fairness, humility.' |trans}}
+                                        </p>
+                                        <p>
+											{{ 'Here, we do not promise you the moon. Our job is (just) to produce code. And we do it well.'|trans }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div><!-- Container End -->
+                        </div><!-- Outer End -->
+                    </div><!-- Heading End -->
+
+
+{#                    <div class="section-inner">#}
+{#                        <div class="uk-container">#}
+{#                            <div class="gallery-boxes pr__grd__overlay uk-grid uk-grid-match uk-grid-medium"#}
+{#                                 data-uk-grid="">#}
+{#                                <div class="left uk-width-expand">#}
+{#                                    <div class="item gallery-box big">#}
+{#                                        <div class="outer">#}
+{#                                            <div class="image pr__image__cover" data-src="assets/images/about_01.jpg"#}
+{#                                                 data-uk-img=""></div>#}
+{#                                            <div class="inner">#}
+{#                                                <h3 class="title uk-h5">Teamwork</h3>#}
+{#                                                <p class="description">Committed and creative</p>#}
+{#                                                <a href="#" class="link uk-position-cover"></a>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="right uk-width-1-3@m">#}
+{#                                    <div class="item gallery-box small">#}
+{#                                        <div class="outer">#}
+{#                                            <div class="image pr__image__cover" data-src="assets/images/about_03.jpg"#}
+{#                                                 data-uk-img=""></div>#}
+{#                                            <div class="inner">#}
+{#                                                <h3 class="title uk-h5">Philosophy</h3>#}
+{#                                                <p class="description">Trust pays off</p>#}
+{#                                                <a href="#" class="link uk-position-cover" data-uk-toggle=""></a>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                    <div class="item gallery-box small">#}
+{#                                        <div class="outer">#}
+{#                                            <div class="image pr__image__cover" data-src="assets/images/about_02.jpg"#}
+{#                                                 data-uk-img=""></div>#}
+{#                                            <div class="inner">#}
+{#                                                <h3 class="title uk-h5">Office</h3>#}
+{#                                                <p class="description">Berlin, UK</p>#}
+{#                                                <a href="#" class="link uk-position-cover" data-uk-toggle=""></a>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="about-boxes uk-grid uk-grid-match uk-grid-medium uk-child-width-1-3@m uk-margin-large-top"#}
+{#                                 data-uk-grid="">#}
+{#                                <div class="item about-box">#}
+{#                                    <div class="outer">#}
+{#                                        <div class="inner">#}
+{#                                            <h3 class="title uk-h5">Who we are</h3>#}
+{#                                            <p class="description">Bring to the table win-win survival strategies to#}
+{#                                                ensure proactive domination. At the end of the day, going forward will#}
+{#                                                have multiple touchpoints for offshoring.</p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="item about-box">#}
+{#                                    <div class="outer">#}
+{#                                        <div class="inner">#}
+{#                                            <h3 class="title uk-h5">Our philosophy</h3>#}
+{#                                            <p class="description">A new normal that has evolved from generation X is#}
+{#                                                on the runway heading towards a streamlined cloud solution. User#}
+{#                                                generated content in real-time.</p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="item about-box">#}
+{#                                    <div class="outer">#}
+{#                                        <div class="inner">#}
+{#                                            <h3 class="title uk-h5">How we work</h3>#}
+{#                                            <p class="description">Capitalize on low hanging fruit to identify a#}
+{#                                                ballpark value added activity to beta test. Override the digital divide#}
+{#                                                with additional clickthroughs from DevOps.</p>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div><!-- Container End -->#}
+{#                    </div><!-- Inner End -->#}
+{#                    #}
+
+
+                </div><!-- Outer End -->
+            </section><!-- Section: About End -->
+
+            <hr class="pr__vr__section">
+            <section class="pr__clients pr__section uk-section uk-section-large" id="pr__clients">
+                <div class="uk-container">
+                    <div class="section-outer">
+                        <div class="uk-flex uk-flex-middle uk-grid uk-grid-large" data-uk-grid="">
+                            <div class="right uk-width-expand">
+                                <div class="section-heading">
+                                    <div class="inner">
+                                        <div class="left">
+                                            <hr class="line pr__hr__secondary">
+                                            <h2 class="title uk-h1">{{ 'What our customers are saying.'|trans }}</h2>
+                                            <span class="subtitle pr__heading__secondary" {{ 'FAST, PROFESSIONAL AND EFFICIENT'|trans }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-inner">
+                                    <div class="item client-box style-one">
+                                        <div class="outer">
+                                            <div class="inner">
+                                                <p class="description">
+													{{ 'Maxime and the Kodkodkod team helped us improve one of the modules of our application. He did a great job and was very professional from start to finish. We are already working with him on other projects.' |trans}}
+												</p>
+                                                <p class="client">Anthony, Jarvis Legal</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left uk-width-2-5@m uk-flex-first">
+                                <div class="item client-box style-one client-image">
+                                    <div class="image pr__image__cover pr__ratio__landscape" data-src="{{ asset('build/images/Works/jarvis.png') }}"
+                                         data-uk-img="" style="background-size: contain;"></div>
+                                </div>
+                            </div>
+                        </div><!-- Grid End -->
+                    </div><!-- Outer End -->
+                </div><!-- Container End -->
+            </section><!-- Section: Clients End -->
+
+            <div class="pr__clients__logos pr__section uk-section uk-section-large uk-padding-remove-top" id="pr__clients__logos">
+                <div class="uk-container">
+                    <hr class="pr__hr__section">
+                    <div class="section-outer uk-padding uk-padding-remove-bottom uk-padding-remove-horizontal">
+                        <div class="title uk-h1 uk-margin-bottom" style="    padding-bottom: 30px;
+    text-align: center;">{{ 'They trust us'|trans }}</div>
+                        <div class="uk-flex uk-flex-around uk-flex-middle uk-grid uk-grid-large" data-uk-grid="">
+                            <div class="item logo">
+                                <div class="inner">
+                                    <img src="{{ asset('build/images/Works/bnp-paribas-1.svg') }}" alt="Bnp paribas" width="200">
+                                </div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/jarvis.png') }}" alt="Jarvis legal" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/canal+.png') }}" alt="Canal +" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/urgence-docteurs.png') }}" alt="Urgence docteurs" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/rencontre-archi.png') }}" alt="Rencontre un archi" width="200"></div>
+                            </div>
+                            <div class="item logo">
+                                <div class="inner"><img src="{{ asset('build/images/Works/prisma-media.png') }}" alt="Prisma media" width="200"></div>
+                            </div>
+                        </div><!-- Grid End -->
+                    </div><!-- Outer End -->
+                </div><!-- Container End -->
+            </div><!-- Section: Clients Logos End -->
+
+
+            <hr class="pr__vr__section">
+        </div><!-- Site Content End -->
+    </div>
+{% endblock %}

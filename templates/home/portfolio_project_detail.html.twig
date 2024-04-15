@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+
+	{% set projectSlugParam = app.request.attributes.get('_route_params')['slug'] %}
+
+	<div
+		class="landingPage-portfolio-project-detail">
+
+		{# Jumbotron #}
+		<section class="project-detail-jumbotron">
+			<div class="bg-img"><img src="{{ asset('build/images/landingPage/bg.png') }}" alt="bg"/></div>
+			<div class="img-deco img-deco--left"><img src="{{ asset('build/images/landingPage/rings-1.png') }}" alt="decoration image" loading="lazy"/></div>
+		</section>
+
+		{# Cards Projects #}
+		<section class="project-detail-container">
+			{% for project in projects %}
+
+				{% if project.slug == projectSlugParam %}
+					<div class="box">
+						<div class="box__presentation">
+							<div class="title">{{project.title}}</div>
+							<div class="sub-title">{{project.description}}</div>
+							<div class="category">{{project.category}}</div>
+						</div>
+						<div class="box__img-jumbo">
+							<img src="{{ asset('images/projects/' ~project.image) }}" alt="{{project.image}}" loading="lazy" />
+						</div>
+						<div class="box__imgs-project">
+							<div class="img-project img-project-1">
+								<img src="{{ asset('build/images/portfolio/bnp.jpeg') }}" alt="bnp image" loading="lazy"/>
+							</div>
+							<div class="img-project img-project-2">
+								<img src="{{ asset('build/images/portfolio/moa.png') }}" alt="moa image" loading="lazy"/>
+							</div>
+							<div class="img-project img-project-3">
+								<img src="{{ asset('build/images/portfolio/kapp.png') }}" alt="kapp image" loading="lazy"/>
+							</div>
+							<div class="img-project img-project-4">
+								<img src="{{ asset('build/images/portfolio/silver-beaute.png') }}" alt="silver beauty image" loading="lazy"/>
+							</div>
+							<div class="img-project img-project-5">
+								<img src="{{ asset('build/images/portfolio/moa.png') }}" alt="kapp image" loading="lazy"/>
+							</div>
+						</div>
+						<div class="box__project-informations">
+							<hr class="hr-mobile">
+							<div class="item project-description">
+								<div class="title">project description</div>
+								<div class="sub-title">
+									Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.<br>
+									Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+								</div>
+							</div>
+
+							<div class="item project-technos">
+								<div class="title">Language</div>
+								<div class="technos">
+								{% for techno in project.technology %}
+									<div class="techno">{{techno}}</div>
+								{% endfor %}
+								</div>
+							</div>
+							<hr>
+							<div class="item computer-description">
+								<div class="title">computer description</div>
+								<div class="sub-title">
+									Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit
+									<br>
+									Exercitation veniam consequat sunt nostrud amet.
+								</div>
+							</div>
+							<hr>
+							<div class="item informations">
+								<div class="title">Website URL</div>
+								<div class="link">
+									<a href="https://kapp-retail.com/">https://kapp-retail.com/</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				{% endif %}
+
+			{% endfor %}
+		</section>
+	</div>
+
+	{# ----------------------------------------------------------------- #}
+
+{% endblock %}

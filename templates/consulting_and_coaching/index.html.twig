@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ "services.title" | trans }}
+{% endblock %}
+
+{% block body %}
+    {{ include('consulting_and_coaching/_hero.html.twig') }}
+    {{ include('consulting_and_coaching/_clients.html.twig') }}
+    {{ include('consulting_and_coaching/_indus.html.twig') }}
+    {{ include('consulting_and_coaching/_benefits.html.twig') }}
+    {{ include('consulting_and_coaching/_services.html.twig') }}
+    {%if app.request.locale != 'ko'%}
+        {% include 'homeNew/team.html.twig' %}
+    {% endif %}
+    {{ include('consulting_and_coaching/_workshop.html.twig') }}
+    {{ include('consulting_and_coaching/_ment.html.twig') }}
+    {{ include('consulting_and_coaching/_opp.html.twig') }}
+{% endblock %}
+

@@ -1,0 +1,305 @@
+#site title
+head.title: "Web development Studio | Kodkodkod"
+head.desc1: "Kodkodkod is a web development studio imagined and created by developers."
+head.desc2: "Kodkodkod is a web development studio imagined and created by developers."
+
+#menu #----- PROOFREAD -----#
+link1: "我們的專長"
+link2: 客戶感言"
+link3: "我們的流程"
+link4: "常見問題"
+link5: ""
+link6: "Contact"
+#ctaTop #----- PROOFREAD -----#
+cta.top: "獲取專案報價"
+
+
+#section1 #----- PROOFREAD -----#
+section1.baseline1: "Kodkodkod, 信守承諾的開發工作室"
+section1.baseline2: "Together, let's build your web projects with passionate developers; ready to take up the greatest challenges."
+
+#section2 #----- PROOFREAD -----#
+section2.baseline1: "Kodkodkod 是一個由開發人員創建的開發工作室，他們雄心勃勃地編寫未來的世界."
+section2.baseline2: "整個團隊以應有的精力和關懷處理每個專案，以便您發展業務."
+section2.baseline3: "我們不做不切實際的承諾。我們的工作是生成代碼"
+section2.baseline4: "，這是我們擅長的."
+
+#section3 #----- PROOFREAD -----#
+section3.baseline1: "您的專案會得到妥善處理."
+section3.baseline2: "除了代碼之外，我們還建立聯繫"
+section3.baseline3: "為什麼?"
+section3.baseline4: "我們不僅要提供向您提供產品."
+section3.baseline5: "我們力求理解您的需求，並為您的專案創建最佳解決方案."
+section3.baseline51: "我們力求理解您的需求，並為您的專案創建最佳解決方案."
+section3.baseline6: "為了實現這一目標，我們與您建立必須的信任關係."
+
+#section4 #----- PROOFREAD -----#
+section4.subtitle: "Our work methods"
+section4.baseline1: "Internal management"
+section4.baseline2: "Our team of developers manages the whole project internally."
+section4.baseline3: "We carry out your project from A to Z."
+section4.section1.title: "Available 20h/24h"
+section4.section2.title: "Expertise & Knowledge"
+section4.section3.title: "Honest and transparent"
+
+#section5 #----- PROOFREAD -----#
+section5.baseline1: "我們的客戶向您推薦我們."
+section5.section1.title: "CEO" # / Bons Conseils
+section5.section2.title: "CEO" # / Codiweb
+section5.section3.title: "CEO" # / Urgence Docteurs
+section5.section4.title: "CEO"  # / Jarvis
+section5.section5.title: "CEO" # / Blue Synaps
+section5.section6.title: "CEO" # / Eskimoz
+
+section5.section1.baseline1: "我要求Kodkodkod使用Symfony構建一個量身定制的業務ERP."
+section5.section1.baseline2: "在這次合作中，我能夠體會到這種靈活性和對需求的整體理解，以及簡單舒適的人際關係."
+section5.section1.baseline3: "我推薦Kodkodkod!"
+
+section5.section2.baseline1: "我的合作重點是優化相當複雜的PHP代碼."
+section5.section2.baseline2: "我對執行任務的開發人員的效率完全滿意."
+section5.section2.baseline3: "您可以完全信任他們的專案."
+
+section5.section3.baseline1: "我們與Kodkodkod工作室合作是一種幸運."
+section5.section3.baseline2: "他陪伴著我們公司的技術開發過程."
+section5.section3.baseline3: "開發人員與我們進行了交流，他們很嚴謹，並且分享他們的專業知識."
+
+section5.section4.baseline1: "工作室陪我們改進了我們應用程式的一個模組."
+section5.section4.baseline2: "開發人員做得很好，始終非常專業."
+section5.section4.baseline3: "我們已經在與 KodKodKod 合作開展其他專案."
+
+section5.section5.baseline1: "Kodkodkod工作室表現出極大的專業精神, 我們強烈推薦它."
+section5.section5.baseline2: "開發人員能夠處理一個幾乎沒有參考資訊的專案中，並推進教學."
+section5.section5.baseline3: "交付的開發品質完全符合我們的期望。謝謝!"
+
+section5.section6.baseline1: "開發人員Maxime細心且反應迅速."
+section5.section6.baseline2: "他通過極大的靈活性來完成任務，因而完成得非常細緻."
+section5.section6.baseline3: "他瞭解技術限制。這是一種真正的合作夥伴關係，而不是簡單的客戶同供應商的關係."
+
+section6.baseline1: "我們為這些客戶完成的專案"
+section6.section1.baseline1: "已在三個國家"
+section6.section1.baseline2: "開展業務"
+
+section6.section2.baseline1: "成功"
+section6.section2.baseline2: "專案案例"
+
+section6.section3.baseline1: "開發人員"
+section6.section3.baseline2: "隨時為您服務"
+section6.cta: "給您的專案估價"
+
+#section 7 #----- PROOFREAD -----#
+section7.title.baseline1: "How is a"
+section7.title.baseline2: "project with"
+section7.title.baseline3: "Kodkodkod ?"
+
+section7.baseline1: "Many agencies carry out projects:"
+section7.baseline2: "Without real transparency"
+section7.baseline3: "No proper follow-up."
+section7.baseline4: "So we decided to take the bull by the horns and change things!"
+section7.baseline5: "The objective of the studio: to develop custom products with complete transparency."
+section7.baseline6: "From start-up to delivery, and even further with maintenance."
+
+#section8 #----- PROOFREAD -----#
+section8.title: "步驟 1"
+section8.baseline1: "確定需求並評估專案"
+section8.baseline2: "收到您對表格的回復後, 我們會組建我們的團隊來估算專案成本."
+section8.bold: "目標"
+section8.baseline3: " : 在接下來的24小時內發送詳細報價"
+
+
+#section9 #----- PROOFREAD -----#
+section9.title: "步驟 2"
+section9.baseline1: "共同驗證專案"
+section9.baseline2: "清晰和透明是必要的，以便為您提供理解專案的所有關鍵."
+section9.baseline3: "是時候定義規格了!"
+section9.bold: "目標"
+section9.baseline4: " : 驗證整個專案的成功執行!"
+
+
+#section10 #----- PROOFREAD -----#
+section10.title: "步驟 3"
+section10.baseline1: "組建負責專案的團隊"
+section10.baseline2: "GO已經進入內部! 在與開發人員會面後, 我們將組建團隊來照顧您的專案."
+section10.baseline3: "開發人員將被指定為您與團隊之間的聯繫人."
+section10.bold: "好處"
+section10.baseline4: " : 技術團隊的全面參與。你的目標成為他們的目標!"
+
+#section11 #----- PROOFREAD -----#
+section11.title: "步驟 4"
+section11.baseline1: "每週一對一"
+section11.baseline2: "回饋會議將伴隨整個專案中."
+section11.baseline3: "在一對一的對話中，回顧所有的成就、挑戰並定義下一步."
+section11.bold: "好處"
+section11.baseline4: " : 完全透明的自定義跟進."
+
+#section12 #----- PROOFREAD -----#
+section12.title: "步驟  5"
+section12.baseline1: "專案交付"
+section12.baseline2: "專案完成, 整個團隊都很自豪能將專案交付給您."
+section12.baseline3: "經過幾個月的討論和協作, 是時候用新產品發展您的業務了!"
+section12.bold: "資產"
+section12.baseline4: " : 詳盡的交接和維護，在交貨後仍然陪伴著您."
+
+#section13 #----- PROOFREAD -----#
+section13.title.part1: "The"
+section13.title.part2: "revolution"
+section13.title.part3: "of a"
+section13.title2: "web development studio"
+section13.baseline1: "We launched Kodkodkod after our own experiences with the aim of changing things and giving more flexibility and clarity in development projects."
+
+#section14 #----- PROOFREAD -----#
+section14.title1: "機構或集體"
+section14.baseline1: "與開發者直接聯繫"
+section14.baseline2: "20小時/24小時待命"
+section14.baseline3: "經驗豐富的開發人員"
+section14.baseline4: "各類專案"
+section14.baseline5: "定期更新專案進度"
+
+#section15 #----- PROOFREAD -----#
+section15.title1: "常見問題"
+section15.section1.baseline: "啟動一個專案需要多久?"
+section15.section1.desc: "一旦我們有了啟動專案的所有必要元素，我們就會在七天內開始。在開發者設置專案的同時，我們會組織一系列的三個啟動來開始專案."
+
+section15.section2.baseline: "如果我的網站有問題，你們能多快提供支持?"
+section15.section2.desc: "根據我們的合同承諾的維護套餐, 如果出現bug, 將在 24 小時內回復您，並在 48 小時內啟動糾正措施，以便儘快解決您的問題。回應能力是我們使命的一部分."
+
+section15.section3.baseline: "你能幫我們寫一個規範嗎?"
+section15.section3.desc: "當然, 我們可以組織研討會來協助您起草規範. 我們將討論: 專案思維，功能，工作流程和 UX/UI."
+
+section15.section4.baseline: "我們將如何共同監督專案?"
+section15.section4.desc: "我們為您組織的專案跟進分為三個主要階段：專案前、專案期間和專案後。在每個主要階段，我們都會共同制定一個精確的啟動日曆和後續會議安排，以便您可以與我們同時瞭解的專案進度。另一點很重要：您會加入我們的一個專門用於您的專案的 Slack 頻道，持續溝通."
+
+section15.section5.baseline: "何滿足常規需求? 有套餐嗎?"
+section15.section5.desc: "我們提供“維護套餐”, 各種套餐為您提供一個月內可以使用的大量開發時間。從5h到50h，我們研究您的需求並相應地調整套餐. 您可以在一個月內要求我們進行技術干預。這些將從您的套餐中扣除，套餐會在下月初自動復原."
+
+
+#extras #----- PROOFREAD -----#
+"Just code.": "Just code."
+"No bullshit.": "No bullshit."
+
+
+"Project detail": "Project detail"
+
+#BLOCKCHAIN PAGE
+
+#ctaTop  #----- PROOFREAD -----#
+cta.blockchain.top: "Explore project types"
+
+#section 1  #----- PROOFREAD -----#
+section1.blockchain.baseline1: "最後，一個能夠開發您的 Web3 專案的專家團隊!"
+
+#type-project  #----- PROOFREAD -----#
+type-project.title: "我們為您量身定制區塊鏈專案"
+type-project.section1.baseline: "Smart Contract"
+type-project.section2.baseline: "DApps"
+type-project.section3.baseline: "平臺或 NFT 市場"
+type-project.section4.baseline: "玩賺錢遊戲（有或沒有 NFT)"
+type-project.section5.baseline: "元宇宙"
+type-project.section6.baseline: "通過區塊鏈實現數據安全性和可追溯性"
+
+type-project.section.desc: "> Learn more"
+
+#equipe-project #----- PROOFREAD -----#
+equipe-project.title: "A dedicated team"
+equipe-project.baseline: "With Kodkodkod, have a dedicated technical team for all your Web3 projects: full stack, backend and frontend developers, as well as a blockchain specialist team."
+
+equipe-project.sub-title: "如果您正在尋找專家來開發您的 Web3 專案，我們就在這裏."
+equipe-project.sub-title.part1: "如果您正在尋找專家來開發您的"
+equipe-project.sub-title.part2: " Web3 "
+equipe-project.sub-title.part3: "，我們就在這裏."
+
+equipe-project.sub-title.section1.baseline: "我們已經掌握了多個區塊鏈，我們將幫助您做出選擇."
+equipe-project.sub-title.section1.desc1: "Ethereum (ETH)"
+equipe-project.sub-title.section1.desc2: "Polygon (MATIC)"
+equipe-project.sub-title.section1.desc3: "Binance Smart Chain (BSC)"
+equipe-project.sub-title.section1.desc4: "Tezos"
+
+equipe-project.sub-title.section2.baseline: "我們在您選擇的區塊鏈上開發您的智能合約."
+equipe-project.sub-title.section2.desc1: "系統化的內部安全審計"
+equipe-project.sub-title.section2.desc2: "代幣/虛擬貨幣 (ERC20)"
+equipe-project.sub-title.section2.desc3: "創建 NFT (ERC721)"
+equipe-project.sub-title.section2.desc4: "NFT + 代幣序列化 (ERC1155)"
+equipe-project.sub-title.section2.desc5: "量身定制的智能合約開發"
+
+equipe-project.sub-title.section3.baseline: "We connect Web2 and Web3 in a secure way."
+equipe-project.sub-title.section3.desc1: "Secure connection to Wallets"
+equipe-project.sub-title.section3.desc2: "Using Web2 APIs with Chainlink"
+equipe-project.sub-title.section3.desc3: "Systematic internal security audit"
+
+equipe-project.cta: "Ask for a quote"
+
+#section 7 #----- PROOFREAD -----#
+section7.blockchain.baseline1: "Web3 對我們來說不再有秘密"
+
+section7.blockchain.desc1: "專門從事電影藝術的 NFT 市場"
+section7.blockchain.desc2: "區塊鏈上安全且不可變的數據存儲"
+section7.blockchain.desc3: "帶有 NFT 集換式卡牌的 3D 遊戲"
+section7.blockchain.desc4: "使用 NFT 在元宇宙中進行跨平臺遊戲"
+section7.blockchain.desc5: "使用區塊鏈融資證書的匹配平臺"
+
+#project-detail #----- PROOFREAD -----#
+project-detail.title: "您想開始什麼類型的專案?"
+
+project-detail.section1.title: "Your tailor-made marketplace or NFT platform"
+project-detail.section1.desc: "****** will proudly present its NFT marketplace specialized in cinematic art developed by Kodkodkod in September. As we don't want to *spoiler*, the name is censored!"
+project-detail.section1.baseline1: "Create a secondary market for your NFTs"
+project-detail.section1.baseline2: "Collections"
+project-detail.section1.baseline3: "Auction"
+project-detail.section1.baseline4: "Exclusive Rewards"
+project-detail.section1.baseline5: "Restricted access"
+project-detail.section1.baseline6: "Buying/Reselling"
+project-detail.section1.baseline7: "Statistical/Analysis"
+project-detail.section1.baseline8: "Royalties"
+
+project-detail.section1.cta: "Request a quote"
+
+project-detail.section2.title: "Tailor-made Web3 games: Play 2 Earn or NFT"
+project-detail.section2.desc: "Teambudd is a 3D game that implements NFTs in the form of collectible cards on the Ethereum blockchain developed by Kodkodkod."
+project-detail.section2.baseline1: "We are passionate about games too!"
+project-detail.section2.baseline2: "And we know how to code them:"
+project-detail.section2.baseline3: "Game development (mobile, tablet, desktop)"
+project-detail.section2.baseline4: "Production of graphic resources and/or NFTs"
+project-detail.section2.baseline5: "Implementation of a marketplace for exchanging items via the blockchain"
+project-detail.section2.baseline6: "Connection via a wallet"
+project-detail.section2.baseline7: "Token creation"
+project-detail.section2.baseline8: "Tell us about your game!"
+
+project-detail.section2.cta: "Speak with an expert"
+
+project-detail.section3.title: "Develop your tailor-made metaverse"
+project-detail.section3.desc: "WarriorVerse, a Web3 game implementing NFTs in a metaverse on the Ethereum blockchain, developed by our teams."
+project-detail.section3.baseline1: "We carry out the graphics development for your metaverse."
+project-detail.section3.baseline2: "Sell/resell your products"
+project-detail.section3.baseline3: "Create Galleries"
+project-detail.section3.baseline4: "Expose your NFTs"
+project-detail.section3.baseline5: "Create  events"
+project-detail.section3.baseline6: "Distribute your advertisements"
+
+project-detail.section3.cta: "Create a metaverse"
+
+project-detail.section4.title: "Securing and traceability of data via the Blockchain"
+project-detail.section4.desc: "Expopolis has called on Kodkodkod to secure data for all their users, byebye classic Web2 hosting. They have made a leap into the future thanks to our teams by hosting and securing their data on the blockchain!"
+project-detail.section4.baseline1: "Make your data immutable and accessible 24/7 thanks to the blockchain."
+project-detail.section4.baseline2: "Avoid leaks, hacks and keep safe traceability of your data."
+project-detail.section4.baseline3: "Manage authentications and storage with the blockchain."
+
+project-detail.section4.cta: "Request a quote"
+
+project-detail.section5.title: "Need NFTs for your Web3 project?"
+project-detail.section5.baseline1: "Don't worry, we manage:"
+project-detail.section5.baseline2: "Graphic basis"
+project-detail.section5.baseline3: "Assets (hair, clothes, etc.)"
+project-detail.section5.baseline4: "Generation of the script to generate all the NFTs"
+project-detail.section5.baseline5: "Rarities files"
+project-detail.section5.baseline6: "Decentralized hosting on the blockchain"
+project-detail.section5.baseline7: "Smart contract development"
+project-detail.section5.baseline8: "Whether in music, art, real estate, virtual worlds, cinema… We can create your NFTs."
+
+project-detail.section5.sub-title: "Why create NFTs?"
+project-detail.section5.sub-title.baseline1: "NFTs allow you to:"
+project-detail.section5.sub-title.baseline2: "increase your brand loyalty."
+project-detail.section5.sub-title.baseline3: "to build a community around your products."
+project-detail.section5.sub-title.baseline4: "to provide a personalized customer experience."
+project-detail.section5.sub-title.baseline5: "finance your new products upstream."
+project-detail.section5.sub-title.baseline6: "create virtual collectables for your customers"
+
+"publications.title": "They talked about us"

@@ -1,0 +1,217 @@
+#site title
+head.title: "Web development Studio | Kodkodkod"
+head.desc1: "Kodkodkod is a web development studio imagined and created by developers."
+head.desc2: "Kodkodkod is a web development studio imagined and created by developers."
+
+#menu #----- PROOFREAD -----#
+Home: 'Trang Chủ'
+link1: 'Portfolio'
+link2: "Nhận xét của khách hàng"
+link3: "Quy trình của chúng tôi"
+link4: "FAQ"
+link6: "Liên hệ"
+#ctaTop #----- PROOFREAD -----#
+cta.top: "Nhận báo giá cho dự án của bạn"
+
+"+33 4 51 20 24 24": "+84 355 222 339"
+"Call us 04 51 20 24 24": "0355 222 339"
+
+
+#section1 #----- PROOFREAD -----#
+section1.baseline1: "Kodkodkod, studio lập trình web giữ trọn cam kết"
+
+section1.baseline1.part1: "Kodkodkod, studio lập trình web giữ trọn"
+section1.baseline1.part2: " cam kết"
+
+#section2 #----- PROOFREAD -----#
+Happy Clients: " Khách Hàng Hài Lòng"
+section2.baseline1: "Kodkodkod là studio lập trình được thành lập bởi đội ngũ lập trình viên có tham vọng lập trình nên thế giới tương lai"
+section2.baseline2: "Toàn bộ đội ngũ lập trình viên của chúng tôi tham gia vào từng dự án bằng tất cả tài năng và tâm huyết, nhằm giúp bạn phát triển doanh nghiệp của mình."
+section2.baseline3: "Ở đây, chúng tôi không hứa hẹn những điều hão huyền. Nhiệm vụ của chúng tôi là lập trình."
+section2.baseline4: "Và chúng tôi làm điều đó rất tốt"
+
+#section3 #----- PROOFREAD -----#
+section3.baseline1: "Dự Án Của Bạn Được Trao Cho Đúng Người"
+section3.baseline2: "Không chỉ viết code, chúng tôi còn xây dựng nên các mối quan hệ"
+section3.baseline3: "Vì sao ?"
+section3.baseline4: "Mục tiêu của chúng tôi không chỉ dừng lại ở việc cung cấp sản phẩm mà bạn cần."
+section3.baseline5: "Chúng tôi cố gắng tiếp thu tất cả nhu cầu của các bạn nhằm đáp ứng và tạo ra giải pháp tốt nhất cho dự án của bạn."
+section3.baseline51: "Chúng tôi cố gắng tiếp thu tất cả nhu cầu của các bạn nhằm đáp ứng và tạo ra giải pháp tốt nhất cho dự án của bạn."
+section3.baseline6: "Để đạt được điều này, chúng tôi thiết lập sự uy tín trong mối quan hệ với khách hàng, điều này cho phép chúng tôi đạt được những kết quả mong đợi."
+
+#section4 #----- PROOFREAD -----#
+section4.subtitle: "Our work methods"
+section4.baseline1: "Internal management"
+section4.baseline2: "Our team of developers manages the whole project internally."
+section4.baseline3: "We carry out your project from A to Z."
+section4.section1.title: "Available 20h/24h"
+section4.section2.title: "Expertise & Knowledge"
+section4.section3.title: "Honest and transparent"
+
+#section5 #----- PROOFREAD -----#
+section5.baseline1: "Những chia sẽ tích cực từ khách hàng của chúng tôi"
+section5.section1.title: "CEO" # / Bons Conseils
+section5.section2.title: "CEO" # / Codiweb
+section5.section3.title: "CEO" # / Urgence Docteurs
+section5.section4.title: "CEO"  # / Jarvis
+section5.section5.title: "CEO" # / Blue Synaps
+section5.section6.title: "CEO" # / Eskimoz
+
+section5.section1.baseline1: "Tôi đã giao phó cho Kodkodkod xây dựng một ERP dành riêng cho doanh nghiệp bằng cách sử dụng Symfony."
+section5.section1.baseline2: "Trong quá trình hợp tác này, tôi đã đánh giá cao sự linh hoạt và sự hiểu biết tổng thể về nhu cầu, mối quan hệ đơn giản và dễ dàng."
+section5.section1.baseline3: "Hãy tìm đến Kodkodkod!"
+
+section5.section2.baseline1: "Quá trình hợp tác giữa tôi và bạn ấy tập trung vào việc tối ưu hóa bộ mã PHP tương đối phức tạp."
+section5.section2.baseline2: "Tôi hoàn toàn hài lòng với hiệu quả làm việc của lập trình viên, bạn ấy đã thực hiện đúng nhiệm vụ của mình."
+section5.section2.baseline3: "Bạn có thể tin tưởng giao phó cho họ dự án của bạn mà không phải lo nghĩ gì."
+
+section5.section3.baseline1: "Chúng tôi rất vui khi được hợp tác với studio Kodkodkod."
+section5.section3.baseline2: "Họ đã đồng hành cùng chúng tôi trong quá trình phát triển công nghệ của công ty chúng tôi."
+section5.section3.baseline3: "Đội ngũ lập trình viên đã trao đổi với chúng tôi một cách nghiêm túc nghiêm túc và sẵn sàng chia sẻ kiến thức của mình."
+
+section5.section4.baseline1: "Studio đã đồng hành cùng chúng tôi trong việc cải thiện một trong các modules (mô-đun) của ứng dụng."
+section5.section4.baseline2: "Lập trình viên đã làm việc tuyệt vời và rất chuyên nghiệp từ đầu đến cuối."
+section5.section4.baseline3: "Chúng tôi hiện đang hợp tác với KodKodKod trong nhiều dự án khác."
+
+section5.section5.baseline1: "Studio Kodkodkod đã thể hiện một tinh thần làm việc rất chuyên nghiệp, chúng tôi thực sự đánh giá cao điều đó."
+section5.section5.baseline2: "Lập trình viên rất nhanh đã có thể làm quen với dự án mà không gặp chút khó khăn nào."
+section5.section5.baseline3: "Chất lượng của dự án bàn giao được phát triển đầy đủ và đáp ứng hoàn toàn mong đợi của chúng tôi. Cảm ơn các bạn!"
+
+section5.section6.baseline1: "Maxime, một lập trình viên rất chú tâm và có trách nhiệm trong công việc của mình."
+section5.section6.baseline2: "Anh ấy tìm hiểu và đi đến ngọn ngành của vấn đề với  một sự linh hoạt tuyệt vời, điều giúp anh ấy hoàn thành tốt nhiệm vụ một cách chi tiết và kỹ lưỡng."
+section5.section6.baseline3: "Anh ấy hiểu rõ các ràng buộc kỹ .Đây quả thực là quan hệ đối tác chứ không đơn giản là quan hệ giữa nhà cung cấp và khách hàng."
+
+section6.baseline1: "Các dự án mà chúng tôi đã thực hiện"
+section6.section1.baseline1: "Có mặt tại"
+section6.section1.baseline2: "3 quốc gia"
+
+section6.section2.baseline1: "Dự án hoàn thành"
+section6.section2.baseline2: "thắng lợi"
+
+section6.section3.baseline1: "Lập trình viên"
+section6.section3.baseline2: "sẵn sàng phục vụ bạn"
+section6.cta: "Bạn có một dự án ? Nhấn nút để nhận báo giá !"
+
+#introduction #landing page
+introducing: "GIỚI THIỆU"
+
+introduction.LP.baseline1: "Toàn bộ đội ngũ lập trình viên của chúng tôi tham gia vào từng dự án bằng tất cả tài năng và tâm huyết, nhằm giúp bạn phát triển doanh nghiệp của mình."
+introduction.LP.baseline2: "Ở đây, chúng tôi không hứa hẹn những điều hão huyền. Nhiệm vụ của chúng tôi là lập trình. Và chúng tôi làm điều đó rất tốt !"
+
+#sec-projects
+
+# HOME PROJECTS SWIPER
+home-projects-swiper.section1.baseline: "Kiểm tra tự động đánh giá kỹ năng nhân sự."
+home-projects-swiper.section2.baseline: "Phát triển & Thiết kế website"
+home-projects-swiper.section3.baseline: "Bảo trì nền tảng tư vấn trực tuyến Symfony"
+home-projects-swiper.section4.baseline: "Phát Triển Magento 1 & 2"
+home-projects-swiper.section5.baseline: "Matching platform được phát triển bằng React. "
+
+bnp.project.LP.baseline1: "Dự án 2022: cải thiện và bổ sung cho nền tảng nhân sự."
+bnp.project.LP.baseline2: "Công nghệ sử dụng: PHP và Angular JS."
+
+canal.project.LP.baseline1: "Nền tảng nhân sự nội bộ."
+canal.project.LP.baseline2: "Tạo bản đồ tương tác để chào mừng nhân viên mới đến công ty."
+canal.project.LP.baseline3: "Công nghệ sử dụng: Vue.js"
+
+urgence.docteur.project.LP.baseline1: "Tạo nền tảng tư vấn y tế trực tuyến."
+urgence.docteur.project.LP.baseline2: "Tạo ứng dụng web từ đầu để ra mắt startup."
+urgence.docteur.project.LP.baseline3: "Chịu trách nhiệm bảo trì và cải tiến từ năm 2018."
+
+moa.project.baseline1: "Thiết kế lại Magento 2."
+moa.project.baseline2: "Chuyển đổi từ Prestashop sang Magento 2 và thiết kế lại trang thương mại điện tử trong năm 2022, giám sát bảo trì và bổ sung chức năng trong năm 2023."
+
+kapp.project.baseline: "Phát triển phần giao diện của app và trang landing page ngay từ đầu để ra mắt startup vào năm 2022. "
+
+#sec-presentation
+presentation.LP.title1: "Dự Án Của Bạn Được Trao Cho"
+presentation.LP.title2: " Đúng Người"
+
+#sec-techno
+techno.LP.title1: "Kodkodkod"
+techno.LP.title2: "Cung Cấp Cho Bạn Những Gì ?"
+
+techno.LP.part1.baseline1: "Chúng Tôi Lập Trình Ứng Dụng Web Của Bạn"
+techno.LP.part1.baseline2: "Một dự án startup? Một dịch vụ online mới hay một sản phẩm SaaS? Các dự án lập trình đột phá luôn tạo động lực cho chúng tôi mỗi ngày."
+
+techno.LP.part2.baseline1: "Chúng Tôi Phát Triển Trang Web Thương Mại Điện Tử Của Bạn"
+techno.LP.part2.baseline2: "Trang thương mại điện tử hay chợ online. Dù là sản phẩm bình thường, dịch vụ hoặc sản phẩm ảo, chúng tôi đều có thể lập trình ra một trang web tốc độ cao giúp chuyển đổi khách truy cập thành khách hàng."
+
+techno.LP.part3.baseline1: "Blockchain Không Còn Là Bí mật Với Chúng Tôi"
+techno.LP.part3.baseline2: "Chúng tôi đã khám phá mọi góc cạnh của công nghệ mới này và sẵn sàng để giải quyết mọi vấn đề liên quan đến Smart Contracts (hợp đồng thông minh), Dapps (ứng dụng phi tập trung), Play-to-earn (chơi để kiếm tiền), metaverse (thế giới ảo)."
+
+techno.LP.part4.baseline1: "Thực Hiện Ứng Dụng Di Động Trở Nên Dễ Dàng"
+techno.LP.part4.baseline2: "Dù là ứng dụng native (thuần) hay hybrid (kết hợp nhiều công nghệ), chúng tôi đều có những lập trình viên giỏi nhất đến từ Pháp để hỗ trợ bạn hoàn thiện dự án ứng dụng di động của mình."
+
+#sec-contact
+contact.LP.title1: "Hãy nói về dự án của bạn với"
+contact.LP.title2: "Kodkodkod"
+
+contact.LP.subtitle: "Chúng tôi thiết lập mối quan hệ uy tín với bạn nhằm đạt tới những kết quả xuất sắc"
+#section13 #----- PROOFREAD -----#
+section13.title.part1: "Cuộc "
+section13.title.part2: "cách mạng"
+section13.title.part3: "của một"
+section13.title2: "studio lập trình"
+section13.baseline1: "Chúng tôi đã thành lập Kodkodkod sau những trải nghiệm của chính mình, với mục tiêu là thay đổi và mang đến nhiều sự linh hoạt và rõ ràng hơn trong các dự án phát triển web."
+
+#section14 #----- PROOFREAD -----#
+section14.title1: "Văn phòng hoặc tổ chức"
+section14.baseline1: "Làm việc trực tiếp với lập trình viên"
+section14.baseline2: "Sẵn sàng 20h/24h"
+section14.baseline3: "Lập trình viên dày dặn kinh nghiệm"
+section14.baseline4: "Dự án đa dạng"
+section14.baseline5: "Cập nhật thường xuyên tiến độ dự án"
+
+#section15 #----- PROOFREAD -----#
+section15.title1: "FAQ"
+section15.section1.baseline: "Mất bao lâu để bắt đầu tiến hành dự án ?"
+section15.section1.desc: "Sau khi chúng tôi có đầy đủ các yếu tố cần thiết để tiến hành dự án, chúng tôi sẽ bắt đầu trong vòng bảy ngày. Trong lúc các lập trình viên thiết lập dự án, chúng tôi sẽ tổ chức một loạt ba buổi khởi động song song để chạy dự án."
+
+section15.section2.baseline: "Nếu trang web của tôi gặp vấn đề, khi nào bạn có thể hỗ trợ tôi nhanh nhất?"
+section15.section2.desc: "Đây được xem là một phần trong gói bảo trì dành cho trang web của bạn. Trong trường hợp xảy ra lỗi, chúng tôi sẽ chịu trách nhiệm theo hợp đồng. Chúng tôi sẽ gửi phản hồi tới bạn trong vòng 24 giờ và bắt đầu có điều chỉnh phù hợp trong vòng 48 giờ để giải quyết vấn đề của bạn càng nhanh càng tốt. Phản ứng nhanh là một phần nhiệm vụ của chúng tôi."
+
+section15.section3.baseline: "Bạn có thể giúp chúng tôi viết tài liệu kỹ thuật cụ thể ?"
+section15.section3.desc: "Hoàn toàn có thể, chúng tôi có thể tổ chức các phiên hội thảo để hỗ trợ bạn xây dựng những tài liệu kỹ thuật cụ thể. Chúng ta sẽ cùng bàn thảo về: tư duy trong dự án, các tính năng, quy trình vận hành và UX/UI."
+
+section15.section4.baseline: "Chúng ta sẽ cùng làm việc với nhau như thế nào để giám sát dự án ?"
+section15.section4.desc: "Cách tiếp cận của chúng tôi trong việc quản lý dự án của bạn sẽ bao gồm ba giai đoạn riêng biệt: tiền dự án, thực hiện dự án và hậu dự án. Trong mỗi giai đoạn, chúng ta sẽ sắp xếp kế hoạch với các mốc thời gian khởi động cụ thể. Thêm vào đó, chúng ta sẽ cùng nhau sắp xếp các cuộc hẹn cho các buổi gặp tiếp theo. Theo đó, bạn sẽ biết được tiến độ dự án của mình cùng lúc với chúng tôi. Thêm một điều quan trọng là: chúng ta sẽ có một kênh Slack chuyên dụng để giữ liên lạc trong suốt dự án."
+
+section15.section5.baseline: "Bạn làm việc cho các nhu cầu thông thường như thế nào? Bạn có cung cấp các gói dịch vụ không?"
+section15.section5.desc: "Công ty chúng tôi cung cấp nhiều gói bảo trì khác nhau với số giờ lập trình nhất định để bạn sử dụng hàng tháng. Các gói này có thể giao động từ 5 đến 50 giờ. Chúng tôi sẽ đánh giá kĩ lưỡng và điều chỉnh các gói với số giờ phù hợp tuỳ vào nhu cầu cụ thể của bạn. Trong tháng đó, bạn có thể yêu cầu chúng tôi hỗ trợ kỹ thuật, chi phí sẽ được khấu trừ vào gói dịch vụ của bạn. Vào đầu tháng tiếp theo, gói dịch vụ của bạn sẽ tự động bắt đầu lại."
+
+#portfolio #landingpage
+portfolio.LP.title: "Dự án mà chúng tôi hoàn thành"
+"View project": "Xem chi tiết"
+"Load More Projects": "Tải thêm"
+
+"publications.title": "Họ đã nói về chúng tôi"
+
+"Terms of use": "Điều Khoản Sử Dụng"
+"Privacy policies": "Chính Sách Riêng Tư"
+
+### CONTACT PAGE
+"Contact": "Liên hệ"
+contact.desc: "Hãy điền thông tin vào biểu mẫu bên cạnh, chúng tôi sẽ liên hệ lại với bạn trong vòng 24 giờ."
+
+"Ask for information": "Thông tin liên hệ"
+contact.desc.line1: "Đối với tất cả các yêu cầu thông tin, bạn có thể sử dụng email hoặc số điện thoại sau :"
+"Ask for a quote": "Yêu cầu báo giá"
+contact.desc.line2: "Đối với yêu cầu báo giá, bạn có thể sử dụng email sau :"
+
+"Last name": "Họ"
+"First name" : "Tên"
+"Telephone": "Số điện thoại"
+"Enterprise": "Công ty"
+"Add file": "File đính kèm"
+form-contact.question1.input-title: "Miêu tả yêu cầu cầu bạn"
+"Description": ""
+"send": "Gửi"
+
+#customize chatbot
+chatbot.title: "Xin chào"
+chatbot.baseline1: "Chúng tôi sẵn sàng lắng nghe bạn !"
+chatbot.baseline2: "Chúng tôi sẽ đáp ứng yêu cầu của bạn"
+chatbot.option1: "Tôi muốn đăt hẹn !"
+chatbot.option2: "Tôi muốn được liên hệ lại"
+chatbot.option3: "Tôi muốn ứng tuyển vào công ty !"

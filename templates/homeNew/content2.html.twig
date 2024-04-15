@@ -1,0 +1,115 @@
+
+{# Change link quote by country #}
+	{% if app.request.locale == 'ko' %}
+      {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+    {% else %}
+      {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+    {% endif %}
+	{% if hongKong is defined and hongKong %}
+      {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+    {% endif %}
+    {% if app.request.locale == 'fr' %}
+      {% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
+    {% endif %}
+<div id="services" class="content2">
+  <div class="div">
+    <div class="div-sub-content">
+      <div class="div-2">{{ 'What we can help you with?'|trans }}</div>
+      <div class="div-3">
+        <div class="div-4">
+          <div class="column">
+            <div class="textTitle">{{ 'services.consulting.title'|trans }}</div>
+          </div>
+          <div class="column-2">
+            <div class="div-6">
+              <div class="div-7">{{ 'services.consulting.description'|trans }}</div>
+              <div class="div-8">
+                <a href="{{ linkQuote }}" target="_blank" style="display:flex; gap: 20px">
+                  <div class="div-9">{{ 'services.consulting.button'|trans }}</div>
+                  <img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-10"></div>
+      <div class="div-11">
+        <div class="div-12">
+          <div class="column">
+            <div class="textTitle">{{ 'services.aiWorkshops.title'|trans }}</div>
+          </div>
+          <div class="column-3">
+            <div class="div-14">
+              <div class="div-15">{{ 'services.aiWorkshops.description'|trans }}</div>
+              <div class="div-16">
+                <a href="{{ linkQuote }}" target="_blank" style="display:flex; gap: 20px">
+                  <div class="div-9">{{ 'services.aiWorkshops.button'|trans }}</div>
+                  <img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-18"></div>
+        <div class="div-19">
+          <div class="div-20">
+            <div class="column">
+              <div class="textTitle">{{ 'services.llm.title'|trans }}</div>
+            </div>
+            <div class="column-4">
+              <div class="div-22">
+                <div class="div-23">{{ 'services.llm.description'|trans }}</div>
+                <div class="div-24">
+                  <a href="{{ linkQuote }}" target="_blank" style="display:flex; gap: 20px">
+                    <div class="div-9">{{ 'services.llm.button'|trans }}</div>
+                    <img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-26"></div>
+        <div class="div-27">
+          <div class="div-28">
+            <div class="column">
+              <div class="textTitle">{{ 'services.aiDevelopers.title'|trans }}</div>
+            </div>
+            <div class="column-5">
+              <div class="div-30">
+                <div class="div-31">{{ 'services.aiDevelopers.description'|trans }}</div>
+                <div class="div-32">
+                  <a href="{{ linkQuote }}" target="_blank" style="display:flex; gap: 20px">
+                    <div class="div-9">{{ 'services.aiDevelopers.button'|trans }}</div>
+                    <img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-34"></div>
+        <div class="div-35">
+          <div class="div-36">
+            <div class="column">
+              <div class="textTitle">{{ 'services.integrations.title'|trans }}</div>
+            </div>
+            <div class="column-6">
+              <div class="div-38">
+                <div class="div-39">{{ 'services.integrations.description'|trans }}</div>
+                <div class="div-40">
+                  <a href="{{ linkQuote }}" target="_blank" style="display:flex; gap: 20px">
+                    <div class="div-9">{{ 'services.integrations.button'|trans }}</div>
+                    <img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

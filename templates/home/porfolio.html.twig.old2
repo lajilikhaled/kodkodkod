@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "head.title" | trans }}{% endblock %}
+
+{% block description %}{{ "head.desc2" | trans }}{% endblock %}
+
+{% block body %}
+
+
+    <div class="app-home-portfolio">
+        <div class="box">
+           <div class="portfolio-title">
+               <div class="title-bar"></div>
+               {{ 'portflio.title'|trans }}
+           </div>
+            <div class="portfolio-sub-title">
+                <div class="portfolio-menu active">{{'View all'|trans}}</div>
+
+				{% for category in categories %}
+					<div class="portfolio-menu" data-category="{{category.id }}">
+						{%if app.request.locale == 'fr'%}{{category.name}}{%endif%}
+						{%if app.request.locale == 'en'%}{{category.nameEn}}{%endif%}
+						{%if app.request.locale == 'ko'%}{{category.nameKr}}{%endif%}
+					</div>
+
+				{%endfor%}
+
+            </div>
+
+            <div class="portfolios">
+                <div class="portfolio-cards">
+
+                    {% for project in projects %}
+                    <div class="portfolio-card {%if project.category%}{{project.category.id }}{%endif%}">
+                        <div class="card-front">
+                            <img src="{{ asset('images/projects/' ~project.image) }}"/>
+                        </div>
+                        <div class="card-back">
+                            <img src="{{ asset('images/projects/' ~project.image) }}"/>
+                            <div class="card-back-desc">
+                                <div class="card-back-name">
+                                    {{ project.title }}
+                                </div>
+                                <div class="card-back-tech">
+                                    {{ project.description }}
+                                </div>
+								{% if project.slug %}
+                                <a href="{{ path('portfolio_detail',{slug: project.slug}) }}">See details</a>
+								{%endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {%  endfor %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

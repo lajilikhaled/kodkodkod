@@ -1,0 +1,38 @@
+
+<section class="customize-chatbot" id="customize-chatbot">
+	<div class="customize-chatbot-icon" id="customize-chatbot-icon">
+		<img src="{{ asset('build/images/portrait/morgan.png') }}" alt="photo de Morgan">
+	</div>
+	<div class="customize-chatbot-overlay --is-opened" id="customize-chatbot-overlay">
+		<div class="box">
+			<div class="icon-close" id="customize-chatbot-icon-close"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+			<h2 class="title">{{'chatbot.title' | trans}} 👋</h2>
+			<h6 class="sub-title">{{'chatbot.baseline1' | trans}}</h6>
+			<h6 class="sub-title text-pink">{{'chatbot.baseline2' | trans}}</h6>
+			<div class="options-list">
+			{% if app.request.locale == 'en' %}
+				<a href="https://calendly.com/kodkodkod_maxime/kodkodkod_en">
+			{% else %}
+				<a href="https://calendly.com/kodkodkod_maxime/kodkodkod_fr">
+			{% endif %}
+					<div class="option">
+						<div class="option__text">{{'chatbot.option1' | trans}}</div>
+						<div>></div>
+					</div>
+				</a>
+				<a href="{{ path('contact') }}">
+					<div class="option">
+						<div class="option__text">{{'chatbot.option2' | trans}}</div>
+						<div>></div>
+					</div>
+				</a>
+				<a href="{{ path('contact') }}">
+					<div class="option">
+						<div class="option__text">{{'chatbot.option3' | trans}}</div>
+						<div>></div>
+					</div>
+				</a>
+			</ul>
+		</div>
+	</div>
+</section>

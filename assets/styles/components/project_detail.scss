@@ -1,0 +1,192 @@
+.project-detail {
+  @include display-flex;
+  flex-direction: column;
+  padding: 10px 25px 100px 25px;
+
+  @media (max-width: 1024px) {
+    padding-bottom: 50px;
+  }
+
+  .title {
+    @include title;
+    margin: 20px 0;
+  }
+
+  .box {
+    max-width: 1250px;
+    width: 100%;
+
+    .card {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 40px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+      }
+
+      &__text {
+        .title {
+          @include title($fontSize: 32px);
+          line-height: 40px;
+          text-align: left;
+
+          @media (max-width: 600px) {
+            text-align: center;
+          }
+        }
+
+        .description {
+          @include sub-title($fontSize: 18px);
+        }
+
+        .btn {
+          @include display-flex($justifyContent: flex-start);
+        }
+
+        &--left {
+          grid-column: 1 / span 1;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          @media (max-width: 1024px) {
+            grid-column: 1 / span 1;
+            order: 1;
+          }
+        }
+
+        &--right {
+          grid-column: 2 / span 1;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          @media (max-width: 1024px) {
+            grid-column: 1 / span 1;
+            order: 1;
+          }
+        }
+
+        &--flex {
+          @include display-flex;
+          flex-direction: column;
+        }
+      }
+
+      &__img {
+        @include display-flex;
+        flex-direction: column;
+        max-width: 500px;
+
+        @media (max-width: 1024px) {
+          max-width: 100%;
+        }
+
+        img {
+          border-radius: 15px;
+        }
+
+        p {
+          @include sub-title;
+          font-style: italic;
+          color: #6d6969
+        }
+
+        .p {
+          font-style: normal;
+
+          &--bold {
+            font-weight: bold;
+            color: $secClr;
+          }
+        }
+
+        ul {
+          @include sub-title;
+          align-self: flex-start;
+          color: #6d6969
+        }
+
+        &--left {
+          grid-column: 1 / span 1;
+          justify-self: flex-start;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          @media (max-width: 1024px) {
+            grid-column: 1 / span 1;
+            order: 2;
+            justify-self: center;
+          }
+        }
+
+        &--right {
+          grid-column: 2 / span 1;
+          justify-self: flex-end;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          @media (max-width: 1024px) {
+            grid-column: 1 / span 1;
+            order: 2;
+            justify-self: center;
+          }
+        }
+
+        .info {
+          @include display-flex($justifyContent: flex-start);
+          color: $secClr;
+
+          .icon {
+            color: $mainClr;
+            height: auto;
+            width: 25px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      &--colored {
+        background-color: $backgroundCard;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+// Style commun used by project-detail of Blockchain Page and React Page (react-project-detail.html.twig)
+// Style of badges in reactPage.scss (badges of react-project-detail.html.twig)
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  margin-bottom: 50px;
+
+  @media (max-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .badge {
+      padding: 0px 10px;
+      box-shadow: 0px 10px 10px #f6f6f6;
+      padding: 0 20px;
+      height: 200px;
+      position: relative;
+      max-width: 130px;
+
+      &__img {
+          @include position-absolute-center;
+          top: 20%;
+          color: $mainClr;
+          width: 20%;
+      }
+      &__description {
+          @include sub-title;
+          @include position-absolute-center;
+          top: 45%;
+          width: 90%;
+          text-align: center;
+      }
+  } 
+}

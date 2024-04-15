@@ -1,0 +1,202 @@
+<div class="testimonials">
+    <div class="div">
+        <div class="div-1">
+            <div class='div-11'>
+                {{ "testimonial.title" | trans }}
+            </div>
+            <div class="div-12">
+
+                <div class="to-the-left mobile-icon" style="display: none;">
+                    <div class="div-21 next-icon">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/87ad6fe23a1bca13da0a25127759c8b53574f181f52552a13c0db0e362aab84b?" class="img"/>
+                    </div>
+                </div>
+
+                <div class="div-22 nb-1 active">
+                    <div class="div-23">
+                        <a href="#" class="icon-testimonial" target="_blank" style="display: flex; gap: 20px;">
+                            <img loading="lazy"  width="244"  height="50" src="{{ asset('build/images/testimonial/urgence-docteurs-logo.png')}}" class="img"/>
+                            <div class="div-5">
+                                <div class="div-51">Mike M.</div>
+                                <span>Co-founder Emergency<br>Doctors</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div-24">
+                        <span>
+                            {{ 'section5.section3.baseline1'|trans }}
+                            {{ 'section5.section3.baseline2'|trans }}
+                            {{ 'section5.section3.baseline3'|trans }}
+                        </span>
+                    </div>
+                    {# <div class="div-25">
+                        <a href="#" target="_blank" style="display: flex;justify-content: space-around;margin-top: 25px;font-size: 25px;font-weight: bold;">
+                            <div class="div-5">1/5</div>
+                        </a>
+                    </div> #}
+                </div>
+
+                <div class="div-22 nb-2" style="display: none;">
+                    <div class="div-23">
+                        <a href="#" target="_blank" style="display: flex; gap: 20px;">
+                            <img loading="lazy" src="{{ asset('build/images/newLandingPage/brands_1_jarvis.png')}}" class="img"/>
+                            <div class="div-5">
+                                <div class="div-51">Alexandre J.</div>
+                                <span>CEO</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div-24">
+                        <span>
+                             {{ 'section5.section4.baseline1'|trans }}
+                            {{ 'section5.section4.baseline2'|trans }}
+                            {{ 'section5.section4.baseline3'|trans }}
+                        </span>
+                    </div>
+                    {# <div class="div-25">
+                        <a href="#" target="_blank" style="display: flex;justify-content: space-around;margin-top: 25px;font-size: 25px;font-weight: bold;">
+                            <div class="div-5">1/5</div>
+                        </a>
+                    </div> #}
+                </div>
+
+                <div class="div-22 nb-3" style="display: none;">
+                    <div class="div-23">
+                        <a href="#" target="_blank" style="display: flex; gap: 20px;">
+                            <img loading="lazy"  src="{{ asset('build/images/testimonial/blue-synaps-logo.png')}}" class="img"/>
+                            <div class="div-5">
+                                <div class="div-51">Antoine B.</div>
+                                <span>CEO</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div-24">
+                        <span>
+                            {{ 'section5.section5.baseline1'|trans }}
+                            {{ 'section5.section5.baseline2'|trans }}
+                            {{ 'section5.section5.baseline3'|trans }}
+                        </span>
+                    </div>
+                    {# <div class="div-25">
+                        <a href="#" target="_blank" style="display: flex;justify-content: space-around;margin-top: 25px;font-size: 25px;font-weight: bold;">
+                            <div class="div-5">1/5</div>
+                        </a>
+                    </div> #}
+                </div>
+
+                <div class="div-22 nb-3" style="display: none;">
+                    <div class="div-23">
+                        <a href="#" target="_blank" style="display: flex; gap: 20px;">
+                                                        <img loading="lazy" src="{{ asset('build/images/testimonial/eskimoz.png')}}" class="img"/>
+                            <div class="div-5">
+                                <div class="div-51">Andrea G.</div>
+                                <span>CEO</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="div-24">
+                        <span>
+                            {{ 'section5.section6.baseline1'|trans }}
+                            {{ 'section5.section6.baseline2'|trans }}
+                            {{ 'section5.section6.baseline3'|trans }}
+                        </span>
+                    </div>
+                    {# <div class="div-25">
+                        <a href="#" target="_blank" style="display: flex;justify-content: space-around;margin-top: 25px;font-size: 25px;font-weight: bold;">
+                            <div class="div-5">1/5</div>
+                        </a>
+                    </div> #}
+                </div>
+                <div class="next-mobile">
+                    <div class="to-the-left">
+                        <div class="div-21 next-icon">
+                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/87ad6fe23a1bca13da0a25127759c8b53574f181f52552a13c0db0e362aab84b?" class="img"/>
+                        </div>
+                    </div>
+                    <div class="to-the-right">
+                        <div class="div-31 next-icon">
+                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4858118d2b4fbd1386dbcc34d0032e4b0726fcea25df3139504ddaa6781a5be9?" class="img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+        const testimonials = document.querySelector('.testimonials');
+        const slides = testimonials.querySelectorAll('.div-22');
+        const firstSlider = testimonials.querySelectorAll('.icon-testimonial');
+        const carossel = testimonials.querySelectorAll('.div-12');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+
+            const leftArrow = testimonials.querySelector('.to-the-left');
+            const rightArrow = testimonials.querySelector('.to-the-right');
+
+            if (index === 0) {
+                leftArrow.style.display = 'none';
+                carossel.forEach(element => {
+                    element.style.justifyContent = 'end';
+                });
+                firstSlider.forEach(element => {
+                   //element.style.marginLeft = '75px';
+                });
+            } else {
+                leftArrow.style.display = 'block';
+            }
+
+            if (index === slides.length - 1) {
+                rightArrow.style.display = 'none';
+                carossel.forEach(element => {
+                    element.style.justifyContent = 'flex-start';
+                });
+            } else {
+                rightArrow.style.display = 'block';
+            }
+
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        testimonials.querySelector('.to-the-left').addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSlide(currentIndex);
+            }
+        });
+
+        testimonials.querySelector('.to-the-left.mobile-icon').addEventListener('click', function() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                showSlide(currentIndex);
+            }
+        });
+
+        testimonials.querySelector('.to-the-right').addEventListener('click', function() {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                showSlide(currentIndex);
+            }
+        });
+
+        showSlide(currentIndex);
+    });
+
+</script>

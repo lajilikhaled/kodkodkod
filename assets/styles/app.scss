@@ -1,51 +1,27 @@
+
 @import "bootstrap-icons";
 @import "slick-carousel/slick/slick";
 @import "slick-carousel/slick/slick-theme";
-@import "fonts";
 @import "map";
 
-// Override Bootstrap font variable
 $font-family-base: "Outfit", sans-serif;
 
-// Override Bootstrap primary color variable
 $primary: #e9204f;
 
 @import "bootstrap";
 
+.footer a,
+.navbar-page a {
+  text-decoration: none !important;
+}
+.footer a {
+  color: white !important;
+}
 .plus-jakarta-sans {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 .space-grotesk {
-  font-family: 'Space Grotesk', sans-serif;
-}
-
-.hero {
-  background-size: cover;
-  background-position: top;
-  background-image: url('./../images/backgrounds/home.png');
-}
-
-.service-hero {
-  background-size: cover;
-  background-position: center;
-  background-image: url('./../images/backgrounds/service.png');
-}
-
-.training-hero {
-  background-size: cover;
-  background-position: center;
-  background-image: url('./../images/backgrounds/training-and-workshops.jpg');
-}
-
-@media (max-width: 768px) {
-  .display-3 {
-    font-size: 1.8rem;
-  }
-  .hero {
-    background-size: cover;
-    background-position: center;
-    background-image: url('./../images/backgrounds/home_mobile.png');
-  }
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .text-gradiant {
@@ -55,18 +31,59 @@ $primary: #e9204f;
   -webkit-text-fill-color: transparent;
 }
 
-.nav-underline .nav-link.active::after,
-.nav-underline .nav-link:hover::after {
-  background-color: #e9204f !important;
+.testimonial {
+  font: 500 23px/48px Satoshi, sans-serif !important;
+}
+.testimonial-title {
+  font: 600 45px / 80px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+.testimonial-prev {
+  position: absolute;
+  left: -50px;
+  top: 40%;
+}
+.testimonial-next {
+  position: absolute;
+  right: -50px;
+  top: 40%;
 }
 
-.nav-underline .nav-link.active,
-.nav-underline .nav-link:hover {
-  color: #e9204f !important;
+.testimonial-next:hover,
+.testimonial-prev:hover {
+  background-color: #fff !important;
 }
 
-.text-justify {
-  text-align: justify !important;
+.h-line {
+  line-height: 1.5 !important;
+}
+
+.slick-dots {
+  bottom: -10% !important;
+}
+
+.color-palette {
+  height: 500px;
+  @media only screen and (max-width: 912px) {
+    height: 200px;
+  }
+}
+
+.w-95 {
+  width: 95% !important;
+}
+
+.training-hero {
+  background-size: cover;
+  background-position: center;
+  background-image: url('./../images/backgrounds/training-and-workshops.jpg');
+}
+
+
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 1.8rem;
+  }
 }
 
 input:focus {
@@ -75,27 +92,8 @@ input:focus {
   outline: none !important;
 }
 
-.footer input::placeholder {
-  color: white !important;
-  opacity: 1 !important;
-}
-
-.footer .border-bottom {
-  border-bottom: 1px solid rgba(211, 211, 211, 0.25) !important;
-}
-.btn.btn-outline-dark.rounded-circle:hover {
-  background-color: transparent !important;
-}
-
-.testimonial-prev  {
-  position: absolute;
-  left: -70px;
-  top: 40%;
-}
-.testimonial-next  {
-  position: absolute;
-  right: -70px;
-  top: 40%;
+.text-justify {
+  text-align: justify !important;
 }
 
 .works-prev  {
@@ -108,98 +106,11 @@ input:focus {
   right: 20px;
   bottom: -60px;
 }
-
-.team-prev  {
-  position: absolute;
-  right: 60px;
-  top: -220px;
-}
-.team-next  {
-  position: absolute;
-  right: 0;
-  top: -220px;
-}
-
-.slick-center .opacity-0 {
-  opacity: 1 !important;
-}
-.accordion-item {
-  border: none;
-  border-radius: 0;
-}
-
-.accordion-button:focus {
-  box-shadow: none !important;
-}
-
-/* Color active item header */
-.accordion-button:not(.collapsed) {
-  background: none;
-  color: black !important;
-  box-shadow: none !important;
-}
-.accordion-button:not(.collapsed) .me-4,
-.accordion-button:not(.collapsed)::after {
-  color: #e9204f !important;
-}
-
-/*
-.navbar-nav .nav-link {
-    position: relative;
-}
-.navbar-nav .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; !* Adjust as needed *!
-    left: 35%; !* Center the underline *!
-    width: 25%; !* Adjust as needed *!
-    height: 2px; !* Adjust as needed *!
-    background-color: #007bff; !* Adjust color as needed *!
-    transition: width 0.3s ease; !* Optional: Add transition effect *!
-    opacity: 0;
-}
-.navbar-nav .nav-link:hover::after {
-    opacity: 1;
-}
-.navbar-nav .active::after {
-    opacity: 1;
-}*/
-
-.background-circles {
-  background-size: cover;
-  bottom: 0;
-  left: 28%;
-  position: absolute;
-  top: 35px;
-  width: 45%;
-  opacity: 0.5;
-}
-
-.background-ellipse {
-  background: linear-gradient(68.41deg, #9531ff 51.35%, #08fff9 76.43%);
-  border-radius: 50%;
-  filter: blur(300px);
-  height: 45%;
-  left: 15%;
-  position: absolute;
-  top: 40%;
-  width: 70%;
-  z-index: -1;
-  @media only screen and (max-width: 912px) {
-    filter: blur(170px);
+.rounded-circle {
+  &:hover {
+    background-color: gray;
   }
-
-  @media only screen and (max-width: 480px) {
-    filter: blur(200px);
+  &:focus {
+    outline: none;
   }
-}
-.color-palette {
-  height: 500px;
-  @media only screen and (max-width: 912px) {
-    height: 200px;
-  }
-}
-.seeall-btn {
-  padding: 0.7rem 3rem;
-  background: #E9204F;
 }

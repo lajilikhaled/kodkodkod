@@ -1,0 +1,465 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{# Change link quote by country #}
+	{% if app.request.locale == "ko" %}
+		{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+	{% else %}
+		{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+	{% endif %}
+	{% if hongKong is defined and hongKong %}
+		{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+	{% endif %}
+
+{% block navbar %}
+	<div class="new-navbar navbar-desktop new-navbar--bg-black">
+		<div class="box">
+			<div class="left">
+				<a href="{{ path('home') }}">
+					<div class="logo">
+						<img src="{{ asset('build/images/newLandingPage/new_logo.png') }}" width="300" height="300"/>
+					</div>
+				</a>
+			</div>
+			<div class="mid">
+				<div class="mid-menu">
+					<a href="{{ path('home') }}">
+						{{"Home"|trans}}
+					</a>
+				</div>
+				<div class="mid-menu">
+					<a href="{{ path('portfolio') }}" target="_blank">
+						{{'new-menu.link1' | trans}}
+					</a>
+				</div>
+				<div class="mid-menu">
+					<a href="{{ path('kodwallet') }}#process">
+						{{'new-menu.link2' | trans}}
+					</a>
+				</div>
+				<div class="mid-menu">
+					<a href="{{ path('kodwallet') }}#presentation">
+						{{'new-menu.link3' | trans}}
+					</a>
+				</div>
+			</div>
+			<div class="right">
+				<a href={{ linkQuote }}>
+					<button class="white-btn white-btn--text-rose white-btn--bg-transparent">{{'new-menu.cta.top'|trans}}</button>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="new-navbar navbar-mobile new-navbar--bg-black">
+		<div class="box">
+			<div class="left">
+				<a href="{{ path('home') }}">
+					<div class="logo">
+						<img src="{{ asset('build/images/newLandingPage/new_logo.png') }}" width="300" height="300"/>
+					</div>
+				</a>
+			</div>
+			<div class="right">
+				<img class="mobile-open" src="{{ asset('build/images/landingPage/burger-menu-icon.svg') }}" width="80" height="80"/>
+			</div>
+			<div class="mobile-navbar-menus">
+				<div class="mobile-navbar-menus-top">
+					<a href="/"><img src="{{ asset('build/images/newLandingPage/new_logo.png') }}" width="65" height="65"/></a>
+					<img class="mobile-close" src="{{ asset('build/images/newLandingPage/navbar_close_white.svg') }}" width="25" height="25"/>
+				</div>
+				<div class="mobile-navbar-menus-bottom">
+					<div class="mobile-menus">
+						<div class="mobile-menu">
+							<a href="{{ path('home') }}">
+								{{"Home"|trans}}
+							</a>
+						</div>
+						<div class="mobile-menu">
+							<a href="{{ path('portfolio') }}" target="_blank">
+								{{'new-menu.link1' | trans}}
+							</a>
+						</div>
+						<div class="mobile-menu">
+							<a href="{{ path('kodwallet') }}#process">
+								{{'new-menu.link2' | trans}}
+							</a>
+						</div>
+						<div class="mobile-menu">
+							<a href="{{ path('kodwallet') }}#presentation">
+								{{'new-menu.link3' | trans}}
+							</a>
+						</div>
+						<div class="mobile-menu"></div>
+						<div class="mobile-menu"></div>
+						<div class="mobile-menu">
+							<a href={{ linkQuote }}>
+								<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
+{# ----------------------------##########---BODY---###########--------------------------- #}
+
+
+{% block body %}
+	<div class="landingPage-kodwallet">
+		<section class="kodwallet-jumbotron">
+			<svg class="bg-chevron" viewbox="0 0 1920 400" height="400" preserveaspectratio="xMidYMax slice">
+				<defs>
+					<linearGradient id="Gradient1" x1="0" x2="0" y1="0" y2="1">
+						<stop offset="0%" stop-color="#0A0F1B"></stop>
+						<stop offset="100%" stop-color="#0A0F1B"></stop>
+					</linearGradient>
+				</defs>
+				<polygon points="0,0 960,400 1920,0" fill="url(#Gradient1)"></polygon>
+			</svg>
+
+			<div class="img-deco img-deco--left"><img src="{{ asset('build/images/landingPage/rings-1.png') }}" alt="decoration image"/></div>
+
+			<div class="box">
+				<div class="box__left">
+					<div class="title">{{'section1.cms.title'|trans}}</div>
+					{# <div class="subtitle">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequatur ipsa tempore illum dolore tempora in culpa est</div> #}
+
+					{# Jumbotron Buttons #}
+					<div class="btns">
+						<a href={{ linkQuote }}>
+							<button class="pink-btn">
+								{{ 'cta.top'|trans }}
+							</button>
+						</a>
+						{% if app.request.locale == 'fr' %}
+							<a href="tel:0451202424">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									04 51 20 24 24
+								</button>
+							</a>
+
+						{% elseif app.request.locale == 'en' %}
+							<a href="tel:+1 628-777-2241">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									+1 628-777-2241
+								</button>
+							</a>
+
+						{% elseif app.request.locale == 'ko' %}
+							<a href="tel:+1 628-777-2241">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									1668-5028
+								</button>
+							</a>
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="box__right">
+					<div class="bg-img">
+						<img class="img-circles" src="{{ asset('build/images/kodwallet/circles.png') }}" alt="circles"/>
+						<img class="img-iphone" src="{{ asset('build/images/kodwallet/iPhone13.png') }}" alt="iPhone13"/>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{# Introduction Kodwallet Section #}
+		<section id="introduction" class="kodwallet-introduction">
+			<div class="box">
+				<div class="box__left">
+					<img src="{{ asset('build/images/kodwallet/illus-presentation-kodwallet.png') }}" alt="illustration presentation kodwallet"/>
+				</div>
+				<div class="box__right">
+					<div class="title">{{'introduction.cms.title'|trans}}</span>
+				</div>
+				<div class="sub-title">
+					<p>{{'introduction.cms.baseline'|trans}}</p>
+				</div>
+				<div class="btns">
+					<a href={{ linkQuote }}>
+						<button class="white-btn white-btn--text-rose">
+							{{'introduction.cms.cta'|trans}}
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{# Compare Kodwallet Section #}
+	<section class="kodwallet-compare">
+		<div class="box">
+			<div class="advantages">
+				<div class="advantage-text">{{"section11.cms.baseline1"|trans}}</div>
+				<div class="advantage-text">{{"section11.cms.baseline2"|trans}}</div>
+				<div class="advantage-text">{{"section11.cms.baseline3"|trans}}</div>
+				<div class="advantage-text">{{"section11.cms.baseline4"|trans}}</div>
+				<div class="advantage-text">{{"section11.cms.baseline5"|trans}}</div>
+				<div class="advantage-text"></div>
+
+			</div>
+			<div class="card checkers">
+				<div class="card__line title">{{"section11.title2"|trans}}</div>
+				<div class="title--mobile">{{"section11.title2"|trans}}</div>
+				<div class="card__line mobile"></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+				<div class="card__line empty"></div>
+			</div>
+			<div class="card x">
+				<div class="card__line title">{{"section11.title1"|trans}}</div>
+				<div class="title--mobile">{{"section11.title1"|trans}}</div>
+				<div class="card__line mobile"></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+				<div class="card__line"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+				<div class="card__line empty"></div>
+
+			</div>
+
+		</div>
+	</section>
+
+	{# Client Process Kodwallet Section #}
+	<section id="process" class="kodwallet-process-client">
+		<div class="box">
+			<div class="box__item">
+				<div class="right title kodwallet-title">{{'section8.client.title.part1'|trans}}<br>
+					<span class="text-pink">{{'section8.client.title.part2'|trans}}</span>
+				</div>
+			</div>
+
+			<div class="box__item">
+				<div id="process-animation" class="left">
+					<hr id="line-step" width="1" size="500"/>
+					<img id="kod-logo" src="{{ asset('build/images/newLandingPage/new_logo.png') }}" alt="kod logo"/>
+				</div>
+
+				<div id="step-container"
+					class="right">
+					{# Step 1 #}
+					<div class="kodwallet-step">
+						<div class="container">
+							<div class="container__left">
+								<div class="imgs">
+									<svg id="step-1" width="70" height="150" viewbox="0 0 70 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.165 43.308V0.875999H69.321V150H21.789V43.308H0.165Z" style=""/>
+									</svg>
+								</div>
+							</div>
+
+							<div class="container__right">
+								<div class="title">{{'section8.client.baseline1'|trans}}</div>
+
+								<div class="title-mobile">
+									<div class="img">
+										<svg id="mobile-step-1" width="107" height="151" viewbox="0 0 70 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.165 43.308V0.875999H69.321V150H21.789V43.308H0.165Z" style=""/>
+										</svg>
+									</div>
+									<div class="title-mobile--title">{{'section8.client.baseline1'|trans}}</div>
+								</div>
+
+								<div class="sub-title">{{'section8.client.baseline2'|trans}}</div>
+								<div class="advantages">
+									<div class="text text-pink">🎯 Objective : &nbsp;</div>
+									<div class="text">{{'section8.client.baseline3'|trans}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{# Step 2 #}
+					<div class="kodwallet-step">
+						<div class="container">
+							<div class="container__left">
+								<div class="imgs">
+									<svg id="step-2" width="107" height="151" viewbox="0 0 107 151" xmlns="http://www.w3.org/2000/svg">
+										<path d="M0.837 116.892C19.061 103.292 33.477 90.984 44.085 79.968C54.693 68.816 59.997 58.412 59.997 48.756C59.997 45.492 59.249 42.976 57.753 41.208C56.393 39.44 54.557 38.556 52.245 38.556C49.525 38.556 47.349 39.984 45.717 42.84C44.221 45.56 43.677 49.776 44.085 55.488H0.225C0.633 42.84 3.353 32.436 8.385 24.276C13.553 16.116 20.217 10.132 28.377 6.32399C36.537 2.51599 45.513 0.611992 55.305 0.611992C72.713 0.611992 85.429 4.82799 93.453 13.26C101.613 21.556 105.693 32.232 105.693 45.288C105.693 59.024 101.273 71.944 92.433 84.048C83.729 96.016 72.781 106.148 59.589 114.444H106.305V150.96H0.837V116.892Z"/>
+									</svg>
+								</div>
+							</div>
+
+							<div class="container__right">
+								<div class="title">{{'section9.client.baseline1'|trans}}</div>
+
+								<div class="title-mobile">
+									<div class="img">
+										<svg id="mobile-step-2" width="107" height="151" viewbox="0 0 107 151" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.837 116.892C19.061 103.292 33.477 90.984 44.085 79.968C54.693 68.816 59.997 58.412 59.997 48.756C59.997 45.492 59.249 42.976 57.753 41.208C56.393 39.44 54.557 38.556 52.245 38.556C49.525 38.556 47.349 39.984 45.717 42.84C44.221 45.56 43.677 49.776 44.085 55.488H0.225C0.633 42.84 3.353 32.436 8.385 24.276C13.553 16.116 20.217 10.132 28.377 6.32399C36.537 2.51599 45.513 0.611992 55.305 0.611992C72.713 0.611992 85.429 4.82799 93.453 13.26C101.613 21.556 105.693 32.232 105.693 45.288C105.693 59.024 101.273 71.944 92.433 84.048C83.729 96.016 72.781 106.148 59.589 114.444H106.305V150.96H0.837V116.892Z"/>
+										</svg>
+									</div>
+									<div class="title-mobile--title">{{'section9.client.baseline1'|trans}}</div>
+								</div>
+
+								<div class="sub-title">{{'section9.client.baseline2'|trans}}</div>
+								<div class="advantages">
+									<div class="text text-pink">🔥
+										{{'section9.client.bold'|trans}}&nbsp;</div>
+									<div class="text">{{'section9.client.baseline3'|trans}}</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					{# Step 3 #}
+					<div class="kodwallet-step">
+						<div class="container">
+							<div class="container__left">
+								<div class="imgs">
+									<svg id="step-3" width="109" height="155" viewbox="0 0 109 155" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2.305 50.592C2.713 34.408 7.405 22.032 16.381 13.464C25.493 4.89599 38.345 0.611992 54.937 0.611992C65.681 0.611992 74.861 2.44799 82.477 6.11999C90.093 9.792 95.805 14.756 99.613 21.012C103.557 27.268 105.529 34.34 105.529 42.228C105.529 51.748 103.285 59.228 98.797 64.668C94.309 69.972 89.277 73.576 83.701 75.48V76.296C100.021 82.416 108.181 93.772 108.181 110.364C108.181 119.068 106.141 126.752 102.061 133.416C97.981 140.08 92.133 145.248 84.517 148.92C77.037 152.592 68.129 154.428 57.793 154.428C40.113 154.428 26.241 150.212 16.177 141.78C6.113 133.348 0.945 120.156 0.673 102.204H44.737C44.465 107.1 45.145 110.84 46.777 113.424C48.545 115.872 51.537 117.096 55.753 117.096C58.201 117.096 60.241 116.212 61.873 114.444C63.505 112.54 64.321 110.092 64.321 107.1C64.321 103.292 63.029 100.436 60.445 98.532C57.997 96.492 53.781 95.472 47.797 95.472H40.249V58.956H47.593C56.841 59.5 61.465 55.828 61.465 47.94C61.465 44.54 60.717 42.024 59.221 40.392C57.861 38.76 56.093 37.944 53.917 37.944C48.885 37.944 46.369 42.16 46.369 50.592H2.305Z"/>
+									</svg>
+								</div>
+							</div>
+
+							<div class="container__right">
+								<div class="title">{{'section10.client.baseline1'|trans}}</div>
+
+								<div class="title-mobile">
+									<div class="img">
+										<svg id="mobile-step-3" width="109" height="155" viewbox="0 0 109 155" xmlns="http://www.w3.org/2000/svg">
+											<path d="M2.305 50.592C2.713 34.408 7.405 22.032 16.381 13.464C25.493 4.89599 38.345 0.611992 54.937 0.611992C65.681 0.611992 74.861 2.44799 82.477 6.11999C90.093 9.792 95.805 14.756 99.613 21.012C103.557 27.268 105.529 34.34 105.529 42.228C105.529 51.748 103.285 59.228 98.797 64.668C94.309 69.972 89.277 73.576 83.701 75.48V76.296C100.021 82.416 108.181 93.772 108.181 110.364C108.181 119.068 106.141 126.752 102.061 133.416C97.981 140.08 92.133 145.248 84.517 148.92C77.037 152.592 68.129 154.428 57.793 154.428C40.113 154.428 26.241 150.212 16.177 141.78C6.113 133.348 0.945 120.156 0.673 102.204H44.737C44.465 107.1 45.145 110.84 46.777 113.424C48.545 115.872 51.537 117.096 55.753 117.096C58.201 117.096 60.241 116.212 61.873 114.444C63.505 112.54 64.321 110.092 64.321 107.1C64.321 103.292 63.029 100.436 60.445 98.532C57.997 96.492 53.781 95.472 47.797 95.472H40.249V58.956H47.593C56.841 59.5 61.465 55.828 61.465 47.94C61.465 44.54 60.717 42.024 59.221 40.392C57.861 38.76 56.093 37.944 53.917 37.944C48.885 37.944 46.369 42.16 46.369 50.592H2.305Z"/>
+										</svg>
+									</div>
+									<div class="title-mobile--title">{{'section10.client.baseline1'|trans}}</div>
+								</div>
+
+								<div class="sub-title">{{'section10.client.baseline2'|trans}}</div>
+								<div class="advantages">
+									<div class="text text-pink text-step-3">✌️{{'section10.client.bold'|trans}}&nbsp;</div>
+									<div class="text">{{'section10.client.baseline3'|trans}}</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{# Company Process Kodwallet Section #}
+	<section class="kodwallet-process-company">
+		<div class="box">
+			<div class="box__title kodwallet-title">{{'section8.client.title.part1'|trans}}<br><span class="text-pink">{{'section8.enterprise.title.part2'|trans}}</span>
+			</div>
+			<div class="box__container">
+				<div class="card">
+					<div class="number-img"><img src="{{ asset('build/images/kodwallet/num_1_rounded.png') }}" alt="num 1 rounded image"/></div>
+					<div class="title">{{'section8.enterprise.baseline1'|trans}}</div>
+					<div class="sub-title">{{'section8.enterprise.baseline2'|trans}}</div>
+					<div class="imgs">
+						<img src="{{ asset('build/images/landingPage/techno/magento.svg') }}" alt="magento logo"/>
+						<img src="{{ asset('build/images/landingPage/techno/prestashop.svg') }}" alt="prestashop logo"/>
+						<img src="{{ asset('build/images/landingPage/techno/shopify.svg') }}" alt="shopify logo"/>
+					</div>
+				</div>
+				<div class="card">
+					<div class="number-img"><img src="{{ asset('build/images/kodwallet/num_2_rounded.png') }}" alt="num 2 rounded image"/></div>
+					<div class="title">{{'section9.enterprise.baseline1'|trans}}</div>
+					<div class="sub-title">{{'section9.enterprise.baseline2'|trans}}</div>
+					<div class="imgs"></div>
+				</div>
+			</div>
+			<div class="box__btns">
+				<a href={{ linkQuote }}>
+					<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+						{{'introduction.cms.cta'|trans}}
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	{# Presentation Section / Just code Section #}
+	<section id="presentation" class="kodwallet-presentation">
+		<div class="box">
+			<div class="box__left">
+				<img src="{{ asset('build/images/kodwallet/illus-intro-kodwallet.png') }}" alt="illustration introduction kodwallet"/>
+			</div>
+			<div class="box__right">
+				<div class="title kodwallet-title">{{ 'Just code'|trans }}<br><span class="text-pink">{{ 'No bullshit'|trans }}</span>
+				</div>
+				<div class="description">
+					<p>{{ 'section2.baseline2'|trans }}</p>
+					<p>{{ 'section2.baseline3'|trans }}.
+						{{ 'section2.baseline4'|trans }}</p>
+				</div>
+				<div class="btns">
+					<a href={{ linkQuote }}>
+						<button class="white-btn white-btn--text-rose">
+							{{ 'cta.top'|trans }}
+						</button>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{# Studio Data Section #}
+	<section class="kodwallet-studio-data">
+		<div class="box">
+			<div class="box__title kodwallet-title">{{ 'studio-data.title.part1'|trans }}&nbsp;<span class="text-pink">{{ 'studio-data.title.part2'|trans }}</span>
+			</div>
+
+			<div class="box__container">
+				<div class="card">
+					<div class="card-img"><img src="{{ asset('build/images/kodwallet/laptop-studio-data.png') }}" alt="laptop image"/></div>
+					<div class="data-number">10</div>
+					<div class="description">{{ 'studio-data.section1.baseline'|trans }}</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img"><img src="{{ asset('build/images/kodwallet/web-dev-studio-data.png') }}" alt="web dev image"/></div>
+					<div class="data-number">30</div>
+					<div class="description">{{ 'studio-data.section2.baseline'|trans }}</div>
+				</div>
+
+				<div class="card">
+					<div class="card-img"><img src="{{ asset('build/images/kodwallet/coffee-laptop-studio-data.png') }}" alt="coffee-laptop image"/></div>
+					<div class="data-number">4104</div>
+					<div class="description">{{ 'studio-data.section3.baseline'|trans }}</div>
+				</div>
+			</div>
+
+			<div class="box__btns">
+				<a href={{ linkQuote }}>
+					<button class="white-btn white-btn--text-rose">
+						{{ 'cta.top'|trans }}
+					</button>
+				</a>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+<div class="landingPage">
+	
+	{# Address Section #}
+	{% include 'home/component/common_sections/address_section.html.twig' %}
+
+</div>
+{% endblock %}

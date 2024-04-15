@@ -7,24 +7,36 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: CategoryRepository::class)]
+/**
+ * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ */
 class Category
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $name;
 
-    #[ORM\OneToMany(targetEntity: Project::class, mappedBy: "category")]
+    /**
+     * @ORM\OneToMany(targetEntity=Project::class, mappedBy="category")
+     */
     private $projects;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $nameKr;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $nameEn;
 
     public function __construct()
@@ -32,13 +44,13 @@ class Category
         $this->projects = new ArrayCollection();
     }
 
-    public function __toString()
-    {
-        return $this->name;
-    }
+	public function __toString()
+	{
+		return $this->name;
+	}
 
 
-    public function getId(): ?int
+	public function getId(): ?int
     {
         return $this->id;
     }

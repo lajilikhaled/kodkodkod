@@ -1,0 +1,41 @@
+<section class="container">
+    <div class="row py-5">
+        <div class="col-lg-7 space-grotesk">
+            <h1 class="display-4 fw-medium mb-5">{{ 'coaching.opp.title'| trans }}</h1>
+        </div>
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-lg-4">
+            <h3 class="space-grotesk fw-medium border-bottom pb-3">{{ 'coaching.opp.content1.t1'| trans }} <br> {{ 'coaching.opp.content1.t2'| trans }}</h3>
+            <h5 class="space-grotesk fw-medium border-bottom py-3">{{ 'coaching.opp.content1.t3'| trans }} <span class="text-primary">4-6 {{ 'coaching.opp.content1.t4'| trans }}</span></h5>
+            <p class="space-grotesk text-secondary py-3 mb-4">   {{ 'coaching.opp.content1.p'| trans }}  </p>
+            {% for i in 1..4 %}
+                <div class="d-flex justify-content-start align-items-start mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-lg-4">
+            <h3 class="space-grotesk fw-medium border-bottom pb-3">{{ 'coaching.opp.content2.t1'| trans }}  <br> {{ 'coaching.opp.content2.t2'| trans }} </h3>
+            <h5 class="space-grotesk fw-medium border-bottom py-3">{{ 'coaching.opp.content2.t3'| trans }} <span class="text-primary">3 {{ 'coaching.opp.content2.t4'| trans }}</span></h5>
+            <p class="space-grotesk text-secondary py-3 mb-4">{{ 'coaching.opp.content2.p'| trans }}</p>
+            {% for i in 1..4 %}
+                <div class="d-flex justify-content-start align-items-start mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.workshops.points.point' ~ i)|trans }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-lg-4 ">
+            <h3 class="space-grotesk fw-medium border-bottom pb-3">{{ 'coaching.opp.content3.t1'| trans }}  <br> {{ 'coaching.opp.content3.t2'| trans }} </h3>
+            <h5 class="space-grotesk fw-medium border-bottom py-3">{{ 'coaching.opp.content3.t3'| trans }} <span class="text-primary">3 {{ 'coaching.opp.content3.t4'| trans }}</span></h5>
+            <p class="space-grotesk text-secondary py-3 mb-4">{{ 'coaching.opp.content3.p'| trans }}</p>            {% for i in 1..4 %}
+                <div class="d-flex justify-content-start align-items-start mb-3">
+                    <i class="bi bi-check-circle-fill text-gradiant fs-2"></i>
+                    <p class="fs-5 text-secondary mt-1 ms-3">{{ ('elevateYourBusiness.development.points.point' ~ i)|trans }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

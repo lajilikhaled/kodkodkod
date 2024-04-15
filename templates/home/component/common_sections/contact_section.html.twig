@@ -1,0 +1,23 @@
+{# Contact Section #}
+<section class="sec-contact">
+	<div class="bg-img"><img class="bg-sec-contact" src="{{ asset('build/images/landingPage/contact/bg-contact.png') }}" alt="bg"/></div>
+	<div class="box">
+		<div class="box__left">
+			<div class="img"><img class="illus-hand-img" src="{{ asset('build/images/landingPage/contact/illus-contact-2.png') }}" alt="illustration contact section image" loading="lazy"/></div>
+			<div class="title {%if app.request.locale == 'ko'%} ko-version {% endif %}">{{"contact.LP.title1"|trans}}<br><span class="text-pink">{{"contact.LP.title2"|trans}}</span>
+			</div>
+			<div class="sub-title">{{"contact.LP.subtitle"|trans}}</div>
+			<div class="btns">
+				<a href={{ linkQuote |trans }}>
+					<button class="pink-btn">
+						{{ 'cta.top'|trans }}
+					</button>
+				</a>
+			</div>
+		</div>
+		<div class="box__right">
+			<img class="illus-img" src="{{ asset('build/images/landingPage/contact/illus-contact.png') }}" alt="illustration contact section image" loading="lazy"/>
+		</div>
+
+	</div>
+</section>

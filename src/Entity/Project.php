@@ -7,199 +7,348 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
-
-#[ORM\Entity(repositoryClass: ProjectRepository::class)]
-#[Vich\Uploadable]
+/**
+ * @ORM\Entity(repositoryClass=ProjectRepository::class)
+ * @Vich\Uploadable
+ */
 class Project
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
-    private $id;
+	/**
+	 * @ORM\Id
+	 * @ORM\GeneratedValue
+	 * @ORM\Column(type="integer")
+	 */
+	private $id;
 
-    #[ORM\Column(type: "string", length: 500)]
-    private $title;
+	/**
+	 * @ORM\Column(type="string", length=500)
+	 */
+	private $title;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
-    private $slug;
+	/**
+	 * @ORM\Column(type="string", length=255,nullable=true)
+	 */
+	private $slug;
 
-    #[ORM\Column(type: "array", nullable: true)]
-    private array $images = [];
-    #[ORM\Column(type: "integer", nullable: true)]
-    private $imageSize;
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $image;
 
-    #[ORM\Column(type: "integer", nullable: true)]
-    private $priority;
 
-    #[ORM\Column(type: "integer", nullable: true)]
-    private $priorityKo;
+	/**
+	 * @ORM\Column(type="integer", nullable=true)
+	 *
+	 * @var int|null
+	 */
+	private $imageSize;
 
-    #[ORM\Column(type: "string", length: 255, nullable: true)]
-    private $country;
+	/**
+	 * @ORM\Column(type="integer", nullable=true)
+	 *
+	 * @var int|null
+	 */
+	private $priority;
 
-    #[ORM\Column(type: "datetime", nullable: true)]
-    private $updatedAt;
+	/**
+	 * @ORM\Column(type="integer", nullable=true)
+	 *
+	 * @var int|null
+	 */
+	private $priorityKo;
 
-    #[Vich\UploadableField(mapping: "projects", fileNameProperty: "image", size: "imageSize")]
-    private $imageFile;
+	/**
+	 * @ORM\Column(type="string", length=255,nullable=true)
+	 */
+	private $country;
 
-    #[ORM\Column(type: "text", nullable: true)]
-    private $description;
+	/**
+	 * @ORM\Column(type="datetime", nullable=true)
+	 *
+	 * @var \DateTimeInterface|null
+	 */
+	private $updatedAt;
 
-    #[ORM\Column(type: "text", nullable: true)]
-    private $descriptionKo;
 
-    #[ORM\Column(type: "text", nullable: true)]
-    private $descriptionEn;
+	/**
+	 * NOTE: This is not a mapped field of entity metadata, just a simple property.
+	 *
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="image", size="imageSize")
+	 *
+	 * @var File|null
+	 */
+	private $imageFile;
 
-    #[ORM\Column(type: "array", nullable: true)]
-    private $technology = [];
 
-    #[ORM\Column(type: "array", nullable: true)]
-    private $ecommerce = [];
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $description;
 
-    #[ORM\Column(type: "array", nullable: true)]
-    private $blockchain = [];
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $descriptionKo;
 
-    #[ORM\Column(type: "text", nullable: true)]
-    private $goal;
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $descriptionEn;
 
-    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: "projects")]
-    private $category;
+	/**
+	 * @ORM\Column(type="array",nullable=true)
+	 */
+	private $technology = [];
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+	/**
+	 * @ORM\Column(type="array",nullable=true)
+	 */
+	private $ecommerce = [];
 
-    public function getTitle(): ?string
-    {
-        return $this->title;
-    }
+	/**
+	 * @ORM\Column(type="array",nullable=true)
+	 */
+	private $blockchain = [];
 
-    public function setTitle(string $title): self
-    {
-        $this->title = $title;
+	/**
+	 * @ORM\Column(type="text",nullable=true)
+	 */
+	private $goal;
 
-        return $this;
-    }
+	/**
+	 * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="projects")
+	 */
+	private $category;
 
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideOneImageRight;
 
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideOneImageRight")
+	 *
+	 * @var File|null
+	 */
+	private $slideOneImageRightFile;
 
-        return $this;
-    }
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideOneImageCenter;
 
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideOneImageCenter")
+	 *
+	 * @var File|null
+	 */
+	private $slideOneImageCenterFile;
 
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
 
-        return $this;
-    }
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideOneImageLeft;
 
-    public function getTechnology(): ?array
-    {
-        return $this->technology;
-    }
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideOneImageLeft")
+	 *
+	 * @var File|null
+	 */
+	private $slideOneImageLeftFile;
 
-    public function setTechnology(array $technology): self
-    {
-        $this->technology = $technology;
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideTwoImageLeft;
 
-        return $this;
-    }
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideTwoImageLeft")
+	 *
+	 * @var File|null
+	 */
+	private $slideTwoImageLeftFile;
+
+
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideTwoImageRight;
+
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideTwoImageRight")
+	 *
+	 * @var File|null
+	 */
+	private $slideTwoImageRightFile;
+
+
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideThreeImage1Left;
+
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideThreeImage1Left")
+	 *
+	 * @var File|null
+	 */
+	private $slideThreeImage1LeftFile;
+
+
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideThreeImage2Right;
+
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideThreeImage2Right")
+	 *
+	 * @var File|null
+	 */
+	private $slideThreeImage2RightFile;
+
+
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideThreeImage3Left;
+
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideThreeImage3Left")
+	 *
+	 * @var File|null
+	 */
+	private $slideThreeImage3LeftFile;
+
+	/**
+	 * @ORM\Column(type="string", length=255, nullable=true)
+	 */
+	private $slideThreeImage4Right;
+
+	/**
+	 * @Vich\UploadableField(mapping="projects", fileNameProperty="slideThreeImage4Right")
+	 *
+	 * @var File|null
+	 */
+	private $slideThreeImage4RightFile;
+
+	public function getId(): ?int
+	{
+		return $this->id;
+	}
+
+	public function getTitle(): ?string
+	{
+		return $this->title;
+	}
+
+	public function setTitle(string $title): self
+	{
+		$this->title = $title;
+
+		return $this;
+	}
+
+	public function getSlug(): ?string
+	{
+		return $this->slug;
+	}
+
+	public function setSlug(string $slug): self
+	{
+		$this->slug = $slug;
+
+		return $this;
+	}
+
+	public function getDescription(): ?string
+	{
+		return $this->description;
+	}
+
+	public function setDescription(string $description): self
+	{
+		$this->description = $description;
+
+		return $this;
+	}
+
+	public function getTechnology(): ?array
+	{
+		return $this->technology;
+	}
+
+	public function setTechnology(array $technology): self
+	{
+		$this->technology = $technology;
+
+		return $this;
+	}
 
 	public function getEcommerce(): ?array
-    {
-        return $this->ecommerce;
-    }
+	{
+		return $this->ecommerce;
+	}
 
-    public function setEcommerce(array $ecommerce): self
-    {
-        $this->ecommerce = $ecommerce;
+	public function setEcommerce(array $ecommerce): self
+	{
+		$this->ecommerce = $ecommerce;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function getBlockchain(): ?array
-    {
-        return $this->blockchain;
-    }
+	public function getBlockchain(): ?array
+	{
+		return $this->blockchain;
+	}
 
-    public function setBlockchain(array $blockchain): self
-    {
-        $this->blockchain = $blockchain;
+	public function setBlockchain(array $blockchain): self
+	{
+		$this->blockchain = $blockchain;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function getGoal(): ?string
-    {
-        return $this->goal;
-    }
+	public function getGoal(): ?string
+	{
+		return $this->goal;
+	}
 
-    public function setGoal(string $goal): self
-    {
-        $this->goal = $goal;
+	public function setGoal(string $goal): self
+	{
+		$this->goal = $goal;
 
-        return $this;
-    }
+		return $this;
+	}
 
-    public function getImages(): ?array
-    {
-        return $this->images;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getImage()
+	{
+		return $this->image;
+	}
 
-    public function setImages(array $images): self
-    {
-        $this->images = $images;
+	/**
+	 * @param mixed $image
+	 */
+	public function setImage($image): void
+	{
+		$this->image = $image;
+	}
 
-        return $this;
-    }
+	public function getCategory(): ?Category
+	{
+		return $this->category;
+	}
 
-    public function addImage(string $name, string $path): self
-    {
-        $this->images[$name] = $path;
+	public function setCategory(?Category $category): self
+	{
+		$this->category = $category;
 
-        return $this;
-    }
-
-    public function removeImage(string $name): self
-    {
-        if (isset($this->images[$name])) {
-            unset($this->images[$name]);
-        }
-
-        return $this;
-    }
-
-    public function getImageByName(string $name): ?string
-    {
-        return $this->images[$name] ?? null;
-    }
-
-    public function getCategory(): ?Category
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?Category $category): self
-    {
-        $this->category = $category;
-
-        return $this;
-    }
+		return $this;
+	}
 
 	/**
 	 * If manually uploading a file (i.e. not using Symfony Form) ensure an instance
@@ -224,16 +373,6 @@ class Project
 	public function getImageFile(): ?File
 	{
 		return $this->imageFile;
-	}
-
-	public function setImageName(?string $imageName): void
-	{
-		$this->imageName = $imageName;
-	}
-
-	public function getImageName(): ?string
-	{
-		return $this->imageName;
 	}
 
 	public function setImageSize(?int $imageSize): void
@@ -342,5 +481,238 @@ class Project
 		$this->priorityKo = $priorityKo;
 	}
 
+	public function getSlideOneImageRight(): ?string
+	{
+		return $this->slideOneImageRight ?: 'default.png';
+	}
 
+	public function setSlideOneImageRight(?string $slideOneImageRight): self
+	{
+		$this->slideOneImageRight = $slideOneImageRight;
+
+		return $this;
+	}
+
+	public function setSlideOneImageRightFile(?File $slideOneImageRightFile = null): void
+	{
+		$this->slideOneImageRightFile = $slideOneImageRightFile;
+
+		if (null !== $slideOneImageRightFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideOneImageRightFile(): ?File
+	{
+		return $this->slideOneImageRightFile;
+	}
+
+
+	public function getSlideOneImageLeft(): ?string
+	{
+		return $this->slideOneImageLeft ?: 'default.png';
+	}
+
+	public function setSlideOneImageLeft(?string $slideOneImageLeft): self
+	{
+		$this->slideOneImageLeft = $slideOneImageLeft;
+
+		return $this;
+	}
+
+	public function setSlideOneImageLeftFile(?File $slideOneImageLeftFile = null): void
+	{
+		$this->slideOneImageLeftFile = $slideOneImageLeftFile;
+
+		if (null !== $slideOneImageLeftFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideOneImageLeftFile(): ?File
+	{
+		return $this->slideOneImageLeftFile;
+	}
+
+	public function getSlideOneImageCenter(): ?string
+	{
+		return $this->slideOneImageCenter ?: 'default.png';
+	}
+
+	public function setSlideOneImageCenter(?string $slideOneImageCenter): self
+	{
+		$this->slideOneImageCenter = $slideOneImageCenter;
+
+		return $this;
+	}
+
+	public function setSlideOneImageCenterFile(?File $slideOneImageCenterFile = null): void
+	{
+		$this->slideOneImageCenterFile = $slideOneImageCenterFile;
+
+		if (null !== $slideOneImageCenterFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideOneImageCenterFile(): ?File
+	{
+		return $this->slideOneImageCenterFile;
+	}
+
+	public function getSlideTwoImageLeft(): ?string
+	{
+		return $this->slideTwoImageLeft ?: 'default.png';
+	}
+
+	public function setSlideTwoImageLeft(?string $slideTwoImageLeft): self
+	{
+		$this->slideTwoImageLeft = $slideTwoImageLeft;
+
+		return $this;
+	}
+
+	public function setSlideTwoImageLeftFile(?File $slideTwoImageLeftFile = null): void
+	{
+		$this->slideTwoImageLeftFile = $slideTwoImageLeftFile;
+
+		if (null !== $slideTwoImageLeftFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideTwoImageLeftFile(): ?File
+	{
+		return $this->slideTwoImageLeftFile;
+	}
+
+	public function getSlideTwoImageRight(): ?string
+	{
+		return $this->slideTwoImageRight ?: 'default.png';
+	}
+
+	public function setSlideTwoImageRight(?string $slideTwoImageRight): self
+	{
+		$this->slideTwoImageRight = $slideTwoImageRight;
+
+		return $this;
+	}
+
+	public function setSlideTwoImageRightFile(?File $slideTwoImageRightFile = null): void
+	{
+		$this->slideTwoImageRightFile = $slideTwoImageRightFile;
+
+		if (null !== $slideTwoImageRightFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideTwoImageRightFile(): ?File
+	{
+		return $this->slideTwoImageRightFile;
+	}
+
+	public function getSlideThreeImage1Left(): ?string
+	{
+		return $this->slideThreeImage1Left ?: 'default.png';
+	}
+
+	public function setSlideThreeImage1Left(?string $slideThreeImage1Left): self
+	{
+		$this->slideThreeImage1Left = $slideThreeImage1Left;
+
+		return $this;
+	}
+
+	public function setSlideThreeImage1LeftFile(?File $slideThreeImage1LeftFile = null): void
+	{
+		$this->slideThreeImage1LeftFile = $slideThreeImage1LeftFile;
+
+		if (null !== $slideThreeImage1LeftFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideThreeImage1LeftFile(): ?File
+	{
+		return $this->slideThreeImage1LeftFile;
+	}
+
+	public function getSlideThreeImage2Right(): ?string
+	{
+		return $this->slideThreeImage2Right ?: 'default.png';
+	}
+
+	public function setSlideThreeImage2Right(?string $slideThreeImage2Right): self
+	{
+		$this->slideThreeImage2Right = $slideThreeImage2Right;
+
+		return $this;
+	}
+
+	public function setSlideThreeImage2RightFile(?File $slideThreeImage2RightFile = null): void
+	{
+		$this->slideThreeImage2RightFile = $slideThreeImage2RightFile;
+
+		if (null !== $slideThreeImage2RightFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideThreeImage2RightFile(): ?File
+	{
+		return $this->slideThreeImage2RightFile;
+	}
+
+	public function getSlideThreeImage3Left(): ?string
+	{
+		return $this->slideThreeImage3Left ?: 'default.png';
+	}
+
+	public function setSlideThreeImage3Left(?string $slideThreeImage3Left): self
+	{
+		$this->slideThreeImage3Left = $slideThreeImage3Left;
+
+		return $this;
+	}
+
+	public function setSlideThreeImage3LeftFile(?File $slideThreeImage3LeftFile = null): void
+	{
+		$this->slideThreeImage3LeftFile = $slideThreeImage3LeftFile;
+
+		if (null !== $slideThreeImage3LeftFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideThreeImage3LeftFile(): ?File
+	{
+		return $this->slideThreeImage3LeftFile;
+	}
+
+	public function getSlideThreeImage4Right(): ?string
+	{
+		return $this->slideThreeImage4Right ?: 'default.png';
+	}
+
+	public function setSlideThreeImage4Right(?string $slideThreeImage4Right): self
+	{
+		$this->slideThreeImage4Right = $slideThreeImage4Right;
+
+		return $this;
+	}
+
+	public function setSlideThreeImage4RightFile(?File $slideThreeImage4RightFile = null): void
+	{
+		$this->slideThreeImage4RightFile = $slideThreeImage4RightFile;
+
+		if (null !== $slideThreeImage4RightFile) {
+			$this->updatedAt = new \DateTimeImmutable();
+		}
+	}
+
+	public function getSlideThreeImage4RightFile(): ?File
+	{
+		return $this->slideThreeImage4RightFile;
+	}
 }

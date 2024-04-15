@@ -1,0 +1,166 @@
+.pink-btn {
+    @include pink-btn;
+}
+
+.team-developers {
+    @include display-flex;
+    padding: 50px 10px 50px 10px;
+    width: 100%;
+
+    .box {
+        @include box;
+
+        .row-1 {
+            @include title($fontSize: 30px);
+            color: $mainClr;
+        }
+
+        .row-2 {
+            @include display-flex;
+            width: 100%;
+
+            @media (max-width: 640px) {
+                flex-direction: column;    
+                align-items: flex-start;
+            }
+
+            justify-content: space-between;
+
+            .title {
+                @include title;
+                color: $secClr;
+
+                @media (max-width: 640px) {
+                    margin-bottom: 30px;
+                    text-align: left;
+                    font-size: 30px;;
+                }
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 30px;
+            width: 100%;
+            justify-items: center;
+
+            @media (max-width: 1280px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @media (max-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (max-width: 640px) {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                @include display-flex($justifyContent: space-evenly);
+                flex-direction: column;
+                color: $secClr;
+                background: $white;
+                box-shadow: 20px 20px 30px rgba(206, 174, 158, 0.2);
+                border-radius: 14px;
+                padding: 0 20px;
+                font-weight: 700;
+                min-height: 400px;
+                min-width: 230px;
+                margin-top: 40px;
+                position: relative;
+
+                &__img {
+                    width: 50%;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 5%;
+                }
+
+                &__text {
+                    @include display-flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 45%;
+
+                    .title {
+                        @include title($fontSize: 30px);
+                        line-height: 45px;
+
+                        @media (max-width: 640px) {
+                            font-size: 17px;
+                        }
+                    }
+
+                    .sub-title {
+                        display: grid;
+                        grid-template-rows: 1fr 2fr;
+                        height: 100px;
+                        justify-items: center;
+                        padding-top: 5px;
+
+                        &__1 {
+                            @include sub-title($fontSize: 20px);
+                            color: $secClr;
+
+                            @media (max-width: 640px) {
+                                font-size: 17px;
+                            }
+                        }
+    
+                        &__2 {
+                            grid-row: 2 / 2;
+                            p {
+                                @include sub-title($fontSize: 16px);
+                                color: $secClr;
+                                text-align: center;
+                           }
+                        }
+                    }
+                }
+
+                &__contact {
+                    @include display-flex;
+                    position: absolute;
+                    bottom: 5%;
+
+                    .badge {
+                        @include display-flex;
+                        width: 40px;
+                        height: 40px;
+                        z-index: 1;
+
+                        .pr-logo-linkedin {
+                            font-size: 40px;
+                            margin-right: 5px;
+                            color: $secClr;
+                            background-color: $white;
+                        }
+
+                        &--black {
+                            width: 31px;
+                            height: 31px;
+                            background-color: $secClr;
+                            border-radius: 3px;
+
+                            .pr-logo-github {
+                                font-size: 20px;
+                                color: $white;
+                                background-color: $secClr;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+<div class="content3">
+    <div class="div">
+        <div class="div-2">
+            <div class="div-3">{{ 'elevateYourBusiness.title'|trans }}</div>
+            <div class="div-4">
+                <div class="div-5">
+                    <!-- Consulting Section -->
+                    <div class="column">
+                        <div class="div-6">
+                            <div class="div-7">{{ 'elevateYourBusiness.consulting.title'|trans }} </br> {{ 'elevateYourBusiness.consulting.secondTitle'|trans }} </div>
+                            <div class="div-9" style="display: flex; flex-wrap: wrap;">
+                                {% for i in 1..4 %}
+                                    <div class="div-10">
+                                        <span>{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Workshops Section -->
+                    <div class="column">
+                        <div class="div-6">
+                            <div class="div-7">{{ 'elevateYourBusiness.workshops.title'|trans }}</div>
+                            <div class="div-9" style="display: flex; flex-wrap: wrap;">
+                                {% for i in 1..4 %}
+                                    <div class="div-10">
+                                        <span>{{ ('elevateYourBusiness.workshops.points.point' ~ i)|trans }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Development Section -->
+                    <div class="column">
+                        <div class="div-6">
+                            <div class="div-7">{{ 'elevateYourBusiness.development.title'|trans }}</div>
+                            <div class="div-9" style="display: flex; flex-wrap: wrap;">
+                                {% for i in 1..4 %}
+                                    <div class="div-10">
+                                        <span>{{ ('elevateYourBusiness.development.points.point' ~ i)|trans }}</span>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

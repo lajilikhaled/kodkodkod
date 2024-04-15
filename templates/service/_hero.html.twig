@@ -1,21 +1,20 @@
-<section class="service-hero d-flex py-5">
+<section class="service-hero d-flex position-relative">
     <div class="container py-5">
-        <div class="col-12 text-center mt-md-5 pt-md-5 mb-5">
+        <div class="col-12 text-center mt-md-5 pt-md-5">
             <div class="d-flex justify-content-center">
                 <h1 class="col-md-7 text-white plus-jakarta-sans display-3 fw-bold mb-4 mt-5">
-                    Unlock the Power of AI with Our <span class="text-gradiant">Development</span> Services
+                    {{ 'service.hero.text1'|trans }} <span class="text-gradiant">{{ 'service.hero.text2'|trans }}</span> 
+                    {{ 'service.hero.text3'|trans }}
                 </h1>
             </div>
             <div class="d-flex justify-content-center">
                 <p class="lead col-md-7 text-white mb-5">
-                    Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize
-                    the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique
-                    needs.
+                    {{ 'service.hero.paragraph'|trans }}
                 </p>
             </div>
             <button class="btn btn-light rounded-pill px-4 py-3 mb-md-3" type="button" aria-label="Phone">
                 <span class="text-gradiant fs-4 fw-medium">{{ 'welcomeSection.bookConsultation'|trans }}</span>
-                <img src="{{ asset('build/images/icons/arrow.svg') }}" alt="arrow" class="ms-2 mb-2"/>
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe697f339d3ce4c0930ff523b955cd461802f5c7db8032f509332e1cd4587b75?" alt="arrow" class="ms-2 mb-2"/>
             </button>
         </div>
     </div>

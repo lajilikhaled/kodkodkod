@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ blog.metaTitle | trans }}{% endblock %}
+{% block ogmetatitle %}{{ blog.metaTitle | trans }}{% endblock %}
+
+{% block ogmetadesc %}{{ blog.metaDescription | trans }}{% endblock %}
+{% block description %}{{blog.metaDescription | trans }}{% endblock %}
+
+{% block body %}
+
+
+    <div class="app-blog-detail">
+
+        <div class="blog-container">
+
+            <div class="author-container">
+                <img class="author" src="{{ asset('build/images/maxime_blog.png') }}" width="50" height="50" alt="maxime gastaldo"/>
+
+                <div class="name-container">
+                    <div class="name">Maxime GASTALDO</div>
+                    <div>{{ 'blog.posted'|trans }} {{ blog.posted|date('d/m/Y') }}</div>
+                </div>
+
+            </div>
+            <h1>{{ blog.title }}</h1>
+
+            <img src="/images/blog/{{ blog.image }}"  alt="{{ blog.title }}" class="imgBlog" width="100%">
+            <br><br>
+            <div class="section-inner">
+
+                {{ blog.description|raw }}
+            </div>
+
+        </div>
+
+
+    </div>
+{#    <div class="landingPage">#}
+{#        #}{# Contact + Address Sections #}
+{#        {% include 'home/component/common_sections/address_section.html.twig' %}#}
+{#    </div>#}
+
+{% endblock %}

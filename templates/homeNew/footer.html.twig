@@ -1,0 +1,107 @@
+<div class="footer">
+  <div class="div">
+    <div class="div-2">
+        <div class="div-3">
+            <div class="div-4">
+                <div class="column">
+                    <div class="div-5">
+                        <div class="div-6">{{ 'footer.aiProjectTitle'|trans }}</div>
+                        <div class="div-7"></div>
+                        <div class="div-8">
+                            <div class="div-9">
+                              <span>{{ 'footer.connectWithExpert'|trans }}</span>
+                            </div>
+                            <div class="div-9">
+                              <span>{{ 'footer.responseTime'|trans }}</span>
+                            </div>
+                            <div class="div-9">
+                              <span>{{ 'footer.availability'|trans }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-2">
+                    <form id="contactForm" data-url="{{ path('app_contact_footer') }}" method="POST" class="div-17 needs-validation" novalidate>
+                        <!-- First Name Field -->
+                        <label for="firstName">{{ 'footer.firstName'|trans }}</label>
+                        <input type="text" id="firstName" name="firstName"  placeholder="{{ 'footer.firstName'|trans }}" class="was-validated" required/>
+                        <div class="invalid-feedback error-firstName">
+                            {{ 'footer.validator.name'|trans }}
+                        </div>
+
+                        <!-- Email Field -->
+                        <label for="email">{{ 'footer.email'|trans }}</label>
+                        <input type="email" id="email" name="email"  placeholder="{{ 'footer.email'|trans }}" required/>
+                        <div class="invalid-feedback error-email">
+                            {{ 'footer.validator.email'|trans }}
+                        </div>
+
+                        <!-- Message Field -->
+                        <label for="message">{{ 'footer.message'|trans }}</label>
+                        <textarea id="message" name="message" required placeholder="{{ 'footer.messageText'|trans }}"></textarea>
+                        <div class="invalid-feedback error-message">
+                            {{ 'footer.validator.message'|trans }}
+                        </div>
+
+                        <!-- Send Button -->
+                        <button class="div-27" type="submit" id="submitButton">
+                            <div class="div-28">{{ 'footer.sendMessage'|trans }}</div>
+                            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/50c97134f0c9170286f30ac0ed74faea9dfc42a99b316e3cb022e04e2a348896?" class="img-2" />
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="div-29"></div>
+        <div class="div-30">
+            <div class="div-31">
+                <div class="div-32">{{ 'footer.getInTouch'|trans }}</div>
+                <div class="div-33"><a href="tel:{{ 'footer.contactNumber'|trans }}">{{ 'footer.contactNumber'|trans }}</a></div>
+{#                <div class="div-34">{{ 'footer.address'|trans }}</div>#}
+                {%if app.request.locale == 'ko'%}
+                    <div class="div-34">
+                        <div>대표 : 김다빈  |  사업자 등록번호 : 592-84-00057</div>
+                        <div>사업자정보 컴퓨터 프로그래밍업  |  서울특별시 강남구 영동대로 602, 미켈란107 6층 K12</div>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="div-35">
+                <!-- Navigation Links -->
+                <div class="div-36">  <a href="/">{{ 'menu.home'|trans }}</a></div>
+                <div class="div-37">   <a href="#services">{{ 'menu.services'|trans }}</a></div>
+                <div class="div-38"> <a href="{{ path('portfolio') }}">{{ 'menu.blog'|trans }}</a></div>
+                <div class="div-39">
+                    <a href="{% if app.request.locale == "ko" %}https://whattime.co.kr/kodkodkod/30min{% else %}/fr/contact{% endif %}">{{ 'menu.contact'|trans }}</a>
+                </div>
+
+            </div>
+        </div>
+{#        <div class="div-42">Scroll to top</div>#}
+        <div class="div-45">
+            <div class="div-46">
+                <div class="div-47"><a href="{{ path('conditions')}}">{{ 'footer.terms'|trans }}</a></div>
+                <div class="div-48"><a href="{{ path('conditions')}}">{{ 'footer.privacy'|trans }}</a></div>
+                <div class="div-49"><a href="{{ path('conditions')}}">{{ 'footer.cookies'|trans }}</a></div>
+                <div class="div-50"><a href="{{ path('conditions')}}">{{ 'footer.cookieSettings'|trans }}</a></div>
+            </div>
+
+            <div class="div-51">
+                <a href="https://www.linkedin.com/company/kodkodkod-studio" target="_blank">
+                <img
+                        loading="lazy"
+                        src="{{ asset('build/images/icons/icon_linkenin.svg') }}"
+                        class="img-6"
+                />
+                </a>
+                <a href="https://www.facebook.com/KodKodKodStudio" target="_blank">
+                <img
+                        loading="lazy"
+                        src="{{ asset('build/images/icons/facebook_icon.svg') }}"
+                        class="img-7"
+                />
+                </a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

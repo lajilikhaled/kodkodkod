@@ -6,35 +6,35 @@
                     <div class="col-lg col-xs-12 p-0 m-0">
                         <div class="color-palette position-relative" style="background-color: #FF6B35;">
                             <div class="position-absolute bottom-0 start-0 ps-2">
-                                <span>Orange - Funky</span>
+                                <span>{{"projet.palette.color1" | trans}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg col-xs-12 p-0 m-0">
                         <div class="color-palette position-relative" style="background-color: #F7C59F;">
                             <div class="position-absolute bottom-0 start-0 ps-2">
-                                <span>Creamy - Candy</span>
+                                <span>{{"projet.palette.color2" | trans}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg col-xs-12 p-0 m-0">
                         <div class="color-palette position-relative" style="background-color: #EFEFD0;">
                             <div class="position-absolute bottom-0 start-0 ps-2">
-                                <span>Lemon - Seafoam</span>
+                                <span>{{"projet.palette.color3" | trans}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg col-xs-12 p-0 m-0">
                         <div class="color-palette position-relative" style="background-color: #004E89;">
                             <div class="position-absolute bottom-0 start-0 ps-2">
-                                <span>Darken - Navy</span>
+                                <span>{{"projet.palette.color4" | trans}}</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg col-xs-12 p-0 m-0">
                         <div class="color-palette position-relative" style="background-color: #1A659E;">
                             <div class="position-absolute bottom-0 start-0 ps-2">
-                                <span>Sea - Blueish</span>
+                                <span>{{"projet.palette.color5" | trans}}</span>
                             </div>
                         </div>
                     </div>
@@ -44,18 +44,18 @@
 
         <div class="row g-4 pt-4">
             <div class="col-lg-6 pr-lg-2">
-                <img src="{{ asset(project.imageByName('img1')) }}" alt="" class="img-fluid">
+                <img src="{{ asset('images/projects/' ~ project.slideTwoImageLeft) }}" alt="" class="img-fluid h-100 w-100">
             </div>
             <div class="col-lg-6 ps-lg-2">
                 <div class="row g-4">
                     <div class="col-lg-12">
-                        <img src="{{ asset(project.imageByName('img2')) }}" alt="" class="img-fluid">
+                        <img src="{{ asset('images/projects/' ~ project.slideTwoImageRight) }}" alt="" class="img-fluid w-100">
                     </div>
                     <div class="col-lg-12">
                         <div class="pt-5 px-lg-5">
-                            <h4 class="text-secondary">Many offerings, one brand</h4>
+                            <h4 class="text-secondary">{{"projet.palette.title" | trans}}</h4>
                             <p class="fs-1 mb-3 text-justify">
-                                Uniting all of Papers offerings under a seamless, patient-centric umbrella brand for an awesome user experience.
+                                {{"projet.palette.text" | trans}}
                             </p>
                         </div>
                     </div>

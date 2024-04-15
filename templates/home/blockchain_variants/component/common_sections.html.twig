@@ -1,0 +1,338 @@
+		{# Brands Section #}
+		<section class="sec-brands">
+			<div class="bg-img"><img src="{{ asset('build/images/landingPage/bg-sec-brands.png') }}" alt="background black"/></div>
+			<div class="box">
+				<div class="box__left">
+					<div class="title">300+<br><span class="text-pink">{{"Happy Clients" | trans}}</span>
+					</div>
+					<div class="sub-title">
+						<p>{{"introduction.LP.baseline1" | trans}}</p>
+						<p>{{"introduction.LP.baseline2" | trans}}</p>
+					</div>
+					<div class="btns">
+						<a href={{ linkQuote }}>
+							<button class="white-btn white-btn--text-rose">
+								{{ 'cta.top'|trans }}
+							</button>
+						</a>
+					</div>
+				</div>
+				<div class="box__right">
+					<img src="{{ asset('build/images/landingPage/brands-logos/jarvis-legal.png') }}" style="visibility: hidden" alt="jarvis-legal"/>
+					<img class="urgence-logo" src="{{ asset('build/images/landingPage/brands-logos/urgence-docteurs.svg') }}" alt="urgence docteurs"/>
+					<img src="{{ asset('build/images/landingPage/brands-logos/bnp.png') }}" alt="bnp"/>
+					<img class="canal-logo" src="{{ asset('build/images/landingPage/brands-logos/canal.svg') }}" alt="canal+"/>
+					<img class="allianz-logo" src="{{ asset('build/images/landingPage/brands-logos/allianz.svg') }}" alt="allianz"/>
+					<img src="{{ asset('build/images/landingPage/brands-logos/moa.svg') }}" alt="MOA"/>
+					<img class="samusocial-logo" src="{{ asset('build/images/landingPage/brands-logos/samusocial.svg') }}" alt="samu social"/>
+					<img class="expopolis-logo" src="{{ asset('build/images/landingPage/brands-logos/logo_expopolis.png') }}" alt="expopolis"/>
+					<img class="kapp-logo" src="{{ asset('build/images/landingPage/brands-logos/kapp.svg') }}" alt="kapp"/>
+					<img src="{{ asset('build/images/landingPage/brands-logos/niwel-beauty.png') }}" alt="niwel-beauty"/>
+				</div>
+			</div>
+		</section>
+
+		{% if app.request.locale != 'ko' %}
+			{# Revolution Section #}
+			<section class="sec-revolution sec-revolution--top">
+				<div class="box">
+					{# <div class="box__left">
+						<img src="{{ asset('build/images/landingPage/illus-revolution.png') }}" alt="illustration revolution image"/>
+						<img class="illus-img-part-2" src="{{ asset('build/images/landingPage/illus-revolution-2.png') }}" alt="illustration revolution image"/>
+					</div> #}
+					<div class="box__right">
+						<div class="title">{{ 'section13.title.part1'|trans }}
+							{{ 'section13.title.part2'|trans }}
+							{{ 'section13.title.part3'|trans }}
+							<span class="text-pink">{{ 'section13.title2'|trans }}</span>
+						</div>
+						<div class="description">{{ 'section13.baseline1'|trans }}</div>
+						<div class="btns">
+							<a href={{ linkQuote }}>
+								<button class="white-btn white-btn--text-rose">
+									{{ 'cta.top'|trans }}
+								</button>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			{# Compare Section #}
+			<section class="sec-compare sec-compare--top">
+				<div class="box">
+					<div class="box__item box__item--left">
+						<div class="row title"></div>
+						<div class="row row-mobile"></div>
+						<div class="row">{{ 'section14.baseline1'|trans }}</div>
+						<div class="row">{{ 'section14.baseline2'|trans }}</div>
+						<div class="row">{{ 'section14.baseline3'|trans }}</div>
+						<div class="row">{{ 'section14.baseline4'|trans }}</div>
+						<div class="row">{{ 'section14.baseline5'|trans }}</div>
+						<div class="row"></div>
+					</div>
+					<div class="box__item box__item--mid">
+						<div class="row title">Kodkodkod Studio</div>
+						<div class="row row-mobile"></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"></div>
+					</div>
+					<div class="box__item box__item--right">
+						<div class="row title">{{ 'section14.title1'|trans }}</div>
+						<div class="row row-mobile"></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"></div>
+					</div>
+				</div>
+			</section>
+		{% endif %}
+
+		{# Type Project Section #}
+		{% if currentPath == '/' ~ app.request.locale ~ '/blockchain' %}
+			{% include 'home/blockchain_variants/component/blockchain/type_project.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/smart-contracts' %}
+			{% include 'home/blockchain_variants/component/smart_contracts/type_project.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/data-security-traceability' %}
+			{% include 'home/blockchain_variants/component/data_security_traceability/type_project.html.twig' %}
+		{% endif %}
+
+		{# Presentation Section #}
+		{% if currentPath == '/' ~ app.request.locale ~ '/blockchain' %}
+			{% include 'home/blockchain_variants/component/blockchain/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/smart-contracts' %}
+			{% include 'home/blockchain_variants/component/smart_contracts/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/d-apps' %}
+			{% include 'home/blockchain_variants/component/d_apps/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/marketplace-nft' %}
+			{% include 'home/blockchain_variants/component/marketplace_nft/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/play-earn' %}
+			{% include 'home/blockchain_variants/component/play_earn/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/metavers' %}
+			{% include 'home/blockchain_variants/component/metavers/presentation_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/data-security-traceability' %}
+			{% include 'home/blockchain_variants/component/data_security_traceability/presentation_section.html.twig' %}
+		{% endif %}
+
+
+		{# Blockchain Technologies Section #}
+		{% if currentPath == '/' ~ app.request.locale ~ '/blockchain' %}
+			{% include 'home/blockchain_variants/component/blockchain/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/smart-contracts' %}
+			{% include 'home/blockchain_variants/component/smart_contracts/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/d-apps' %}
+			{% include 'home/blockchain_variants/component/d_apps/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/marketplace-nft' %}
+			{% include 'home/blockchain_variants/component/marketplace_nft/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/play-earn' %}
+			{% include 'home/blockchain_variants/component/play_earn/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/metavers' %}
+			{% include 'home/blockchain_variants/component/metavers/technos_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/data-security-traceability' %}
+			{% include 'home/blockchain_variants/component/data_security_traceability/technos_section.html.twig' %}
+		{% endif %}
+
+		{# Blockchain Project Swippe Cards Section #}
+		{% include 'home/component/swiper-card/sec_projects_blockchain.html.twig' %}
+
+		{# Advantages Section #}
+		{% if currentPath == '/' ~ app.request.locale ~ '/smart-contracts' %}
+			{% include 'home/blockchain_variants/component/smart_contracts/advantages_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/marketplace-nft' %}
+			{% include 'home/blockchain_variants/component/marketplace_nft/advantages_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/play-earn' %}
+			{% include 'home/blockchain_variants/component/play_earn/advantages_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/metavers' %}
+			{% include 'home/blockchain_variants/component/metavers/advantages_section.html.twig' %}
+		{% elseif currentPath == '/' ~ app.request.locale ~ '/data-security-traceability' %}
+			{% include 'home/blockchain_variants/component/data_security_traceability/advantages_section.html.twig' %}
+		{% endif %}
+
+		{% if app.request.locale == 'ko' %}
+			{# Revolution Section #}
+			<section class="sec-revolution">
+				<div class="box">
+					<div class="box__left">
+						<img src="{{ asset('build/images/landingPage/illus-revolution.png') }}" alt="illustration revolution image"/>
+						<img class="illus-img-part-2" src="{{ asset('build/images/landingPage/illus-revolution-2.png') }}" alt="illustration revolution image"/>
+					</div>
+					<div class="box__right">
+						<div class="title">{{ 'section13.title.part1'|trans }}
+							{{ 'section13.title.part2'|trans }}
+							{{ 'section13.title.part3'|trans }}
+							<span class="text-pink">{{ 'section13.title2'|trans }}</span>
+						</div>
+						<div class="description">{{ 'section13.baseline1'|trans }}</div>
+						<div class="btns">
+							<a href={{ linkQuote }}>
+								<button class="white-btn white-btn--text-rose">
+									{{ 'cta.top'|trans }}
+								</button>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			{# Compare Section #}
+			<section class="sec-compare">
+				<div class="box">
+					<div class="box__item box__item--left">
+						<div class="row title"></div>
+						<div class="row row-mobile"></div>
+						<div class="row">{{ 'section14.baseline1'|trans }}</div>
+						<div class="row">{{ 'section14.baseline2'|trans }}</div>
+						<div class="row">{{ 'section14.baseline3'|trans }}</div>
+						<div class="row">{{ 'section14.baseline4'|trans }}</div>
+						<div class="row">{{ 'section14.baseline5'|trans }}</div>
+						<div class="row"></div>
+					</div>
+					<div class="box__item box__item--mid">
+						<div class="row title">Kodkodkod Studio</div>
+						<div class="row row-mobile"></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/check-white.png') }}" alt="check white"/></div>
+						<div class="row"></div>
+					</div>
+					<div class="box__item box__item--right">
+						<div class="row title">{{ 'section14.title1'|trans }}</div>
+						<div class="row row-mobile"></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"><img src="{{ asset('build/images/landingPage/x-pink.png') }}" alt="x pink"/></div>
+						<div class="row"></div>
+					</div>
+				</div>
+			</section>
+		{% endif %}
+
+		{% if app.request.locale != 'ko' %}
+			{# Publication Section #}
+			<section class="sec-publications">
+				<div class="box">
+					<div class="box__title {%if app.request.locale == 'ko'%} ko-version {% endif %}">
+						{{"publications.title"|trans}}
+					</div>
+					<div class="box__imgs">
+						<a href="https://www.lefigaro.fr/services/cahier-partner-solutions-entreprises-20221130">
+							<img class="figaro-logo" src="{{ asset('build/images/landingPage/publications/le-figaro.png') }}" alt="le figaro logo"/>
+						</a>
+						<a href="https://www.challenges.fr/economie/kodkodkod-le-studio-de-developpement-qui-casse-les-codes_838043">
+							<img class="challenges-logo" src="{{ asset('build/images/landingPage/publications/challenges.png') }}" alt="challenges logo"/>
+						</a>
+					</div>
+				</div>
+			</section>
+		{% endif %}
+
+		{# FAQ #}
+		<section id="FAQ" class="sec-faq">
+			<div class="box">
+				<div class="faq-title">{{ 'section15.title1'|trans }}</div>
+			{% if currentPath == '/' ~ app.request.locale ~ '/data-security-traceability' %}
+				{% include 'home/blockchain_variants/component/data_security_traceability/faq_description_section.html.twig' %}
+			{% endif %}
+				<div class="faq-lists">
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section1.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/landingPage/faq-icon-closed.png') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/landingPage/faq-icon-opened.png') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section1.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section2.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/landingPage/faq-icon-closed.png') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/landingPage/faq-icon-opened.png') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section2.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section3.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/landingPage/faq-icon-closed.png') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/landingPage/faq-icon-opened.png') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section3.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section4.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/landingPage/faq-icon-closed.png') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/landingPage/faq-icon-opened.png') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section4.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section5.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/landingPage/faq-icon-closed.png') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/landingPage/faq-icon-opened.png') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section5.desc'|trans }}
+						</div>
+					</div>
+				</div>
+				<a href={{ linkQuote |trans }}>
+					<button class="white-btn white-btn--text-rose">
+						{{ 'cta.top'|trans }}
+					</button>
+				</a>
+			</div>
+		</section>

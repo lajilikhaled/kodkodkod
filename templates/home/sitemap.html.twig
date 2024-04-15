@@ -1,0 +1,216 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}
+	{{ "head.siteMap.meta" | trans }}
+{% endblock %}
+
+{% block title %}
+	{{ "head.siteMap.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+	{% set prefixUrl = '/' ~ app.request.locale ~ '/' %}
+
+	{% set listPages = [
+		{
+			'name': 'Homepage',
+			'url' : ''
+		},
+		{
+			'name': 'link1',
+			'url' : 'portfolio'
+		},
+		{
+			'name': 'link2',
+			'url' : '#testimony'
+		},
+		{
+			'name': 'link3',
+			'url' : '#process'
+		},
+		{
+			'name': 'link4',
+			'url' : '#FAQ'
+		},
+		{
+			'name': 'Blog',
+			'url' : 'blog'
+		},
+		{
+			'name': 'Technologies',
+			'url' : '#'
+		},
+		{
+			'name': 'Ask for a quote',
+			'url' : 'link-quote'
+		},
+		{
+			'name': 'Thank-you! See you soon!',
+			'url' : 'thank-you'
+		},
+	] %}
+
+	{% set listTechno = [
+		{
+			'name': 'Blockchain/NFT',
+			'url' : 'blockchain'
+		},
+		{
+			'name': 'ReactJS',
+			'url' : 'react'
+		},
+		{
+			'name': 'VueJS',
+			'url' : 'vue'
+		},
+		{
+			'name': 'Flutter',
+			'url' : 'flutter'
+		},
+		{
+			'name': 'Symfony',
+			'url' : 'symfony'
+		},
+		{
+			'name': 'Magento',
+			'url' : 'magento'
+		},
+		{
+			'name': 'Prestashop',
+			'url' : 'prestashop'
+		},
+		{
+			'name': 'Kodwallet',
+			'url' : 'kodwallet'
+		}
+	] %}
+
+	{% set blockchainListTechno = [
+		{
+			'name': 'Blockchain/NFT',
+			'url' : 'blockchain'
+		},
+		{
+			'name': 'Data Security Traceability',
+			'url' : 'data-security-traceability'
+		},
+		{
+			'name': 'Smart Contracts',
+			'url' : 'smart-contracts'
+		},
+		{
+			'name': 'DApps',
+			'url' : 'd-apps'
+		},
+		{
+			'name': 'Marketplace NFT',
+			'url' : 'marketplace-nft'
+		},
+		{
+			'name': 'Jeux play to earn',
+			'url' : 'play-earn'
+		},
+		{
+			'name': 'Métaverse',
+			'url' : 'metavers'
+		}
+	] %}
+
+	{# Change link quote by country #}
+	{% if app.request.locale == "ko" %}
+		{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+	{% else %}
+		{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+	{% endif %}
+	{% if hongKong is defined and hongKong %}
+		{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+	{% endif %}
+
+	<div class="app-home-newLandingPage">
+		<section class="jumbotron jumbotron--text">
+			<div class="box box--text">
+				<div class="text">{{ "Site Map"|trans }}</div>
+			</div>
+		</section>
+
+		<section class="content-container">
+			<div class="title">Pages</div>
+			<div class="pages">
+				<ul class="pages-list">
+					{% for p in listPages %}
+
+						{% if p.name == "Technologies" %}
+							<a href="href={{ prefixUrl ~ p.url }}" style="pointer-events: none;">
+								<li>{{ p.name|trans }}
+									<ul class="pages-list__techno">
+										{% for techno in listTechno %}
+											{% if techno.name == "Blockchain/NFT" %}
+												<a href="href={{ prefixUrl ~ p.url }}" style="pointer-events: none;">
+													<li>{{ techno.name|trans }}
+														<ul>
+															{% for blockchainTechno in blockchainListTechno %}
+																<a href={{ prefixUrl ~ blockchainTechno.url }}>
+																	<li>{{ blockchainTechno.name|trans }}</li>
+																</a>
+															{% endfor %}
+														</ul>
+													</li>
+												</a>
+											{% else %}
+												<a href={{ prefixUrl ~ techno.url }}>
+													<li>{{ techno.name|trans }}</li>
+												</a>
+											{% endif %}
+										{% endfor %}
+									</ul>
+								</li>
+							</a>
+
+						{% elseif  p.name == "Ask for a quote" %}
+							<a href={{ linkQuote|trans}}>
+								<li>{{ p.name|trans }}</li>
+							</a>
+
+						{% else %}
+							<a href={{ prefixUrl ~ p.url }}>
+								<li>{{ p.name|trans }}</li>
+							</a>
+						{% endif %}
+
+					{% endfor %}
+				</ul>
+
+				<ul>
+					<li >
+						<a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web'}) }}">Agence Web</a>
+						<ul>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/utilisation-ia-entreprise'}) }}">L'Expansion de l'IA : Causes, Impacts et Défis</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/utilisation-ia-entreprise'}) }}">Avantages et Bienfaits de l'IA : Efficacité, Décisions, Santé e…</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/impact-ia-entreprise/aveni'}) }}">L'IA et l'avenir du travail : Transformation et Opportunités</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/comment-integrer-ia/quatre'}) }}">Guide Complet sur les Quatre Formes d'Intelligence Artificielle</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/comment-integrer-ia/trois-'}) }}">Les trois méthodes d'apprentissage clés en Intelligence Artific…</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/comment-integrer-ia'}) }}">Guide d'intégration de l'IA dans votre entreprise - Étapes clés</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/impact-ia-entreprise'}) }}">Impact de l'IA sur l'entreprise : une révolution</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/utilisation-ia-entreprise'}) }}">IA en Entreprise : Pourquoi et Comment l'Utiliser ?</a></li>
+							<li><a style="color: black;" href="{{ path('app_page_detail2', {'_locale': 'fr', 'slug': 'agence-web/intelligence-artificielle/utiliser-chat-gpt-efficace'}) }}">Guide Pratique : Optimiser l'Utilisation de ChatGPT en Entrepri…</a></li>
+						</ul>
+					</li>
+
+				</ul>
+
+
+			</div>
+		</section>
+	</div>
+
+	<div
+		class="landingPage">
+		{# Address Sections #}
+		{% include 'home/component/common_sections/address_section.html.twig' %}
+	</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<div class="newsletter">
+    <form action="{{ path('add_member') }}" method="post">
+        <div class="div">
+            <div class="div-2">
+                <div class="div-3">{{ 'newsletter.title'|trans }}</div>
+                <div class="div-4">
+                    <input type="hidden" name="_token" value="{{ csrf_token('add_member') }}">
+                    <input type="email" id="newsletter-email" name="email" placeholder="{{ 'newsletter.emailLabel'|trans }}" required />
+                    <button type="submit">
+                        <img loading="lazy" src="{{ asset('build/images/icons/arrow_black.svg') }}" class="img" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

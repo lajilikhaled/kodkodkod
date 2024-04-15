@@ -1,0 +1,156 @@
+.navbar-page{
+  font-family: 'Outfit';
+  font-size: 18px;
+  color:white;
+  max-width: 100%;
+  box-sizing: border-box;
+  &.white {
+    background: white;
+
+    a {
+      color:black
+    }
+    .right {
+      .btnPhone {
+          color:black;
+          border: 1px solid black;
+      }
+    }
+  }
+  a {
+    color:white;
+  }
+  .btnPhone{
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border:1px solid white;
+    border-radius: 10px;
+    padding:10px;
+    background:transparent;
+    color:white;
+  }
+  .box {
+    justify-content: space-between;
+    display: flex;
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    font-size: 18px;
+    color: var(--White, #fff);
+    font-weight: 500;
+    white-space: nowrap;
+    line-height: 150%;
+    padding: 24px 80px;
+  }
+  .mid {
+    align-items: center;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 750px;
+    width: 100%;
+  }
+  .right {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+  @media (max-width: 991px) {
+    .box {
+      padding: 20px;
+    }
+    .mid {
+      display: none;
+    }
+    .div {
+      max-width: 100%;
+      flex-wrap: wrap;
+      white-space: initial;
+      padding: 0 20px;
+    }
+  }
+  .img {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 65px;
+  }
+
+  .burger-mobile {
+    margin-left: 20px;
+    position: relative;
+    top: 5px;
+
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+  }
+  .mobile-navbar-menus {
+    top: 0;
+    right: 0;
+    //position: absolute;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    height: 100vh;
+    z-index: 999999;
+    display: none;
+
+    @media (min-width: 426px) {
+      width: 85%;
+    }
+
+    &.mobile-open-active {
+      display: block;
+      background-color: $black;
+    }
+
+    &.mobile-close-active {
+      display: none;
+    }
+
+    .mobile-navbar-menus-top {
+      display: flex;
+      padding: 50px 50px 50px 30px;
+      justify-content: space-between;
+
+      img.mobile-close {
+        width: 25px ;
+        height: 65px;
+      }
+
+    }
+
+    .mobile-navbar-menus-bottom {
+
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+
+      .mobile-menus {
+        max-width: calc(100vw - 100px);
+        width: 100%;
+        font: normal normal 600 24px $mainFnt;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+
+        .mobile-menu {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+}

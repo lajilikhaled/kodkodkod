@@ -1,0 +1,134 @@
+{% set prefixPhotoUrl = "build/images/newPortrait/" %}
+
+{% set listDevelopers = [
+  {
+    'name': 'Maxime',
+    'position': 'team-developpers.section1.baseline1',
+    'experience': '13',
+    'skills': ['Symfony', 'Web3', 'E-commerce'],
+    'photoUrl': 'maxime.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/maximegastaldo/',
+    'github' : 'https://github.com/maxtor3569'
+  },
+  {
+    'name': 'Morgan',
+    'position': 'team-developpers.section2.baseline1',
+    'experience': '14',
+    'skills': ['Automation', 'Gestion de projet', 'JS'],
+    'photoUrl': 'morgan.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/morganbancel/',
+    'github' : ''
+  },
+  {
+    'name': 'Damien',
+    'position': 'team-developpers.section6.baseline1',
+    'experience': '15',
+    'skills': ['Fullstack', 'Javascript', 'React', '3D'],
+    'photoUrl': 'damien.png',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : 'https://github.com/Smeagolworms4'
+  },
+  {
+    'name': 'Dabin',
+    'position': 'team-developpers.section4.baseline1',
+    'experience': '5',
+    'skills': ['Frontend' ,'React', 'Design', 'UX'],
+    'photoUrl': 'dabin.png',
+    'linkedin' : 'https://www.linkedin.com/in/dabin-kim-7a535a140/',
+    'github' : ''
+  },
+  {
+  'name': 'Gary',
+  'position': 'team-developpers.section5.baseline1',
+  'experience': '10',
+  'skills': ['Backend', 'Symfony', 'Laravel'],
+  'photoUrl': 'gary.jpg',
+  'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+  'github' : 'https://github.com/TheGarious'
+  },
+  {
+    'name': 'Olivier',
+    'position': 'team-developpers.section7.baseline1',
+    'experience': '7',
+    'skills': ['Frontend', 'Vue.js'],
+    'photoUrl': 'olivier.png',
+    'linkedin' : 'https://www.linkedin.com/company/kodkodkod-studio',
+    'github' : 'https://gitlab.com/otrinh'
+  },
+  {
+    'name': 'Yosra',
+    'position': 'team-developpers.section10.baseline1',
+    'experience': '7',
+    'skills': ['Fullstack', 'PHP', 'Symfony'],
+    'photoUrl': 'yosra.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/thanh-qui-nguyen/',
+    'github' : 'https://github.com/qui-nguyen'
+  },
+  {
+    'name': 'Thanh Qui',
+    'position': 'team-developpers.section10.baseline1',
+    'experience': '',
+    'skills': ['Frontend', 'React'],
+    'photoUrl': 'thanhqui.jpg',
+    'linkedin' : 'https://www.linkedin.com/in/thanh-qui-nguyen/',
+    'github' : 'https://github.com/qui-nguyen'
+  }
+]
+%}
+<section class="sec-dev-team">
+	<div class="box">
+		<div class="box__title">{{'team-developpers.sub-title'|trans}}</div>
+		<div class="dev-team-swiper">
+			<div
+				class="swiper-wrapper">
+
+				{# Slides #}
+				{% for d in listDevelopers %}
+					<div class="swiper-slide">
+						<div class="slide-container">
+							<div class="slide-container__img">
+								<img src="{{ asset(prefixPhotoUrl ~ d.photoUrl) }}" alt="photo de {{d.name}}" loading="lazy">
+							</div>
+							<div class="slide-container__desc">
+								<h3>{{d.name}}</h3>
+								{% if d.experience %}
+									<p>{{ "Experiences" | trans }}
+										{{d.experience}}&nbsp;{{ "years" | trans }}</p>
+								{% else %}
+									<br>
+								{% endif %}
+								<div class="tags">
+									{% for s in d.skills %}
+										<div class="tag">
+											<p>{{s}}</p>
+										</div>
+									{% endfor %}
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				{% endfor %}
+
+			</div>
+			<div
+				class="swiper-button-prev">{# <img class="next-icon" src="{{ asset('build/images/testimonial/next-icon.svg') }}" style="transform: rotate(-180deg)" alt="next icon" width="27" height="18"/> #}
+			</div>
+			<div
+				class="swiper-button-next">{# <img class="prev-icon" src="{{ asset('build/images/testimonial/next-icon.svg') }}" alt="prev icon" width="27" height="18"/> #}
+			</div>
+		</div>
+		<div class="btns">
+			<a href={{ linkQuote }}>
+				<button class="pink-btn">
+					{% if app.request.locale == 'en' %}
+						{{ 'cta.top.2'|trans }}
+					{% else %}
+						{{ 'cta.top'|trans }}
+					{% endif %}
+				</button>
+			</a>
+		</div>
+	</div>
+</section>

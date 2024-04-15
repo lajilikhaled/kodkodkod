@@ -1,0 +1,362 @@
+<div class="team">
+    <div class="div">
+        <div class="div-2">
+            <div class="div-3">{{ 'Meet Our Team of AI Enthusiasts'|trans }}</div>
+            <div class="div-4">
+                <div  class="div-5 arrow-left" onclick="handleClick('previous')">
+                    <img
+                        loading="lazy"
+                        src="{{ asset('build/images/icons/arrow_right.svg') }}"
+                        class="img "
+                    />
+                </div>
+                <div  class="div-6 arrow-right" onclick="handleClick('next')">
+                    <img
+                        loading="lazy"
+                        src="{{ asset('build/images/icons/arrow_left.svg') }}"
+                        class="img"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="div-7">
+
+            {% if app.request.locale != 'ko' %}
+                <div class="div-8 slider">
+                    <ul class="slide-container">
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/maxime.jpg') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Maxime G.</div>
+                                        <div class="div-16">Exp: 13 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">AI</div>
+                                        <div class="tag">LLM</div>
+                                        <div class="tag">PYTHON</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/morgan.jpg') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Morgan B.</div>
+                                        <div class="div-16">Exp: 13 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">AI</div>
+                                        <div class="tag">LLM</div>
+                                        <div class="tag">UX</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/dabin.png') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Dabin K.</div>
+                                        <div class="div-16">Exp: 7 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">Frontend</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/damien.png') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Damien D.</div>
+                                        <div class="div-16">Exp: 15 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">FullStack</div>
+                                        <div class="tag">JAVA</div>
+                                        <div class="tag">PHP</div>
+                                        <div class="tag">LLM</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/yosra.jpg') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Yosra G.</div>
+                                        <div class="div-16">Exp: 8 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">FullStack</div>
+                                        <div class="tag">React</div>
+                                        <div class="tag">Symfony</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/olivier.png') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Olivier G.</div>
+                                        <div class="div-16">Exp: 10 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">FullStack</div>
+                                        <div class="tag">React</div>
+                                        <div class="tag">Symfony</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/gary.jpg') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Gary Houbre.</div>
+                                        <div class="div-16">Exp: 13 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">Backend</div>
+                                        <div class="tag">Vue.js</div>
+                                        <div class="tag">PHP</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="column">
+                            <div class="div-9">
+                                <img
+                                        loading="lazy"
+                                        src="{{ asset('build/images/components/team/yosra.jpg') }}"
+                                        class="img-2"
+                                />
+                                <div class="div-10">
+                                    <div class="div-11">
+                                        <div class="div-12">Yosra G.</div>
+                                        <div class="div-16">Exp: 10 {{ 'years'|trans }}</div>
+                                    </div>
+                                    <div class="div-13">
+                                        <div class="tag">FullStack</div>
+                                        <div class="tag">React</div>
+                                        <div class="tag">Symfony</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+            {% endif %}
+
+            {% if app.request.locale == 'ko' %}
+            <div class="div-8 slider">
+
+                <ul class="slide-container">
+
+                <li class="column">
+                    <div class="div-9">
+                        <img
+                                loading="lazy"
+                                src="{{ asset('build/images/components/team/dabin.png') }}"
+                                class="img-2"
+                        />
+                        <div class="div-10">
+                            <div class="div-11">
+                                <div class="div-12">Dabin K.</div>
+                                <div class="div-16">한국 CEO</div>
+                            </div>
+{#                            <div class="div-13">#}
+{#                                <div class="div-14">AI</div>#}
+{#                                <div class="div-15">Blockchain</div>#}
+{#                                <div class="div-24">Frontend</div>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </li>
+                <ll class="column">
+                    <div class="div-9">
+                        <img
+                                loading="lazy"
+                                src="{{ asset('build/images/components/team/maxime.jpg') }}"
+                                class="img-2"
+                        />
+                        <div class="div-10">
+                            <div class="div-11">
+                                <div class="div-12">Maxime G.</div>
+                                <div class="div-16">세계 CEO</div>
+                            </div>
+{#                            <div class="div-13">#}
+{#                                <div class="div-14">AI</div>#}
+{#                                <div class="div-15">Blockchain</div>#}
+{#                                <div class="div-24">Frontend</div>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </ll>
+                <li class="column">
+                    <div class="div-9">
+                        <img
+                                loading="lazy"
+                                src="{{ asset('build/images/components/team/morgan.jpg') }}"
+                                class="img-2"
+                        />
+                        <div class="div-10">
+                            <div class="div-11">
+                                <div class="div-12">Morgan B.</div>
+                                <div class="div-16">UK CEO</div>
+                            </div>
+{#                            <div class="div-13">#}
+{#                                <div class="tag">Design</div>#}
+{#                                <div class="tag">React</div>#}
+{#                                <div class="tag">Frontend</div>#}
+{#                                <div class="tag">UX</div>#}
+{#                            </div>#}
+                        </div>
+                    </div>
+                </li>
+                    <li class="column">
+                        <div class="div-9">
+                            <img
+                                    loading="lazy"
+                                    src="{{ asset('build/images/components/team/gary.jpg') }}"
+                                    class="img-2"
+                            />
+                            <div class="div-10">
+                                <div class="div-11">
+                                    <div class="div-12">Gary H.</div>
+                                    <div class="div-16">Switzerland CEO</div>
+                                </div>
+                                {#                            <div class="div-13">#}
+                                {#                                <div class="tag">Design</div>#}
+                                {#                                <div class="tag">React</div>#}
+                                {#                                <div class="tag">Frontend</div>#}
+                                {#                                <div class="tag">UX</div>#}
+                                {#                            </div>#}
+                            </div>
+                        </div>
+                    </li>
+                <li class="column">
+                    <div class="div-9">
+                        <img
+                                loading="lazy"
+                                src="{{ asset('build/images/components/team/damien.png') }}"
+                                class="img-2"
+                        />
+                        <div class="div-10">
+                            <div class="div-11">
+                                <div class="div-12">Damien D.</div>
+                                <div class="div-16">Exp: 15 {{ 'years'|trans }}</div>
+                            </div>
+                            <div class="div-13">
+                                <div class="tag">FullStack</div>
+                                <div class="tag">JAVA</div>
+                                <div class="tag">PHP</div>
+                                <div class="tag">JS</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    <li class="column">
+                        <div class="div-9">
+                            <img
+                                    loading="lazy"
+                                    src="{{ asset('build/images/components/team/olivier.png') }}"
+                                    class="img-2"
+                            />
+                            <div class="div-10">
+                                <div class="div-11">
+                                    <div class="div-12">Olivier T.</div>
+                                    <div class="div-16">Exp: 12 {{ 'years'|trans }}</div>
+                                </div>
+                                <div class="div-13">
+                                    <div class="tag">FullStack</div>
+                                    <div class="tag">PHP</div>
+                                    <div class="tag">JS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                <li class="column">
+                    <div class="div-9">
+                        <img
+                                loading="lazy"
+                                src="{{ asset('build/images/components/team/yosra.jpg') }}"
+                                class="img-2"
+                        />
+                        <div class="div-10">
+                            <div class="div-11">
+                                <div class="div-12">Yosra G.</div>
+                                <div class="div-16">Exp: 10 {{ 'years'|trans }}</div>
+                            </div>
+                            <div class="div-13">
+                                <div class="div-14">FullStack</div>
+                                <div class="div-15">React</div>
+                                <div class="div-24">Symfony</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+
+            {% endif %}
+        </div>
+    </div>
+
+
+</div>
+<script>
+  const list = document.querySelector(".slide-container");
+
+  const item = document.querySelector(".column");
+  const itemWidth = item.offsetWidth;
+
+  function handleClick(direction) {
+    if(direction === "previous") {
+      list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+    } else {
+      list.scrollBy({ left: itemWidth, behavior: "smooth" });
+    }
+  }
+</script>

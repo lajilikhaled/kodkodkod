@@ -1,0 +1,116 @@
+{% set titleTextList = [
+    {
+      'pageName': '',
+      'routeName': '/form-contact',
+      'meta': 'head.contact.meta',
+	  'title': 'head.contact.title'
+    },
+    {
+      'pageName': 'blockchain',
+      'routeName': '/form-contact/blockchain',
+      'meta': 'head.form-contact.blockchain.meta',
+	  'title': 'head.form-contact.blockchain.title'
+    },
+    {
+      'pageName': 'react',
+      'routeName': '/form-contact/react',
+      'meta': 'head.form-contact.react.meta',
+	  'title': 'head.form-contact.react.title'
+    },
+	{
+      'pageName': 'vue',
+      'routeName': '/form-contact/vue',
+    	'meta': 'head.form-contact.vue.meta',
+	  'title': 'head.form-contact.vue.title'
+    },
+	{
+      'pageName': 'flutter',
+      'routeName': '/form-contact/flutter',
+      'meta': 'head.form-contact.flutter.meta',
+	  'title': 'head.form-contact.flutter.title'
+    },
+	{
+      'pageName': 'symfony',
+      'routeName': '/form-contact/symfony',
+      'meta': 'head.form-contact.symfony.meta',
+	  'title': 'head.form-contact.symfony.title'
+    },
+	{
+      'pageName': 'magento',
+      'routeName': '/form-contact/magento',
+      'meta': 'head.form-contact.magento.meta',
+	  'title': 'head.form-contact.magento.title'
+    },
+	{
+      'pageName': 'prestashop',
+      'routeName': '/form-contact/prestashop',
+      'meta': 'head.form-contact.prestashop.meta',
+	  'title': 'head.form-contact.prestashop.title'
+    },
+	{
+      'pageName': 'cms',
+      'routeName': '/form-contact/cms',
+      'meta': 'head.form-contact.cms.meta',
+	  'title': 'head.form-contact.title'
+    }
+] %}
+
+{% set currentPath = path(app.request.attributes.get('_route'),
+                    app.request.attributes.get('_route_params')) %}
+
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}
+	{% for page in titleTextList %}
+		{% if currentPath == '/' ~ app.request.locale ~ page.routeName %}
+			{{ page.meta | trans }}
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+
+{% block title %}
+	{% for page in titleTextList %}
+		{% if currentPath == '/' ~ app.request.locale ~ page.routeName %}
+			{{ page.title | trans }}
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+	<div class="app-home-newLandingPage app-home-newLandingPage--flex">
+		<section class="jumbotron jumbotron--full">
+			<div class="box box--normal">
+				<div class="title">
+					{{ "form-contact.title"|trans }}
+				</div>
+			</div>
+
+		</section>
+		{% if error is defined %}
+		<div style="color:red;padding-top: 20px;font-weight: bold;">
+
+				<div>
+					Une erreur est survenue
+				</div>
+
+		</div>
+		{% endif %}
+
+		<section class="form-container">
+
+			{# Questions #}
+			{% include 'form_contact/component/questions.html.twig' %}
+
+			{# Responses #}
+			{% include 'form_contact/component/responses.html.twig' %}
+		</section>
+	</div>
+	 <div class="landingPage">
+	{# Address Section #}
+	{% include 'home/component/common_sections/address_section.html.twig' %}
+    </div>
+{% endblock %}

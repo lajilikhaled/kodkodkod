@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}
+	{{ "head.meta" | trans }}
+{% endblock %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+	<div class="page-home">
+		{#    {% cache 'index-' ~ app.request.locale  %}#}
+		<div class="div">
+			<div class="div-2">
+				<span class="line1">Unlock the Power of AI with Our </span>
+				<span class="line2">Development</span>
+				<span class="line1"> Services</span>
+			</div>
+			<div class="div-3">
+				Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique needs.
+			</div>
+			<a href="{{ linkQuote }}" target="_blank">
+				<div class="btnConsult">
+					<div class="div-5">
+						<div class="div-6 orange">Schedule a Workshop</div>
+						<img loading="lazy" src="{{ asset('build/images/icons/icon_arrow.svg') }}" class="img"/>
+					</div>
+				</div>
+			</a>
+		</div>
+
+		{#    <img src="{{ asset('build/images/pages/home/mask.png') }}" class="mask">#}
+		{#    {% endcache %}#}
+
+
+	</div>
+	{% include 'service/content.html.twig' %}
+	{% include 'service/content2.html.twig' %}
+	{% include 'service/content3.html.twig' %}
+	{% include 'service/content4.html.twig' %}
+	{% include 'service/content5.html.twig' %}
+	{% include 'service/content6.html.twig' %}
+	{% include 'homeNew/testimonials.html.twig' %}
+
+
+{% endblock %}

@@ -8,6 +8,9 @@ trait LoggerTrait {
 
 	protected LoggerInterface $logger;
 
+	/**
+	 * @required
+	 */
 	public function setLogger(LoggerInterface $logger) {
 		$this->logger = $logger;
 	}

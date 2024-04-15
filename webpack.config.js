@@ -11,9 +11,8 @@ Encore
     .setOutputPath('public/build/')
     // public path used by the web server to access the output path
     .setPublicPath('/build')
-    // only needed for CDN's or subdirectory deploy
+    // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
-
     .copyFiles({
         from: './assets/images',
         to: 'images/[path][name].[hash:8].[ext]'
@@ -22,7 +21,6 @@ Encore
         from: './assets/fonts',
         to: 'fonts/[path][name].[hash:8].[ext]'
     })
-
     /*
      * ENTRY CONFIG
      *
@@ -31,6 +29,9 @@ Encore
      */
     .addEntry('app', './assets/app.js')
     .addEntry('portfolio', './assets/portfolio.js')
+
+    // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
+    .enableStimulusBridge('./assets/controllers.json')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -52,33 +53,18 @@ Encore
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
-    // configure Babel
-    // .configureBabel((config) => {
-    //     config.plugins.push('@babel/a-babel-plugin');
-    // })
+    .configureBabel((config) => {
+        config.plugins.push('@babel/plugin-proposal-class-properties');
+    })
 
-    // enables and configure @babel/preset-env polyfills
+    // enables @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
         config.useBuiltIns = 'usage';
-        config.corejs = '3.23';
+        config.corejs = 3;
     })
 
     // enables Sass/SCSS support
-    .enableSassLoader(
-        options => {
-            options.sassOptions = {
-                ...options.sassOptions,
-                // options spécifiques à sass-loader
-            };
-            options.sourceMap = true; // Assurez-vous que les source maps sont activées
-            // options pour resolve-url-loader, si nécessaire
-        }, {
-            // Options pour resolve-url-loader ici
-            resolveUrlLoaderOptions: {
-                removeCR: true
-            }
-        })
-    
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -92,6 +78,15 @@ Encore
 
     // uncomment if you're having problems with a jQuery plugin
     .autoProvidejQuery()
+
+    if (Encore.isProduction()) {
+        Encore.setPublicPath('https://127.0.0.1:8000/build');
+
+        // guarantee that the keys in manifest.json are *still*
+        // prefixed with build/
+        // (e.g. "build/dashboard.js": "https://my-cool-app.com.global.prod.fastly.net/dashboard.js")
+        Encore.setManifestKeyPrefix('build/');
+    }
 ;
 
 module.exports = Encore.getWebpackConfig();

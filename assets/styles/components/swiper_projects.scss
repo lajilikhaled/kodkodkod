@@ -1,0 +1,209 @@
+// .app-home-projects {
+//     .cards {
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+
+//         .card {
+//             padding-top: 80px;
+//             display: flex;
+//             justify-content: space-evenly;
+
+//             @media (max-width: 1240px) {
+//                 flex-direction: column;
+//                 justify-content: center;
+//                 align-items: center;
+//             }
+
+//             .card-element {
+//                 width: 25%;
+//                 background-color: #263238;
+//                 border-radius: 20px;
+//                 position: relative;
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: end;
+//                 padding-top: 60px;
+
+//                 @media (max-width: 1240px) {
+//                     width: 60%;
+//                     margin-bottom: 40px;
+//                 }
+
+//                 @media (max-width: 640px) {
+//                     width: 100%;
+//                     margin-bottom: 40px;
+//                 }
+
+//                 .card-title {
+//                     position: absolute;
+//                     background: #FFFFFF;
+//                     border-radius: 20px;
+//                     width: 70%;
+//                     height: 40px;
+//                     padding: 10px 20px;
+//                     display: flex;
+//                     justify-content: center;
+//                     align-items: center;
+//                     top: -25px;
+//                     left: 10%;
+
+//                     img {
+//                         height: 100%;
+//                         &.img--small {
+//                             height: 70%;
+//                         }
+//                     }
+//                 }
+
+//                 .card-image {
+//                     width: 100%;
+//                     height: 65%;
+
+//                     img {
+//                         width: 100%;
+//                         height: 100%;
+//                         object-fit: cover;
+//                         object-position: center;
+
+//                         &.slide-kapp-img {
+//                             object-position: left;
+//                         }
+//                     }
+
+//                 }
+
+//                 .card-text {
+//                     width: 100%;
+//                     margin: 30px 0;
+//                     font: normal normal 700 20px Poppins;
+//                     color: #fff;
+//                     padding: 0px 5px;
+
+//                     @media (max-width: 425px) {
+//                         font: normal normal 700 14px Poppins;
+//                         margin: 0px;
+//                         line-height: 30px;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.app-home-projects-swiper {
+  .box {
+    margin-bottom: 0px;
+
+    .new-swiper {
+      width: calc(100vw - 100px) !important;
+      margin-left: auto;
+      margin-right: auto;
+
+      .swiper-wrapper {
+        padding: 50px 0;
+
+        .swiper-slide {
+          height: 450px;
+          min-height: 450px;
+          background-color: #263238;
+          border-radius: 20px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          padding-top: 60px;
+
+          .slide-title {
+            position: absolute;
+            background: #FFFFFF;
+            border-radius: 20px;
+            width: 70%;
+            height: 40px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -25px;
+            left: 10%;
+
+            img {
+              height: 100%;
+            }
+          }
+
+          .slide-image {
+            width: 100%;
+            height: 45%;
+
+            &--magento, &--presta {
+              height: 60%;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: center;
+
+              &.slide-kapp-img {
+                object-position: left;
+              }
+            }
+
+          }
+
+          .slide-text {
+            display: inline-block;
+            height: 180px;
+            width: 90%;
+            margin: 30px auto;
+            padding: 0 5px;
+            font: normal normal 700 20px Poppins;
+            color: #fff;
+
+            p {
+              line-height: 120%;
+              margin: 10px;
+            }
+
+            @media (max-width: 1280px) {
+              margin: 10px 40px auto auto;
+              height: 180px;
+              p {
+                font: normal normal 700 16px Poppins;
+              }
+
+              &--magento, &--presta {
+                margin: 30px auto;
+                height: 150px;
+                p {
+                  font: normal normal 700 18px Poppins;
+                }
+              }
+            }
+
+            @media (max-width: 425px) {
+              // font: normal normal 700 18px Poppins;
+              display:inline-block;
+              margin:auto;
+
+              &--magento, &--presta {
+                height: 180px;
+                font: normal normal 700 16px Poppins;
+              }
+            }
+          }
+        }
+      }
+
+      .swiper-button-next:after,
+      .swiper-rtl .swiper-button-prev:after,
+      .swiper-button-prev:after,
+      .swiper-rtl .swiper-button-next:after {
+        content: none !important;
+      }
+    }
+  }
+
+}

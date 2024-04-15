@@ -1,43 +1,172 @@
+{% set listUrlPage = [
+    {
+      'pageName': '',
+      'routeName': '/',
+      'linkQuote': 'link-quote'
+    },
+    {
+      'pageName': 'blockchain',
+      'routeName': '/blockchain',
+      'linkQuote': 'link-quote-blockchain'
+    },
+    {
+      'pageName': 'react',
+      'routeName': '/react',
+      'linkQuote': 'link-quote-react'
+    },
+    {
+      'pageName': 'vue',
+      'routeName': '/vue',
+      'linkQuote': 'link-quote-vue'
+    },
+    {
+      'pageName': 'flutter',
+      'routeName': '/flutter',
+      'linkQuote': 'link-quote-flutter'
+    },
+    {
+      'pageName': 'symfony',
+      'routeName': '/symfony',
+      'linkQuote': 'link-quote-symfony'
+    },
+    {
+      'pageName': 'magento',
+      'routeName': '/magento',
+      'linkQuote': 'link-quote-magento'
+    },
+    {
+      'pageName': 'prestashop',
+      'routeName': '/prestashop',
+      'linkQuote': 'link-quote-prestashop'
+    },
+    {
+      'pageName': 'kodwallet',
+      'routeName': '/kodwallet',
+      'linkQuote': 'link-quote'
+    }
+] %}
+
 {% extends 'base.html.twig' %}
 
-{% block ogmetatitle %}
-    {{ "head.meta" | trans }}
-{% endblock %}
+{% block ogmetatitle %}{{ "head.meta" | trans }}{% endblock %}
 
 {% block title %}
-    {{ "home.title" | trans }}
+	{{ "head.title" | trans }}
 {% endblock %}
 
 {% block description %}
-    {{ "head.desc2" | trans }}
+	{{ "head.desc2" | trans }}
 {% endblock %}
 
-{% if app.request.locale == 'ko' %}
-    {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
-{% else %}
-    {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
-{% endif %}
-
-{% if hongKong is defined and hongKong %}
-    {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
-{% endif %}
-
-{% if app.request.locale == 'fr' %}
-    {% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
-{% endif %}
-
 {% block body %}
-    <div class="position-relative">
-        {{ include('_navbar.html.twig') }}
-        {{ include('home/_hero.html.twig') }}
-    </div>
-    {{ include('home/_intro.html.twig') }}
-    {{ include('home/_story.html.twig') }}
-    {{ include('home/_numbers.html.twig') }}
-    {{ include('home/_services.html.twig') }}
-    {{ include('home/_team.html.twig') }}
-    {{ include('_testimonial.html.twig') }}
-    {{ include('home/_map.html.twig') }}
-    {{ include('_newsletter.html.twig') }}
-    {{ include('_footer.html.twig') }}
+
+	{# Change link quote by country #}
+	{% if app.request.locale == 'ko' %}
+		{% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+	{% else %}
+		{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+	{% endif %}
+	{% if hongKong is defined and hongKong %}
+		{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+	{% endif %}
+
+{% cache 'index-' ~ app.request.locale  %}
+<div
+	class="landingPage">
+
+	{# Jumbotron #}
+	<section class="sec-jumbotron">
+		<div class="bg-img"><img class="{% if app.request.locale == "ko" %}ko-version{% endif %}" src="{{ asset('build/images/landingPage/bg.png') }}" alt="bg"/></div>
+		<div class="img-deco img-deco--left"><img src="{{ asset('build/images/landingPage/rings-1.png') }}" alt="decoration image"/></div>
+
+		<div class="box">
+{#			<div class="box__text">{{ 'introducing'|trans }}</div>#}
+			{% if app.request.locale == "ko" or app.request.locale == "hk" %}
+				<div class="box__title">
+					<h1>{{ 'section1.baseline1'|trans }}&nbsp;</h1>
+				</div>
+			{% else %}
+				<div class="box__title">
+					<h1>{{ 'section1.baseline1.part1fr'|trans }}
+					{{ 'section1.baseline1.part2fr'|trans }}
+					{{ 'section1.baseline1.part3fr'|trans }}</h1>
+				</div>
+			{% endif %}
+
+			{% if app.request.locale == 'ko'%}
+				<div class="box__sub-title"><h2>{{ 'section2.baseline1'|trans }}</h2></div>
+			{% endif %}
+
+			{# Jumbotron Buttons #}
+			<div class="box__btns">
+				<a href={{ linkQuote |trans }}>
+					<button class="pink-btn">
+						{{ 'cta.top'|trans }}
+					</button>
+				</a>
+
+				{% if app.request.locale == 'fr' %}
+{#					<a href="tel:0451202424">#}
+{#						<button class="white-btn white-btn--text-rose white-btn--bg-transparent" style="border: none;box-shadow: none;">#}
+{#							<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone" width="22" height="22"/>#}
+{#							04 51 20 24 24#}
+{#						</button>#}
+{#					</a>#}
+
+				{# {% elseif app.request.locale == 'en' and not hongKong %}
+					<a href="tel:+19292389229">
+						<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+							<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone" width="22" height="22"/>
+							+1 929-238-9229
+						</button>
+					</a> #}
+
+				{% elseif app.request.locale == 'ko' %}
+					<a href="tel:1668-5028">
+						<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+							<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone" width="22" height="22"/>
+							1668-5028
+						</button>
+					</a>
+				{% elseif app.request.locale == 'vn' %}
+					<a href="tel:1668-5028">
+						<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+							<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone" width="22" height="22"/>
+							0355 222 339
+						</button>
+					</a>
+				{% elseif app.request.locale == 'hk' or hongKong %}
+					<a href="tel:+19292389229">
+						<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+							<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone" width="22" height="22"/>
+							+1 929-238-9229
+						</button>
+					</a>
+				{% endif %}
+			</div>
+
+			{# Jumbotron Illustrations Img #}
+			<div class="box__imgs">
+				<img class="circles-img" src="{{ asset('build/images/landingPage/circles-img.png') }}" alt="circles images"/>
+			</div>
+		</div>
+	</section>
+
+	<section class="illustration-img">
+
+		{% include 'home/component/illustration_animated.html.twig' %}
+
+		<div class="animation-img">
+			<img class="techno-logo techno-logo--left-top" src="{{ asset('build/images/landingPage/react.png') }}" alt="react logo"/>
+			<img class="techno-logo techno-logo--left-bottom" src="{{ asset('build/images/landingPage/php.png') }}" alt="php logo"/>
+			<img class="techno-logo techno-logo--right-top" src="{{ asset('build/images/landingPage/symfony.png') }}" alt="symfony logo"/>
+			<img class="techno-logo techno-logo--right-bottom" src="{{ asset('build/images/landingPage/java.png') }}" alt="java logo"/>
+		</div>
+
+	</section>
+
+		{# Sections common #}
+		{% include 'home/component/common_sections/common_sections.html.twig' %}
+</div>
+{% endcache %}
 {% endblock %}

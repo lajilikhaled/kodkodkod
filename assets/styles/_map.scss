@@ -9,16 +9,16 @@
 }
 .map-tooltip {
   position: absolute;
-  width: 12.5%;
   display: none;
   z-index: 1000;
+  width: 12.5%;
 }
+
 @media (max-width: 768px) {
   .map-tooltip {
     width: 18%;
   }
 }
-
 .paris-pointer {
   right: 51%;
   top: 32%;

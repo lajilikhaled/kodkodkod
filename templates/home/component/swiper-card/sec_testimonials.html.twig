@@ -1,0 +1,126 @@
+{% set prefixPhotoUrl = "build/images/testimonial/" %}
+
+{% set listTestimonials = [
+    {
+    'name': 'Juliette. A',
+    'position': 'section5.section1.title',
+    'recommendationTexts' : [
+        'section5.section1.baseline3',
+        'section5.section1.baseline2',
+        'section5.section1.baseline1',
+        ],
+    'companyLogo' : 'bons-conseils-logo.png'
+    },
+    {
+    'name': 'Simon. A',
+    'position': 'section5.section2.title',
+    'recommendationTexts' : [
+        'section5.section2.baseline3',
+        'section5.section2.baseline2',
+        'section5.section2.baseline1',
+        ],
+    'companyLogo' : 'codiweb-logo.png'
+  },
+  {
+    'name': 'Mike.M',
+    'position': 'section5.section3.title',
+    'recommendationTexts' : [
+        'section5.section3.baseline1',
+        'section5.section3.baseline2',
+        'section5.section3.baseline3',
+        ],
+    'companyLogo' : 'urgence-docteurs-logo.png'
+  },
+   {
+    'name': 'Alexandre.J',
+    'position': 'section5.section4.title',
+    'recommendationTexts' : [
+        'section5.section4.baseline1',
+        'section5.section4.baseline2',
+        'section5.section4.baseline3',
+        ],
+    'companyLogo' : 'jarvis.png'
+  },
+  {
+    'name': 'Antoine.B',
+    'position': 'section5.section5.title',
+    'recommendationTexts' : [
+        'section5.section5.baseline1',
+        'section5.section5.baseline2',
+        'section5.section5.baseline3',
+        ],
+    'companyLogo' : 'blue-synaps-logo.png'
+  },
+  {
+    'name': 'Andrea.G',
+    'position': 'section5.section6.title',
+    'recommendationTexts' : [
+        'section5.section6.baseline1',
+        'section5.section6.baseline2',
+        'section5.section6.baseline3',
+        ],
+    'companyLogo' : 'eskimoz.png'
+  },
+]
+%}
+
+<section id="testimony" class="sec-testimonials">
+	<div class="box">
+		<div class="box__title">{{ 'section5.baseline1'|trans }}</div>
+		<div class="testimonials-swiper">
+			<div
+				class="swiper-wrapper">
+
+				{# Slides #}
+				{% for t in listTestimonials %}
+					<div class="swiper-slide">
+						<div class="slide-container">
+							<div class="slide-container__left">
+								<div class="company-img">
+									{% if t.companyLogo == "bons-conseils-logo.png" %}
+										<img class="bon-conseil-logo" src="{{ asset(prefixPhotoUrl ~ t.companyLogo) }}" alt="company logo"/>
+									{% elseif t.companyLogo == "codiweb-logo.png" %}
+										<img class="codiweb-logo" src="{{ asset(prefixPhotoUrl ~ t.companyLogo) }}" alt="company logo"/>
+									{% else %}
+										<img class="" src="{{ asset(prefixPhotoUrl ~ t.companyLogo) }}" alt="company logo"/>
+									{% endif %}
+
+								</div>
+							</div>
+							<div class="slide-container__right">
+								<div class="starts">
+									{% for i in 0..4 %}
+										<img class="start" src="{{ asset('build/images/testimonial/start.png') }}" alt="start image"/>
+									{% endfor %}
+								</div>
+								<div class="title">
+									<img class="quote-open" src="{{ asset('build/images/testimonial/quote-open.png') }}" alt="quote open image"/>
+									{{ t.recommendationTexts[0]|trans}}
+								</div>
+								<div class="sub-title">
+									{% for i in 1..(t.recommendationTexts|length - 1) %}
+										{{ t.recommendationTexts[i]|trans }}<br>
+									{% endfor %}
+								</div>
+								<div class="author">
+									<div class="author-name">{{ t.name }}</div>
+									<div class="author-position">
+										{{ t.position|trans }}</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				{% endfor %}
+
+			</div>
+			<div class="swiper-button-prev">
+				<img class="next-icon" src="{{ asset('build/images/testimonial/next-icon.svg') }}" style="transform: rotate(-180deg)" alt="next icon" width="27" height="18"/>
+			</div>
+			<div class="swiper-button-next">
+				<img class="prev-icon" src="{{ asset('build/images/testimonial/next-icon.svg') }}" alt="prev icon" width="27" height="18"/>
+			</div>
+		</div>
+	</div>
+</section>

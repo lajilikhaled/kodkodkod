@@ -7,7 +7,9 @@ trait EntityManagerTrait {
 
 	protected EntityManagerInterface $em;
 
-
+	/**
+	 * @required
+	 */
 	public function setEntityManager(EntityManagerInterface $entityManager) {
 		$this->em = $entityManager;
 	}

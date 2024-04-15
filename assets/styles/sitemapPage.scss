@@ -1,0 +1,58 @@
+.jumbotron {
+    &--text {
+        .box {
+            &--text {
+                grid-template-columns: 1fr !important;
+                justify-items: center !important;
+
+                .text {
+                    font: normal normal 700 55px/65px Poppins;
+                }
+            }
+        }
+    }
+}
+
+.content-container {
+    @include display-flex($alignItems: flex-start);
+    flex-direction: column;
+    padding: 60px 25px 45px 25px;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    .title {
+        @include title;
+        margin: 20px 0;
+    }
+
+    .pages {
+        @include sub-title;
+        text-align: left;
+        margin: 0 !important;
+        margin: 20px 0;
+    }
+}
+
+.pages-list {
+    line-height: 40px;
+
+    a {
+        color: $black;
+
+        &:hover {
+            color: $mainClr;
+        }
+    }
+
+    &__techno {
+        @include sub-title;
+
+        a {
+            color: $black;
+
+            &:hover {
+                color: $mainClr;
+            }
+        }
+    }
+}

@@ -1,0 +1,163 @@
+{% set listUrlPage = [
+    {
+        'pageName': '',
+        'routeName': '/',
+        'linkQuote': 'link-quote'
+    },
+    {
+        'pageName': 'blockchain',
+        'routeName': '/blockchain',
+        'linkQuote': 'link-quote-blockchain'
+    },
+    {
+        'pageName': 'react',
+        'routeName': '/react',
+        'linkQuote': 'link-quote-react'
+    },
+    {
+        'pageName': 'vue',
+        'routeName': '/vue',
+        'linkQuote': 'link-quote-vue'
+    },
+    {
+        'pageName': 'flutter',
+        'routeName': '/flutter',
+        'linkQuote': 'link-quote-flutter'
+    },
+    {
+        'pageName': 'symfony',
+        'routeName': '/symfony',
+        'linkQuote': 'link-quote-symfony'
+    },
+    {
+        'pageName': 'magento',
+        'routeName': '/magento',
+        'linkQuote': 'link-quote-magento'
+    },
+    {
+        'pageName': 'prestashop',
+        'routeName': '/prestashop',
+        'linkQuote': 'link-quote-prestashop'
+    },
+    {
+        'pageName': 'kodwallet',
+        'routeName': '/kodwallet',
+        'linkQuote': 'link-quote'
+    }
+] %}
+
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.meta" | trans }}{% endblock %}
+
+{% block title %}
+    {{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+    {{ "head.desc2" | trans }}
+{% endblock %}
+	{% if app.request.locale == 'ko' %}
+        {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+    {% else %}
+        {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+    {% endif %}
+	{% if hongKong is defined and hongKong %}
+        {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+    {% endif %}
+    {% if app.request.locale == 'fr' %}
+        {% set linkQuote = 'https://calendly.com/kodkodkod_maxime/kodkodkod_fr' %}
+    {% endif %}
+
+{% block body %}
+<div class="page-home">
+    {#    {% cache 'index-' ~ app.request.locale  %}#}
+    <div class="div">
+
+        {% if app.request.locale != 'ko' %}
+            <div class="div-2">
+                <span class="line1">{{ "pageHome.introLine1" | trans }}</span>
+                <br />
+                <span class="line2">{{ "pageHome.introLine2" | trans }}</span>
+            </div>
+        {% endif %}
+
+        {% if app.request.locale == 'ko' %}
+        <div class="div-2">
+            <span class="line1">
+                <span class="line2">웹사이트, 홈페이지, 어플, AI, 블록체인 & NFT</span>
+            </span>
+<div>제작해 드립니다.</div>
+        </div>
+        {% endif %}
+
+        <div class="div-3">
+            {{ "pageHome.detail" | trans }}
+        </div>
+        <a href="{{ linkQuote }}" target="_blank">
+            <div class="btnConsult">
+                <div class="div-5">
+                    <img loading="lazy" src="{{ asset('build/images/icons/icon_calendar.svg') }}" class="img"/>
+                    <div class="div-6">{{ "pageHome.bookConsultation" | trans }}</div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="section-logo">
+        <div class="text">
+            {{ 'People who trust us'|trans }}
+        </div>
+        {% if app.request.locale == 'ko' %}
+        <div class="logo">
+
+            <div>
+                <img style="width: 100px" src="{{ asset('build/images/pages/logos/cesco.png') }}">
+            </div>
+            <div>
+                <img style="width:60px" src="{{ asset('build/images/pages/logos/veja.svg') }}">
+            </div>
+            <div>
+                <img src="{{ asset('build/images/pages/logos/logo3.png') }}">
+            </div>
+            <div>
+                <img src="{{ asset('build/images/pages/logos/frankburger-burger.png') }}" style="background: white">
+            </div>
+        </div>
+        {% else %}
+            <div class="logo">
+
+                <div>
+                    <img src="{{ asset('build/images/pages/logos/logo1.svg') }}">
+                </div>
+                <div>
+                    <img src="{{ asset('build/images/pages/logos/logo2.png') }}">
+                </div>
+                <div>
+                    <img src="{{ asset('build/images/pages/logos/logo3.png') }}">
+                </div>
+                <div>
+                    <img src="{{ asset('build/images/pages/logos/logo4.png') }}">
+                </div>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+{#    <img src="{{ asset('build/images/pages/home/mask.png') }}" class="mask">#}
+    {#    {% endcache %}#}
+
+
+</div>
+    {% include 'homeNew/content.html.twig' %}
+    {% include 'homeNew/content2.html.twig' %}
+    {% include 'homeNew/content3.html.twig' %}
+    {%if app.request.locale != 'ko'%}
+     {% include 'homeNew/team.html.twig' %}
+    {% endif %}
+    {% include 'homeNew/map.html.twig' %}
+    {% include 'homePage/_testimonial.html.twig' %}
+{#    {% include 'homeNew/map.html.twig' %}#}
+{% endblock %}
+

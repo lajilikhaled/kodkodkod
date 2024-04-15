@@ -1,0 +1,811 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "head.title" | trans }}{% endblock %}
+
+{% block description %}{{ "head.desc2" | trans }}{% endblock %}
+
+{% block body %}
+
+	{# Change link quote by country #}
+	{% if app.request.locale == "ko" or app.request.locale == "fr" %}
+		{% set linkQuoteBlockchain = 'link-quote-blockchain' %}
+	{% else %}
+		{% set linkQuoteBlockchain = '/' ~ app.request.locale ~ '/form-contact/blockchain' %}
+	{% endif %}
+
+	<div class="app-home-newLandingPage">
+		<section class="jumbotron">
+			<div class="box">
+				<div class="left">
+					<div class="title">
+						{{ 'section1.blockchain.baseline1'|trans }}
+					</div>
+				{% if app.request.locale == 'fr' %}
+					<div class="contact-btns">
+						<a href={{ linkQuoteBlockchain |trans }}>
+							<button class="pink-btn">
+								{{ 'cta.react.top'|trans }}
+							</button>
+						</a>
+						<a href="tel:0451202424" >
+							<button class="white-btn white-btn--text-rose">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+								width="30" height="30"
+								viewBox="0 0 50 50"
+								style=" fill:#e9204f; margin-right:10px"><path d="M 14 3.9902344 C 8.4886661 3.9902344 4 8.4789008 4 13.990234 L 4 35.990234 C 4 41.501568 8.4886661 45.990234 14 45.990234 L 36 45.990234 C 41.511334 45.990234 46 41.501568 46 35.990234 L 46 13.990234 C 46 8.4789008 41.511334 3.9902344 36 3.9902344 L 14 3.9902344 z M 14 5.9902344 L 36 5.9902344 C 40.430666 5.9902344 44 9.5595687 44 13.990234 L 44 35.990234 C 44 40.4209 40.430666 43.990234 36 43.990234 L 14 43.990234 C 9.5693339 43.990234 6 40.4209 6 35.990234 L 6 13.990234 C 6 9.5595687 9.5693339 5.9902344 14 5.9902344 z M 18.048828 11.035156 C 16.003504 10.946776 14.45113 11.723922 13.474609 12.658203 C 12.986349 13.125343 12.633832 13.625179 12.392578 14.091797 C 12.151324 14.558415 11.998047 14.943108 11.998047 15.443359 C 11.998047 15.398799 11.987059 15.632684 11.980469 15.904297 C 11.973869 16.17591 11.97507 16.542045 12 16.984375 C 12.04996 17.869036 12.199897 19.065677 12.597656 20.484375 C 13.393174 23.321771 15.184446 27.043821 19.070312 30.929688 C 22.95618 34.815554 26.678014 36.606575 29.515625 37.402344 C 30.93443 37.800228 32.130881 37.949937 33.015625 38 C 33.457997 38.02503 33.822105 38.026091 34.09375 38.019531 C 34.365395 38.012931 34.601049 38.001953 34.556641 38.001953 C 35.056892 38.001953 35.441585 37.848676 35.908203 37.607422 C 36.374821 37.366168 36.874657 37.013651 37.341797 36.525391 C 38.276078 35.54887 39.053222 33.996496 38.964844 31.951172 C 38.922907 30.975693 38.381316 30.111858 37.582031 29.599609 C 36.96435 29.203814 36.005458 28.589415 34.753906 27.789062 C 33.301811 26.861299 31.44451 26.795029 29.929688 27.625 L 30.015625 27.582031 L 28.837891 28.087891 L 28.751953 28.148438 C 28.465693 28.349428 28.111154 28.386664 27.789062 28.251953 C 26.886813 27.874649 25.480985 27.133329 24.173828 25.826172 C 22.866671 24.519015 22.125351 23.113186 21.748047 22.210938 C 21.613336 21.888845 21.650568 21.534307 21.851562 21.248047 L 21.912109 21.162109 L 22.417969 19.984375 L 22.375 20.070312 C 23.204764 18.555868 23.140248 16.698619 22.210938 15.246094 C 21.410584 13.994542 20.796186 13.03565 20.400391 12.417969 C 19.888142 11.618684 19.02431 11.077096 18.048828 11.035156 z M 17.962891 13.033203 C 18.243409 13.045263 18.533045 13.209378 18.716797 13.496094 C 19.113001 14.114413 19.727696 15.07377 20.527344 16.324219 C 21.058033 17.153694 21.09533 18.243821 20.621094 19.109375 L 20.597656 19.152344 L 20.115234 20.279297 L 20.214844 20.097656 C 19.623835 20.939396 19.505055 22.032514 19.902344 22.982422 C 20.35304 24.060173 21.214923 25.695392 22.759766 27.240234 C 24.304608 28.785077 25.939827 29.64696 27.017578 30.097656 C 27.967486 30.494945 29.060604 30.376165 29.902344 29.785156 L 29.720703 29.884766 L 30.847656 29.402344 L 30.890625 29.378906 C 31.755801 28.904877 32.845877 28.944375 33.675781 29.474609 L 33.675781 29.472656 C 34.92623 30.272304 35.885587 30.886999 36.503906 31.283203 C 36.790622 31.466955 36.954736 31.756591 36.966797 32.037109 C 37.032417 33.555785 36.504954 34.506599 35.896484 35.142578 C 35.59225 35.460568 35.262335 35.691348 34.990234 35.832031 C 34.718133 35.972715 34.457889 36.001953 34.556641 36.001953 C 34.373232 36.001953 34.276633 36.013981 34.046875 36.019531 C 33.817117 36.025131 33.509144 36.025436 33.128906 36.003906 C 32.368431 35.960876 31.318757 35.831053 30.054688 35.476562 C 27.526547 34.767581 24.137509 33.168759 20.484375 29.515625 C 16.831241 25.862491 15.232169 22.473167 14.523438 19.945312 C 14.169071 18.681386 14.039037 17.631464 13.996094 16.871094 C 13.974624 16.490908 13.974899 16.18286 13.980469 15.953125 C 13.986069 15.72339 13.998047 15.626918 13.998047 15.443359 C 13.998047 15.542109 14.027287 15.281867 14.167969 15.009766 C 14.308652 14.737665 14.539432 14.40775 14.857422 14.103516 C 15.493401 13.495046 16.444215 12.967581 17.962891 13.033203 z">
+								</path>
+							</svg>
+								04 51 20 24 24
+							</button>
+						</a>	
+					</div>
+				{% else %}
+					<a href={{ linkQuoteBlockchain |trans }}>
+						<button class="pink-btn">
+							{{ 'cta.react.top'|trans }}
+						</button>
+					</a>
+				{% endif %}
+				</div>
+				<div class="right">
+					<img class="jumbo-img" src="{{ asset('build/images/newLandingPage/jumbotron_blockchain.png') }}"/>
+				</div>
+			</div>
+		</section>
+
+		<section class="brands">
+			<div class="box">
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_1_jarvis.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_2_bnp.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/testimonial/urgence-docteurs-logo.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_4_pm.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/react/allianz-logo-2.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_6_canal.png') }}"/>
+				</div>
+			</div>
+		</section>
+
+		<div id="your_project" class="your-project">
+			<section class="type-project">
+				<div class="type-project box">
+					<div class="box__title">
+						{{ 'type-project.title'|trans }}
+					</div>
+
+					{# <div class="box__sub-title">
+						{{ 'type-project.baseline'|trans }}
+					</div> #}
+
+					<div class="box__cards">
+						<div class="card">
+							<span class="icon-container">
+								<img src="{{ asset('build/images/blockchain/smart_contract.png') }}" style="width: 25px; height: auto"/>
+							</span>
+							<div class="title">{{ 'type-project.section1.baseline'|trans }}</div>
+						</div>
+
+						<div class="card">
+							<span class="icon-container">
+								<img src="{{ asset('build/images/blockchain/Dapps.png') }}" style="width: 25px; height: auto"/>
+							</span>
+							<div class="title">{{ 'type-project.section2.baseline'|trans }}</div>
+						</div>
+
+						<div class="card">
+							<span class="icon-container">
+								<svg 
+									aria-hidden="true" 
+									focusable="false" 
+									data-prefix="fas" 
+									data-icon="exchange-alt" 
+									class="icon " 
+									role="img" xmlns="http://www.w3.org/2000/svg" 
+									viewBox="0 0 512 512" 
+									style="font-size:20px">
+									<path fill="currentColor" d="M0 168v-16c0-13.255 10.745-24 24-24h360V80c0-21.367 25.899-32.042 40.971-16.971l80 80c9.372 9.373 9.372 24.569 0 33.941l-80 80C409.956 271.982 384 261.456 384 240v-48H24c-13.255 0-24-10.745-24-24zm488 152H128v-48c0-21.314-25.862-32.08-40.971-16.971l-80 80c-9.372 9.373-9.372 24.569 0 33.941l80 80C102.057 463.997 128 453.437 128 432v-48h360c13.255 0 24-10.745 24-24v-16c0-13.255-10.745-24-24-24z"></path>
+								</svg>
+							</span>
+							<div class="title">{{ 'type-project.section3.baseline'|trans }}</div>
+						</div>
+
+						<div class="card">
+							<span class="icon-container">
+								<svg 
+									aria-hidden="true" 
+									focusable="false" 
+									data-prefix="fas" 
+									data-icon="gamepad" 
+									class="icon " 
+									role="img" 
+									xmlns="http://www.w3.org/2000/svg" 
+									viewBox="0 0 640 512" style="font-size:20px">
+									<path fill="currentColor" d="M480.07 96H160a160 160 0 1 0 114.24 272h91.52A160 160 0 1 0 480.07 96zM248 268a12 12 0 0 1-12 12h-52v52a12 12 0 0 1-12 12h-24a12 12 0 0 1-12-12v-52H84a12 12 0 0 1-12-12v-24a12 12 0 0 1 12-12h52v-52a12 12 0 0 1 12-12h24a12 12 0 0 1 12 12v52h52a12 12 0 0 1 12 12zm216 76a40 40 0 1 1 40-40 40 40 0 0 1-40 40zm64-96a40 40 0 1 1 40-40 40 40 0 0 1-40 40z"></path>
+								</svg>
+							</span>
+							<div class="title">{{ 'type-project.section4.baseline'|trans }}</div>
+						</div>
+
+						<div class="card">
+							<span class="icon-container">
+								<svg 
+									aria-hidden="true" 
+									focusable="false" 
+									data-prefix="fas" 
+									data-icon="globe" 
+									class="icon " 
+									role="img" 
+									xmlns="http://www.w3.org/2000/svg" 
+									viewBox="0 0 496 512" 
+									style="font-size:20px">
+									<path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"></path>
+								</svg>
+							</span>
+							<div class="title">{{ 'type-project.section5.baseline'|trans }}</div>
+						</div>
+
+						<div class="card">
+							<span class="icon-container">
+								<svg 
+									aria-hidden="true" 
+									focusable="false" 
+									data-prefix="fas" 
+									data-icon="link" 
+									class="icon " 
+									role="img" 
+									xmlns="http://www.w3.org/2000/svg" 
+									viewBox="0 0 512 512" 
+									style="font-size:20px">
+									<path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path>
+								</svg>
+							</span>
+							<div class="title">{{ 'type-project.section6.baseline'|trans }}</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{# <section class="equipe-project">
+				<div class="equipe-project box">
+					{% include 'home/component/team_developers.html.twig' %}
+				</div>
+			</section> #}
+
+			<section class="sec8">
+				<div class="box" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700">
+					<div class="sec8-cards">
+						<div class="sec8-card">
+							<div class="num">3</div>
+							<div class="text">{{ 'section6.section1.baseline1'|trans }}
+								<br/>{{ 'section6.section1.baseline2'|trans }}</div>
+						</div>
+						<div class="sec8-card">
+							<div class="num">+100</div>
+							<div class="text">{{ 'section6.section2.baseline1'|trans }}
+								<br/>{{ 'section6.section2.baseline2'|trans }}</div>
+						</div>
+						<div class="sec8-card">
+							<div class="num">+30</div>
+							<div class="text">{{ 'section6.section3.baseline1'|trans }}
+								<br/>{{ 'section6.section3.baseline2'|trans }}</div>
+						</div>
+					</div>
+					<a href= {{ linkQuoteBlockchain|trans }} >
+						<button class="pink-btn">{{ 'section6.cta'|trans }}</button>
+					</a>
+				</div>
+			</section>
+
+			<section class="sec4">
+				<div class="box">
+					<div class="title">{{ 'section3.baseline1'|trans }}</div>
+					<div class="sub-title">«
+						{{ 'section3.baseline2'|trans }}
+						»</div>
+					<div class="contents" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700">
+						<div class="contents-text">
+							<div class="content-title">{{ 'section3.baseline3'|trans }}</div>
+							<div class="content-desc">
+								{{ 'section3.baseline4'|trans }}<br/>
+								{{ 'section3.baseline5'|trans }}<br/>
+								{{ 'section3.baseline6'|trans }}
+							</div>
+						</div>
+						<div class="contents-img">
+							<img src="{{ asset('build/images/newLandingPage/sec4_img.png') }}"/>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="equipe-project">
+				<div class="equipe-project box">
+
+					<div class="box__sub-box">
+						<div class="title">
+							{{ 'equipe-project.sub-title'|trans }}
+						</div>
+						<div class="row-content-1">
+							<div class="sub-title">{{ 'equipe-project.sub-title.section1.baseline'|trans }}</div>
+							<div class="cards">
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/ethereum.png') }}" alt="ethereum">
+									<p>{{ 'equipe-project.sub-title.section1.desc1'|trans }}</p>
+								</div>
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/polygon.png') }}" alt="polygon">
+									<p>{{ 'equipe-project.sub-title.section1.desc2'|trans }}</p>
+								</div>
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/bsc.png') }}" alt="ethereum">
+									<p>{{ 'equipe-project.sub-title.section1.desc3'|trans }}</p>
+								</div>
+
+								{% if app.request.locale == "fr" or app.request.locale == "en"%}
+								<div class="card">
+									<img class="card-img" src="{{ asset('build/images/blockchain/Tezos_logo.png') }}" alt="ethereum">
+									<p>{{ 'equipe-project.sub-title.section1.desc4'|trans }}</p>
+								</div>
+								{% endif %}
+	
+							</div>
+						</div>
+
+						<div class="row-content-2">
+							<div class="sub-title">{{ 'equipe-project.sub-title.section2.baseline'|trans }}</div>
+							<div class="cards">
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/paper.png') }}" alt="paper">
+									<p>{{ 'equipe-project.sub-title.section2.desc1'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/token.png') }}" alt="token">
+									<p>{{ 'equipe-project.sub-title.section2.desc2'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/nft.png') }}" alt="nft">
+									<p>{{ 'equipe-project.sub-title.section2.desc3'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/nft-token.png') }}" alt="nft-token">
+									<p>{{ 'equipe-project.sub-title.section2.desc4'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/gamefi.png') }}" alt="gamefi">
+									<p>{{ 'equipe-project.sub-title.section2.desc5'|trans }}</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="row-content-2">
+							<div class="sub-title">{{ 'equipe-project.sub-title.section3.baseline'|trans }}</div>
+							<div class="cards">
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/metamask.png') }}" alt="metamask">
+									<p>{{ 'equipe-project.sub-title.section3.desc1'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/chainlink.png') }}" alt="chainlink">
+									<p>{{ 'equipe-project.sub-title.section3.desc2'|trans }}</p>
+								</div>
+
+								<div class="card">
+									<img src="{{ asset('build/images/blockchain/audit.png') }}" alt="audit">
+									<p>{{ 'equipe-project.sub-title.section3.desc3'|trans }}</p>
+								</div>
+							</div>
+
+						</div>
+
+						<a href= {{ linkQuoteBlockchain|trans }} >
+							<button class="pink-btn">
+								{{ 'equipe-project.cta'|trans }}
+							</button>
+						</a>
+
+					</div>
+
+				</div>
+			</section>
+
+			<section class="sec7">
+				<div class="box">
+					<div class="title">
+						{{ 'section7.blockchain.baseline1'|trans }}
+					</div>
+					<div class="projects">
+						{% include 'home/component/blockchain_projects_swiper.html.twig' %}
+					</div>
+					<div class="btn">
+                        <a href={{ linkQuoteBlockchain|trans }} >
+                            <button class="pink-btn">{{ 'cta.react.top'|trans }}</button>
+                        </a>
+                    </div>
+				</div>
+			</section>
+
+			<section class="project-detail">
+				<div class="title">{{ 'project-detail.title'|trans }}</div>
+				<div class="box">
+					<div id="circular-project" class="card">
+						<div class="card__img card__img--left">
+							<img <img src="{{ asset('build/images/blockchain/circular.png') }}">
+							<p>{{ 'project-detail.section1.desc'|trans }}</p>
+						</div>
+						<div class="card__text card__text--right">
+							<div class="title"></div>
+							<div class="description">
+								<p>{{ 'project-detail.section1.baseline1'|trans }}</p>
+								<ul>
+									<li>{{ 'project-detail.section1.baseline2'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline3'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline4'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline5'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline6'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline7'|trans }}</li>
+									<li>{{ 'project-detail.section1.baseline8'|trans }}</li>
+								</ul>
+								
+							</div>
+							<div class="btn">
+								<a href= {{ linkQuoteBlockchain|trans }} >
+									<button class="pink-btn">
+										{{ 'project-detail.section1.cta'|trans }}
+									</button>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+					<div id="teambudd-project" class="card">
+						<div class="card__text card__text--left">
+							<div class="title">{{ 'project-detail.section2.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'project-detail.section2.baseline1'|trans }}</p>
+								<p>{{ 'project-detail.section2.baseline2'|trans }}</p>
+								<ul>
+									<li>{{ 'project-detail.section2.baseline3'|trans }}</li>
+									<li>{{ 'project-detail.section2.baseline4'|trans }}</li>
+									<li>{{ 'project-detail.section2.baseline5'|trans }}</li>
+									<li>{{ 'project-detail.section2.baseline6'|trans }}</li>
+									<li>{{ 'project-detail.section2.baseline7'|trans }}</li>
+								</ul>
+								<p>{{ 'project-detail.section2.baseline8'|trans }}</p>
+							</div>
+							<div class="btn">
+								<a href= {{ linkQuoteBlockchain|trans }} >
+									<button class="pink-btn">
+										{{ 'project-detail.section1.cta'|trans }}
+									</button>
+								</a>
+							</div>
+						</div>
+
+						<div class="card__img card__img--right">
+							<img <img src="{{ asset('build/images/blockchain/teambudd.png') }}">
+							<p>{{ 'project-detail.section2.desc'|trans }}</p>
+						</div>
+
+					</div>
+
+					<div id="warriorverse-project" class="card">
+						<div class="card__img card__img--left">
+							<img <img src="{{ asset('build/images/blockchain/warriorverse.png') }}">
+							<p>{{ 'project-detail.section3.desc'|trans }}</p>
+						</div>
+						<div class="card__text card__text--right">
+							<div class="title">{{ 'project-detail.section3.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'project-detail.section3.baseline1'|trans }}</p>
+								<ul>
+									<li>{{ 'project-detail.section3.baseline2'|trans }}</li>
+									<li>{{ 'project-detail.section3.baseline3'|trans }}</li>
+									<li>{{ 'project-detail.section3.baseline4'|trans }}</li>
+									<li>{{ 'project-detail.section3.baseline5'|trans }}</li>
+									<li>{{ 'project-detail.section3.baseline6'|trans }}</li>
+								</ul>
+								
+							</div>
+							<div class="btn">
+								<a href= {{ linkQuoteBlockchain|trans }} >
+									<button class="pink-btn">
+										{{ 'project-detail.section1.cta'|trans }}
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div id="expopolis-project" class="card">
+						<div class="card__text card__text--left">
+							<div class="title">{{ 'project-detail.section4.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'project-detail.section4.baseline1'|trans }}</p>
+								<p>{{ 'project-detail.section4.baseline2'|trans }}</p>
+								<p>{{ 'project-detail.section4.baseline3'|trans }}</p>
+							</div>
+							<div class="btn">
+								<a href= {{ linkQuoteBlockchain|trans }} >
+									<button class="pink-btn">
+										{{ 'project-detail.section1.cta'|trans }}
+									</button>
+								</a>
+							</div>
+						</div>
+
+						<div class="card__img card__img--right">
+							<img <img src="{{ asset('build/images/blockchain/expopolis.png') }}">
+							<p>{{ 'project-detail.section4.desc'|trans }}</p>
+						</div>
+
+					</div>
+
+					<div class="card card--colored">
+						<div class="card__text card__text--left card__text--flex">
+							<div class="title">{{ 'project-detail.section5.title'|trans }}</div>
+							<div class="description">
+								<p>{{ 'project-detail.section5.baseline1'|trans }}</p>
+								<ul>
+									<li>{{ 'project-detail.section5.baseline2'|trans }}</li>
+									<li>{{ 'project-detail.section5.baseline3'|trans }}</li>
+									<li>{{ 'project-detail.section5.baseline4'|trans }}</li>
+									<li>{{ 'project-detail.section5.baseline5'|trans }}</li>
+									<li>{{ 'project-detail.section5.baseline6'|trans }}</li>
+									<li>{{ 'project-detail.section5.baseline7'|trans }}</li>
+								</ul>
+								<p>{{ 'project-detail.section5.baseline8'|trans }}</p>
+							</div>
+						</div>
+
+						<div class="card__img card__img--right">
+							<img src="{{ asset('build/images/blockchain/illustration-NFT-1.png') }}">
+							<div>
+								<div class="info">
+									<span>
+										<svg 
+											aria-hidden="true" 
+											focusable="false" 
+											data-prefix="fas" 
+											data-icon="info-circle" 
+											class="icon" 
+											role="img" 
+											xmlns="http://www.w3.org/2000/svg" 
+											viewBox="0 0 512 512" 
+											style="font-size:25px">
+										<path 
+											fill="currentColor" 
+											d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path>
+										</svg>
+									</span>
+									<p class="p p--bold">{{ 'project-detail.section5.sub-title'|trans }}</p>
+								</div>
+								<p class="p">{{ 'project-detail.section5.sub-title.baseline1'|trans }}<p>
+								<ul>
+									<li>{{ 'project-detail.section5.sub-title.baseline2'|trans }}</li>
+									<li>{{ 'project-detail.section5.sub-title.baseline3'|trans }}</li>
+									<li>{{ 'project-detail.section5.sub-title.baseline4'|trans }}</li>
+									<li>{{ 'project-detail.section5.sub-title.baseline5'|trans }}</li>
+									<li>{{ 'project-detail.section5.sub-title.baseline6'|trans }}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="process" class="sec9">
+				<div class="box">
+					<div class="title">
+						<div class="title-row row1">
+							{{ 'section7.title.baseline1'|trans }}
+						</div>
+						<div class="title-row row2">
+							<span>{{ 'section7.title.baseline2'|trans }}</span>
+							<span class="pink-text-box">{{ 'section7.title.baseline3'|trans }}</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sec10">
+				<div class="box">
+					<div class="steps">
+
+						<div class="step step-leftimg step1">
+							<div class="img-part left" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step1.png') }}"/>
+							</div>
+							<div class="text-part right" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+								<div class="title">{{ 'section8.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section8.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section8.baseline2'|trans }}<br/><br/>
+										<b>🏅
+											{{ 'section8.bold'|trans }}</b>
+										{{ 'section8.baseline3'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="step step-rightimg step2">
+							<div class="left text-part" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+								<div class="title">{{ 'section9.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section9.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section9.baseline2'|trans }}<br/><br/>
+										{{ 'section9.baseline3'|trans }}<br/><br/>
+										<b>🏅
+											{{ 'section9.bold'|trans }}</b>
+										{{ 'section9.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+							<div class="right img-part" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step2.png') }}"/>
+							</div>
+						</div>
+
+						<div class="step step-leftimg step3">
+							<div class="left img-part" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step3.png') }}"/>
+							</div>
+							<div class="right text-part">
+								<div class="title">{{ 'section10.title'|trans }}</div>
+								<div class="text-box" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+									<div class="sub-title">{{ 'section10.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section10.baseline2'|trans }}<br/><br/>
+										{{ 'section10.baseline3'|trans }}<br/><br/>
+										<b>📈
+											{{ 'section10.bold'|trans }}</b>
+										{{ 'section10.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="step step-rightimg step4">
+							<div class="left text-part" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+								<div class="title">{{ 'section11.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section11.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section11.baseline2'|trans }}<br/><br/>
+										{{ 'section11.baseline3'|trans }}<br/><br/>
+										<b>📈
+											{{ 'section11.bold'|trans }}</b>
+										{{ 'section11.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+							<div class="right img-part" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step4.png') }}"/>
+							</div>
+						</div>
+
+						<div class="step step-leftimg step5">
+							<div class="left img-part" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step5.png') }}"/>
+							</div>
+							<div class="right text-part" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+								<div class="title">{{ 'section12.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section12.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section12.baseline2'|trans }}<br/><br/>
+										{{ 'section12.baseline3'|trans }}<br/><br/>
+										<b>✅
+											{{ 'section12.bold'|trans }}</b>
+										{{ 'section12.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="step-revolution">
+						<div class="box">
+							<div class="left" data-aos="fade-left" data-aos-easing="ease" data-aos-duration="700">
+								<div class="title">
+									{{ 'section13.title.part1'|trans }}
+									<span class="pink-text-box">{{ 'section13.title.part2'|trans }}</span>
+									{{ 'section13.title.part3'|trans }}
+									{{ 'section13.title2'|trans }}
+								</div>
+								<div class="desc">
+									{{ 'section13.baseline1'|trans }}
+								</div>
+							</div>
+							<div class="right" data-aos="fade-right" data-aos-easing="ease" data-aos-duration="700">
+								<img src="{{ asset('build/images/newLandingPage/step-revolution.png') }}"/>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</section>
+
+			<section id="compare" class="sec11" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700">
+				<div class="box">
+					<div class="black">
+						<div class="menus">
+							<div class="menu">{{ 'section14.baseline1'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline2'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline3'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline4'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline5'|trans }}</div>
+						</div>
+						<div class="without black-pink">
+							<div class="pink-title">
+								{{ 'section14.title1'|trans }}
+							</div>
+							<div class="checkers">
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+							</div>
+						</div>
+						<div class="with black-pink inactive">
+							<div class="pink-title">
+								Kodkodkod Studio
+							</div>
+							<div class="checkers">
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href= {{ linkQuoteBlockchain|trans }} >
+						<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+					</a>
+				</div>
+			</section>
+		</div>
+
+		<section id="FAQ" class="sec-faq">
+			<div class="box">
+				<div class="faq-title">{{ 'section15.title1'|trans }}</div>
+				<div class="faq-lists">
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section1.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section1.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section2.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section2.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section3.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section3.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section4.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section4.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section5.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section5.desc'|trans }}
+						</div>
+					</div>
+				</div>
+				<a href= {{ linkQuoteBlockchain|trans }} >
+					<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	{# ----------------------------------------------------------------- #}
+	{# Common sections #}
+	<div class="landingPage landingPage-portfolioPage">
+	
+		{# Address Section #}
+		{% include 'home/component/common_sections/address_section.html.twig' %}
+
+	</div>
+	{# ----------------------------------------------------------------- #}
+{% endblock %}

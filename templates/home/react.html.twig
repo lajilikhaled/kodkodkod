@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.react.meta" | trans }}{% endblock %}
+
+{% block title %}
+	{{ "head.react.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+
+{# Change link quote by country #}
+{% if app.request.locale == "ko" %}
+	{% set linkQuote = 'link-quote-react' %}
+{% else %}
+	{% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+{% endif %}
+{% if hongKong is defined and hongKong %}
+	{% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+{% endif %}
+
+	<div class="landingPage">
+        {# Jumbotron #}
+		<section class="sec-jumbotron">
+			<div class="bg-img"><img class="{% if app.request.locale == "ko" %}ko-version{% endif %}" src="{{ asset('build/images/landingPage/bg.png') }}" alt="bg"/></div>
+			<div class="img-deco img-deco--left"><img src="{{ asset('build/images/landingPage/rings-1.png') }}" alt="decoration image"/></div>
+
+			<div class="box">
+				{% if app.request.locale == "hk" %}
+					<div class="box__title">
+						<h1>{{ 'react.jumbo.title'|trans }}&nbsp;</h1>
+					</div>
+				{% else %}
+					<div class="box__title">
+						<h1>{{ 'all.jumbo.title1'|trans }}&nbsp;
+						<span class="highlight">{{ 'react.jumbo.title2'|trans }}</span>&nbsp;
+						{{ 'all.jumbo.title2'|trans }}</h1>
+					</div>
+				{% endif %}
+
+				{% if app.request.locale == 'ko'%}
+					<div class="box__sub-title"><h2>{{ 'section2.baseline1'|trans }}</h2></div>
+				{% endif %}
+
+				{# Jumbotron Buttons #}
+				<div class="box__btns">
+					<a href={{ linkQuote |trans }}>
+						<button class="pink-btn">
+							{{ 'cta.top'|trans }}
+						</button>
+					</a>
+
+					{% if app.request.locale == 'fr' %}
+						{# <a href="tel:0451202424">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								04 51 20 24 24
+							</button>
+						</a> #}
+
+					{# {% elseif app.request.locale == 'en' %}
+						<a href="tel:+1 628-777-2241">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								+1 628-777-2241
+							</button>
+						</a> #}
+
+					{% elseif app.request.locale == 'ko' %}
+						<a href="tel:+1 628-777-2241">
+							<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+								<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+								1668-5028
+							</button>
+						</a>
+					{% endif %}
+				</div>
+
+				{# Jumbotron Illustrations Img #}
+				<div class="box__imgs">
+					<img
+					class="circles-img" src="{{ asset('build/images/landingPage/circles-img.png') }}" alt="circles images"/>
+				</div>
+			</div>
+		</section>
+
+		<section class="illustration-img">
+		
+			{% include 'home/component/illustration_animated.html.twig' %}
+
+			<div class="animation-img">
+				<img class="techno-logo techno-logo--left-top" src="{{ asset('build/images/landingPage/react.png') }}" alt="react logo" />
+				<img class="techno-logo techno-logo--left-bottom" src="{{ asset('build/images/react/react-native-logo.png') }}" alt="react native logo"/>
+				<img class="techno-logo techno-logo--right-top" src="{{ asset('build/images/react/next.js.png') }}" alt="nextjs logo"/>
+				<img class="techno-logo techno-logo--right-bottom"  src="{{ asset('build/images/react/formik-logo.png') }}" alt="formik logo"/>
+				
+			</div>
+
+		</section>
+
+		{# Sections common #}
+		{% include 'home/component/common_sections/common_sections.html.twig' %}
+	</div>
+
+
+{% endblock %}

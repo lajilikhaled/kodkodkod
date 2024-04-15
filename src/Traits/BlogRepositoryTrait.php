@@ -8,6 +8,9 @@ trait BlogRepositoryTrait {
 
 	protected BlogRepository $blogRepository;
 
+	/**
+	 * @required
+	 */
 	public function setBlogRepository(BlogRepository $blogRepository) {
 		$this->blogRepository = $blogRepository;
 	}

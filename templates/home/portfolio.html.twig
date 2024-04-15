@@ -1,0 +1,265 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.portfolio.meta" | trans }}{% endblock %}
+
+{% block title %}
+	{{ "head.portfolio.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('portfolio') }}
+{% endblock %}
+
+{% block body %}
+
+	<div
+		class="landingPage-portfolio">
+
+		{# Jumbotron #}
+		<section class="portfolio-jumbotron">
+			<div class="bg-img"><img src="{{ asset('build/images/portfolio/bg.png') }}" alt="bg"/></div>
+			<div class="bg-img-mobile"><img src="{{ asset('build/images/portfolio/bg-mobile.png') }}" alt="bg"/></div>
+
+			<div class="box">
+				<div class="box__left">
+					<div class="text">{{ 'portfolio.LP.title'|trans }}</div>
+					<div class="title"><h1>{{ 'portflio.title'|trans }}&nbsp;</h1></div>
+					<div class="sub-title"><h2>{{ 'section3.baseline51'|trans }}</h2></div>
+
+					{# Jumbotron Buttons #}
+					<div class="btns">
+						<a href={{ linkQuote |trans }}>
+							<button class="pink-btn {%if app.request.locale != 'ko'%} btn-lg {% endif %}">
+								{{ 'cta.top'|trans }}
+							</button>
+						</a>
+
+						{% if app.request.locale == 'fr' %}
+							{# <a href="tel:0451202424">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									04 51 20 24 24
+								</button>
+							</a> #}
+
+						{% elseif app.request.locale == 'en' %}
+							{# <a href="tel:+1 628-777-2241">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									+1 628-777-2241
+								</button>
+							</a> #}
+						{% elseif app.request.locale == 'ko' %}
+							<a href="tel:+1 628-777-2241">
+								<button class="white-btn white-btn--text-rose white-btn--bg-transparent">
+									<img src="{{ asset('build/images/landingPage/tel-icon-4x.png') }}" style="margin-right:10px; width: 10%" alt="icon telephone"/>
+									1668-5028
+								</button>
+							</a>
+						{% endif %}
+					</div>
+				</div>
+
+				<div
+					class="box__right">{# <div class="line line--1">
+													<div class="project-img"><img src="{{ asset('build/images/portfolio/kapp.png') }}" alt="project image"/></div>
+												</div>
+
+												<div class="line line--2">
+													<div class="project-img"><img src="{{ asset('build/images/portfolio/circular.png') }}" alt="project image"/></div>
+													<div class="project-img project-img-img2"><img src="{{ asset('build/images/portfolio/silver-beaute.png') }}" alt="project image"/></div>
+												</div>
+
+												<div class="line line--3">
+													<div class="project-img project-img-img1"><img src="{{ asset('build/images/portfolio/moa.png') }}" alt="project image"/></div>
+												</div>
+											</div> #}
+
+				</div>
+			</div>
+		</section>
+
+		{# Cards Projects #}
+		<section class="portfolio-projects">
+			<div class="box">
+				<div class="box__filter">
+					<button id="all-projects" class="active">
+						<div class="text">{{ "View all"|trans }}</div>
+						<div class="btn-icon">
+							<div class="nb-total-projects">{{ projects|length }}</div>
+							<div class="arrow-down" style="visibility: hidden" >
+								<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+							</div>
+						</div>
+
+					</button>
+
+					{% for category in categoriesWithTechnos %}
+
+						<ul class="select-techno" id="techno-by-cat-{{ category.cat.id }}" data-category-id="{{ category.cat.id }}">
+							{% if app.request.locale == 'fr' or app.request.locale == 'ch' or app.request.locale == 'ca' %}
+								<li class="init" data-value="{{ category.cat.name }}" disabled selected>
+									<div class="category-name">{{ category.cat.name }}</div>
+									<div class="li-icon">
+										<div class="projects-count">{{ category.nbProjects }}</div>
+										<div class="arrow-down">
+											<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+										</div>
+									</div>
+								</li>
+							{% elseif app.request.locale == 'ko' %}
+								<li class="init" data-value="{{ category.cat.nameKr }}" disabled selected>
+									<div class="category-name">{{ category.cat.nameKr }}</div>
+									<div class="li-icon">
+										<div class="projects-count">{{ category.nbProjects }}</div>
+										<div class="arrow-down">
+											<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+										</div>
+									</div>
+								</li>
+							{% else %}
+								<li class="init" data-value="{{ category.cat.nameEn }}" disabled selected>
+									<div class="category-name">{{ category.cat.nameEn }}</div>
+									<div class="li-icon">
+										<div class="projects-count">{{ category.nbProjects }}</div>
+										<div class="arrow-down">
+											<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+										</div>
+									</div>
+								</li>
+							{% endif %}
+							<li class="all-projects-by-cat" data-value="all">
+
+								<div class="category-name">{{ "View all"|trans }}</div>
+								<div class="li-icon">
+									<div class="projects-count" data-projects-total="{{ category.nbProjects }}">{{ category.nbProjects }}</div>
+									<div class="arrow-down">
+										<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+									</div>
+								</div>
+							</li>
+
+							{% for technology in category.technologies %}
+								<li data-value="{{ technology.techno }}">
+									<div class="category-name">{{ technology.techno }}</div>
+									<div class="li-icon">
+										<div class="projects-count">{{ technology.nbProjects }}</div>
+										<div class="arrow-down">
+											<img src="{{ asset('build/images/portfolio/arrow-down.png') }}" alt="arrow-down"/>
+										</div>
+									</div>
+								</li>
+
+							{% endfor %}
+						</ul>
+
+					{% endfor %}
+
+				</div>
+
+				<div
+					class="box__project-cards">
+					{# card #}
+					{% for project in projects %}
+
+						{% set technosConcat = '' %}
+						{% set iosTechno = false %}
+
+						{% for t in project.technology %}
+								{% if "ios" == t|lower %}
+									{% set iosTechno = true %}
+								{% endif %}
+							{% set technosConcat = technosConcat ~ t|capitalize ~ ";" %}
+						{% endfor %}
+						<div class="card" data-category="{{ project.category.id }}" data-technologies="{{ technosConcat }}">
+							<div class="card__left">
+								<div class="technologies">
+									{% for t in project.technology %}
+										<div class="technology">{{ t }}</div>
+									{% endfor %}
+								</div>
+								<div class="title">{{ project.title }}</div>
+								{% if app.request.locale == 'ko' %}
+									<div class="sub-title">{{ project.descriptionKo }}</div>
+								{% elseif app.request.locale == 'fr' %}
+									<div class="sub-title">{{ project.description }}</div>
+								{% else %}
+									<div class="sub-title">{{ project.descriptionEn }}</div>
+								{% endif %}
+								<div class="category">
+									{% if project.category == 'Web / Application mobile' %}
+										{{ 'Web / Application mobile'|trans }}
+									{% else if project.category == 'E-commerce / Marketplace' %}
+										{{ 'E-commerce / Marketplace'|trans }}
+										{% else if project.category == 'Blockchain / NFT / Metaverse' %}
+											{{ 'Blockchain / NFT / Metaverse'|trans }}
+									{% else %}
+									{{ project.category|trans }}
+									{% endif %}
+
+
+								</div>
+								<div
+									class="btns">
+									{# {% if project.slug %}
+										<a href="{{ path('portfolio_project_detail',{slug: project.slug}) }}" target="_blank">
+											<button class="border-white-btn text-white">
+												{{"View project"|trans}}
+											</button>
+										</a>
+									{% endif %} #}
+
+								</div>
+							</div>
+							<div class="card__right">
+								{% if iosTechno %}
+									<div class="ios-card-img">
+										<img class="ios-project-bg ios-project-img" src="{{ asset('images/projects/' ~project.image) }}" alt="project image background"/>
+										<img class="ios-project-img" src="{{ asset('images/projects/' ~project.image) }}" alt="project image background"/>
+									</div>
+								{% else %}
+									<div class="card-bg">
+										<img src="{{ asset('images/projects/' ~project.image) }}" alt="project image background"/>
+									</div>
+									<div class="card-img">
+										<img class="laptop-img" src="{{ asset('build/images/portfolio/laptop-img.png') }}" alt="laptop image"/>
+										<img class="project-img" src="{{ asset('images/projects/' ~project.image) }}" alt="project image background"/>
+									</div>
+								{% endif %}
+
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="box__btns">
+
+					<a href="/">
+						<button id="loadMore" class="white-btn white-btn--text-rose white-btn--bg-transparent">
+							{{ "Load More Projects"|trans }}
+						</button>
+					</a>
+
+				</div>
+			</div>
+		</section>
+	</div>
+
+	{# ----------------------------------------------------------------- #}
+	{# Common sections #}
+	<div class="landingPage landingPage-portfolioPage">
+
+		{# Contact Section #}
+		{% include 'home/component/common_sections/contact_section.html.twig' %}
+
+		{# Address Section #}
+		{% include 'home/component/common_sections/address_section.html.twig' %}
+
+	</div>
+	{# ----------------------------------------------------------------- #}
+
+{% endblock %}

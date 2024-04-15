@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page.title | trans }}{% endblock %}
+{% block ogmetatitle %}{{ page.title | trans }}{% endblock %}
+
+{% block ogmetadesc %}{{ page.metaDescription | trans }}{% endblock %}
+{% block description %}{{page.metaDescription | trans }}{% endblock %}
+
+{% block body %}
+
+
+	<div class="app-blog-detail" style="padding: 50px">
+
+			{{ html|raw }}
+
+
+	</div>
+
+	<style>
+		.app-blog-detail a {
+			color:red!important;
+		}
+	</style>
+{% endblock %}

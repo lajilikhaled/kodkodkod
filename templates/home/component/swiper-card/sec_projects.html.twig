@@ -1,0 +1,133 @@
+{% set prefixLogoUrl = "build/images/landingPage/brands-logos/" %}
+
+{% set prefixPhotoProjectUrl = "build/images/portfolio/" %}
+
+{% set listProjects = [
+    {
+	'position': '1',
+    'name': 'bnp',
+    'title': 'home-projects-swiper.section1.baseline',
+    'description' : ['bnp.project.LP.baseline1', 'bnp.project.LP.baseline2'],
+    'companyLogo' : 'bnp.png',
+    'screenSiteImg': 'bnp_work_2.png'
+    },
+	{
+	'position': '2',
+    'name': 'canal',
+    'title': 'home-projects-swiper.section2.baseline',
+    'description' : ['canal.project.LP.baseline1', 'canal.project.LP.baseline2', 'canal.project.LP.baseline3'],
+    'companyLogo' : 'canal.svg',
+    'screenSiteImg': 'work-canal.jpeg'
+    },
+	{
+	'position': '3',
+    'name': 'urgence-docteurs',
+    'title': 'home-projects-swiper.section3.baseline',
+    'description' : ['urgence.docteur.project.LP.baseline1', 'urgence.docteur.project.LP.baseline2', 'urgence.docteur.project.LP.baseline3'],
+    'companyLogo' : 'urgence-docteurs.svg',
+    'screenSiteImg': 'urgence_docteurs_2023.png'
+    },
+	{
+	'position': '4',
+    'name': 'moa',
+    'title': 'home-projects-swiper.section4.baseline',
+    'description' : ['moa.project.baseline1', 'moa.project.baseline2'],
+    'companyLogo' : 'moa.svg',
+    'screenSiteImg': 'moa_2023.png'
+    },
+	{
+	'position': '5',
+    'name': 'kapp',
+    'title': 'home-projects-swiper.section5.baseline',
+    'description' : ['kapp.project.baseline'],
+    'companyLogo' : 'kapp.svg',
+    'screenSiteImg': 'kapp.png'
+    },
+]
+%}
+
+
+<section id="projects" class="sec-projects {%if app.request.locale != 'ko'%} sec-projects--translate {% endif %}">
+	<div class="box">
+		<div class="box__title">{{ 'section6.baseline1'|trans }}</div>
+
+		<div id="slider">
+			<div class="dp-wrap">
+				<div id="dp-slider">
+
+					{% for p in listProjects %}
+						<div class="dp_item" data-position="{{p.position}}" data-class="{{p.position}}">
+							<div class="slide-container">
+								<div class="slide-container__left">
+									<div class="project-img">
+										<img class="project-img-site-web" src="{{ asset(prefixPhotoProjectUrl ~ p.screenSiteImg) }}" alt="site web image" loading="lazy" width="623" height="332"/>
+									</div>
+								</div>
+								<div class="slide-container__right">
+									<div class="logo-img">
+										<img class="company-logo company-logo--{{p.name}}" src="{{ asset(prefixLogoUrl ~ p.companyLogo) }}" alt="company logo" loading="lazy"/>
+									</div>
+									<div class="title">{{ p.title|trans }}</div>
+									<div class="sub-title">
+									{% for d in p.description %}
+										{{d|trans}} <br>
+									{% endfor %}
+									</div>
+									<div class="btns">
+										<a href="{{ path('portfolio') }}" target="_blank">
+											<button class="white-btn white-btn--text-rose">
+												{{ 'type-project.section.desc'|trans }}
+											</button>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					{% endfor %}
+
+				</div>
+
+				<span id="dp-next">
+					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 51.401 51.401">
+						<defs>
+							<style>
+								.cls-1 {
+									fill: none;
+									stroke: #E9204F;
+									stroke-miterlimit: 10;
+									stroke-width: 7px;
+								}
+							</style>
+						</defs>
+						<path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)"/>
+					</svg>
+				</span>
+
+				<span id="dp-prev">
+					<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 51.401 51.401">
+						<defs>
+							<style>
+								.cls-1 {
+									fill: none;
+									stroke: #E9204F;
+									stroke-miterlimit: 10;
+									stroke-width: 7px;
+								}
+							</style>
+						</defs>
+						<path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)"/>
+					</svg>
+				</span>
+
+				<ul id="dp-dots">
+					<li data-class="1" class="active"></li>
+					<li data-class="2"></li>
+					<li data-class="3"></li>
+					<li data-class="4"></li>
+					<li data-class="5"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

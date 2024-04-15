@@ -5,37 +5,57 @@ namespace App\Entity;
 use App\Repository\ConversionRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ConversionRepository::class)]
+/**
+ * @ORM\Entity(repositoryClass=ConversionRepository::class)
+ */
 class Conversion
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: "integer")]
+    /**
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     * @ORM\Column(type="integer")
+     */
     private $id;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
     private $subject;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
     private $name;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
-    private $phone;
+	/**
+	 * @ORM\Column(type="string", length=500, nullable=true)
+	 */
+	private $phone;
 
-    #[ORM\Column(type: "string", length: 500, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
     private $email;
 
-    #[ORM\Column(type: "text", nullable: true)]
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
     private $messsage;
 
-    #[ORM\Column(type: "boolean", nullable: true)]
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
     private $spam;
 
-    #[ORM\Column(type: "string", length: 1000, nullable: true)]
+    /**
+     * @ORM\Column(type="string", length=1000, nullable=true)
+     */
     private $Company;
 
-    #[ORM\Column(type: "string", length: 1000, nullable: true)]
-    private $typeProject;
+	/**
+	 * @ORM\Column(type="string", length=1000, nullable=true)
+	 */
+	private $typeProject;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -131,35 +151,37 @@ class Conversion
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPhone()
-    {
-        return $this->phone;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getPhone()
+	{
+		return $this->phone;
+	}
 
-    /**
-     * @param mixed $phone
-     */
-    public function setPhone($phone): void
-    {
-        $this->phone = $phone;
-    }
+	/**
+	 * @param mixed $phone
+	 */
+	public function setPhone($phone): void
+	{
+		$this->phone = $phone;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getTypeProject()
-    {
-        return $this->typeProject;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getTypeProject()
+	{
+		return $this->typeProject;
+	}
 
-    /**
-     * @param mixed $typeProject
-     */
-    public function setTypeProject($typeProject): void
-    {
-        $this->typeProject = $typeProject;
-    }
+	/**
+	 * @param mixed $typeProject
+	 */
+	public function setTypeProject($typeProject): void
+	{
+		$this->typeProject = $typeProject;
+	}
+
+
 }

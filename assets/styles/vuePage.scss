@@ -1,0 +1,128 @@
+.jumbo-img-vue {
+    width: fit-content !important;
+    max-width: 100% !important;
+}
+
+.introduction-vue {
+    .box {
+        &__right {
+            img {
+                max-width: 40%;
+            }
+        }
+    }
+}
+
+.project-detail {
+    &__vue {
+        padding-top: 90px; 
+    }
+
+    @media (max-width: 640px) {
+        padding-top: 10px;
+    }
+}
+
+.advantages-vue {
+    @include display-flex;
+    flex-direction: column;
+    padding: 90px 25px 50px 25px;
+    background-color: $backgroundCard;
+    height: fit-content;
+
+    @media (max-width: 1024px) {
+        padding: 50px 25px;
+    }
+
+    .box {
+        @include display-flex;
+        flex-direction: column;
+        max-width: 1250px;
+        width: 100%;
+        height: auto;
+
+        .title-box {
+            width: 51%;
+
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
+            @media (max-width: 425px) {
+                font-size: 35px;
+              }
+            
+            .line {
+                &--pink {
+                    background-color: $mainClr;
+                    height: 4px;
+                    width: 40px;
+                    text-align: left;
+                }
+            }
+            
+            .title {
+                @include title;
+                text-align: left;
+            }
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 40px;
+
+            @media (max-width: 640px) {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                position: relative;
+                max-height: 500px;
+                
+            overflow: visible;
+                @media (max-width: 640px) {
+                    max-height: 400px;
+                }
+                &__img {
+                    margin-top: 20%;
+
+                    .icon-container {
+                        width: 50px;
+                        height: 50px;
+                        background-color: rgba(233, 32, 79, 0.2);
+                        padding: 14px;
+                        border-radius: 50%;
+                        .icon {
+                            width: 30px;
+                            height: auto;
+                            color: $mainClr;
+                        }  
+                    }
+                }
+
+                &__title {
+                    @include title($fontSize: 22px);
+                    margin-top: 10%;
+                    text-align: left;
+                    
+                    @media (max-width: 1024px) {
+                        line-height: 32px;
+                    }
+                }
+
+                &__description {
+                    p {
+                        @include sub-title;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn {
+        @include display-flex;
+            margin-top: 50px;
+    }
+}

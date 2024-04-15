@@ -1,34 +1,286 @@
 <!DOCTYPE html>
-<html lang="">
+<html>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="msapplication-TileColor" content="#E9204F">
         <meta name="theme-color" content="#E9204F">
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/images/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('build/images/site.webmanifest') }}">
+		<link rel="alternate" hreflang="ko" href="https://kodkodkod.studio/ko" />
+		<link rel="alternate" hreflang="en" href="https://kodkodkod.studio/en" />
+        <link rel="alternate" hreflang="fr" href="https://kodkodkod.studio/fr" />
+
         <meta property="og:title" content= "{% block ogmetatitle %}{{ "head.title" | trans }}{% endblock %}" >
         <meta property="og:site_name" content="KodKodKod Studio">
         <meta property="og:url" content="https://kodkodkod.studio">
         <meta property="og:description" content="{% block ogmetadesc %}{{ "head.desc1" | trans }}{% endblock %}">
         <meta property="og:type" content="website">
         <meta property="og:image" content="{{ asset('build/images/newLandingPage/new_logo.png') }}">
-        <title>{% block title %}{{ "home.title" | trans }}{% endblock %}</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/images/logos/favicon-32x32.png') }}">
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/images/icons/apple-touch-icon.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/images/logos/favicon-16x16.png') }}">
-        <link rel="manifest" href="{{ asset('build/images/site.webmanifest') }}">
-		<link rel="alternate" hreflang="ko" href="https://kodkodkod.studio/ko" />
-		<link rel="alternate" hreflang="en" href="https://kodkodkod.studio/en" />
-        <link rel="alternate" hreflang="fr" href="https://kodkodkod.studio/fr" />
+
+        <title>{% block title %}KodKodKod{% endblock %}</title>
+        <meta name="description" content="{% block description %}{% endblock %}">
+        <meta name="google-site-verification" content="4pj0KBdPD6rlDpitVqFGSM_nbSw1byaf3zs3OmzF5uc" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
+        <!-- Meta Pixel Code -->
+        <script type="text/javascript">
+			!function(f,b,e,v,n,t,s)
+			{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+				if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+				n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];
+				s.parentNode.insertBefore(t,s)}(window, document,'script',
+				'https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '628890009100174');
+			fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=628890009100174&ev=PageView&noscript=1"
+            /></noscript>
+        <!-- End Meta Pixel Code -->
+        {% block javascript_header %}{% endblock %}
+    </head>
+
+    <!--################# BODY ####################-->
+
+    <body class="{% if app.request.attributes.get('_route') =='home' %}background{% elseif app.request.attributes.get('_route') =='app_services' %}services{% endif %}" {%if app.request.locale == 'ko'%} style="word-break: keep-all;" {% endif %}>
+
+
+	{%if app.request.locale == 'ko'%}
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3T9FBF"
+						  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+	{%endif %}
+	<!-- End Google Tag Manager (noscript) -->
+
+    {% if app.request.locale == 'en' or app.request.locale == 'ch' or app.request.locale == 'ca' %}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHLPPWC"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+
+{#    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render={{ gg_recaptcha_site_key}}&explicit&hl={{ app.request.locale }}" async defer></script>#}
+
+    <!-- Link of form-contact -->
+    {% if app.request.locale == "ko" %}
+        {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+    {% else %}
+        {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+    {% endif %}
+    {% if hongKong is defined and hongKong %}
+        {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+    {% endif %}
+
+
+    {% set currentPath = path(app.request.attributes.get('_route'),
+            app.request.attributes.get('_route_params')) %}
+
+    {% if app.request.attributes.get('_route') =='home'  %}
+        {% include 'homeNew/navbar.html.twig' %}
+    {% elseif app.request.attributes.get('_route') =='app_services'  %}
+        {% include 'homeNew/navbar.html.twig' %}
+    {% else %}
+        {% include 'homeNew/navbarWhite.html.twig' %}
+    {% endif %}
+
+
+	<div id="kakaoBtn" style="position:fixed;bottom:0;right:0px;padding:20px;z-index: 99999;">
+
+	</div>
+    {% block body %}{% endblock %}
+
+    <!--################# FOOTER ####################-->
+    {% include 'homeNew/newsletter.html.twig' %}
+
+    {% block footer %}
+        {% include 'homeNew/footer.html.twig' %}
+    {% endblock %}
+
+        {%if app.request.locale == 'fr'%}
+            <!-- Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFKTSMN"
+                              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        {%endif %}
+
+        {%if app.request.locale == 'fr'%}
+            <!-- Google Tag Manager -->
+            <script async>
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-KFKTSMN');</script>
+            <!-- End Google Tag Manager -->
+
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1JJ6QL6W0"></script>
+            <script async>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-S1JJ6QL6W0');
+            </script>
+        {%endif %}
+
+        {%if app.request.locale == 'ko'%}
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-N3T9FBF');</script>
+            <!-- End Google Tag Manager -->
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R6W8QXG13"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-9R6W8QXG13');
+            </script>
+        {%endif %}
+
+        {%if app.request.locale == 'en' or app.request.locale == 'ch' or app.request.locale == 'ca' %}
+            <!-- Google Tag Manager -->
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NHLPPWC');</script>
+            <!-- End Google Tag Manager -->
+
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-301951260"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'AW-301951260');
+            </script>
+        {% endif %}
+
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
+
+		<!--javascript -->
+		{%if app.request.locale == 'ko'%}
+		<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+		<script type="text/javascript" defer>
+			Kakao.init('1418710c23d9c835b2074730a7f6c335');
+			Kakao.Channel.createChatButton({
+				container:"#kakaoBtn",
+				channelPublicId: '_GFlHb' // Use the ID included in the home URL of Kakao Talk Channel.
+			});
+		</script>
+		{%endif%}
+
+        {# {%if app.request.locale == 'en'%}
+            <script type="text/javascript" defer>
+                window.$crisp=[];
+                window.CRISP_WEBSITE_ID="21a34c0d-1caa-441b-9a6e-f81b14394c00";
+                if (window.innerWidth > 1181) {
+                    (function(){
+                        d=document;
+                        s=d.createElement("script");
+                        s.src="https://client.crisp.chat/l.js";
+                        s.async=1;
+                        d.getElementsByTagName("head")[0].appendChild(s);
+                    })();
+                }
+            </script>
+		{%endif%} #}
+
+{#        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>#}
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js" async></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
+        <script type="text/javascript" async>
+			AOS.init();
+        </script>
+
+        <script type="text/javascript" async>
+
+            document.addEventListener('DOMContentLoaded', (event) => {
+                const form = document.querySelector('.newsletter form');
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); // Prevent the form from submitting through HTTP POST
+
+                    // Submit the form data using AJAX or Fetch API
+                    fetch('{{ path('add_member') }}', {
+                        method: 'POST',
+                        body: new FormData(form),
+                        // Additional headers and options as needed
+                    }).then(response => {
+                        // Handle the response
+                        if(response.ok) {
+                            Toastify({
+                                text: "{{ 'Subscription successful!'|trans }}",
+                                backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+                                className: "info",
+                                position: "right", // Position toast on the right
+                                close: true, // Show close button
+                            }).showToast();
+							form.reset();
+
+                            // Optional: Clear the form or redirect the user
+                        } else {
+                            // Handle failure
+                            Toastify({
+                                text: "{{ "Subscription failed. Please try again."|trans }}",
+                                backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                                className: "info",
+                                position: "right", // Position toast on the right
+                                close: true, // Show close button
+                            }).showToast();
+                        }
+                    }).catch(error => {
+                        console.error('Error:', error);
+                        Toastify({
+                            text: "{{ "Subscription failed. Please try again."|trans }}",
+                            backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+                            className: "info",
+                            position: "right", // Position toast on the right
+                            close: true, // Show close button
+                        }).showToast();
+                    });
+                });
+            });
+        </script>
+
+        <script type="text/javascript" async>
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "gq0p7728vz");
+        </script>
+        {# Whatsapp #}
+        {# {% if app.request.locale == "en"%}
+            <script defer> var url = 'https://widget.bot.space/js/widget.js'; var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url; var options = {"enabled":true,"chatButtonSetting":{"backgroundColor":"#13C656","ctaText":"Message Us","borderRadius":"25","marginLeft":"20","marginBottom":"20","marginRight":"20","position":"right"},"brandSetting":{"brandName":"KodKodKod","brandSubTitle":"Typically replies within a day","brandImg":"https://kodkodkod.b-cdn.net/build/images/newLandingPage/new_logo.e629c63c.png","welcomeText":"Hi there!\nHow can I help you?","messageText":"Hello, I have a question","backgroundColor":"#085E54","ctaText":"Start Chat","borderRadius":"25","autoShow":false,"phoneNumber":"+19292389229"}}; s.onload = function() { CreateWhatsappChatWidget(options); }; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); </script>
+            {% elseif app.request.locale == "fr" %}
+            <script defer>  var url = 'https://widget.bot.space/js/widget.js'; var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url; var options = {"enabled":true,"chatButtonSetting":{"backgroundColor":"#13C656","ctaText":"Envoyez-nous un message","borderRadius":"25","marginLeft":"20","marginBottom":"20","marginRight":"20","position":"right"},"brandSetting":{"brandName":"KodKodKod","brandSubTitle":"Généralement répond dans un délai d'un jour.","brandImg":"https://kodkodkod.b-cdn.net/build/images/newLandingPage/new_logo.e629c63c.png","welcomeText":"Bonjour!\nComment puis-je vous aider?","messageText":"Bonjour, j'ai une question","backgroundColor":"#085E54","ctaText":"Start Chat","borderRadius":"25","autoShow":false,"phoneNumber":"+33760941116"}}; s.onload = function() { CreateWhatsappChatWidget(options); }; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); </script>
+        {% endif %} #}
     </body>
 </html>

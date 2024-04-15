@@ -1,0 +1,69 @@
+.page404 {
+  padding: 50px;
+  max-width: 1200px;
+  margin: auto;
+
+  .page-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+    padding: 0 20px;
+  }
+
+  .not-found-message {
+    color: #15141a;
+    font: 600 54px/68px 'Space Grotesk', sans-serif
+  }
+
+  .description {
+    color: rgba(21, 20, 26, 0.6);
+    margin-top: 40px;
+    font: 400 20px/30px 'Outfit', sans-serif;
+  }
+
+  .go-home-button {
+    border-radius: 100px;
+    border: 1px solid #15141a;
+    background-color: #fff;
+    color: #15141a;
+    padding: 14px 24px;
+    font: 500 18px 'Outfit', sans-serif;
+    cursor: pointer;
+    width: fit-content;
+  }
+
+  .image-column {
+    width: 64%;
+    margin-left: 20px;
+
+    img {
+      width: 600px;
+    }
+
+  }
+
+  .page-image {
+    width: 100%;
+  }
+
+  @media (max-width: 991px) {
+    .page-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    .content, .image-column {
+      width: 100%;
+      margin-left: 0;
+    }
+    .not-found-message {
+      font-size: 40px;
+      line-height: 53px;
+    }
+  }
+}

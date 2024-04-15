@@ -1,99 +1,1791 @@
-# home page
-home.title: "Web development Studio | Kodkodkod"
+#site title
+head.meta: "Are you looking for a Web3 & Blockchain development agency? ✓ Kodkodkod is your IT development studio specializing in Web3, crypto, blockchains and Smart Contracts."
+head.title: "Web & Web3 Development Agency|Kodkodkod"
+head.desc1: "Kodkodkod is a web development studio imagined and created by developers."
+head.desc2: "Kodkodkod is a web development studio imagined and created by developers."
+
+#contact page
+head.contact.meta: "Contact the Web3 Kodkodkod agency: your IT development studio specializing in ✓ Web3, ✓ crypto, ✓ blockchains and ✓ Smart Contracts."
+head.contact.title: "Contact our web agency| Kodkodkod"
+
+#terms page
+head.conditions.meta: "General terms and conditions of Web3 Kodkodkod: your IT development studio specializing in ✓ Web3, ✓ crypto, ✓ blockchains and ✓ Smart Contracts."
+head.conditions.title: "General Conditions | Kodkodkod"
+
+#site map
+head.siteMap.meta: "Kodkodkod sitemap: your IT development studio specializing in ✓ Web3, ✓ crypto, ✓ blockchains and ✓ Smart Contracts."
+head.siteMap.title: "Sitemap| Kodkodkod"
+
+#policy page
+head.politique.meta: "Web3 Kodkodkod agency privacy policy: your IT development studio specializing in ✓ Web3, ✓ crypto, ✓ blockchains and ✓ Smart Contracts."
+head.policy.title: "Privacy Policy|Kodkodkod"
+
+#portfolio page
+head.portfolio.meta: "Discover the achievements & Web developments of the Web3 Kodkodkod agency. ✓ IT development studio specializing in Web3, crypto, blockchains and Smart Contracts."
+head.portfolio.title: "Our achievements & Web developments | Kodkodkod"
+
+#blockchain
+head.blockchain.meta: "Are you looking for a Blockchain & Web3 development agency? ✓ Discover the Kodkodkod studio. We are specialized in Blockchain"
+head.blockchain.title: "Blockchain & Web3 Expert Agency | Kodkodkod"
+
+#react
+head.react.meta: "Looking for a react development agency? ✓ Check out Kodkodkod studio. We specialize in React"
+head.react.title: "Expert web agency react|Kodkodkod"
+
+#prestashop
+head.prestashop.meta: "Are you looking for a prestashop development agency? ✓ Check out the Kodkodkod studio. We specialize in Prestashop"
+head.prestashop.title: "Prestashop & E-commerce expert web agency|Kodkodkod"
+
+#thank you
+head.thankYou.meta: "Thank you for your project. Discover the Kodkodkod studio. ✓ We are specialized in Web3, crypto, blockchains and Smart Contracts."
+head.thankYou.title: "We are studying your project|Kodkodkod"
+
+#symfony
+head.symfony.meta: "Looking for a symfony development agency? ✓ Check out the Kodkodkod studio. We specialize in Symfony"
+head.symfony.title: "Symfony|Kodkodkod expert web development agency"
+
+#flutter
+head.flutter.meta: "Looking for a flutter development agency? ✓ Check out Kodkodkod studio. We specialize in Flutter"
+head.flutter.title: "Flutter|Kodkodkod expert web agency"
+
+#magento
+head.magento.meta: "Looking for a magento development agency? ✓ Check out Kodkodkod studio. We specialize in Magento"
+head.magento.title: "Magento & E-commerce expert web agency|Kodkodkod"
+
+#vueJS
+head.vue.meta: "Looking for a VueJS development agency? ✓ Check out Kodkodkod studio. We specialize in VueJS"
+head.vue.title: "Vue JS expert web agency | Kodkodkod"
+
+#data-security-traceability
+head.data-security-traceability.meta: "Are you looking for a development agency on the Blockchain? ✓ Discover the Kodkodkod studio. We are specialized in Blockchain"
+head.data-security-traceability.title: "Blockchain Expert Web Agency|Kodkodkod"
+
+#smart contracts
+head.smart-contracts.meta: "Are you looking for a Smart Contract development agency on the Blockchain? ✓ Discover the Kodkodkod studio. We are specialized in Smart Contract & Blockchain"
+head.smart-contracts.title: "Smart Contract & Blockchain web agency|Kodkodkod"
+
+#d-apps
+head.d-apps.meta: "Looking for a Dapps & Decentralized Apps Development Agency? ✓ Check out Kodkodkod Studio. We specialize in Dapps & Blockchain"
+head.d-apps.title: "Dapps Web Agency & Decentralized Applications|Kodkodkod"
+
+#marketplace-nft:
+head.marketplace-nft.meta: "Are you looking for an NFT & Web3 e-commerce marketplace development agency? ✓ Check out Kodkodkod studio. We specialize in NFT, Web3 e-commerce & Blockchain"
+head.marketplace-nft.title: "Expert web agency marketplace NFT & e-commerce Web3|Kodkodkod"
+
+#play-earn
+head.play-earn.meta: "Are you looking for a Play to Earn game development agency (Web3, NFT...)? ✓ Discover the Kodkodkod studio. We are specialized in Web3, NFT & Blockchain"
+head.play-earn.title: "Web agency & game development Play to Earn|Kodkodkod"
+
+#metavers
+head.metavers.meta: "Looking for a Metaverse development agency? ✓ Check out the Kodkodkod studio. We specialize in Metaverse"
+head.metavers.title: "Web agency & development of Metavers|Kodkodkod"
+
+#form-contact #all pages
+head.form-contact.blockchain.meta: "Tell us about your Blockchain project. ✓ Discover the Kodkodkod studio. We specialize in Blockchain"
+head.form-contact.blockchain.title: "Tell us about your Blockchain|Kodkodkod project"
+
+head.form-contact.symfony.meta: "Tell us about your Symfony project! Discover the Kodkodkod studio. ✓ We specialize in Symfony"
+head.form-contact.symfony.title: "We are studying your Symfony|Kodkodkod project"
+
+head.form-contact.magento.meta: "Tell us about your Magento project! Discover the Kodkodkod studio. ✓ We specialize in Magento"
+head.form-contact.magento.title: "We study your Magento|Kodkodkod project"
+
+head.form-contact.prestashop.meta: "Tell us about your Prestashop project! Discover the Kodkodkod studio. ✓ We specialize in Prestashop"
+head.form-contact.prestashop.title: "We study your Prestashop|Kodkodkod project"
+
+head.form-contact.flutter.meta: "Tell us about your Flutter project! Discover the Kodkodkod studio. ✓ We specialize in SymfoFlutterny"
+head.form-contact.flutter.title: "We are studying your Flutter|Kodkodkod project"
+
+head.form-contact.react.meta: "Tell us about your React project! Discover the Kodkodkod studio. ✓ We specialize in React"
+head.form-contact.react.title: "We are studying your React|Kodkodkod project"
+
+head.form-contact.vue.meta: "Tell us about your VueJS project! Discover the Kodkodkod studio. ✓ We are specialized in VueJS"
+head.form-contact.vue.title: "We are studying your VueJS|Kodkodkod project"
+
+#menu #----- PROOFREAD -----#
+link1: "Portfolio"
+link2: "Testimonials"
+link3: "Our services"
+link4: "FAQ"
+link5: "Blockchain / NFT"
+link6: "Contact"
+#ctaTop #----- PROOFREAD -----#
+cta.top: "Let’s discuss your project"
+cta.top.2: "Get in touch"
+
 menu:
     home: "Home "
     services: "Services"
     portfolio: "Portfolio"
     blog: "Blog"
     contact: "Contact"
-pageHome:
-  introLine1: "Improve your processes"
-  introLine2: "by integrating AI."
-  detail1: "We specialize in tailoring solutions to meet your unique challenges, ensuring"
-  detail2: "you harness the full potential of this technological revolution."
-  bookConsultation: "Book a Consultation"
-  peopleTrustUs: "People who trust us"
+
+#section1 #----- PROOFREAD -----#
+section1.baseline1: "Kodkodkod, the web development studio that keeps its promises."
+section1.baseline2: "Together, let's build your web projects with passionate developers; ready to take up the greatest challenges."
+
+section1.baseline1.part1: "Kodkodkod, the web development studio that keeps"
+section1.baseline1.part2: "its promises."
+section1.baseline1.part1fr: "Skilled developers"
+section1.baseline1.part2fr: "for"
+section1.baseline1.part3fr: "your next web project"
+
+#section2 #----- PROOFREAD -----#
+section2.baseline1: "Skilled Developers for Your Next Web Project"
+section2.baseline2: "The entire team tackles each project with the energy and care it deserves so you can grow your business."
+section2.baseline3: "Here, we do not promise you the moon. Our job is to produce code."
+section2.baseline4: "And we do it well."
+
+#section3 #----- PROOFREAD -----#
+section3.baseline1: "Your project is in good hands."
+section3.baseline2: "Beyond code, we build relationships."
+section3.baseline3: "Why?"
+section3.baseline4: "Our goal is not just to provide the product you need."
+section3.baseline5: "We seek to translate your needs and create the best solution for your project."
+section3.baseline51: "We seek to translate your needs and create the best solution for your project."
+section3.baseline6: "To achieve this, we establish a relationship of trust with you, which allows us to get these results."
+
+#section4 #----- PROOFREAD -----#
+section4.subtitle: "Our work methods"
+section4.baseline1: "Internal management"
+section4.baseline2: "Our team of developers manages the whole project internally."
+section4.baseline3: "We carry out your project from A to Z."
+section4.section1.title: "Available 20h/24h"
+section4.section2.title: "Expertise & Knowledge"
+section4.section3.title: "Honest and transparent"
+
+#section5 #----- PROOFREAD -----#
+section5.baseline1: "Our customers recommend us."
+section5.section1.title: "CEO" # / Bons Conseils
+section5.section2.title: "CEO" # / Codiweb
+section5.section3.title: "CEO" # / Urgence Docteurs
+section5.section4.title: "CEO"  # / Jarvis
+section5.section5.title: "CEO" # / Blue Synaps
+section5.section6.title: "CEO" # / Eskimoz
+
+section5.section1.baseline1: "I called on Kodkodkod to build a tailor-made business ERP using Symfony."
+section5.section1.baseline2: "During this collaboration, I was able to appreciate the flexibility and the overall understanding of the need, the simple and easy relationships."
+section5.section1.baseline3: "I recommend Kodkodkod!"
+
+section5.section2.baseline1: "My collaboration focused on the optimization of fairly complex PHP code."
+section5.section2.baseline2: "I am totally satisfied with the efficiency of the developer who carried out his mission."
+section5.section2.baseline3: "You can trust them with your project with your eyes closed."
+
+section5.section3.baseline1: "We had the pleasure of collaborating with the Kodkodkod studio."
+section5.section3.baseline2: "He accompanied us during the technical development of our company."
+section5.section3.baseline3: "The developers have exchanged with us, they are rigorous and share their know-how."
+
+section5.section4.baseline1: "The studio accompanied us on the improvement of one of the modules of our application."
+section5.section4.baseline2: "The developer did a great job and was very professional from start to finish."
+section5.section4.baseline3: "We are already working with KodKodKod on other projects."
+
+section5.section5.baseline1: "The Kodkodkod studio demonstrates great professionalism, we highly recommend it."
+section5.section5.baseline2: "The developer was able to integrate into a project with little context and move forward with pedagogy."
+section5.section5.baseline3: "The quality of the development delivered fully meets our expectations. Thanks!"
+
+section5.section6.baseline1: "Maxime, the developer, is attentive and very responsive."
+section5.section6.baseline2: "He goes to the end of things by showing great flexibility, which allows him to finalize the tasks in detail."
+section5.section6.baseline3: "He understands the technical constraints. It is a real partnership and not a simple client/supplier relationship."
+
+section6.baseline1: "The projects we have done for them"
+section6.section1.baseline1: "Present in"
+section6.section1.baseline2: "3 countries"
+
+section6.section2.baseline1: "Finished project"
+section6.section2.baseline2: "with success"
+
+section6.section3.baseline1: "Developers at"
+section6.section3.baseline2: "your disposal"
+section6.cta: "A project? Get an estimate!"
+
+#section 7 #----- PROOFREAD -----#
+section7.title.baseline1: "How is a"
+section7.title.baseline2: "project with"
+section7.title.baseline3: "Kodkodkod ?"
+
+section7.baseline1: "Many agencies carry out projects:"
+section7.baseline2: "Without real transparency"
+section7.baseline3: "No proper follow-up."
+section7.baseline4: "So we decided to take the bull by the horns and change things!"
+section7.baseline5: "The objective of the studio: to develop custom products with complete transparency."
+section7.baseline6: "From start-up to delivery, and even further with maintenance."
+
+#section8 #----- PROOFREAD -----#
+section8.title: "Step 1"
+section8.baseline1: "Identify needs and evaluate the project"
+section8.baseline2: "Once we receive your responses to the form, we assemble our team to estimate project costs."
+section8.bold: "The goal"
+section8.baseline3: " : Send a detailed quote within the next 24 hours"
+
+
+#section9 #----- PROOFREAD -----#
+section9.title: "Step 2"
+section9.baseline1: "Validate the project together"
+section9.baseline2: "Clarity and transparency are necessary to give you all the keys to understanding the project."
+section9.baseline3: "It's time to define the specifications!"
+section9.bold: "The goal"
+section9.baseline4: " : validate the project as a whole for a successful execution!"
+
+
+#section10 #----- PROOFREAD -----#
+section10.title: "Step 3"
+section10.baseline1: "Assembling the team in charge of the project"
+section10.baseline2: "The GO has gone in-house! After a meeting with the devs, we form the team that will take care of your project."
+section10.baseline3: "A developer will be designated to be the point of contact between you and the team."
+section10.bold: "The benefit"
+section10.baseline4: " : Total involvement of the technical team. Your goals become theirs!"
+
+#section11 #----- PROOFREAD -----#
+section11.title: "Step 4"
+section11.baseline1: "Weekly one-on-one"
+section11.baseline2: "Feedback meetings will be defined throughout the project."
+section11.baseline3: "During this one-on-one, it's time to review all the successes, challenges and define the next steps."
+section11.bold: "The benefit"
+section11.baseline4: " : A custom follow-up with complete transparency."
+
+#section12 #----- PROOFREAD -----#
+section12.title: "Step 5"
+section12.baseline1: "Delivery of the project"
+section12.baseline2: "This is it, the project is finalized and the whole team is proud to deliver the project to you."
+section12.baseline3: "After several months of discussions and collaboration, it's time to grow your business with your new product!"
+section12.bold: "The asset"
+section12.baseline4: " : A detailed handover with maintenance to accompany you after delivery."
+
+#section13 #----- PROOFREAD -----#
+section13.title.part1: "The"
+section13.title.part2: "revolution"
+section13.title.part3: "of a"
+section13.title2: "web development studio"
+section13.baseline1: "We launched Kodkodkod after our own experiences with the aim of changing things and giving more flexibility and clarity in development projects."
+
+#section14 #----- PROOFREAD -----#
+section14.title1: "Agencies or collectives"
+section14.baseline1: "Direct link with the developers"
+section14.baseline2: "Available 20h/24h"
+section14.baseline3: "Experienced Developers"
+section14.baseline4: "Various types of projects"
+section14.baseline5: "Regular updates on the progress of the project"
+
+#section15 #----- PROOFREAD -----#
+section15.title1: "FAQ"
+section15.section1.baseline: "How long do you take to launch a project?"
+section15.section1.desc: "Once we have all the necessary elements to launch the project, we start within seven days. While the developers are setting up the project, we organize a series of three kickoffs in parallel to get the project off the ground"
+
+section15.section2.baseline: "If my site has a problem, how quickly can you provide support?"
+section15.section2.desc: "As part of a maintenance package for your site, we contractually undertake, in the event of a bug, to respond to you within 24 hours and to initiate corrective action within 48 hours in order to resolve your problem as quickly as possible. Responsiveness is part of our mission"
+
+section15.section3.baseline: "Can you help us write a specification?"
+section15.section3.desc: "Absolutely, we can organize workshop sessions to assist you in drafting specifications. We will talk about: project mindset, functionalities, workflow, and UX/UI."
+
+section15.section4.baseline: "How will we work together to monitor the project?"
+section15.section4.desc: "We organize the follow-up of your project in three main stages: before project, during project, and after project. At each major stage, we have a precise kickoff calendar and follow-up appointments that we will set up together so you can experience the progress of your project at the same time as us. Another point that is important: you join us in a Slack channel dedicated to your project to communicate constantly"
+
+section15.section5.baseline: "How do you work for regular needs? Do you have packages?"
+section15.section5.desc: "We offer “maintenance packages”, different packages granting you a number of hours of development to consume over the month. From 5h to 50h, we study your needs and adapt the package accordingly. You can ask us for technical interventions throughout the month. These are deducted from your plan, which is automatically refilled at the beginning of the following month."
+
+
+#extras #----- PROOFREAD -----#
+"Just code.": "Just code."
+"No bullshit.": "No bullshit."
+
+
+"Project detail": "Project detail"
+#contact bottom
+"magento.contactBottom.title": "Tell us about your Magento project"
+"vue.contactBottom.title": "Tell us about your Vue.js project"
+"symfony.contactBottom.title": "Tell us about your Symfony project"
+"shopify.contactBottom.title": "Tell us about your Shopify project"
+"react.contactBottom.title": "Tell us about your React project"
+"prestashop.contactBottom.title": "Tell us about your Prestashop project"
+"all.contactBottom.title": "Tell us about your project"
+"blockchain.contactBottom.title": "Tell us about your Blockchain project"
+"laravel.contactBottom.title": "Tell us about your Laravel project"
+"nft.contactBottom.title": "Tell us about your NFT project"
+#service
+"magento.service.title": "A specialized Magento studio"
+"vue.service.title": "A specialized Vue studio"
+"laravel.service.title": "A specialized Laravel studio"
+"nft.service.title": "A specialized e-commerce and NFT marketplace studio"
+"blockchain.service.title": "A specialized Blockchain studio"
+"shopify.service.title": "A specialized Shopify studio"
+"react.service.title": "A specialized React studio"
+"symfony.service.title": "A specialized Symfony studio"
+"all.service.title": "A studio for more productivity"
+"service.baseline1": "With Kodkodkod we did not want to create yet another agency with all the problems that we can encounter: lack of flexibility, lack of responsiveness, ignored customer service, cascading subcontracting which deteriorates the quality of deliveries... Kodkodkod formed in the studio. Magento developers united with all the strengths of a group and the qualities of a freelancer."
+"service.baseline2": "Kodkodkod is about speed, requirement and excellence, a customer who is a priority with a direct relationship and a code produced by studio developers, who have been tested and validated for the quality of their code ."
+
+#expertise
+magento.expertise.title: "Creation and redesign of e-commerce website with Magento"
+magento.expertise.title2: "Magento support and maintenance"
+magento.expertise.baseline: "Building or redesigning fast and powerful E-Commerce sites is our core business. We know and master all the solutions that aim to make an e-commerce site a sales machine quickly and over time, even for rapid growth."
+magento.expertise.baseline2: "After the production of an e-commerce site, we know that the bulk of the work remains to be done for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+nft.expertise.title: "Building E-commerce NFT app"
+nft.expertise.title2: "Building NFT Marketplace"
+nft.expertise.baseline: "Building or redesigning fast and powerful E-Commerce sites is our core business. We know and master all the solutions that aim to make an e-commerce site a sales machine quickly and over time, even for rapid growth."
+nft.expertise.baseline2: "After the production of an e-commerce site, we know that the bulk of the work remains to be done for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+blockchain.expertise.title: "Creation of Blockchain applications (Ethereum, Solana…) maintenance of Blockchain projects"
+blockchain.expertise.title2: "Blockchain project support and maintenance"
+blockchain.expertise.baseline: "Building fast and powerful Blockchain application is our core business. We know and master all the solutions that aim to make an application a sales machine quickly and over time, even for rapid growth."
+blockchain.expertise.baseline2: "After putting an application into production, we know that the bulk of the work remains for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+laravel.expertise.title: "Building Laravel apps"
+laravel.expertise.title2: "Laravel support and maintenance"
+laravel.expertise.baseline: "Building or redesigning fast and powerful Laravel sites is our core business. We know and master all the solutions that aim to make an application a sales machine quickly and over time, even for rapid growth."
+laravel.expertise.baseline2: "After putting an application into production, we know that the bulk of the work remains for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+shopify.expertise.title: "Creation and redesign of e-commerce with Shopify"
+shopify.expertise.title2: "Shopify support and maintenance"
+shopify.expertise.baseline: "Building or redesigning fast and powerful E-Commerce sites is our core business. We know and master all the solutions that aim to make an e-commerce site a sales machine quickly and over time, even for rapid growth."
+shopify.expertise.baseline2: "After the production of an e-commerce site, we know that the bulk of the work remains to be done for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+prestashop.expertise.title: "Creation and redesign of e-commerce with Prestashop"
+prestashop.expertise.title2: "Prestashop support and maintenance"
+prestashop.expertise.baseline: "Building or redesigning fast and powerful E-Commerce sites is our core business. We know and master all the solutions that aim to make an e-commerce site a sales machine quickly and over time, even for rapid growth."
+prestashop.expertise.baseline2: "After the production of an e-commerce site, we know that the bulk of the work remains to be done for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+symfony.expertise.title: "Building Symfony apps"
+symfony.expertise.title2: "Symfony support and maintenance"
+symfony.expertise.baseline: "Building or redesigning a fast and powerful Symfony site is our core business. We know and master all the solutions that aim to make an application a sales machine quickly and over time even for rapid growth. we know and master all the solutions that aim to make an application a sales machine quickly and over time even for rapid growth."
+symfony.expertise.baseline2: "After putting an application into production, we know that the bulk of the work remains for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+vue.expertise.title: "Building Vue apps"
+vue.expertise.title2: "Vue support and maintenance"
+vue.expertise.baseline: "Building or redesigning a fast and powerful Vue site is our core business. We know and master all the solutions that aim to make an application a sales machine quickly and over time, even for rapid growth. we know and master all the solutions that aim to make an application a machine of sales quickly and over time even for rapid growth. we know and master all the solutions that aim to make an application a sales machine quickly and over time even for rapid growth."
+vue.expertise.baseline2: "After putting an application into production, we know that the bulk of the work remains for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+react.expertise.title: "Building React apps"
+react.expertise.title2: "React support and maintenance"
+react.expertise.baseline: "Building or redesigning fast and powerful React sites is our core business. We know and master all the solutions that aim to make an application a sales machine quickly and over time, even for rapid growth."
+react.expertise.baseline2: "After putting an application into production, we know that the bulk of the work remains for you and that is why you must count on a reliable site capable of evolving quickly. We make sure to stay by your side and take care of the proper functioning of your site."
+
+#BLOCKCHAIN PAGE
+
+#ctaTop  #----- PROOFREAD -----#
+cta.blockchain.top: "Explore project types"
+
+#section 1  #----- PROOFREAD -----#
+section1.blockchain.baseline1: "Finally, an expert team capable of developing your Web3 project!"
+section1.blockchain.baseline1.part1: "Finally, an expert team capable of developing "
+section1.blockchain.baseline1.part2: "your Web3 project !"
+
+section1.blockchain.baseline2: "Kodkodkod is a group of coders and enthusiasts. We are eager to assist you in the development of your blockchain project."
+
+#type-project  #----- PROOFREAD -----#
+type-project.title: "We develop your tailor-made Blockchain project"
+type-project.section1.baseline: "Smart Contract"
+type-project.section2.baseline: "DApps"
+type-project.section3.baseline: "A platform or NFT marketplace"
+type-project.section4.baseline: "A Play to Earn Game (with or without NFTs)"
+type-project.section5.baseline: "A Metaverse"
+type-project.section6.baseline: "Data security and traceability via Blockchain"
+
+type-project.section.desc: "> Learn more"
+
+#equipe-project #----- PROOFREAD -----#
+equipe-project.title: "A dedicated team"
+equipe-project.baseline: "With Kodkodkod, have a dedicated technical team for all your Web3 projects: full stack, backend and frontend developers, as well as a blockchain specialist team."
+
+equipe-project.sub-title: "If you are looking for experts to develop your Web3 project, we are here."
+equipe-project.sub-title.part1: "If you are looking for experts to develop"
+equipe-project.sub-title.part2: " Web3 project"
+equipe-project.sub-title.part3: ", we are here."
+
+equipe-project.sub-title.section1.baseline: "We’ve mastered several blockchains and we’ll help you make your choice."
+equipe-project.sub-title.section1.desc1: "Ethereum (ETH)"
+equipe-project.sub-title.section1.desc2: "Polygon (MATIC)"
+equipe-project.sub-title.section1.desc3: "Binance Smart Chain (BSC)"
+equipe-project.sub-title.section1.desc4: "Tezos"
+
+equipe-project.sub-title.section2.baseline: "We develop your smart contract on the blockchain of your choice."
+equipe-project.sub-title.section2.desc1: "Systematic internal security audit"
+equipe-project.sub-title.section2.desc2: "Token / virtual currency (ERC20)"
+equipe-project.sub-title.section2.desc3: "Creation of NFTs (ERC721)"
+equipe-project.sub-title.section2.desc4: "Serialization of NFT + Token (ERC1155)"
+equipe-project.sub-title.section2.desc5: "Tailor-made development of smart contracts"
+
+equipe-project.sub-title.section3.baseline: "We connect Web2 and Web3 in a secure way."
+equipe-project.sub-title.section3.desc1: "Secure connection to Wallets"
+equipe-project.sub-title.section3.desc2: "Using Web2 APIs with Chainlink"
+equipe-project.sub-title.section3.desc3: "Systematic internal security audit"
+
+equipe-project.cta: "Ask for a quote"
+
+#section 7 #----- PROOFREAD -----#
+section7.blockchain.baseline1: "Web3 has no more secrets for us"
+section7.blockchain.baseline1.part1: "Web3 has"
+section7.blockchain.baseline1.part2: " no more secrets "
+section7.blockchain.baseline1.part3: "for us"
+
+section7.blockchain.desc1: "NFT marketplace specialized in cinematographic art"
+section7.blockchain.desc2: "Secure and immutable data storage on the blockchain"
+section7.blockchain.desc3: "3D game with NFT trading cards"
+section7.blockchain.desc4: "Cross-platform play in a metaverse with NFTs"
+section7.blockchain.desc5: "Matching platform using the blockchain for financing certificates"
+
+#project-detail #----- PROOFREAD -----#
+project-detail.title: "What type of project do you want to start?"
+
+project-detail.section1.title: "Your tailor-made marketplace or NFT platform"
+project-detail.section1.desc: "****** will proudly present its NFT marketplace specialized in cinematic art developed by Kodkodkod in September. As we don't want to *spoiler*, the name is censored!"
+project-detail.section1.baseline1: "Create a secondary market for your NFTs"
+project-detail.section1.baseline2: "Collections"
+project-detail.section1.baseline3: "Auction"
+project-detail.section1.baseline4: "Exclusive Rewards"
+project-detail.section1.baseline5: "Restricted access"
+project-detail.section1.baseline6: "Buying/Reselling"
+project-detail.section1.baseline7: "Statistical/Analysis"
+project-detail.section1.baseline8: "Royalties"
+
+project-detail.section1.cta: "Request a quote"
+
+project-detail.section2.title: "Tailor-made Web3 games: Play 2 Earn or NFT"
+project-detail.section2.desc: "Teambudd is a 3D game that implements NFTs in the form of collectible cards on the Ethereum blockchain developed by Kodkodkod."
+project-detail.section2.baseline1: "We are passionate about games too!"
+project-detail.section2.baseline2: "And we know how to code them:"
+project-detail.section2.baseline3: "Game development (mobile, tablet, desktop)"
+project-detail.section2.baseline4: "Production of graphic resources and/or NFTs"
+project-detail.section2.baseline5: "Implementation of a marketplace for exchanging items via the blockchain"
+project-detail.section2.baseline6: "Connection via a wallet"
+project-detail.section2.baseline7: "Token creation"
+project-detail.section2.baseline8: "Tell us about your game!"
+
+project-detail.section2.cta: "Speak with an expert"
+
+project-detail.section3.title: "Develop your tailor-made metaverse"
+project-detail.section3.desc: "WarriorVerse, a Web3 game implementing NFTs in a metaverse on the Ethereum blockchain, developed by our teams."
+project-detail.section3.baseline1: "We carry out the graphics development for your metaverse."
+project-detail.section3.baseline2: "Sell/resell your products"
+project-detail.section3.baseline3: "Create Galleries"
+project-detail.section3.baseline4: "Expose your NFTs"
+project-detail.section3.baseline5: "Create  events"
+project-detail.section3.baseline6: "Distribute your advertisements"
+
+project-detail.section3.cta: "Create a metaverse"
+
+project-detail.section4.title: "Securing and traceability of data via the Blockchain"
+project-detail.section4.desc: "Expopolis has called on Kodkodkod to secure data for all their users, byebye classic Web2 hosting. They have made a leap into the future thanks to our teams by hosting and securing their data on the blockchain!"
+project-detail.section4.baseline1: "Make your data immutable and accessible 24/7 thanks to the blockchain."
+project-detail.section4.baseline2: "Avoid leaks, hacks and keep safe traceability of your data."
+project-detail.section4.baseline3: "Manage authentications and storage with the blockchain."
+
+project-detail.section4.cta: "Request a quote"
+
+project-detail.section5.title: "Need NFTs for your Web3 project?"
+project-detail.section5.baseline1: "Don't worry, we manage:"
+project-detail.section5.baseline2: "Graphic basis"
+project-detail.section5.baseline3: "Assets (hair, clothes, etc.)"
+project-detail.section5.baseline4: "Generation of the script to generate all the NFTs"
+project-detail.section5.baseline5: "Rarities files"
+project-detail.section5.baseline6: "Decentralized hosting on the blockchain"
+project-detail.section5.baseline7: "Smart contract development"
+project-detail.section5.baseline8: "Whether in music, art, real estate, virtual worlds, cinema… We can create your NFTs."
+
+project-detail.section5.sub-title: "Why create NFTs?"
+project-detail.section5.sub-title.baseline1: "NFTs allow you to:"
+project-detail.section5.sub-title.baseline2: "increase your brand loyalty."
+project-detail.section5.sub-title.baseline3: "to build a community around your products."
+project-detail.section5.sub-title.baseline4: "to provide a personalized customer experience."
+project-detail.section5.sub-title.baseline5: "finance your new products upstream."
+project-detail.section5.sub-title.baseline6: "create virtual collectables for your customers"
+
+# Link Ask for a quote Home Page
+link-quote: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote Blockchain Page
+# link-quote-blockchain: "https://kodkodkod.studio/en/form-contact/blockchain"
+link-quote-blockchain: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote React Page
+# link-quote-react: "https://kodkodkod.studio/en/form-contact/react"
+link-quote-react: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote Flutter Page
+# link-quote-flutter: "https://kodkodkod.studio/en/form-contact/flutter"
+link-quote-flutter: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote Vue Page
+# link-quote-vue: "https://kodkodkod.studio/en/form-contact/vue"
+link-quote-vue: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote Symfony Page
+# link-quote-symfony: "https://kodkodkod.studio/en/form-contact/symfony"
+link-quote-symfony: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote Magento Page
+# link-quote-magento: "https://kodkodkod.studio/en/form-contact/magento"
+link-quote-magento: "https://kodkodkod.studio/en/contact"
+
+# Link Ask for a quote PrestaShop Page
+# link-quote-prestashop: "https://kodkodkod.studio/en/form-contact/prestashop"
+link-quote-prestashop: "https://kodkodkod.studio/en/contact"
+
+#REACT PAGE
+
+#ctaTop
+cta.react.top: "Ask for a quote"
+
+#section 1
+section1.react.baseline1: "Get your React project done faster with a team of experts."
+section1.react.baseline2: "At KodkodKod, working with a team of enthusiasts with over 10 years of experience and bringing your project to life!"
+
+#type-project
+type-project.react.title: "We develop your tailor-made React project"
+
+type-project.react.cta: "See our expertise"
+
+#introduction-react
+introduction-react.title: "React what is it?"
+introduction-react.baseline1: "The open-source React framework is based on the JavaScript library developed by Facebook. It allows the development of web and mobile applications."
+introduction-react.baseline2: "React offers faster coding to make the API connection, produces more stable and secure code, and simplifies data management."
+introduction-react.baseline3: "Since React has a much larger resource library, it is used in any way. It is popular with businesses of all sizes due to its flexibility."
+
+#section8
+section8.react.section1: "10 years of expertise"
+section8.react.section2: "6 ReactJS Experts"
+section8.react.section3.baseline1: "coffee cups turned into"
+section8.react.section3.baseline2: "React lines of code"
+
+section8.react.cta: "Tell us about your project"
+
+#section7
+section7.react.title: "React no longer holds any secrets for us."
+swiper-projects.section1.baseline1: "HR tools for self-assessment"
+swiper-projects.section1.baseline2: "Skills graph"
+swiper-projects.section1.baseline3: "Report by e-mail"
+
+swiper-projects.section2.baseline1: "Interactive map"
+swiper-projects.section2.baseline2: "Geolocation"
+swiper-projects.section2.baseline3: "Statistics"
+
+swiper-projects.section3.baseline1: "Blockchain connection"
+swiper-projects.section3.baseline2: "File certification in the blockchain"
+swiper-projects.section3.baseline3: "Project leader relationship platform"
+swiper-projects.section3.baseline4: "Major brands"
+swiper-projects.section3.baseline5: "Third party API connection"
+
+#expertise
+expertise.react.title: "Our React Expertise"
+
+expertise.react.section1.tag: "Development"
+expertise.react.section1.title: "KodKodKod answers all your technical questions regarding technology, maintainability or reliability."
+expertise.react.section1.baseline1: "Native and cross-platform mobile expertise"
+expertise.react.section1.baseline2: "Web and CMS"
+expertise.react.section1.baseline3: "Architecture and cloud services"
+expertise.react.section1.baseline4: "Data and User Analytics"
+expertise.react.section1.baseline5: "Data governance and GDPR"
+expertise.react.section1.baseline6: "Optimized development cost"
+expertise.react.section1.baseline7: "Agile culture, craftsmanship and DevOps"
+expertise.react.section1.baseline8: "CI & Automated Tests"
+
+expertise.react.section2.tag: "Strategic advice"
+expertise.react.section2.title: "Build a solid foundation as soon as possible to effectively manage your project."
+expertise.react.section2.baseline1: "Web and mobile application audit"
+expertise.react.section2.baseline2: "Strategy and digital transformation"
+expertise.react.section2.baseline3: "Product design"
+expertise.react.section2.baseline4: "Design thinking"
+expertise.react.section2.baseline5: "Analytics and Conversions"
+expertise.react.section2.baseline6: "Data and privacy"
+
+expertise.react.section3.tag: "Artificial intelligence"
+expertise.react.section3.title: "Tailor-made solutions based on Artificial Intelligence."
+expertise.react.section3.baseline1: "Identification of opportunities related to your uses"
+expertise.react.section3.baseline2: "Proof Of Concept"
+expertise.react.section3.baseline3: "Chatbots"
+expertise.react.section3.baseline4: "Neural networks"
+expertise.react.section3.baseline5: "Machine learning"
+expertise.react.section3.baseline6: "Computer vision"
+
+expertise.react.section4.tag: "Mobile"
+expertise.react.section4.title: "We help you grow your business with innovative mobile apps."
+expertise.react.section4.baseline1: "React Native app"
+expertise.react.section4.baseline2: "Progressive Web App (PWA)"
+expertise.react.section4.baseline3: "iOS and Android"
+
+expertise.react.section5.tag: "Design"
+expertise.react.section5.title: "Benefit from a strong and assumed identity."
+expertise.react.section5.baseline1: "Webdesign"
+expertise.react.section5.baseline2: "Branding"
+expertise.react.section5.baseline3: "Graphical redesign"
+expertise.react.section5.baseline4: "Motion design"
+expertise.react.section5.baseline5: "UX/UI design"
+
+expertise.react.section6.tag: "Virtual and augmented reality"
+expertise.react.section6.title: "Let's think about your ambitious solutions, whether it's virtual or augmented reality, WebGL or Unity 3D."
+expertise.react.section6.baseline1: "HTC Vive"
+expertise.react.section6.baseline2: "Oculus Rift"
+expertise.react.section6.baseline3: "Hololens"
+expertise.react.section6.baseline4: "ARKit"
+expertise.react.section6.baseline5: "CardboardVR and WebVR"
+
+#project-detail
+project-detail.react.title: "We develop your tailor-made React project"
+
+project-detail.react.section1.title: "Develop your e-commerce site or showcase"
+project-detail.react.section1.sub-title: "We carry out the development of your tailor-made showcase or e-commerce site."
+project-detail.react.section1.baseline1: "Payment system"
+project-detail.react.section1.baseline2: "Geoloc. in real time"
+project-detail.react.section1.baseline3: "Appointment booking"
+project-detail.react.section1.baseline4: "Bulk data import"
+project-detail.react.section1.baseline5.part1: "API connection"
+project-detail.react.section1.baseline5.part2: "ERP:CRM"
+project-detail.react.section1.baseline6: "Dashboard analytics"
+project-detail.react.section1.baseline7: "Backoffice admin"
+project-detail.react.section1.baseline8: "Search system"
+project-detail.react.section1.baseline9: "Logistician API connection"
+project-detail.react.section1.baseline10: "PIM"
+project-detail.react.section1.baseline11: "Management of product returns"
+project-detail.react.section1.desc: "Creation of a payment tunnel for Renault"
+
+project-detail.react.section2.title: "Personnalisez votre Web App"
+project-detail.react.section2.sub-title: "We carry out the creation of your tailor-made Web App."
+project-detail.react.section2.desc: "Kapp is a platform dematching for the franchise world."
+project-detail.react.section2.cta: "Speak with an expert"
+
+project-detail.react.section3.title: "Produce your Native App"
+project-detail.react.section3.sub-title: "KodKodKod takes care of creating your custom Native App."
+project-detail.react.section3.baseline1: "Push notifications"
+project-detail.react.section3.baseline2: "Geoloc. /GPS"
+project-detail.react.section3.baseline3: "Importing Contacts"
+project-detail.react.section3.baseline4: "API connection"
+project-detail.react.section3.baseline5: "Facial ID"
+project-detail.react.section3.baseline6: "Media Management"
+project-detail.react.section3.baseline7: "Sensors"
+project-detail.react.section3.desc: "bouche bee trusted us to develop their restaurant geolocation application"
+project-detail.react.section3.cta: "Create a Native App"
+
+project-detail.react.section4.title: "Develop your ERP"
+project-detail.react.section4.sub-title: "KodKodKod takes care of making your ERP tailor-made."
+project-detail.react.section4.baseline1: "Project Management"
+project-detail.react.section4.baseline2: "Schedule Management"
+project-detail.react.section4.baseline3: "Client Management"
+project-detail.react.section4.baseline4: "API connection"
+project-detail.react.section4.baseline5: "Integration with another ERP"
+project-detail.react.section4.desc: "Silver Beauté called on Kodkodkod to develop its tailor-made ERP from A to Z."
+
+project-detail.react.section5.title: "Blockchain Connection"
+project-detail.react.section5.sub-title: "We manage your tailor-made blockchain project."
+project-detail.react.section5.baseline1: "Secure and Authenticate"
+project-detail.react.section5.baseline2: "Smart contract"
+project-detail.react.section5.baseline3: "NFT"
+project-detail.react.section5.baseline4: "Play to Earn"
+project-detail.react.section5.baseline5: "Metaverse"
+project-detail.react.section5.baseline6: "Synchro. marketplace type Opensea"
+project-detail.react.section5.baseline7: "Web2/Web3 connection"
+project-detail.react.section5.baseline8: "Custodial wallet generation"
+project-detail.react.section5.desc: "WarriorVerse, a Web3 game implementing NFTs in a metaverse on the Ethereum blockchain and developed by our teams."
+
+project-detail.react.section6.title: "Launch your Marketplace"
+project-detail.react.section6.sub-title: "Create and personalize your custom marketplace."
+project-detail.react.section6.baseline3: "Import bulk products"
+project-detail.react.section6.baseline6: "Product return management"
+project-detail.react.section6.desc: "Slowlution is an Upcycling marketplace developed in React."
+
+#advantages-react
+advantages-react.title: "Why favor React?"
+advantages-react.section1.title: "Optimal Performance"
+advantages-react.section1.baseline1: "Performance is critical to user experience and SEO."
+advantages-react.section1.baseline2: "React allows easy custom development while providing performance comparable to modern standards."
+
+advantages-react.section2.title: "Community"
+advantages-react.section2.baseline1: "Thanks to its large community of developers, React has a diverse and rich ecosystem of side projects such as Redux, Formik, NextJS…"
+advantages-react.section2.baseline2: "These help kick-start a project and allow developers to focus on their core business."
+
+advantages-react.section3.title: "Mobile App"
+advantages-react.section3.baseline: "It is possible to build a mobile app alongside your web app using a single codebase. Using the React Native framework, you can develop native mobile apps for Android and iOS."
+advantages-react.section3.cta: "Launch my project"
+
+#FLUTTER PAGE
+
+#section 1
+section1.flutter.baseline1: "Get your Flutter project done faster with a team of experts."
+section1.flutter.baseline2: "At Kodkodkod, work with a team of enthusiasts with over 10 years of experience and bring your project to life!"
+
+#type-project
+type-project.flutter.title: "We develop your custom Flutter project"
+
+type-project.flutter.cta: "See our expertise"
+
+#introduction-flutter
+introduction-flutter.title: "What is flutter?"
+introduction-flutter.baseline1: "Designed by Google, the first version of Flutter was released as an open source project in late 2018."
+introduction-flutter.baseline2: "This cross-platform UI framework is first developed in the Dart language. The code is then compiled to develop native applications for the web, Linux, MacOS, Windows, Android and iOS."
+introduction-flutter.baseline3: ""
+
+#section8
+section8.flutter.section1: "10 years of expertise"
+section8.flutter.section2: "6 Flutter Experts"
+section8.flutter.section3.baseline1: "coffee cups turned into"
+section8.flutter.section3.baseline2: "Flutter lines of code"
+
+section8.flutter.cta: "Tell us about your project"
+
+#expertise
+expertise.flutter.title: "Our Flutter Expertise"
+
+expertise.flutter.section4.baseline1: "App Native"
+
+#project-detail
+project-detail.flutter.title: "We develop your custom Flutter project"
+
+project-detail.flutter.section3.title: "Produce Your Native App"
+project-detail.flutter.section3.sub-title: "KodKodKod takes care of creating your custom Native App."
+project-detail.flutter.section3.baseline1: "Push notifications"
+project-detail.flutter.section3.baseline2: "Geoloc./GPS"
+project-detail.flutter.section3.baseline3: "Import contacts"
+project-detail.flutter.section3.baseline4: "API connection"
+project-detail.flutter.section3.baseline5: "Facial ID"
+project-detail.flutter.section3.baseline6: "Media Management"
+project-detail.flutter.section3.baseline7: "Sensors"
+project-detail.flutter.section3.desc: "bouche bee trusted us to develop their restaurant geolocation app"
+project-detail.flutter.section3.cta: "Create a Native App"
+
+#advantages-flutter
+advantages-flutter.title: "Why Flutter?"
+advantages-flutter.section1.title: "Optimal Performance"
+advantages-flutter.section1.baseline1: "Performance is critical to user experience and SEO."
+advantages-flutter.section1.baseline2: "Flutter allows simple custom development while providing performance comparable to modern standards."
+
+advantages-flutter.section2.title: "Community"
+advantages-flutter.section2.baseline1: "Flutter stands out from its competitors (React Native, NativeScript, Ionic) with its performance."
+advantages-flutter.section2.baseline2: "These help kick-start a project and allow developers to focus on their core business."
+
+advantages-flutter.section3.title: "Mobile App"
+advantages-flutter.section3.baseline: "It is possible to build a mobile app alongside your web app using a single code base. Using the Flutter framework, you can develop native mobile apps for Android and iOS."
+advantages-flutter.section3.cta: "Launch my project"
+
+# VUE PAGE
+
+#section 1
+section1.vue.baseline1: "Get your Vue.js project done faster with a team of experts."
+section1.vue.baseline2: "At Kodkodkod, work with a team of enthusiasts with more than 10 years of experience and bring your project to life!"
+
+#type-project
+type-project.vue.title: "We develop your tailor-made Vue.js project"
+
+type-project.vue.cta: "See our expertise"
+
+#introduction-view
+introduction-vue.title: "What is Vue.js?"
+introduction-vue.baseline2: "Vue.js is a development tool for creating responsive user interfaces similar to Angular and React."
+
+#section8
+section8.vue.section2: "6 Vue.js experts"
+section8.vue.section3.baseline2: "Vue.js lines of code"
+
+#section7
+section7.vue.title: "Vue.js has no more secrets for us."
+
+#expertise
+expertise.vue.title: "Our Vue.js Expertise"
+expertise.vue.section4.baseline1: "App Native"
+
+#project-detail
+project-detail.vue.title: "We develop your tailor-made Vue.js project"
+project-detail.vue.section6.desc: "Slowlution - an Upcycling marketplace"
+
+#advantages-vue
+advantages-vue.title: "Why favor Vue.js?"
+advantages-vue.section1.baseline2: "Vue.js allows easy custom development while providing performance comparable to modern standards."
+
+advantages-vue.section2.title: "Community"
+advantages-vue.section2.baseline1: "Thanks to its large community of developers, Vue.js has a diverse and rich ecosystem of side projects such as Vuex, NextJS…"
+advantages-vue.section2.baseline2: ""
+
+advantages-vue.section3.baseline: "It is possible to build a mobile app alongside your web app using a single code base. Using the Vue Native framework, you can develop native mobile apps for Android and iOS."
+
+# TEAM DEVELOPPERS #----- PROOFREAD -----#
+
+team-developpers.title: "BY WHO?"
+team-developpers.sub-title: "Our developers"
+
+team-developpers.section1.baseline1: "Co-founder"
+team-developpers.section1.baseline2: "Expert on Magento / Symfony / Blockchain"
+
+team-developpers.section2.baseline1: "Co-founder"
+team-developpers.section2.baseline2: "Expert on Growth / Marketing"
+
+team-developpers.section3.baseline1: "Director Vietnam"
+team-developpers.section3.baseline2: "Expert on Symfony / Prestashop / Wordpress / Vue"
+
+team-developpers.section4.baseline1: "Director Korea"
+team-developpers.section4.baseline2: "Expert on React / Vue / Angular"
+
+team-developpers.section5.baseline1: "Director Switzerland"
+team-developpers.section5.baseline2: "Expert on Symfony / Laravel / Drupal / App"
+
+team-developpers.section6.baseline1: "Collaborator"
+team-developpers.section6.baseline2: "Expert on React / Vue / Blockchain"
+
+team-developpers.section7.baseline1: "Collaborator"
+team-developpers.section7.baseline2: "Expert on Symfony / Laravel / React"
+
+team-developpers.section8.baseline1: "Collaborator"
+team-developpers.section8.baseline2: "Expert on Node.js / Java / Vue / App"
+
+team-developpers.section9.baseline1: "Collaborator"
+team-developpers.section9.baseline2: "Expert on Magento / SCRUM / GO"
+
+team-developpers.section10.baseline1: "Collaborator"
+team-developpers.section10.baseline2: "React / React Native / Express"
+
+team-developpers.cta : "Contact our developers"
+
+# HOME PROJECTS SWIPER
+home-projects-swiper.section1.baseline: "Auto-evaluation HR skill test"
+home-projects-swiper.section2.baseline: "Development & Website"
+home-projects-swiper.section3.baseline: "Teleconsultation Platform Maintenance Symfony"
+home-projects-swiper.section4.baseline: "Magento 1 & 2 Development"
+home-projects-swiper.section5.baseline: "Matching platform developed in React"
+
+# THANK-PAGE
+container.baseline: "Thank you, we will consider your request and come back to you soon! See you soon!"
+
+#SYMFONY PAGE
+
+#ctaTop
+cta.symfony.top: "Ask for a quote"
+
+#section 1
+section1.symfony.baseline1: "Get your Symfony project done faster with a team of experts."
+section1.symfony.baseline2: "At Kodkodkod, work with a team of enthusiasts with more than 10 years of experience and bring your project to life!"
+
+#type-project
+type-project.symfony.title: "We develop your custom Symfony project"
+
+#introduction-symfony
+introduction-symfony.title: "What is Symfony?"
+introduction-symfony.baseline1: "The Symfony framework is an open-source project based on the PHP language. It is a very powerful MVC (Model-View-Controller) type framework and recognized worldwide as being in the TOP 3 world of PHP frameworks. Symfony is a 100% back-end framework allowing the development of web applications and any website."
+introduction-symfony.baseline2: "Symfony makes coding easier, faster, and more secure. It's popular with businesses of all sizes because of its flexibility, scalability, and large community that keeps it constantly updated. "
+
+#section8
+section8.symfony.section2: "7 Symfony Developers"
+section8.symfony.section3.baseline2: "Symfony lines of code"
+
+section8.symfony.cta: "Tell us about your project"
+
+#section7
+section7.symfony.title: "Symfony has no more secrets for us."
+
+#expertise
+expertise.symfony.title: "Our Symfony Expertise"
+
+#project-detail
+project-detail.symfony.title: "We develop your custom Symfony project"
+
+project-detail.symfony.section6.desc: "Slowlution - an Upcycling Marketplace"
+
+#PORTFOLIO PAGE
+
+portflio.title: "Our Works"
+# SITEMAP PAGE
+"Site Map": "Site Map"
+"Homepage": "Homepage"
+"Technologies": "Technologies"
+"Thank-you! See you soon!": "Thank-you! See you soon!"
+
+# MAGENTO PAGE
+section1.magento.baseline1: "Build your Magento project with a team of experts."
+
+type-project.magento.title: "We develop your custom Magento project"
+
+#introduction-magento
+introduction-magento.title: "What is Magento?"
+introduction-magento.baseline1: "Magento is one of the most widely used open source e-commerce platforms in the world with more than 250,000 sites worldwide (30% market share)."
+introduction-magento.baseline2: "Magento recently joined a web giant named Adobe, which makes it the most reliable and stable solution on the market to date, allowing in particular the management of e-commerce sites, multistore, multilingualism , SEO optimization, payments, transport…"
+introduction-magento.baseline3: ""
+
+#section8
+section8.magento.section2: "4 Magento Developers"
+section8.magento.section3.baseline2: "Magento lines of code"
+
+#section7
+section7.magento.title: "Magento no longer holds any secrets for us."
+
+swiper-projects.magento.section1.baseline1: "Site in e-commerce mode"
+swiper-projects.magento.section1.baseline2: "Integration with logistics"
+swiper-projects.magento.section1.baseline3: "CEGID integration"
+
+swiper-projects.magento.section2.baseline1: "Graphic Redesign"
+swiper-projects.magento.section2.baseline2: "Improved performance"
+swiper-projects.magento.section2.baseline3: "Maintenance"
+
+swiper-projects.magento.section3.baseline1: "Migration to Magento 2"
+swiper-projects.magento.section3.baseline2: "Graphic Redesign"
+
+#skill
+expertise.magento.title: "Our Magento Expertise"
+
+#project-detail
+project-detail.magento.title: "We develop your tailor-made Magento project"
+project-detail.magento.section6.desc: "Slowlution - Upcycling Marketplace"
+
+#advantages-magento
+advantages-magento.title: "Why choose Magento?"
+advantages-magento.section1.title: "Optimized Conversion Tunnel"
+advantages-magento.section1.baseline1: "After more than 15 years of experience and data analysis, Magento knows perfectly well how to guide your visitors towards the purchase."
+advantages-magento.section1.baseline2: "Products, shopping cart, means of payment everything is designed to facilitate use."
+
+advantages-magento.section2.title: "Adding component"
+advantages-magento.section2.baseline1: "The Magento plugin ecosystem is one of the most developed and successful in the world."
+advantages-magento.section2.baseline2: "There are a lot of specialist developers out there which makes adding features quick and easy."
+
+advantages-magento.section3.title: "Optimal SEO"
+advantages-magento.section3.baseline1: "Magento knew how to work and set up the necessary structure to become appreciated by Google."
+advantages-magento.section3.baseline2: "This makes it easy to implement a good SEO strategy, which is essential for online sales."
+
+# FORM CONTACT
+form-contact.title: "Tell us about your project"
+
+form-contact.question1: "Your requirement"
+form-contact.question2: "Your budget"
+form-contact.question3: "Beginning date"
+form-contact.question4: "Contact"
+
+form-contact.question1.title: "1. What do you require?"
+form-contact.question1.baseline1: "Web/SaaS App"
+form-contact.question1.baseline2: "Mobile App"
+form-contact.question1.baseline3: "E-commerce site / Marketplace"
+form-contact.question1.baseline4: "Blockchain"
+form-contact.question1.baseline5: "Showcase site"
+form-contact.question1.baseline6: "Other"
+
+form-contact.question1.input-title: "Describe your requirement"
+
+form-contact.question2.title: "2. What is your budget?"
+form-contact.question2.baseline1: "5,000 - 10,000$"
+form-contact.question2.baseline2: "10,000 - 20,000$"
+form-contact.question2.baseline3: "20,000 - 50,000$"
+form-contact.question2.baseline4: "+$50,000"
+form-contact.question2.baseline5: "I don't know"
+
+form-contact.question3.title: "3. When do you want to start?"
+form-contact.question3.baseline1: "As soon as possible"
+form-contact.question3.baseline2: "- 1 month"
+form-contact.question3.baseline3: "More than 1 month"
+
+form-contact.question4.title: "4. Contact Us"
+
+Name: "First & Last Name"
+Email: "Email"
+Enterprise: "Enterprise"
+Telephone: "Telephone"
+back: "Back"
+next: "Next"
+send: "Send"
+
+# BLOCKCHAIN ​​FORM CONTACT
+
+form-contact.blockchain.question1.baseline1: "NFT Design"
+form-contact.blockchain.question1.baseline2: "Mint NFT/Marketplace"
+form-contact.blockchain.question1.baseline3: "Metaverse"
+form-contact.blockchain.question1.baseline4: "Play to Earn Game"
+form-contact.blockchain.question1.baseline5: "DApps"
+
+# REACT FORM CONTACT
+
+form-contact.ecommerce.question1.baseline: "E-commerce platform"
+form-contact.marketplace.question1.baseline: "Marketplace platform"
+
+# VIEW FORM CONTACT
+
+form-contact.webapp.question1.baseline: "Web application"
+
+# FLUTTER FORM CONTACT
+
+form-contact.appiOS.question1.baseline: "iOS App"
+form-contact.appAndroid.question1.baseline: "Android App"
+form-contact.twoApps.question1.baseline: "Both"
+
+#PRESTASHOP PAGE
+
+section1.presta.baseline1: "Build your Prestashop project with a team of experts."
+
+type-project.presta.title: "We develop your custom PrestaShop project"
+
+#introduction-benefit
+introduction-presta.title: "What is Prestashop?"
+introduction-presta.baseline1: "Prestashop, developed in France, is one of the most widely used open source e-commerce platforms in the world, particularly by VSEs and SMEs."
+introduction-presta.baseline2: "In addition to its internal team, Prestashop has one of the largest communities of contributors in the Prestashop world, which makes it a constantly evolving product offering increasingly powerful tools with many themes and plugins available."
+introduction-presta.baseline3: "Note that Prestashop also offers very powerful international solutions."
+
+#section8
+section8.presta.section2: "Prestashop developers"
+section8.presta.section3.baseline2: "Prestashop lines of code"
+
+#section7
+section7.presta.title: "Prestashop has no secrets for us"
+
+swiper-projects.presta.section1.baseline1: "Fashion e-commerce site"
+swiper-projects.presta.section1.baseline2: "Prestashop to Magento migration"
+swiper-projects.presta.section1.baseline3: "CEGID integration"
+
+swiper-projects.presta.section2.baseline1: "Graphical redesign"
+swiper-projects.presta.section2.baseline2: "Performance improvement"
+swiper-projects.presta.section2.baseline3: "Maintenance"
+
+swiper-projects.presta.section3.baseline1: "UX Redesign"
+swiper-projects.presta.section3.baseline2: "Graphical redesign"
+
+#expertise
+expertise.presta.title: "Our PrestaShop Expertise"
+
+#project-detail
+project-detail.presta.title: "We develop your tailor-made PrestaShop project"
+
+project-detail.presta.section2.desc: "MOA: fancy jewelry e-commerce site"
+project-detail.presta.section2.title: "CRM"
+project-detail.presta.section2.sub-title: "KodKodKod takes care of doing the:"
+project-detail.presta.section2.baseline3: "Email campaign integration"
+project-detail.presta.section2.baseline4: "FID program integration"
+project-detail.presta.section6.desc: "Slowlution - Upcycling marketplace"
+
+#advantages-benefit
+advantages-presta.title: "Why prefer PrestaShop?"
+advantages-presta.section1.title: "Rich Native Features"
+advantages-presta.section1.baseline1: "Upon installation Prestashop is ready to use."
+advantages-presta.section1.baseline2: "It is then very easy to take it up a gear by installing, quite simply, plugins (SMS, private sales, social networks, etc.)."
+
+advantages-presta.section2.title: "A French and international community"
+advantages-presta.section2.baseline1: "We can say it, Prestashop was able to federate around the project a community of developers at its service."
+advantages-presta.section2.baseline2: "Today we are talking about more than 1000 contributing developers and 250 specialized agencies."
+
+advantages-presta.section3.title: "Optimal responsive"
+advantages-presta.section3.baseline1: "As you know, more than half of your traffic comes from mobile. Prestashop since its version 1.6 has made mobile a pillar of its development by perfectly optimizing the front but also the back-office."
+
+# KODWALLET PAGE (2023) / CMS PAGE
+
+#menu
+new-menu.link1: "Discover"
+new-menu.link2: "Functioning"
+new-menu.link3: "Who are we?"
+
+#jumbotron
+new-menu.cta.top: "Contact the studio"
+
+section1.cms.title: "All your guarantees in a single one wallet !"
+
+section1.cms.section1.title: "Scan the code"
+
+section1.cms.section2.title: "Download Now"
+section1.cms.section2.baseline: "Download From"
+section1.cms.section2.baseline1: "Apple Store"
+section1.cms.section2.baseline2: "Google Store"
+
+cta.cms.top: "Request an appointment"
+
+#introduction
+introduction.cms.title: "The certificates and guarantees of your customers, managed & secured by the blockchain"
+introduction.cms.baseline: "Your customers no longer need to worry about retrieving and storing their purchase documents, the blockchain does it for them. Whether it's warranties or certificates of authenticity following a purchase at home, they are generated, stored and sent via a secure wallet, requiring only a simple email connection for your customers."
+introduction.cms.cta: "Be contacted to test"
+
+#advantages
+advantages.cms: The advantages of the Kodwallet
+
+#sec11
+section11.title1: "Paper Storage"
+section11.title2: "Blockchain custody"
+
+section11.cms.baseline1: "Easy Document Storage"
+section11.cms.baseline2: "Rapid availability of documents"
+section11.cms.baseline3: "Automation sending"
+section11.cms.baseline4: "100% secure system"
+section11.cms.baseline5: "Ecological system"
+
+#functioning
+section8.client.title: "How does it work for your client?"
+section8.client.title.part1: "How does it work for"
+section8.client.title.part2: "your client?"
+
+#sec10
+#step 1
+section8.client.baseline1: "He makes his purchase online"
+section8.client.baseline2: "Before paying, your customer chooses whether he prefers his guarantee by email or on his KodWallet. If he already has a wallet, he can indicate the address to which to send the guarantee"
+section8.client.baseline3: " Let your client choose"
+
+#step 2
+section9.client.baseline1: "Your client receives their guarantee"
+section9.client.baseline2: "Your client receives an email with a link to his new wallet where he will find his guarantee"
+section9.client.bold: "The big plus :"
+section9.client.baseline3: " The connection to KodWallet is done via a simple email"
+
+#step3
+section10.client.baseline1: "Reusing the KodWallet"
+section10.client.baseline2: "Your client can reuse his KodWallet with all our partner sites and thus store all his warranties and certificates there"
+section10.client.bold: "The profit :"
+section10.client.baseline3: " No more document loss, one secure storage place for life"
+
+#functioning #enterprise
+section8.enterprise.title: "How does it work for you?"
+section8.enterprise.title.part2: "for you?"
+section8.enterprise.subtitle: "A simple plugin to install and available at:"
+
+#step 1
+section8.enterprise.baseline1: "Plug-in installation"
+section8.enterprise.baseline2: "The Kodkodkod team helps you install and configure the plugin"
+
+#step 2
+section9.enterprise.baseline1: "Automated sending of guarantees"
+section9.enterprise.baseline2: "Now you don't have to do anything. Warranties and certificates are automatically sent to customers"
+
+#left-title #introduction
+introduction.left-title: "Who is Kodkodkod?"
+
+#studio-data
+studio-data.title: "Studio Data"
+studio-data.title.part1: "Studio"
+studio-data.title.part2: "Data"
+studio-data.section1.baseline: "years of expertise"
+studio-data.section2.baseline: "blockchain developers"
+studio-data.section3.baseline: "cups of coffee turned into lines of code"
+
+#footer
+newfooter.baseline: "Kodkodkod wants to change the codes and give more flexibility and clarity in development projects."
+
+blog.posted: "Posted on "
+
+#introduction #landing page
+introducing: "INTRODUCING"
+
+introduction.LP.baseline1: "The entire team tackles each project with the energy and care it deserves so you can grow your business."
+introduction.LP.baseline2: "Here, we do not promise you the moon. Our job is to produce code and we do it well."
+
+#sec-presentation
+presentation.LP.title1: "Your Project Is In"
+presentation.LP.title2: "Good Hands"
+
+#sec-techno
+techno.LP.title1: "What Kodkodkod"
+techno.LP.title2: "Does For You?"
+
+techno.LP.part1.baseline1: "We Code Your Web App"
+techno.LP.part1.baseline2: "A startup project? A new online service or a SaaS product? Coding innovative projects is what drives us every day."
+
+techno.LP.part2.baseline1: "We Develop Your E-commerce Website"
+techno.LP.part2.baseline2: "E-commerce site or markertplace. Physical products, services or virtual products, we will code a fast site that converts your visitors into customers."
+
+techno.LP.part3.baseline1: "Blockchain Have No Secret For Us"
+techno.LP.part3.baseline2: "Smart Contracts, DApps, Play-to-earn, metaverse... we have explored every corner of this new technology and master it at your fingertips."
+
+techno.LP.part4.baseline1: "Making A Mobile App Easy"
+techno.LP.part4.baseline2: "Whether native or hybrid, we have the best coders in France to support you in your mobile application project."
+
+#sec-contact
+contact.LP.title1: "Let's talk about your project with"
+contact.LP.title2: "Kodkodkod"
+
+contact.LP.subtitle: "We establish a relationship with trust of you, which allows us to get these result"
+
+#sec-projects
+bnp.project.LP.baseline1: "Project 2022: improvements and additions to the Human Resources platform."
+bnp.project.LP.baseline2: "Technologies used: PHP and Angular JS."
+
+canal.project.LP.baseline1: "Internal HR platform."
+canal.project.LP.baseline2: "Creation of an interactive map to welcome new employees to the company."
+canal.project.LP.baseline3: "Technologies used: Vue.js"
+
+urgence.docteur.project.LP.baseline1: "Creation of a medical teleconsultation platform."
+urgence.docteur.project.LP.baseline2: "Creation from scratch of the web application for the launch of the startup."
+urgence.docteur.project.LP.baseline3: "In charge of maintenance and improvements since 2018."
+
+moa.project.baseline1: "Magento 2 redesign."
+moa.project.baseline2: "Migration from Prestashop to Magento 2 and redesign of the e-commerce site in 2022, monitoring of maintenance and additions of functionalities in 2023."
+
+kapp.project.baseline: "Creation from scratch of the front part of the app and the landing page, for the launch of the startup in 2022."
+
+#portfolio #landingpage
+portfolio.LP.title: "Projects We Have Done"
+"View project": "View project"
+"Load More Projects": "Load More Projects"
+
+"publications.title": "They talked about us"
+
+
+######Technology landingpage
+react.jumbo.title: "Kodkodkod, the web development studio that codes your React project"
+symfony.jumbo.title: "Kodkodkod, the web development studio that codes your Symfony project"
+presta.jumbo.title: "Kodkodkod, the web development studio that codes your Prestashop project"
+magento.jumbo.title: "Kodkodkod, the web development studio that codes your Magento project"
+flutter.jumbo.title: "Kodkodkod, the web development studio that codes your Flutter project"
+vue.jumbo.title: "Kodkodkod, the web development studio that codes your VueJS project"
+
+all.jumbo.title1: "Kodkodkod, the web development studio that codes your project"
+all.jumbo.title2: ""
+
+#reactLP
+react.jumbo.title2: "React"
+
+#symfonyLP
+symfony.jumbo.title2: "Symfony"
+
+#prestashopLP
+presta.jumbo.title2: "Prestashop"
+
+#magentoLP
+magento.jumbo.title2: "Magento"
+
+#flutterLP
+flutter.jumbo.title2: "Flutter"
+
+#vueLP
+vue.jumbo.title2: "VueJS"
+
+'Call us 04 51 20 24 24': "+44 20 4586 3029"
+
+'+33 4 51 20 24 24': '+44 20 4586 3029'
+
+#Variants Blockchain Page
+## 1.Smart Contracts
+head.title.smart-contracts: "Smart Contract Development - Blockchain"
+head.desc2.smart-contracts: "Entrust all your Smart Contract projects to Kodkodkod, your IT development studio specializing in Web3, crypto, blockchains and Smart Contracts."
+
+section1.smart-contracts.baseline1.part2: "your Smart Contracts!"
+
+type-project.smart-contracts.title: "We develop your tailor-made Smart Contracts"
+type-project.smart-contracts.baseline: "“A computer program that works autonomously on the web, the Smart Contract is called “intelligent contract”. It is revolutionizing the field of transactions by bringing fluidity, transparency and efficiency to all sectors of activity: finance, industrial companies or real estate.”"
+
+### section3
+section3.smart-contracts.baseline3: "Why entrust your Smart Contract project to Kodkodkod?"
+section3.smart-contracts.baseline4: "A company wishing to deploy a project combining decentralized technology and IT security can without hesitation turn to the skills of Kodkodkod. Present in France (Paris & Lyon) as well as in the United Kingdom, we bring together experts in IT and web development 3! There are more than 30 developers who are at your disposal to discuss your objectives, the desired technologies and your project."
+section3.smart-contracts.baseline5: "We are committed to establishing a solid, stable and lasting relationship of trust with our clients to support you in your success. Our web and computer programming experts have real expertise computer code, rigor and active listening."
+section3.smart-contracts.baseline6: "We are able to develop all your smart contracts, whatever blockchain you choose: Ethereum, Polygon, Tezos, Solana..."
+section3.smart-contracts.baseline7: "Whether to make your own markeplace, to perform decentralized exchanges or certificates of authenticity, we are able to provide the code necessary for their execution within your future application or platform. "
+section3.smart-contracts.baseline8: "Everything is really possible. Collaborating with Kodkodkod for the creation and development of your Smart Contracts means engaging in a partnership that is both human and technical and guarantees the success of your project and that puts digital technology at the heart of our future!"
+
+### project-team
+equipe-project.smart-contracts.sub-title.part2: "Your Smart Contracts"
+
+equipe-project.smart-contracts.description.part1.subtitle: "Smart Contracts on Blockchain: definition and operation"
+equipe-project.smart-contracts.description.part1.desc1: "A Smart Contract is a self-executing computer program stored on a blockchain, designed to facilitate, verify or automatically execute agreements or contracts between parties, without requiring the intervention of a trusted third party."
+
+equipe-project.smart-contracts.description.part1.desc2: "Smart Contracts are used to automate the terms of a contract recorded on a blockchain and allow it to be considered secure and transparent, because the blockchain is a decentralized and immutable data repository. This means that the parties involved in the contract have transparent access to the terms of the contract, as well as any changes to it. In addition, Smart Contracts are resistant to censorship and fraud, because their execution is based on crypto protocols that guarantee their security."
+
+equipe-project.smart-contracts.description.part2.subtitle: "When we develop Smart Contracts, we follow these 4 key steps:"
+equipe-project.smart-contracts.description.part2.subtitle.part1: "When we develop Smart Contracts, we follow these"
+equipe-project.smart-contracts.description.part2.subtitle.part2: "4 key steps"
+
+equipe-project.smart-contracts.description.part2.desc1.part1: "Definition of the terms of the contract"
+equipe-project.smart-contracts.description.part2.desc1.part2: "The parties involved in the contract define the terms and conditions which will be fixed once published on the blockchain by the execution of the computer program specifically created for this. "
+equipe-project.smart-contracts.description.part2.desc2.part1: "Publication of the contract"
+equipe-project.smart-contracts.description.part2.desc2.part2: "The Smart Contract is published on a blockchain for execution. The publication of the contract is usually done via a contract deployment transaction."
+equipe-project.smart-contracts.description.part2.desc3.part1: "Execution of the contract"
+equipe-project.smart-contracts.description.part2.desc3.part2: "Once the Smart Contract is published, it can be executed automatically according to the programmed terms. The execution of the contract is generally triggered by a transaction carried out on the blockchain."
+equipe-project.smart-contracts.description.part2.desc4.part1: "Finalization of the contract"
+equipe-project.smart-contracts.description.part2.desc4.part2: "When the conditions of the contract are met, the Smart Contract ends automatically. The results of the execution of the contract are recorded immutably on the blockchain."
+
+### advantages section
+advantages.smart-contracts.title.part1: "Why undertake a project to create and develop"
+advantages.smart-contracts.title.part2: "Smart Contracts"
+
+advantages.smart-contracts.title.baseline1: "The Smart Contract is considered the technological future of digital transactions, for 3 main reasons."
+advantages.smart-contracts.title.baseline2: "The first is that these smart contracts have become a reliable and authentic means of securing an agreement between several parties, in the private and professional fields. Thanks to Blockchain technology, the simple fact to establish a Smart Contract provides several guarantees such as access to unique and authentic information, which removes the risk of conflict.In addition, the data of the contract being recorded on the Blockchain, they remain tamper-proof, which reinforces the integrity of the Smart Contract and protects it from possible computer fraud. Finally, transactions are only carried out when all the conditions are met, which eliminates the threat of error or fraud."
+advantages.smart-contracts.title.baseline3: "The second argument concerns the automation of payments on Smart Contracts, which offers many advantages over traditional contracts. On the one hand, this type of process reduces the risk of payment is triggered according to the conditions issued in the contract, without a legal deadline. Moreover, it is possible for smart contracts to carry out a total or partial payment execution, depending on the wishes of the stakeholders. Finally, some Smart Contracts offer the use of a legal construct in which the assets are handed over to an independent third party (called Escrow) who blocks payment until full verification of the terms of the contract. This also limits the risk of non-payment."
+advantages.smart-contracts.title.baseline4: "Finally, the third advantage is related to the reduction in the costs of implementing the contract, from the elaboration to the realization of the project. A traditional contract is normally sealed between several parties by through an approved professional such as a lawyer or a notary, whose fees can reach expensive sums"
+advantages.smart-contracts.title.baseline5: "In the context of Smarts Contracts, the costs incurred are lower, because the only professionals included in this process are the developers, whose remuneration is not comparable to that of the professionals mentioned above ."
+advantages.smart-contracts.title.baseline6: "Furthermore, since the execution of these smart contracts is automated, there is no need to involve an intermediary during its application. Thanks to the transparency of the Blockchain, it is possible to verify compliance with the contract in real time, without having to purchase an additional service."
+
+
+## D-Apps
+head.title.d-apps: "DApps Development - Blockchain"
+head.desc2.d-apps: "Call on Studio KodKodKod for the development of all your dApps using the innovative and secure Blockchain technology."
+section1.d-apps.baseline1.part2: "your DApps"
+
+### section3
+section3.d-apps.baseline3: "Kodkodkod: know-how for decentralized applications"
+section3.d-apps.baseline4: "The development of decentralized applications on Blockchain (DApps) represents a major challenge ahead for companies, with a new way of understanding their model using Blockchain technology. In addition to this deep understanding and meticulous understanding of the operation of the Blockchain, the specific skills of a developer are required to take charge of this type of project.They must be trained in specific tools and programming languages such as mastery of Solidity, to successfully create a decentralized application in complete security and in compliance with the standards established in this field.
+Kodkodkod has the resources and solid skills to carry out each DApp creation project, in such a way as to provide its customers with considerable advantages for their business. Indeed, as indicated above, a DApp is an application as we know it in the everyday world, but whose hosting is carried out in a decentralized way on the Blockchain. Its operation being autonomous thanks to a series of Smart Contracts which each have their function and usefulness within the digital project, your Kodkodkod studio knows how to program smart contracts, create the associated tokens necessary for the proper functioning of any DApp."
+section3.d-apps.baseline5: "In short, Kodkodkod brings together a panel of specialized and experienced developers, with unique technical know-how, allowing them to exploit the technological potential of the Blockchain and create innovative decentralized applications. By investing in the digital future of DApps with the help of Kodkodkod, you contribute to offering technological solutions that meet the constant needs of companies and users. DApps being the future of the decentralized web, what are you waiting for to exploit their interactive potential ?"
+
+### project-team
+equipe-project.d-apps.sub-title.part2: "Your DApps"
+equipe-project.d-apps.description.part1.subtitle: "What is a DApp?"
+equipe-project.d-apps.description.part1.desc1: "In digital language, a DApp is a decentralized application, that is, an application that works independently, without the help of a server centralized, thanks to a system in which the digital flow is distributed between several interconnected networks. The majority of DApps operate on the Ethereum blockchain; their creation requires meticulous know-how on the part of the developers who manipulate these decentralized applications thanks to smart contracts, with the idea of managing the distribution of data as well as user interactions across the network, so developers use various digital programming languages to edit the code of DApps (including Solidity or Vyper for example). Note that besides the popularity of Ethereum, there are other Blockchains that support DApps like BSC, EOS or Cardano."
+equipe-project.d-apps.description.part1.desc2: "DApps are often associated with the world of crypto because they too can be exploited to provide digital products and services. When creating a DApp, professionals must take care to protect users against any risk of cyberattack, making security a crucial element in the storage of data on the decentralized network.Decentralized applications (DApps) provide an infinite potential of services without having to use of centralized servers, which offers more freedom and privacy to Internet users, while reducing the financial costs of investors. DApps are considered to be the future of applications on the web of the 21st century."
+
+equipe-project.d-apps.description.part2.subtitle.part1: "3 reasons"
+equipe-project.d-apps.description.part2.subtitle.part2: "to invest in the development of DApps on the Blockchain"
+
+equipe-project.d-apps.description.part2.desc1.part1: ""
+equipe-project.d-apps.description.part2.desc1.part2: "Investing in the development of a decentralized application based on Blockchain technology has several advantages for enthusiasts and investors rooted in the digital world."
+equipe-project.d-apps.description.part2.desc2.part1: ""
+equipe-project.d-apps.description.part2.desc2.part2: "On the one hand, Blockchain technology provides an environment in which it is possible to develop and deploy decentralized applications in complete security. Using of a smart contract, the developer ensures that each transaction is transparent and unalterable, guaranteeing a considerable reduction in the risk of hacking or fraud on the web."
+equipe-project.d-apps.description.part2.desc3.part1: ""
+equipe-project.d-apps.description.part2.desc3.part2: "Investing in this type of digital project is an easily accessible opportunity to meet the needs of users around the world. Indeed, decentralized applications on Blockchain are an opportunity to connect and interact with people around the world in a seamless and simplistic way, without requiring the help of a third party. Moreover, using digital currencies ( Ether, Bitcoin, etc.), each user can make a transaction quickly and cheaply."
+
+## 3.Marketplace NFT
+head.title.marketplace-nft: "Marketplace-nft Development - Blockchain"
+head.desc2.marketplace-nft: "KodKodKod Development Studio has the experience and skills to build your own NFT MarketPlace."
+
+section1.marketplace-nft.baseline1.part2: "your NFT Marketplace"
+
+### Section 3
+section3.marketplace-nft.baseline3: "Why collaborate with Kodkodkod for the creation of your NFT Marketplace?"
+section3.marketplace-nft.baseline4: "Whether you are a company established in the blockchain universe or the owner of a business associated with the digital boom, collaborating with the Kodkodkod studio will be the best choice you can make to create your own NFT Marketplace. The Kodkodkod development studio was born in web2 and grew up in web3. Each member of the Kodkodkod team is able to connect the two worlds, for example by creating your Marketplace under Magento or Symfony, connecting them to Web3."
+section3.marketplace-nft.baseline5: "Whether it's our passion for code, our expertise in web application development, or our significant experience in crypto & blockchain, we have the necessary skills to develop a Marketplace Original, attractive and high-performance NFT, like OpenSea for example."
+section3.marketplace-nft.baseline6: "Our developers have a real mastery of the code and a solid knowledge of the protocols of several blockchains such as Ethereum or Polygon, and guarantee that your project of creating Marketplace NFT will materialize. Our team benefits also a real know-how in UX, combining technical expertise and creative commitment, to allow the smooth navigation of future users of your platform, and facilitate the acquisition and holding of tokens (tokens or digital assets) in securely on the blockchain of your choice."
+section3.marketplace-nft.baseline7: "Entrusting your Market Place NFT project to Kodkodkod means calling on an agency of more than 30 experienced employees who are involved in the world of digital and crypto. The team Kodkodkod is available 20 hours a day and makes it a point of honor to maintain constant and regular exchanges with its customers throughout the projects."
+
+### equipe-project
+equipe-project.marketplace-nft.sub-title.part2: " Your NFT Marketplace"
+equipe-project.marketplace-nft.description.part1.subtitle: "What is an NFT Marketplace?"
+equipe-project.marketplace-nft.description.part1.desc: "An online platform that offers the opportunity to own a unique piece of digital art, the NFT Marketplace is part of a booming market that is attracting new More and more artists see it as a new way to sell their digital art, while others are passionate about acquiring and owning this type of digital asset, sometimes rare enough to be qualified as a collector's item and arouse covetousness with a view to future profits."
+
+### equipe-project
+equipe-project.marketplace-nft.description.part2.subtitle.part1: "An NFT Marketplace , "
+equipe-project.marketplace-nft.description.part2.subtitle.part2: "how does it work?"
+
+equipe-project.marketplace-nft.description.part2.desc1.part1: ""
+equipe-project.marketplace-nft.description.part2.desc1.part2: "An NFT Marketplace is an online platform, a real market place on which all web users can buy, sell or exchange non-fungible tokens, known worldwide under the name of NFT. Created from blockchain technology, these digital tokens, also called tokens, can represent a creation, a work of art, or any other object, in a unique, unalterable and secure way. NFTs category of digital assets such as card collections, boards, games or rewards Most of the time, NFTs are created from the smart contract functionalities of the Ethereum blockchain, allowing each user to have a public and transparent guarantee of his digital property."
+equipe-project.marketplace-nft.description.part2.desc2.part1: ""
+equipe-project.marketplace-nft.description.part2.desc2.part2: "To use the functionalities of an NFT sales marketplace, users must have a digital wallet called 'wallet', which can accommodate their tokens. Indeed, this electronic wallet allows each user to browse the marketplace in search of NFTs to buy, as well as store or sell all the NFTs in their possession, to other users of the platform.These applications offer many functionalities to follow their transactions or manage digital wallet."
+equipe-project.marketplace-nft.description.part2.desc3.part1: ""
+equipe-project.marketplace-nft.description.part2.desc3.part2: "In short, a Marketplace is a market place on which owners can exchange their digital goods: buy, sell and store their tokens on the blockchain by through these latest technology platforms. Indeed, all transactions are based on the blockchain in order to ensure transparency, protection of user data and security of purchase and sale transactions. This digital project highlights the artists of the around the world and gives investors the opportunity to diversify their financial portfolio with confidence."
+
+### advantages section
+advantages.marketplace-nft.title.part1: "The advantages"
+advantages.marketplace-nft.title.part2: " of creating your own Marketplace NFT"
+advantages.marketplace-nft.title.baseline1: "A company interested in the latest advances in technology and wishing to be part of the digital boom, can choose to embark on the creation and development of a Marketplace NFT for many reasons, such as:"
+advantages.marketplace-nft.title.baseline2: "To provide ownership transparency, security, and reliability to its users through blockchain technology. Owners of these types of digital assets place more trust in goods they can store directly on the blockchain."
+advantages.marketplace-nft.title.baseline3: "Promote its brand by creating an attractive NFT sales application for its users, with the aim of creating a real community of ambassadors."
+advantages.marketplace-nft.title.baseline4: "Be a pioneer in the decentralized digital world of tomorrow."
+advantages.marketplace-nft.title.baseline5: "Provide new offerings and develop new sales channels for their products and services."
+advantages.marketplace-nft.title.baseline6: "Highlight certain trades such as those exercised by artists, content creators and developers who participate in this digital market and who are offered a new source of income more advantageous than the traditional means of remuneration."
+advantages.marketplace-nft.title.baseline7: "In short, whatever the reason for which you decided to create your NFT marketplace, the KododKod studio is there to advise you and support you in your project, from creation to completion. final delivery of your future platform."
+
+## 4.Play to Earn
+head.title.play-earn: "Play to Earn game development - Blockchain"
+head.desc2.play-earn: "A concept that allows players to earn real money, crypto, NFTs or other rewards, Play to Earn games represent a new technology in the world of gaming, model to the thriving economy around the world."
+
+section1.play-earn.baseline1.part2: "your Play to Earn games"
+
+### section 3
+section3.play-earn.baseline3: "Kodkodkod: Play to Earn Game Development Studio"
+section3.play-earn.baseline4: "Kodkodkod is an IT development company, specializing in web3 and creating Play to Earn games. Kodkodkod developers are true video game enthusiasts, so it is only natural for them to develop these types of games on the Web 3. Thanks to the mastery of Unity and 3D for the graphic side, the Kodkodkod team is able to create all the reward tokens (rewards) of the games you want to create. at ease in the backend as well as in the front, their various skills in the development of video games are among the best in the gaming industry. Renowned for designing Play to Earn games from the latest technological innovations such as NFTs and cryptocurrencies, the company Kodkodkod is recognized for its mastery and expertise in Web3 development, and the permanent dialogue with its customers, which maintains as its primary objective that of meeting the personalized expectations of each of its customers. In addition to these qualities, the company has a solid experience and a reliable reputation in the Play to Earn games industry, thanks to quality work and as well as meeting delivery deadlines for each project."
+section3.play-earn.baseline5: "Taking on Kodkodkod's developers also means getting involved in setting the Metaverse and digital platforms in motion. Any company that is looking for an experienced and responsive company to develop a Play to Earn, is invited to collaborate with Kodkodkod! Passionate about the digital universe in all its forms, this company masters the latest technologies in terms of tokens, blockchain and Metaverse. Committed and available, establish a partnership with the Kodkodkod team is a real springboard for entrepreneurs looking for financial diversification, while staying connected with market trends!"
+
+### equipe-project
+
+equipe-project.play-earn.sub-title.part2: "Your Play to Earn Games"
+
+equipe-project.play-earn.description.part1.subtitle: "What are Play to Earn games?"
+equipe-project.play-earn.description.part1.desc1: "Play to Earn games are video games in which players have the opportunity to earn money, through the completion of tasks and missions within of an online game, alone or in a team. This model of video games works through the use of crypto and NFT (Non Fungible Token), rewards distributed to players according to the time spent online. to Earn are hosted on the blockchain, which offers each player transparency and security during transactions carried out on the platform.Among the tasks and missions associated with Play to Earn games, there are challenges, tournaments, quests and even exchanges of virtual goods (NFTs, cryptocurrencies, etc.)."
+equipe-project.play-earn.description.part1.desc2: "If this Play to Earn games project works so well with users who are passionate about digital technology, it is because they stand out thanks to their attractive and original side In addition, Play to Earn games are an opportunity for players to earn money in their free time and thus supplement their monthly income.However, before embarking on this type of platform, it is recommended to learn about the operation of the blockchain and know the risks associated with this type of digital investment, to avoid disappointment and consequent financial losses."
+equipe-project.play-earn.description.part1.desc3: "This type of game fits into the environment of the Metaverse, which grants players the ability to simultaneously connect and interact together within a universe virtual, by offering them a more immersive and dynamic experience.Among the latest games created, we find Axie Infinity, a popular game in the digital gaming world thanks to its both innovative and entertaining side, based on blockchain technology. uses NFTs as unique characters and works through tokens that allow players to sell and buy avatars and virtual items."
+### advantages section
+advantages.play-earn.title.part1: "The 5 advantages"
+advantages.play-earn.title.part2: "to develop a model of Play to Earn games"
+advantages.play-earn.title.baseline1: "The advantages of developing this type of gaming project include: "
+advantages.play-earn.title.baseline2: "Increased player engagement who are incentivized to participate longer in Play to Earn games in order to earn maximum rewards. Thus, this monetizes the lifetime of digital entertainment ."
+advantages.play-earn.title.baseline3: "Growing the user base, especially those looking for easy-to-use games to make regular money."
+advantages.play-earn.title.baseline4: "Expanded reach of influence through players who view Play to Earn games as well designed and share this tip with other investors and those around them."
+advantages.play-earn.title.baseline5: "The creation of a digital economy through the exchange, purchase and sale of virtual objects between users, increasing the income of the owner of Play to Earn games."
+advantages.play-earn.title.baseline6: "The use of blockchain technology providing players with transparency, security and traceability during transactions on the platform."
+
+##5.Metavers
+head.title.metavers: "Developing the Metaverse - Blockchain"
+head.desc2.metavers: "The principle of Metaverse includes a 3D virtual reality universe in which users can interact with other individuals within a fictional environment, making this digital creation an immersive and interactive experience that thwarts the limits of physical reality."
+
+section1.metavers.baseline1.part2: "your Metaverse"
+
+### section 3
+section3.metavers.baseline3: "Why use Kodkodkod for your digital project?"
+section3.metavers.baseline4: "Kodkodkod accompanies you on all the technical and graphic part of the creation of your Metavers. Whether you want to create an art gallery to display your NFTs or a training room to bring your teams together worldwide, our KodKodKod development studio offers a wide range of services to meet your professional expectations. Kodkodkod can even create your city, design job dating, or an administration to facilitate access to your services and your agents . "
+section3.metavers.baseline5: "Indeed, at Kodkodkod, we specialize in the development of new technologies, and we offer a Metaverse creation service in which Internet users can interact in real time with the people or subjects of their choice. By Through rigorous design and programming techniques, Kodkodkod creates a quality virtual world within a reliable and secure digital environment. Determined to satisfy its customers, our company is renowned for its commitment to digital innovation and seeks to perfect its know-how through new avant-garde and qualitative approaches."
+section3.metavers.baseline6: "Kodkodkod's primary idea is to participate in the development of many environments from the Metaverse, to allow each user to fully flourish in a virtual world. Thanks to meticulous modeling techniques and graphics high in quality, Kodkodkod has become an expert in the immersive universe. To these technical skills are added our professional qualities, both in the relevance of our collaboration with our customers, in our methods of carrying out the project or the respect of deadlines. At each stage, our company applies rigorous methods that follow a precise professional plan: planning, design, programming, carrying out tests and producing the project."
+section3.metavers.baseline7: "To conclude, Kodkodkod is included in a process of creation and development of the Metaverse which ensures quality and security during each digital project. The different virtual worlds respect a strict charter in terms of computer security, protecting users from all forms of threats on the web while allowing them an exemplary user experience."
+
+### equipe-project
+equipe-project.metavers.sub-title.part2: "Your Metaverse"
+
+equipe-project.metavers.description.part1.subtitle: "What is the Metaverse?"
+equipe-project.metavers.description.part1.desc1: "This word that seems barbaric at first glance is nothing but a concept of a 3D virtual world that offers users a unique experience to create their personal avatars and dive into within a parallel universe. Indeed, the word 'Metaverse' is composed of the English link 'meta' and 'universe', having given rise to the term 'Metaverse' in France. The words Metaverse are therefore used as much as Metavers for describe this virtual real-time 3D space simulation technology. In this virtual space, we find online games, applications, social networks that have developed to the point that companies specializing in digital have appropriated this concept engaging and immersive. The Metaverse helps establish a new boundary between the real and the fictional, and offers developers the possibility of imagining a virtual environment designed using cutting-edge digital technology."
+equipe-project.metavers.description.part1.desc2: "Within the Metaverse, each user can interact with other avatars, but also videos, objects, live events, applications, in order to use this powerful tool for entertainment or marketing purposes. Indeed, on the professional side, companies can decide to use Metavers technology to maximize the sale of their products, build customer loyalty or promote their new brand, in originality and creativity.To stand out from the competition, some do not hesitate, for example, to use NFTs which represent virtual objects exchangeable between individuals, the value of which can quickly increase and ensure the company a diversification of his online income."
+equipe-project.metavers.description.part1.desc3: "Companies with a global reputation have already chosen to develop their own Metaverse, which offer users the possibility of connecting to several virtual spaces, while sharing their data or by creating online web content. In the world of video games, the Metaverse increases the interactive and captivating side for players. In short, the Metaverse is an opportunity for a modern and innovative parallel network, opening the doors of the virtual in a way infinite, both in the personal and professional domains.Thus, each company can include itself in an innovative and decisive approach to retain its customers in a sustainable way.It is a digital revolution that comes to impact traditional interactions, by designing a virtual world where everything becomes possible."
+
+### advantages section
+advantages.metavers.title.part1: "Advantages"
+advantages.metavers.title.part2: "of the Metaverse environment"
+
+advantages.metavers.title.baseline1: "Virtual reality provides an interactive world in constant evolution. Companies can use this virtual platform to highlight products and services with an innovative concept, but also to promote their expertise and convince new users In addition to being a marketing tool, the Metaverse offers a new technique that allows developers and creators of web content to stand out through avant-garde projects that promote virtual reality, or even augmented reality. "
+advantages.metavers.title.baseline2: "In addition, the Metaverse brings together a unique panel of experiences rich in sensations, by immersing each user in the heart of a new world in which the possibilities are infinite. It is a concrete way to everyone to emancipate themselves in a new universe, far from routine daily life, thanks to innovative augmented and virtual reality projects."
+
+## 6. Data traceability and security on Blockchain
+head.title.data-security-traceability: "Data Traceability and Security Agency - Blockchain"
+head.desc2.data-security-traceability: "In the digital age where the dematerialized occupies an important place in the daily life of the French, blockchain technology attracts as much as it intrigues thanks to the potential for secure and transparent transactions that it propose."
+
+section1.data-security-traceability.baseline1.part2: "your Blockchain project"
+type-project.data-security-traceability.title: "What is blockchain technology?"
+type-project.data-security-traceability.baseline: "Blockchain technology is a digital system that stores a range of information securely and transparently. Its operation is based on a decentralized network on which transactions are validated at the shelter of the traditional banking system. Blockchain technologies offer an environment of trust in which each transaction can be verified by several partners, which makes falsification impossible. Blockchain technology is accessible to individuals as well as professionals; in In the case of companies, this process makes it possible to automate certain functions such as logistics, the supply chain or the invoicing process via secure and reliable payment solutions."
+
+### section 3
+section3.data-security-traceability.baseline3: "Why use Kodkodkod?"
+section3.data-security-traceability.baseline4: "A reliable digital solution"
+section3.data-security-traceability.baseline5: "The Kodkodkod company stands out thanks to its expertise in traceability and data security on the blockchain. In an ultra-connected world, the company has a primary objective: to meet best meet the needs of consumers, using innovative solutions."
+section3.data-security-traceability.baseline6: "Indeed, the company places trust at the heart of its operation, offering a range of quality products and services. Kodkodkod enables companies and business owners to improve their supply chain, selling their products and services through efficient and personalized solutions. Thus, Kodkodkod members rely on the use of the latest IoT technologies and online transactions, to gather, analyze and optimize the operational efficiency of all of their customers, following the latest digital market trends and consumer demand."
+
+### equipe-project
+equipe-project.data-security-traceability.sub-title.part2: "your Blockchain project"
+
+equipe-project.data-security-traceability.description.part2.subtitle.part1: "Services"
+equipe-project.data-security-traceability.description.part2.subtitle.part2: "proposed by Kodkodkod"
+
+equipe-project.data-security-traceability.description.part1.subtitle: "The Kodkodkod company offers a variety of services with the aim of providing concrete assistance to companies in order to secure their data and optimize the process of their transactions. These professional services include:"
+
+equipe-project.data-security-traceability.description.part2.desc1.part1: "Product traceability"
+equipe-project.data-security-traceability.description.part2.desc1.part2: "If you want to trace, secure and authenticate data through the blockchain, Kodkodkod can take care of smart contracts but also API bridges with third-party applications such as Docusign, allowing you to trace your documents.Kodkodkod also has the ability to trigger and automate typical scenarios followed by royalties through complex data chains and processes.Thanks to the blockchain system, companies have security regarding the authenticity of products, a reliable way to fight against counterfeiting, in the health, luxury or technology sectors."
+equipe-project.data-security-traceability.description.part2.desc2.part1: "Securing data"
+equipe-project.data-security-traceability.description.part2.desc2.part2: "Kodkodkod company can help companies protect their data against cyberattacks and data breaches, because their storage on the blockchain is carried out securely , in a tamper-proof manner to ensure that all information, including sensitive or confidential information, is protected from hackers."
+equipe-project.data-security-traceability.description.part2.desc3.part1: "Development"
+equipe-project.data-security-traceability.description.part2.desc3.part2: "This service includes solutions for web and mobile applications as well as for company software. Kodkodkod professionals combine the needs of their customers and their provide personalized solutions that meet their expectations in terms of objectives."
+equipe-project.data-security-traceability.description.part2.desc4.part1: "The design"
+equipe-project.data-security-traceability.description.part2.desc4.part2: "Graphically or via a user interface, Kodkodkod's designers are able to create a design that is both attractive and functional to attract and retain the customers of the companies with which this company collaborates."
+equipe-project.data-security-traceability.description.part2.desc5.part1: "Technology advice"
+equipe-project.data-security-traceability.description.part2.desc5.part2: "Kodkodkod has consultants specializing in the development of strategies that enable companies to plan, execute and correct their projects in order to guarantee their success and maximize their most -value."
+
+
+### advantages
+advantages.data-security-traceability.title.part1: "Data Security and Traceability"
+advantages.data-security-traceability.title.part2: "protection for consumers"
+advantages.data-security-traceability.title.baseline1: "Using blockchain technology, it is possible to proceed with the creation of connected networks. On the one hand, it helps to strengthen the collaborative process towards different partners; on the other hand, it guarantees data security and traceability.Indeed, in the field of health, the blockchain stores a multitude of medical information on its network, ensuring the medical staff (doctors) as well as the patients or other actors revolving around the medical field, to have access to it in complete transparency."
+advantages.data-security-traceability.title.baseline2: "In the industrial sector, blockchain work is relevant insofar as it facilitates transactions by combining security, transparency and speed, a crucial advantage for companies wishing to retain their customers and gaining their trust. Besides these two areas, it is a digital technology that is also useful for consumers and companies belonging to the financial, agricultural or renewable energy sectors."
+
+### faq-description
+faq-description.data-security-traceability.title: "How is a project going with Kodkodkod?"
+faq-description.data-security-traceability.description1: "At first, the team members carry out an analysis of their client's needs in order to grasp the objectives set by the company. Once the professional aspirations have been set, a is carried out in such a way as to develop a blockchain architecture adapted to the expectations of the customer. For this, the Kodkodkod team uses the latest technological innovations to guarantee an efficient and secure project. It is in partnership with their customers that they move forward in a common project, that of creating reliable and functional security protocols in order to protect any data stored on the blockchain.Before finalizing their work, tests are carried out and must meet the standards of traceability and data security, before final delivery ."
+faq-description.data-security-traceability.description2: "In short, Kodkodkod is an expert blockchain company that companies can call on to safeguard their confidential data, making it safe from cyberattacks , thanks in particular to advanced encryption techniques."
+
+### BLOGS PAGE
+introducing.blog: "Blog"
+blogs.section1.baseline1.part1: "Kodkodkod,"
+blogs.section1.baseline1.part2: "the coders' blog"
+blogs.section2.baseline1: "Here we talk about blockchain, NFT, web3 and tech"
+
+### CONTACT PAGE
+"Contact": "Contact"
+contact.desc: "Tell us about your project via this form, we will get back to you in less than 24 hours."
+
+"Ask for information": "Request for information"
+contact.desc.line1: "For inquiries, you can use the following email or phone number:"
+contact.desc.line2: "For quote requests, you can also use the following email:"
+
+#dev team section
+"Experiences": "Experiences : "
+"years": "years"
+
+#customize chatbot
+chatbot.title: "Hello you"
+chatbot.baseline1: "Surely I can help you!"
+chatbot.baseline2: "Want to be contacted?"
+chatbot.option1: "I want to make an appointment!"
+chatbot.option2: "I want to be contacted again"
+chatbot.option3: "I want to join you!"
+
+### NEW
+"page.title.blog" : "Blogs and insights from our Koders"
+services:
+    consulting:
+        title: "Consulting"
+        description: "From day one, we provide AI strategy, Proof of Concept assistance, and consulting services to support your project. Let's shape the future together with AI."
+        button: "Book Consultation"
+
+    aiWorkshops:
+        title: "AI Workshops"
+        description: "We provide AI workshops to detect and understand where AI can impact your business processes the most. Let's optimize together."
+        button: "Book Consultation"
+
+    llm:
+        title: "LLM"
+        description: "We develop LLMs in-house, leveraging your data. Let's craft customized solutions to enhance your operations and address your specific needs effectively."
+        button: "Book Consultation"
+
+    aiDevelopers:
+        title: "AI Developers"
+        description: "We handle all development tasks by assigning our skilled developers to you. Let us streamline the process and bring your vision to life."
+        button: "Book Consultation"
+
+    integrations:
+        title: "Integrations"
+        description: "We seamlessly integrate and deploy AI solutions into your current systems and platforms. Let's optimize your operations with cutting-edge technology."
+        button: "Book Consultation"
+elevateYourBusiness:
+    title: "Elevate Your Business with AI"
+    consulting:
+        title: "Audit &"
+        secondTitle : "Consulting"
+        description: "We support you on your path to AI by providing our expertise."
+        points:
+            point1: "Advice and answers to your questions"
+            point2: "Provision of experts"
+            point3: "Feasibility study"
+            point4: "Search for solutions and tools"
+    workshops:
+        title: "Workshops"
+        description: "A scoping program designed to develop your AI strategy risk-free."
+        points:
+            point1: "Translating business objectives into a tech problem that AI solves"
+            point2: "Resources needed for the project"
+            point3: "Project system and infrastructure"
+            point4: "Roadmap and Scope of Deliverables"
+    development:
+        title: "Development"
+        description: "We take care of all integration of AI into your home."
+        points:
+            point1: "Site/platform development"
+            point2: "API development / integration"
+            point3: "Development of interactive AI features"
+            point4: "AI application development"
 
 welcomeSection:
-  intro:
-    text1: "Welcome to "
-    text2: "KodKodKod"
-    text3: ", where expert web development meets tailored solutions. With."
-    text4: "300+ satisfied customers"
-    text5: "we drive your business's digital success."
-  bookConsultation: "Book Consultation"
-  ourStoryTitle: "Our Story"
-  ourStoryContent1: "Welcome to Kodkokod, where expert web development meets tailored solutions. With 300+ satisfied customers, we drive your business's digital success."
-  ourStoryContent2: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best: producing top-quality code that empowers your business to succeed."
-  ourStoryContent3: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best."
-  completedProjects:
-    text1: "Successfully completed"
-    text2: "projects"
-  bestProductsClients:
-    text1: "Delivered the best ever products to"
-    text2: "200+"
-    text3: "clients"
-  yearsInAi:
-    text1: "We have experience of more than"
-    text2: "15 years"
-    text3: "in Ai space"
-  skilledAiExperts:
-    text1: "More than"
-    text2: "50+"
-    text3: "skilled Ai experts to help you"
+    intro: "Welcome to KodKodKod, where expert web development meets tailored solutions. With 300+ satisfied customers, we drive your business's digital success."
+    bookConsultation: "Book Consultation"
+    ourStoryTitle: "Our Story"
+    ourStoryContent1: "Welcome to Kodkokod, where expert web development meets tailored solutions. With 300+ satisfied customers, we drive your business's digital success."
+    ourStoryContent2: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best: producing top-quality code that empowers your business to succeed."
+    ourStoryContent3: "At KodKodKod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best."
+    completedProjects: "Successfully completed 150+ projects"
+    bestProductsClients: "Delivered the best ever products to 80+ clients"
+    yearsInAi: "We have experience of more than 12 years in Ai space"
+    skilledAiExperts: "More than 20 skilled Ai experts to help you"
 
-services:
-  title: "What we can help you with?"
-  consulting:
-    title: "Consulting"
-    description: "From day one, we provide AI strategy, Proof of Concept assistance, and consulting services to support your project. Let's shape the future together with AI."
-    button: "Book Consultation"
 
-  aiWorkshops:
-    title: "AI Workshops"
-    description: "We provide AI workshops to detect and understand where AI can impact your business processes the most. Let's optimize together."
-    button: "Book Consultation"
+newsletter:
+    title: "Don’t miss any updates with our Newsletter"
+    emailLabel: "Email"
+    subscribe: "Subscribe"
 
-  llm:
-    title: "LLM"
-    description: "We develop LLMs in-house, leveraging your data. Let's craft customized solutions to enhance your operations and address your specific needs effectively."
-    button: "Book Consultation"
+footer:
+    aiProjectTitle: "Let’s talk about the AI Project"
+    connectWithExpert: "Connect with an expert"
+    responseTime: "In less than 24 hours"
+    availability: "Available immediately"
+    firstName: "First name"
+    email: "E-mail"
+    message: "Message"
+    sendMessage: "Send"
+    getInTouch: "Get in touch"
+    contactNumber: "+44 20 4586 3029"
+    address: "New York, Paris, Lyon, Seoul, Londres, Genève, Abidjan"
+    messageText: "ex: I want to build a website..."
+    navigation:
+        home: "Home"
+        aboutUs: "About us"
+        services: "Services"
+        work: "Work"
+        contact: "Contact"
+        news: "News"
+    scrollTop: "Scroll to top"
+    terms: "Terms & Conditions"
+    privacy: "Privacy Policy"
+    cookies: "Cookies"
+    cookieSettings: "Cookies Settings"
+    validator:
+        name: "Please provide your name"
+        email : "Please provide a valid email."
+        message : "Please provide a message."
+pageHome:
+    introLine1: "We’re offering the best consulting services for"
+    introLine2: "Ai solution."
+    detail: "We specialize in tailoring solutions to meet your unique challenges, ensuring you harness the full potential of this technological revolution."
+    bookConsultation: "Book a Consultation"
+    peopleTrustUs: "People who trust us"
 
-  aiDevelopers:
-    title: "AI Developers"
-    description: "We handle all development tasks by assigning our skilled developers to you. Let us streamline the process and bring your vision to life."
-    button: "Book Consultation"
+Meet Our Team of AI Enthusiasts: "Meet Our Team of AI Enthusiasts"
 
-  integrations:
-    title: "Integrations"
-    description: "We seamlessly integrate and deploy AI solutions into your current systems and platforms. Let's optimize your operations with cutting-edge technology."
-    button: "Book Consultation"
-elevateYourBusiness:
-  title: "Elevate Your Business with AI"
-  consulting:
-    title: "Audit & Consulting"
-    description: "We support you on your path to AI by providing our expertise."
-    points:
-      point1: "Advice and answers to your questions"
-      point2: "Provision of experts"
-      point3: "Feasibility study"
-      point4: "Search for solutions and tools"
-  workshops:
-    title: "Workshops"
-    description: "A scoping program designed to develop your AI strategy risk-free."
-    points:
-      point1: "Translating business objectives into a tech problem that AI solves"
-      point2: "Resources needed for the project"
-      point3: "Project system and infrastructure"
-      point4: "Roadmap and Scope of Deliverables"
-  development:
-    title: "Development"
-    description: "We take care of all integration of AI into your home."
-    points:
-      point1: "Site/platform development"
-      point2: "API development / integration"
-      point3: "Development of interactive AI features"
-      point4: "AI application development"
+map :
+    title: "From Paris to Seoul, We’re everywhere"
 
-head.portfolio.meta: "Discover the achievements & Web developments of the Web3 Kodkodkod agency. ✓ IT development studio specializing in Web3, crypto, blockchains and Smart Contracts."
-head.portfolio.title: "Our achievements & Web developments | Kodkodkod"
+testimonial:
+    title : "What our customers say"
+Choose an option: 'Choose an option'
+See All Projects: "See All Projects"
+
+service:
+    title: "Services"
+    clients:
+        title: "We are proud to support them"
+    hero:
+        text1: "Unlock the Power of AI with Our"
+        text2: "Development"
+        text3: "Services"
+        paragraph: "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize
+                    the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique
+                    needs."
+    indus:
+        title1 : "INDUSTRIES"
+        title2 :
+            text1: "Industry-Specific"
+            text2: Solutions
+        textBtn: "Manufacturing"
+        collapseOne :
+            item: "Procurement / Logistics"
+            text1: "This is the first item's accordion body."
+            text2: "It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the"
+            text3: "accordion-body"
+            text4: "though the transition does limit overflow."
+        collapseTwo:
+            item: "Procurement / Logistics"
+            text1: "Corps de l'accordéon du deuxième élément."
+            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
+            text3: "corps d'accordéon"
+            text4: "bien que la transition limite le débordement."
+        collapseThree:
+            item: "Procurement / Logistics"
+            text1: "Corps de l'accordéon du troisième élément."
+            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
+            text3: "corps d'accordéon"
+            text4: "bien que la transition limite le débordement."
+        collapseFour:
+            item: "Procurement / Logistics"
+            text1: "Corps de l'accordéon du quatrième élément."
+            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
+            text3: "corps d'accordéon"
+            text4: "bien que la transition limite le débordement."
+        collapseFive:
+            item: "Procurement / Logistics"
+            text1: "Corps de l'accordéon du cinquième élément."
+            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
+            text3: "corps d'accordéon"
+            text4: "bien que la transition limite le débordement."
+    section:
+        title: "Integration into Your Business"
+        text1: "At Kodkokod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best: producing top-quality code that empowers your business to succeed."
+        text2: "At Kodkokod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best."
+    carousel:
+        item1:
+            title: "Logiciel de gestion de projet"
+            description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
+        item2:
+            title: "Développement mobile"
+            description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
+        item3:
+            title: "Détection automatique"
+            description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
+        item4:
+            title: "Logiciel de soins de santé"
+            description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
+        item5:
+            title: "Applications d'IA"
+            description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
+    team:
+        title: "Meet our Amazing team enriched with Talent"
+        text1 : "We have 4 consultatnts -AI project managers"
+        text2 : "We have 6 experienced -AI expert Ai developers"
+        text3 : "We have 1 lead AI researcher"
+
+projet:
+    challenge:
+        title: "Challenge"
+        text1: "Say goodbye to one-size-fits-all solutions – our Tailor-made AI Assistants are finely tuned to reflect your individuality, providing a bespoke experience that enhances efficiency, productivity, and overall satisfaction."
+        text2: "Say goodbye to one-size-fits-all solutions – our Tailor-made AI Assistants are finely tuned to reflect your individuality, providing a bespoke experience that enhances efficiency, productivity, and overall satisfaction."
+    info:
+        title: "Project Type"
+        title2: "Stage"
+        text2: "Established Company"
+        title3: "Deliverables"
+    info_gallery:
+        btnPrev: "Previous"
+        btnNext: "Next"
+    intro:
+        title: "Introduction"
+        text: "Say goodbye to one-size-fits-all solutions – our Tailor-made AI Assistants are finely tuned to reflect your individuality, providing a bespoke experience that enhances efficiency, productivity, and overall satisfaction."
+    offer:
+        title: "Many offerings, one brand"
+        text: "Uniting all of Papers offerings under a seamless, patient-centric umbrella brand for an awesome user experience."
+    palette:
+        title: "Many offerings, one brand"
+        text: "Uniting all of Papers offerings under a seamless, patient-centric umbrella brand for an awesome user experience."
+        color1: "Orange - Funky"
+        color2: "Creamy - Candy"
+        color3: "Lemon - Seafoam"
+        color4: "Darken - Navy"
+        color5: "Sea - Blueish"
+    style:
+        title: "Many offerings, one brand"
+        text: "Uniting all of Papers offerings under a seamless, patient-centric umbrella brand for an awesome user experience."
+
+training:
+    hero :
+        title1 : "Unlock the Potential of AI in Your"
+        title2: "Processes"
+        p1:  "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique needs."
+    benifits :
+        title: "Who can get benefits?"
+        carrosel :
+            title1 : "Business Leaders"
+            p1 : "Gain strategic insights into how AI can transform your business operations and drive growth."
+            title2 : "Operations Managers"
+            p2: "Discover AI-driven solutions to optimize processes, enhance efficiency, and reduce costs."
+            title3 : "Marketing Professionals"
+            p3: "Leverage AI for targeted marketing campaigns, personalized customer experiences, and improved ROI."
+            title4: "Sales Teams"
+            p4: "Utilize AI tools for sales forecasting, lead generation, and customer relationship management."
+    workshop:
+        title: "Workshop content tailored to your needs"
+        p1: "GPT Chat workshop"
+        p2: "Tailored AI strategies crafted specifically for your company's unique needs and challenges."
+    works:
+        title1 : "How it works?"
+        title2: "How it works?"
+        p1: "We support you on your path to AI by providing our expertise."
+        link: "Schedule a Workshop"
+        p2: "We support you on your path to AI by providing our expertise."
+contact:
+    title: "Contact us"
+    firstName: "First Name"
+    lastName: "Last Name"
+    subject: "Subject"
+    company: "Company"
+    requirement: "Describe your requirements"
+    requirement_placeholder: "Please tape your message here..."
+coaching:
+    hero :
+        title1 : "Tailor-made AI"
+        title2: "Assistants"
+        p1:  "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique needs."
+    clients:
+        title: "We are proud to support them"
+    benifits :
+        title: "Who can get benefits?"
+        carrosel :
+            title1 : "Business Leaders"
+            p1 : "Gain strategic insights into how AI can transform your business operations and drive growth."
+            title2 : "Operations Managers"
+            p2: "Discover AI-driven solutions to optimize processes, enhance efficiency, and reduce costs."
+            title3 : "Marketing Professionals"
+            p3: "Leverage AI for targeted marketing campaigns, personalized customer experiences, and improved ROI."
+            title4: "Sales Teams"
+            p4: "Utilize AI tools for sales forecasting, lead generation, and customer relationship management."
+    workshop:
+        title: "Workshop content tailored to your needs"
+        p1: "GPT Chat workshop"
+        p2: "Tailored AI strategies crafted specifically for your company's unique needs and challenges."
+    works:
+        title1 : "How it works?"
+        title2: "How it works?"
+        p1: "We support you on your path to AI by providing our expertise."
+        link: "Schedule a Workshop"
+        p2: "We support you on your path to AI by providing our expertise."
+    opp:
+        title: "Exploring collaborative opportunities"
+        content1:
+            t1: "End-to-end"
+            t2: "integration"
+            t3: "Starting from"
+            t4: "weeks"
+            p: "Kodkokod offers comprehensive AI virtual assistant integration, tailored to your business. Our experts fine-tune GPT models to match your brand and operational needs, seamlessly integrating the assistant into your infrastructure."
+        content2:
+            t1: "Technical advisory"
+            t2: "services"
+            t3: "Starting from"
+            t4: "weeks"
+            p: "Kodkokod offers comprehensive AI virtual assistant integration, tailored to your business. Our experts fine-tune GPT models to match your brand and operational needs, seamlessly integrating the assistant into your infrastructure."
+        content3:
+            t1: "Prompt engineering"
+            t2: "services"
+            t3: "Starting from"
+            t4: "weeks"
+            p: "Kodkokod offers comprehensive AI virtual assistant integration, tailored to your business. Our experts fine-tune GPT models to match your brand and operational needs, seamlessly integrating the assistant into your infrastructure."
+    ment:
+        t1: "Where have we been"
+        t2: "mentioned?"

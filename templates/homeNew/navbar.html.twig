@@ -1,0 +1,113 @@
+{% if app.request.locale == 'ko' %}
+    {% set linkQuote = 'https://whattime.co.kr/kodkodkod/30min' %}
+{% else %}
+    {% set linkQuote = '/' ~ app.request.locale ~ '/contact' %}
+{% endif %}
+	{% if hongKong is defined and hongKong %}
+        {% set linkQuote = 'https://calendly.com/kodkodkod_hk/30min' %}
+    {% endif %}
+
+<div class="navbar-page position-relative">
+    <div class="box">
+        <div class="left">
+            <a href="{{ path('home') }}">
+                <div class="logo">
+                    <img src="{{ asset('build/images/logo_white.png') }}" width="65" height="65">
+                </div>
+            </a>
+        </div>
+        <div class="mid">
+            <div class="mid-menu">
+                <a href="{{ path('home') }}">
+                    {{ 'menu.home'|trans }}
+                </a>
+            </div>
+            <div class="mid-menu">
+                <a href="#services">
+                    {{ 'menu.services'|trans }}
+                </a>
+            </div>
+            <div class="mid-menu">
+                <a href="{{ path('portfolio') }}">
+                    {{ 'menu.portfolio'|trans }}
+                </a>
+            </div>
+
+            <div class="mid-menu">
+                <a href="{{ path('blog') }}">
+                    {{ 'menu.blog'|trans }}
+                </a>
+            </div>
+
+            <div class="mid-menu">
+                <a target="_blank" href="{{ linkQuote }}">
+                    {{ 'menu.contact'|trans }}
+                </a>
+            </div>
+        </div>
+        <div class="right">
+            <a href="tel:{% if app.request.locale == 'ko' %}16685028{% elseif app.request.locale == 'fr' %}+33451202424{% else %}+442045863029{% endif %}">
+                <button class="btnPhone">
+                    <img src="https://kodkodkod.b-cdn.net/build/images/landingPage/tel-icon-4x.e46bd137.png" style="margin-right:10px;" alt="icon telephone" width="22" height="22">
+                    {% if app.request.locale == 'ko' %}
+                        1668-5028
+                    {% elseif app.request.locale == 'en' %}
+                        +44 20 4586 3029
+                    {% else %}
+                        04 51 20 24 24
+                    {% endif %}
+
+
+                </button>
+            </a>
+            <div class="burger-mobile">
+                <img class="mobile-open" src="{{ asset('build/images/newLandingPage/navbar_burger.svg') }}" width="28" height="28"/>
+            </div>
+        </div>
+
+        <div class="mobile-navbar-menus">
+            <div class="mobile-navbar-menus-top">
+                <a href="/">
+                    <img src="{{ asset('build/images/logo_white.png') }}" width="65" height="65"/>
+                </a>
+                <img class="mobile-close" src="{{ asset('build/images/newLandingPage/navbar_close_white.svg') }}" width="25" height="25"/>
+            </div>
+            <div class="mobile-navbar-menus-bottom">
+                <div class="mobile-menus">
+                    {# <div class="mobile-menu">
+                                    <a href="{{ path('home') }}">
+                                       {{'Home'|trans}}
+                                    </a>
+                                </div> #}
+                    <div class="mobile-menu">
+                        <a href="{{ path('portfolio') }}">
+                            {{ 'link1'|trans }}
+                        </a>
+                    </div>
+
+                    <div class="mobile-menu">
+                        <a href="{{ path('home') }}#services">
+                            {{ 'link3'|trans }}
+                        </a>
+                    </div>
+
+
+                    <div class="mobile-menu">
+                        <a href={{ linkQuote }}>
+                            {{'link6'|trans}}
+                        </a>
+                    </div>
+
+
+{#                    <div class="mobile-menu">#}
+{#                        <a href={{ linkQuote }}>#}
+{#                            <button class="pink-btn">{{ 'cta.top'|trans }}</button>#}
+{#                        </a>#}
+{#                    </div>#}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

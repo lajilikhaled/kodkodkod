@@ -1,0 +1,628 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}newLandingPage{% endblock %}
+{% block description %} newLandingPage{% endblock %}
+
+
+{% block body %}
+
+	<div class="app-home-newLandingPage">
+
+		<div class="new-navbar">
+			<div class="box">
+				<div class="left">
+					<div class="logo">
+						<img src="{{ asset('build/images/newLandingPage/logo.png') }}"/>
+					</div>
+				</div>
+				<div class="mid">
+					<div class="mid-menu">{{ 'link1'|trans }}</div>
+					<div class="mid-menu">{{ 'link2'|trans }}</div>
+					<div class="mid-menu">{{ 'link3'|trans }}</div>
+					<div class="mid-menu">{{ 'link4'|trans }}</div>
+				</div>
+				<div class="right">
+					<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+				</div>
+			</div>
+		</div>
+
+
+		<section class="jumbotron">
+			<div class="box">
+				<div class="left">
+					<div class="title">
+						{{ 'section1.baseline1'|trans }}
+					</div>
+					<div class="desc">
+						{{ 'section1.baseline2'|trans }}
+					</div>
+					<button class="pink-btn">
+						{{ 'cta.top'|trans }}
+					</button>
+				</div>
+				<div class="right">
+					<img class="jumbo-img" src="{{ asset('build/images/newLandingPage/jumbotron.png') }}"/>
+				</div>
+			</div>
+		</section>
+
+		<section class="brands">
+			<div class="box">
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_1_jarvis.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_2_bnp.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_3_urgence.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_4_pm.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_5_rencontre.png') }}"/>
+				</div>
+				<div class="brand">
+					<img src="{{ asset('build/images/newLandingPage/brands_6_canal.png') }}"/>
+				</div>
+			</div>
+		</section>
+
+		<section class="intro">
+			<div class="box">
+				<div class="left">
+					<div class="title">
+						{{ 'Just code.'|trans }}<br/>
+						<span class="intro-pink-font"> {{ 'No bullshit.'|trans }}</span>
+					</div>
+					<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+				</div>
+				<div class="right">
+					{% set openP= '<p>' %}
+					{% set closeP= '</p>' %}
+					{% set openB= '<b>' %}
+					{% set closeB= '</b>' %}
+					<span class="pink-text">{{ openP | trans }}</span>{{ 'section2.baseline1'|trans }}<span
+						class="pink-text">{{ closeP | trans }}</span><br/><br/>
+					<span class="pink-text">{{ openP | trans }}</span>{{ 'section2.baseline2'|trans }}<span
+						class="pink-text">{{ closeP | trans }}</span><br/><br/>
+					<span class="pink-text">{{ openP | trans }}</span>{{ 'section2.baseline3'|trans }}
+					<span class="pink-text">{{ openB | trans }}</span><b>{{ 'section2.baseline4'|trans }}</b><span
+						class="pink-text">{{ closeB | trans }}</span><span class="pink-text">{{ closeP | trans }}</span>
+				</div>
+			</div>
+		</section>
+
+		<div class="your-project">
+			<section class="sec4">
+				<div class="box">
+					<div class="title">{{ 'section3.baseline1'|trans }}</div>
+					<div class="sub-title">« {{ 'section3.baseline2'|trans }} »</div>
+					<div class="contents">
+						<div class="contents-text">
+							<div class="content-title">{{ 'section3.baseline3'|trans }}</div>
+							<div class="content-desc">
+								{{ 'section3.baseline4'|trans }}<br/>
+								{{ 'section3.baseline5'|trans }}<br/>
+								{{ 'section3.baseline6'|trans }}
+							</div>
+						</div>
+						<div class="contents-img">
+							<img src="{{ asset('build/images/newLandingPage/sec4_img.png') }}"/>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{# <section class="sec5">
+				<div class="box">
+					<div class="left">
+						<div class="sub-title pink-text">{{ 'section4.subtitle'|trans }}</div>
+						<div class="title">{{ 'section4.baseline1'|trans }}</div>
+						<div class="desc">{{ 'section4.baseline2'|trans }}<br/><br/>{{ 'section4.baseline3'|trans }}
+						</div>
+						<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+					</div>
+					<div class="right">
+						<div class="title one">
+							<img src="{{ asset('build/images/newLandingPage/sec5_one.png') }}"/>
+							<span class="text">{{ 'section4.section1.title'|trans }}</span>
+						</div>
+
+						<div class="title two">
+							<img src="{{ asset('build/images/newLandingPage/sec5_two.png') }}"/>
+							<span class="text two">{{ 'section4.section2.title'|trans }}</span>
+						</div>
+
+						<div class="title three">
+							<img src="{{ asset('build/images/newLandingPage/sec5_three.png') }}"/>
+							<span class="text three">{{ 'section4.section3.title'|trans }}</span>
+						</div>
+
+						<div class="desc one">
+							{{ 'section4.section3.baseline1'|trans }}<br/><br/>
+							{{ 'section4.section3.baseline2'|trans }}
+						</div>
+
+						<div class="desc two">
+							{{ 'section4.section3.baseline1'|trans }}<br/><br/>
+							{{ 'section4.section3.baseline2'|trans }}
+						</div>
+
+						<div class="desc three">
+							{{ 'section4.section3.baseline1'|trans }}<br/><br/>
+							{{ 'section4.section3.baseline2'|trans }}
+						</div>
+
+					</div>
+				</div>
+			</section> #}
+
+			<section class="sec5-new">
+                <div class="box">
+                    <div class="title-box">
+                        <div class="sub-title pink-text">{{ 'section4.subtitle'|trans }}</div>
+                        <div class="title">{{ 'section4.baseline1'|trans }}</div>
+                    </div>
+                   
+                    <div class="desc">{{ 'section4.baseline2'|trans }}
+						
+                        <br/><br/>
+
+                        <div class="desc-1" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" data-delay="100">
+                            <img src="{{ asset('build/images/newLandingPage/sec5_one.png') }}"/>
+                            <span class="text">{{ 'section4.section1.title'|trans }}</span>
+                        </div>
+                        <br/><br/>
+
+                        <div class="desc-2" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" data-delay="100">
+                            <img src="{{ asset('build/images/newLandingPage/sec5_two.png') }}"/>
+							<span class="text two">{{ 'section4.section2.title'|trans }}</span>
+                        </div>
+                        <br/><br/>
+
+                        <div class="desc-3" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="700" data-delay="100">
+                            <img src="{{ asset('build/images/newLandingPage/sec5_three.png') }}"/>
+							<span class="text three">{{ 'section4.section3.title'|trans }}</span>
+                        </div>
+                    </div>
+
+                    <div class="btn">
+                    	<a href= "" >
+							<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+						</a>
+                    </div>
+                </div>
+
+			</section>
+
+			<section class="sec6">
+				<div class="box">
+					<div class="title">{{ 'section5.baseline1'|trans }}</div>
+					<div class="reviews">
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review1.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Juliette. A</div>
+							<div class="position">
+								{{ 'section5.section1.title'|trans }}
+							</div>
+							<div class="review">
+								{{ 'section5.section1.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section1.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section1.baseline3'|trans }}
+							</div>
+						</div>
+
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review2.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Simon. A</div>
+							<div class="position">{{ 'section5.section2.title'|trans }}</div>
+							<div class="review">
+								{{ 'section5.section2.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section2.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section2.baseline3'|trans }}
+							</div>
+						</div>
+
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review3.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Mike.M</div>
+							<div class="position">{{ 'section5.section3.title'|trans }}</div>
+							<div class="review">
+								{{ 'section5.section3.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section3.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section3.baseline3'|trans }}
+							</div>
+						</div>
+
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review4.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Alexandre. J</div>
+							<div class="position">{{ 'section5.section4.title'|trans }}</div>
+							<div class="review">
+								{{ 'section5.section4.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section4.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section4.baseline3'|trans }}
+							</div>
+						</div>
+
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review5.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Antoine B.</div>
+							<div class="position">{{ 'section5.section5.title'|trans }}</div>
+							<div class="review">
+								{{ 'section5.section5.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section5.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section5.baseline3'|trans }}
+							</div>
+						</div>
+
+						<div class="reviewer">
+							{#                            <div class="photo"> #}
+							{#                                <img  src="{{ asset('build/images/newLandingPage/sec6_review6.png') }}"/> #}
+							{#                            </div> #}
+							<div class="name">Andrea. G</div>
+							<div class="position">{{ 'section5.section6.title'|trans }}</div>
+							<div class="review">
+								{{ 'section5.section6.baseline1'|trans }}<br/><br/>
+								{{ 'section5.section6.baseline2'|trans }}<br/><br/>
+								{{ 'section5.section6.baseline3'|trans }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="sec7">
+				<div class="box">
+					<div class="title">
+						{{ 'section6.baseline1'|trans }}
+					</div>
+					<div class="portfolio">
+
+					</div>
+				</div>
+			</section>
+
+			<section class="sec8">
+				<div class="box">
+					<div class="sec8-cards">
+						<div class="sec8-card">
+							<div class="num">3</div>
+							<div class="text">{{ 'section6.section1.baseline1'|trans }}
+								<br/>{{ 'section6.section1.baseline2'|trans }}</div>
+						</div>
+						<div class="sec8-card">
+							<div class="num">+100</div>
+							<div class="text">{{ 'section6.section2.baseline1'|trans }}
+								<br/>{{ 'section6.section2.baseline2'|trans }}</div>
+						</div>
+						<div class="sec8-card">
+							<div class="num">+30</div>
+							<div class="text">{{ 'section6.section3.baseline1'|trans }}
+								<br/>{{ 'section6.section2.baseline2'|trans }}</div>
+						</div>
+					</div>
+					<button class="pink-btn">{{ 'section6.cta'|trans }}</button>
+				</div>
+			</section>
+
+			<section class="sec9">
+				<div class="box">
+					<div class="title">
+						<div class="title-row row1">
+							{{ 'section7.title.baseline1'|trans }}
+						</div>
+						<div class="title-row row2">
+							<span>{{ 'section7.title.baseline2'|trans }}</span> <span
+								class="pink-text-box">{{ 'section7.title.baseline3'|trans }}</span>
+						</div>
+					</div>
+					<div class="desc">
+						{{ 'section7.baseline1'|trans }}
+						<div class="margin">· {{ 'section7.baseline2'|trans }}<br/>
+							· {{ 'section7.baseline3'|trans }}</div>
+						{{ 'section7.baseline4'|trans }}<br/>
+						{{ 'section7.baseline5'|trans }}<br/>
+						{{ 'section7.baseline6'|trans }}
+
+					</div>
+				</div>
+			</section>
+
+			<section class="sec10">
+				<div class="box">
+					<div class="steps">
+						<div class="step step-leftimg">
+							<div class="left img-part">
+								<img src="{{ asset('build/images/newLandingPage/step1.png') }}"/>
+							</div>
+							<div class="right text-part">
+								<div class="title">{{ 'section8.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section8.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section8.baseline2'|trans }}<br/><br/>
+										<b>🏅 {{ 'section8.bold'|trans }}</b> {{ 'section8.baseline3'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="step step-rightimg">
+							<div class="left text-part">
+								<div class="title">{{ 'section9.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section9.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section9.baseline2'|trans }}<br/><br/>
+										{{ 'section9.baseline3'|trans }}<br/><br/>
+										<b>🏅 {{ 'section9.bold'|trans }}</b> {{ 'section9.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+							<div class="right img-part">
+								<img src="{{ asset('build/images/newLandingPage/step2.png') }}"/>
+							</div>
+						</div>
+
+						<div class="step step-leftimg">
+							<div class="left img-part">
+								<img src="{{ asset('build/images/newLandingPage/step3.png') }}"/>
+							</div>
+							<div class="right text-part">
+								<div class="title">{{ 'section10.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section10.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section10.baseline2'|trans }}<br/><br/>
+										{{ 'section10.baseline3'|trans }}<br/><br/>
+										<b>📈 {{ 'section10.bold'|trans }}</b> : {{ 'section10.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="step step-rightimg">
+							<div class="left text-part">
+								<div class="title">{{ 'section11.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section11.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section11.baseline2'|trans }}<br/><br/>
+										{{ 'section11.baseline3'|trans }}<br/><br/>
+										<b>📈 {{ 'section11.bold'|trans }}</b> {{ 'section11.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+							<div class="right img-part">
+								<img src="{{ asset('build/images/newLandingPage/step4.png') }}"/>
+							</div>
+						</div>
+
+						<div class="step step-leftimg">
+							<div class="left img-part">
+								<img src="{{ asset('build/images/newLandingPage/step5.png') }}"/>
+							</div>
+							<div class="right text-part">
+								<div class="title">{{ 'section12.title'|trans }}</div>
+								<div class="text-box">
+									<div class="sub-title">{{ 'section12.baseline1'|trans }}</div>
+									<div class="desc">
+										{{ 'section12.baseline2'|trans }}<br/><br/>
+										{{ 'section12.baseline3'|trans }}<br/><br/>
+										<b>✅ {{ 'section12.bold'|trans }}</b> {{ 'section12.baseline4'|trans }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="step-revolution">
+						<div class="box">
+							<div class="left">
+								<div class="title">
+									<div class="title-row row1">
+										<span>{{ 'section13.title.part1'|trans }}</span> <span
+											class="pink-text-box">{{ 'section13.title.part2'|trans }}</span><span>{{ 'section13.title.part3'|trans }}</span>
+									</div>
+									<div class="title-row row2">
+										{{ 'section13.title2'|trans }}
+									</div>
+								</div>
+								<div class="desc">
+									{{ 'section13.baseline1'|trans }}
+								</div>
+							</div>
+							<div class="right">
+								<img src="{{ asset('build/images/newLandingPage/step-revolution.png') }}"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="sec11">
+				<div class="box">
+					<div class="black">
+						<div class="menus">
+							<div class="menu">{{ 'section14.baseline1'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline2'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline3'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline4'|trans }}</div>
+							<div class="menu">{{ 'section14.baseline5'|trans }}</div>
+						</div>
+						<div class="without black-pink">
+							<div class="pink-title">
+								{{ 'section14.title1'|trans }}
+							</div>
+							<div class="checkers">
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_x.png') }}"/>
+								</div>
+							</div>
+						</div>
+						<div class="with black-pink">
+							<div class="pink-title">
+								Kodkodkod Studio
+							</div>
+							<div class="checkers">
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+								<div class="checker">
+									<img src="{{ asset('build/images/newLandingPage/sec11_check.png') }}"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+				</div>
+			</section>
+		</div>
+		{#        <section class="sec12"> #}
+		{#            <div class="box"> #}
+		{#                <div class="sec12-title">Un projet ?</div> #}
+		{#                <div class="sec12-sub-title">Pour rentrer en contact avec Kodkodkod, c'est ici</div> #}
+		{#                <div class="sec12-hand">👇</div> #}
+		{#                <div class="sec12-btns"> #}
+		{#                    <button class="pink-btn">{{ 'cta.top'|trans }}</button> #}
+		{#                    appuyez sur &nbsp;<strong>Entrée</strong>&nbsp;↵ #}
+		{#                </div> #}
+		{#                <div class="sec12-desc">🕒 Cela prend 6 minutes</div> #}
+		{#            </div> #}
+		{#        </section> #}
+
+		{#   <section class="sec13">
+                <div class="box">
+                    <div class="sec13-title">A propos<br/>(pas encore écrit)</div>
+                </div>
+            </section> #}
+
+		<section class="sec-faq">
+			<div class="box">
+				<div class="faq-title">{{ 'section15.title1'|trans }}</div>
+				<div class="faq-lists">
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section1.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section1.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section2.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section2.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section3.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section3.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">{{ 'section15.section4.baseline'|trans }}</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section4.desc'|trans }}
+						</div>
+					</div>
+
+					<div class="faq">
+						<div class="question">
+							<div class="question-title">
+								{{ 'section15.section5.baseline'|trans }}
+							</div>
+							<div class="question-img answer-plus">
+								<img src="{{ asset('build/images/newLandingPage/faq_plus.svg') }}"/>
+							</div>
+							<div class="question-img answer-close">
+								<img src="{{ asset('build/images/newLandingPage/faq_close.svg') }}"/>
+							</div>
+						</div>
+						<div class="answer">
+							{{ 'section15.section5.desc'|trans }}
+						</div>
+					</div>
+				</div>
+				<button class="pink-btn">{{ 'cta.top'|trans }}</button>
+			</div>
+		</section>
+
+
+	</div>
+
+
+{% endblock %}

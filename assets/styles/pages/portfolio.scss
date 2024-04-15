@@ -1,0 +1,630 @@
+.portfolio {
+  padding: 50px;
+  @media (max-width: 991px) {
+    padding:20px;
+  }
+  .div {
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    h1 {
+      color: var(--Dark, #15141a);
+      letter-spacing: -2.16px;
+      width: 100%;
+      font: 600 54px/86px Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
+      margin: 0;
+
+      @media (max-width: 500px) {
+        font: 600 45px/86px Space Grotesk, -apple-system, Roboto, Helvetica, sans-serif;
+      }
+    }
+
+  }
+  @media (max-width: 991px) {
+    h1 {
+      .title {
+        max-width: 100%;
+        font-size: 40px;
+        line-height: 53px;
+      }
+    }
+  }
+
+  .div-3 {
+    @media (max-width: 500px) {
+      font-size: 12px;
+      display: grid;
+    }
+    display: flex;
+    margin-top: 48px;
+   // justify-content: space-between;
+    gap: 20px;
+    font-size: 20px;
+    color: var(--Dark, #15141a);
+    font-weight: 600;
+    letter-spacing: -0.6px;
+    line-height: 150%;
+    padding: 0 20px;
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
+
+
+
+  }
+  @media (max-width: 991px) {
+    .div-3 {
+      max-width: 100%;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+  }
+  .filter {
+    font-family: Space Grotesk, sans-serif;
+    justify-content: center;
+    cursor: pointer;
+    &.active{
+      border: 1px solid #e9204f;
+      background-color: #e9204f;
+    }
+
+    /*flex-grow: 1;*/
+    color: var(--White, #fff);
+    white-space: nowrap;
+    padding: 16px 45px;
+  }
+
+  @media (max-width: 991px) {
+    .filter {
+      white-space: initial;
+      //padding: 0 20px;
+    }
+  }
+
+
+  .div-5 {
+    justify-content: space-between;
+    border: 1px solid var(--Dark, #15141a);
+    background-color: var(--White, #fff);
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+    padding: 16px 24px;
+    text-align: center;
+  }
+  @media (max-width: 991px) {
+    .div-5 {
+      white-space: initial;
+      //padding: 0 20px;
+    }
+  }
+  .div-6 {
+    font-family: Space Grotesk, sans-serif;
+    flex-grow: 1;
+  }
+  @media (max-width: 991px) {
+    .div-6 {
+      white-space: initial;
+    }
+  }
+  .img {
+    aspect-ratio: 1;
+    object-fit: auto;
+    object-position: center;
+    width: 24px;
+    margin: auto 0;
+  }
+  .div-7 {
+    border: 1px solid var(--Dark, #15141a);
+    background-color: var(--White, #fff);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 24px;
+  }
+  @media (max-width: 991px) {
+    .div-7 {
+      padding: 0 20px;
+    }
+  }
+  .div-8 {
+    font-family: Space Grotesk, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .div-9 {
+    border: 1px solid var(--Dark, #15141a);
+    background-color: var(--White, #fff);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 16px 24px;
+  }
+  @media (max-width: 991px) {
+    .div-9 {
+      padding: 0 20px;
+    }
+  }
+  .div-10 {
+    font-family: Space Grotesk, sans-serif;
+    flex-grow: 1;
+    flex-basis: auto;
+  }
+  .div-11 {
+    margin-top: 48px;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .div-11 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .projectContainer {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .projectContainer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .column {
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+    //line-height: normal;
+    //width: 50%;
+    margin-left: 0px;
+  }
+  @media (max-width: 991px) {
+    .column {
+      width: 100%;
+    }
+  }
+  .item {
+    flex: 1 1 50%; /* Grow to fill, Shrink to fit, Basis at 50% of the parent's width */
+    /* Adjust max-width if necessary, to account for margins/padding */
+    max-width: calc(50% - 10px); /* Example, assuming you want a 10px gap between items */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    /* Add padding/margin as necessary */
+    margin: 5px; /* Example margin */
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+    @media (max-width: 991px) {
+      max-width: 100%
+    }
+  }
+  @media (max-width: 991px) {
+    .div-13 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .imgProject {
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+
+    @media (max-width: 991px) {
+      height: inherit;
+    }
+
+  }
+
+  @media (max-width: 991px) {
+    .img-2 {
+      max-width: 100%;
+    }
+  }
+  .div-14 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-14 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-15 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  .div-16 {
+    letter-spacing: -0.48px;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-17 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-17 {
+      max-width: 100%;
+    }
+  }
+
+  .div-18 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+  }
+  @media (max-width: 991px) {
+    .div-18 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .img-3 {
+    aspect-ratio: 1.27;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img-3 {
+      max-width: 100%;
+    }
+  }
+  .div-19 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-19 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-20 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  .div-21 {
+    letter-spacing: -0.48px;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-22 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-22 {
+      max-width: 100%;
+    }
+  }
+  .div-23 {
+    margin-top: 60px;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .div-23 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .div-24 {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .div-24 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .div-25 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+  }
+  @media (max-width: 991px) {
+    .div-25 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .img-4 {
+    aspect-ratio: 1.27;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img-4 {
+      max-width: 100%;
+    }
+  }
+  .div-26 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-26 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-27 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-27 {
+      max-width: 100%;
+    }
+  }
+  .div-28 {
+    letter-spacing: -0.48px;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-29 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-29 {
+      max-width: 100%;
+    }
+  }
+  .column-3 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .column-3 {
+      width: 100%;
+    }
+  }
+  .div-30 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+  }
+  @media (max-width: 991px) {
+    .div-30 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .img-5 {
+    aspect-ratio: 1.27;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img-5 {
+      max-width: 100%;
+    }
+  }
+  .div-31 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-31 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-32 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  .div-33 {
+    letter-spacing: -0.48px;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-34 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-34 {
+      max-width: 100%;
+    }
+  }
+  .div-35 {
+    margin-top: 60px;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .div-35 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .div-36 {
+    gap: 20px;
+    display: flex;
+  }
+  @media (max-width: 991px) {
+    .div-36 {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  }
+  .div-37 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+  }
+  @media (max-width: 991px) {
+    .div-37 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .img-6 {
+    aspect-ratio: 1.27;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img-6 {
+      max-width: 100%;
+    }
+  }
+  .div-38 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-38 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-39 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  .div-40 {
+    letter-spacing: -0.48px;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-41 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-41 {
+      max-width: 100%;
+    }
+  }
+  .column-4 {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 20px;
+  }
+  @media (max-width: 991px) {
+    .column-4 {
+      width: 100%;
+    }
+  }
+  .div-42 {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color: var(--Dark, #15141a);
+    padding: 0 20px;
+  }
+  @media (max-width: 991px) {
+    .div-42 {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  }
+  .img-7 {
+    aspect-ratio: 1.27;
+    object-fit: auto;
+    object-position: center;
+    width: 100%;
+  }
+  @media (max-width: 991px) {
+    .img-7 {
+      max-width: 100%;
+    }
+  }
+  .div-43 {
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+    line-height: 150%;
+  }
+  @media (max-width: 991px) {
+    .div-43 {
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  .div-44 {
+    letter-spacing: -0.96px;
+    flex-grow: 1;
+    flex-basis: auto;
+    font: 600 32px Space Grotesk, sans-serif;
+  }
+  .div-45 {
+    letter-spacing: -0.48px;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: auto 0;
+    font: 500 24px Space Grotesk, sans-serif;
+  }
+  .div-46 {
+    letter-spacing: -0.4px;
+    margin-top: 16px;
+    font: 400 20px/30px Space Grotesk, -apple-system, Roboto, Helvetica,
+    sans-serif;
+  }
+  @media (max-width: 991px) {
+    .div-46 {
+      max-width: 100%;
+    }
+  }
+}

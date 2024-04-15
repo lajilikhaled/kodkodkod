@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}
+	{{ "head.portfolio.meta" | trans }}
+{% endblock %}
+
+{% block title %}
+	{{ "head.portfolio.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('portfolio') }}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{{ encore_entry_script_tags('portfolio') }}
+{% endblock %}
+
+{% block body %}
+
+	<div class="portfolio">
+
+		<div class="div">
+			<div class="title">
+				<h1>{{ 'portflio.title'|trans }}</h1>
+			</div>
+			<div class="div-3">
+				<button class="filter cat-all active">{{ 'See All Projects'|trans }}</button>
+
+				<select class="div-5 filter-select" name="category-filter" id="category-filter">
+					<option disabled selected>{{ 'Web / Application mobile'|trans }}</option>
+					<option value="PHP">PHP</option>
+					<option value="React">React</option>
+					<option value="Angular">Angular</option>
+					<option value="Vue_js">Vue.js</option>
+					<option value="JAVA">JAVA</option>
+					<option value="Javascript">Javascript</option>
+{#					<option value="Express_js">Express.js</option>#}
+					<option value="Next_js">Next.js</option>
+					<option value="Nest_js">Nest.js</option>
+					<option value="Nuxt_js">Nuxt.js</option>
+					<option value="Node">Node</option>
+					<option value="Ionic">Ionic</option>
+					<option value="Flutter">Flutter</option>
+					<option value="React_Native">React Native</option>
+					<option value="Kotlin">Kotlin</option>
+					<option value="Android">Android</option>
+					<option value="IOS">IOS</option>
+{#					<option value="Swift">Swift</option>#}
+					<option value="Autres">Autres</option>
+				</select>
+
+				<select class="div-5 filter-select" name="category-filter" id="category-filter">
+					<option disabled selected>{{ 'E-commerce / Marketplace'|trans }}</option>
+					<option value="Shopify">Shopify</option>
+					<option value="Cafe24">Cafe24</option>
+					<option value="Salesforce">Salesforce</option>
+					<option value="Symfony">Symfony</option>
+					<option value="Magento">Magento</option>
+{#					<option value="BigCommerce">BigCommerce</option>#}
+{#					<option value="WooCommerce">WooCommerce</option>#}
+					<option value="VueStoreFront">VueStoreFront</option>
+				</select>
+				<select class="div-5 filter-select" name="category-filter" id="category-filter">
+					<option disabled selected>{{ 'Blockchain / NFT / Metaverse'|trans }}</option>
+					<option value="Blockchain">Blockchain</option>
+					<option value="NFT_Metaverse">NFT Metaverse</option>
+					<option value="Ethereum">Ethereum</option>
+					<option value="Polygon">Polygon</option>
+				</select>
+			</div>
+			<div class="div-11">
+				<div class="projectContainer">
+					<div class="column">
+						{% for project in projects %}
+							<div class="item project {% for tech in project.technology %} {{ tech|replace({' ': '_', '.': '_'}) }} {% endfor %} {% for ecommerce in project.ecommerce %} {{ ecommerce|replace({' ': '_', '.': '_'}) }} {% endfor %} {% for blockchain in project.blockchain %} {{ blockchain|replace({' ': '_', '.': '_'}) }} {% endfor %}">
+								{% if project.slug is not empty %}
+									<a href="{{ path('app_portfolio_detail',{slug: project.slug}) }}" target="_blank">
+								{% endif %}
+									<img loading="lazy" src="{{ asset('images/projects/' ~project.image) }}" class="imgProject" width="150"/>
+								{% if project.slug is not empty %}
+									</a>
+								{% endif %}
+								<div class="div-14">
+									<div class="div-15">{{ project.title }}</div>
+									<div class="div-16">{{ project.category.name }}</div>
+								</div>
+								<div class="div-17">
+									{% if app.request.locale == 'ko' %}
+										{{ project.descriptionKo }}
+									{% elseif app.request.locale == 'fr' %}
+										{{ project.description }}
+									{% else %}
+										{{ project.descriptionEn }}
+									{% endif %}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		{# ----------------------------------------------------------------- #}
+	{# Common sections #}
+
+		{# ----------------------------------------------------------------- #}
+	</div>
+{% endblock %}
