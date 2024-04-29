@@ -13,9 +13,10 @@ class ServiceController extends AbstractController
      /**
 	 * @Route("/{_locale<%app.supported_locales%>}/service", name="app_services",  options={"sitemap" = true}, priority=1)
 	 */
-    public function index(): Response
+    public function index(ClientRepository $clientRepository): Response
     {
         return $this->render('service/index.html.twig', [
+            'clients' => $clientRepository->findAll()
         ]);
     }
 

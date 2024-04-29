@@ -104,47 +104,50 @@
         </a>
     </div>
 
-    <div class="section-logo">
-        <div class="text">
-            {{ 'People who trust us'|trans }}
+    <div class="section-logo row">
+        <div class="col-sm-2 d-flex flex-row justify-content-evenly">
+            <div class="logos-text mt-4">
+                {{ 'People who trust us'|trans }}
+            </div>
         </div>
         {% if app.request.locale == 'ko' %}
-        <div class="logo">
+            <div class="col-sm-10 container pt-4 pb-3 px-3">
+                <div class="logo-carousel row justify-content-between align-items-center">
+                    <div class="carousel-item item-log active d-flex justify-content-center align-items-center">
+                        <img style="width: 80px !important" src="{{ asset('build/images/pages/logos/cesco.png') }}" class="img-fluid">
+                    </div>
+                    <div class="carousel-item item-log d-flex justify-content-center align-items-center">
+                        <img style="width: 60px !important" src="{{ asset('build/images/pages/logos/veja.svg') }}" class="img-fluid">
+                    </div>
+                    <div class="carousel-item item-log d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/logo3.png') }}" class="img-fluid">
+                    </div>
+                    <div class="carousel-item item-log d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/frank-burger-logo.png') }}" class="img-fluid">
+                    </div>
+                </div>
+            </div>
 
-            <div>
-                <img style="width: 100px" src="{{ asset('build/images/pages/logos/cesco.png') }}">
-            </div>
-            <div>
-                <img style="width:60px" src="{{ asset('build/images/pages/logos/veja.svg') }}">
-            </div>
-            <div>
-                <img src="{{ asset('build/images/pages/logos/logo3.png') }}">
-            </div>
-            <div>
-                <img src="{{ asset('build/images/pages/logos/frankburger-burger.png') }}" style="background: white">
-            </div>
-        </div>
         {% else %}
-            <div class="logo">
-
-                <div>
-                    <img src="{{ asset('build/images/pages/logos/logo1.svg') }}">
-                </div>
-                <div>
-                    <img src="{{ asset('build/images/pages/logos/logo2.png') }}">
-                </div>
-                <div>
-                    <img src="{{ asset('build/images/pages/logos/logo3.png') }}">
-                </div>
-                <div>
-                    <img src="{{ asset('build/images/pages/logos/logo4.png') }}">
+            <div class="col-sm-10 container pt-4 px-3">
+                <div class="logo-carousel row justify-content-between align-items-center">
+                    <div class="carousel-item item-log px-2 d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/logo1.svg') }}" class="img-fluid" style="max-height: 100px; width: 170px!important;">
+                    </div>
+                    <div class="carousel-item item-log px-2 d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/logo2.png') }}" class="img-fluid" style="max-height: 100px; width: 140px!important;">
+                    </div>
+                    <div class="carousel-item item-log px-2 d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/logo3.png') }}" class="img-fluid" style="max-height: 100px;">
+                    </div>
+                    <div class="carousel-item item-log px-2 d-flex justify-content-center align-items-center">
+                        <img src="{{ asset('build/images/pages/logos/logo4.png') }}" class="img-fluid" style="max-height: 100px; width: 120px!important;">
+                    </div>
                 </div>
             </div>
-
         {% endif %}
 
     </div>
-
 {#    <img src="{{ asset('build/images/pages/home/mask.png') }}" class="mask">#}
     {#    {% endcache %}#}
 

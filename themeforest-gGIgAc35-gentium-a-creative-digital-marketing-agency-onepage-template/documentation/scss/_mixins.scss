@@ -1,0 +1,21 @@
+// Button
+@mixin button($bgClr, $txtClr) {
+    background-color: $bgClr;
+    border-color: $bgClr;
+    color: $txtClr;
+    &:hover {
+        background-color: lighten($bgClr, 6);
+        border-color: lighten($bgClr, 6);
+        color: $txtClr;
+    }
+    &:focus {
+        background-color: darken($bgClr, 2);
+        border-color: darken($bgClr, 2);
+        color: $txtClr;
+    }
+}
+
+// Transitions
+@mixin transitions($num) {
+    transition: all #{$num}s ease-in-out;
+}

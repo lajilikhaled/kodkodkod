@@ -56,7 +56,7 @@
 
     <!--################# BODY ####################-->
 
-    <body class="{% if app.request.attributes.get('_route') =='home' %}background{% elseif app.request.attributes.get('_route') =='app_services' %}services{% endif %}" {%if app.request.locale == 'ko'%} style="word-break: keep-all;" {% endif %}>
+<body class="{% if app.request.attributes.get('_route') == 'home' %}background{% elseif app.request.attributes.get('_route') == 'app_services' %}services{% elseif app.request.attributes.get('_route') == 'app_training_and_workshops' %}training{% elseif app.request.attributes.get('_route') == 'app_consulting_and_coaching' %}coaching{% endif %}" {% if app.request.locale == 'ko' %}style="word-break: keep-all;" {% endif %}>
 
 
 	{%if app.request.locale == 'ko'%}
@@ -93,7 +93,7 @@
 
     {% if app.request.attributes.get('_route') =='home'  %}
         {% include 'homeNew/navbar.html.twig' %}
-    {% elseif app.request.attributes.get('_route') =='app_services'  %}
+    {% elseif app.request.attributes.get('_route') in ['app_services', 'app_training_and_workshops', 'app_consulting_and_coaching'] %}
         {% include 'homeNew/navbar.html.twig' %}
     {% else %}
         {% include 'homeNew/navbarWhite.html.twig' %}

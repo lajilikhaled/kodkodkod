@@ -2,35 +2,50 @@
     <div class="row justify-content-between py-5">
         <div class="col-lg-7">
             <h4 class="space-grotesk fw-medium text-primary mb-2 mt-3">{{ 'training.works.title1'| trans }}</h4>
-            <h1 class="space-grotesk display-4 fw-medium mb-5">{{ 'training.works.title2'| trans }}</h1>
+            <h1 class="space-grotesk display-4 fw-medium mb-5">{{ 'training.works.title2'| trans }} <br> {{ 'training.works.title3'| trans }}</h1>
             <div class="works-carousel">
                 <div class="carousel-item">
-                    <h3 class="space-grotesk fw-medium mb-4">{{ 'elevateYourBusiness.consulting.title'|trans }}
+                    <h3 class="space-grotesk fw-medium mb-4">{{ 'training.works.t1'|trans }}
                     </h3>
-                    <p class="text-secondary"{{ 'training.works.p1'| trans }}</p>
+                    <p class="text-secondary">{{ 'training.works.p1'| trans }}</p>
                     {% for i in 1..4 %}
                         <div class="d-flex justify-content-start align-items-center mb-3">
                             <i class="bi bi-check text-gradiant fs-2"></i>
-                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('training.works.points1.point' ~ i)|trans }}</p>
                         </div>
                     {% endfor %}
                     <a class="h4 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                        {{ 'training.works.link'| trans }}
+                        {{ 'training.hero.btn'| trans }}
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe697f339d3ce4c0930ff523b955cd461802f5c7db8032f509332e1cd4587b75?" alt="arrow" class="ms-2 d-inline" width="25"/>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <h3 class="space-grotesk fw-medium mb-4">{{ 'elevateYourBusiness.consulting.title'|trans }}
+                    <h3 class="space-grotesk fw-medium mb-4">{{ 'training.works.t2'|trans }}
                     </h3>
                     <p class="text-secondary">{{ 'training.works.p2'| trans }}</p>
                     {% for i in 1..4 %}
                         <div class="d-flex justify-content-start align-items-center mb-3">
                             <i class="bi bi-check text-gradiant fs-2"></i>
-                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('elevateYourBusiness.consulting.points.point' ~ i)|trans }}</p>
+                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('training.works.points2.point' ~ i)|trans }}</p>
                         </div>
                     {% endfor %}
                     <a class="h4 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
-                        {{ 'training.works.link'| trans }}
+                        {{ 'training.hero.btn'| trans }}
+                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe697f339d3ce4c0930ff523b955cd461802f5c7db8032f509332e1cd4587b75?" alt="arrow" class="ms-2 d-inline" width="25"/>
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <h3 class="space-grotesk fw-medium mb-4">{{ 'training.works.t3'|trans }}
+                    </h3>
+                    <p class="text-secondary">{{ 'training.works.p3'| trans }}</p>
+                    {% for i in 1..3 %}
+                        <div class="d-flex justify-content-start align-items-center mb-3">
+                            <i class="bi bi-check text-gradiant fs-2"></i>
+                            <p class="fs-5 text-secondary mt-2 ms-3">{{ ('training.works.points3.point' ~ i)|trans }}</p>
+                        </div>
+                    {% endfor %}
+                    <a class="h4 space-grotesk text-gradiant text-decoration-none mt-5" href="#">
+                        {{ 'training.hero.btn'| trans }}
                         <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/fe697f339d3ce4c0930ff523b955cd461802f5c7db8032f509332e1cd4587b75?" alt="arrow" class="ms-2 d-inline" width="25"/>
                     </a>
                 </div>

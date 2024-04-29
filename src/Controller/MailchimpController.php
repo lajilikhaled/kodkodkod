@@ -21,7 +21,7 @@ class MailchimpController extends AbstractController
 
         $mailchimp = new ApiClient();
         $mailchimp->setConfig([
-            'apiKey' => '332480d263b5d177e1cf228633d15fff-us9',
+            'apiKey' => 'ac9743981323b5ea79a589aa5260f97c-us9',
             'server' => 'us9',
         ]);
 

@@ -1,0 +1,16 @@
+.site-sidebar {
+    border-right: 1px solid #ececec;
+    > div {
+        padding-right: 30px;
+        .uk-nav-default>li {
+            >a {
+                margin: 5px 0;
+            }
+            &.uk-active>a {
+                color: #333;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    }
+}

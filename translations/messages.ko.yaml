@@ -1290,8 +1290,8 @@ coaching:
             t4: "weeks"
             p: "Kodkokod offers comprehensive AI virtual assistant integration, tailored to your business. Our experts fine-tune GPT models to match your brand and operational needs, seamlessly integrating the assistant into your infrastructure."
     ment:
-        t1: "Where have we been"
-        t2: "mentioned?"
+        t1: "우리는 어디에서"
+        t2: "언급되었나요?"
 
 map :
     title: "파리에서 서울까지, 우리는 어디에나 있습니다"

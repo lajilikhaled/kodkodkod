@@ -1,9 +1,23 @@
 <section class="container pt-5 space-grotesk">
 	<div class="row justify-content-start py-5">
 		<div class="col-lg-6 space-grotesk">
-			<h4 class="fw-bolder ">{{ 'projet.offer.title' |trans }}</h4>
-			<p class="text-decoration-none text-justify" href="#">
-				{{ 'projet.offer.text' |trans }}
+			<h4 class="fw-bolder ">
+				{% if app.request.locale == 'ko' %}
+					{{ project.title6Ko }}
+				{% elseif app.request.locale == 'fr' %}
+					{{ project.title6Fr }}
+				{% else %}
+					{{ project.title6En }}
+				{% endif %}
+			</h4>
+			<p class="text-decoration-none text-justify">
+				{% if app.request.locale == 'ko' %}
+					{{ project.text6Ko }}
+				{% elseif app.request.locale == 'fr' %}
+					{{ project.text6Fr }}
+				{% else %}
+					{{ project.text6En }}
+				{% endif %}
 			</p>
 		</div>
 	</div>

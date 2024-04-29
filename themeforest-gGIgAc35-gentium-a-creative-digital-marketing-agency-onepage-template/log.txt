@@ -1,0 +1,54 @@
+
+==========================
+Gentium Updates Log:
+==========================
+
+* v2.2.0 — 04 December, 2018
+--
+
+- Added: New Homepage
+- Added: New service style section
+- Added: New works style section (Grid 3 Cols)
+- Added: New blog style section
+- Added: Components page
+- Added: Component: Carousel.
+- Added: Component: Slideshow.
+- Added: Component: Tabs & Switchers.
+- Added: Component: Alerts.
+- Added: Component: Tooltip.
+- Added: Component: Grid + Filter.
+- Added: Icons cheat sheet.
+- Improved: Some responsive issues
+- Fixed: Some minor bugs
+
+==========================
+
+* v2.1.0 — 27 November, 2018
+--
+
+- Added: Sendmail function to send mails via contact form.
+- Added: Validate jQuery plugin for contact form.
+
+==========================
+
+* v2.0.0 — 20 November, 2018
+--
+
+- Added: New Homepage
+- Added: New service style section
+- Added: New works style section (Masonry + Filter)
+- Added: New about style section
+- Added: New clients style section
+- Added: New testimonials style section
+- Added: Favicon and theme color meta.
+- Improved: Some responsive issues
+- Fixed: Favicon not found
+- Fixed: Some minor bugs
+
+==========================
+
+
+* v1.0.0 — 13 November, 2018
+--
+
+Initial Release

@@ -60,21 +60,87 @@ body {
   &.services{
     background-image: url('../images/pages/service/background.png');
     background-repeat: no-repeat;
-    background-position: center -100px;
+    background-position: center 51%;
+    background-size: cover;
+    position: relative;
+    height: 700px;
+
+    @media (max-width: 1360px) {
+      &.services {
+        height: 950px;
+      }
+    }
+  
+    @media (max-width: 991px) {
+      &.services {
+        background-position: 0;
+        height: 700px
+      }
+    }
+  
+    @media (max-width: 768px) {
+      &.services {
+        background-position: 0;
+        height: 700px
+      }
+    }
+  }
+
+  &.coaching{
+    background-image: url('../images/backgrounds/background-coaching.png');
+    background-repeat: no-repeat;
+    background-position: center 100%;
     background-size: cover;
     position: relative;
     height: 800px;
 
     @media (max-width: 1360px) {
-      height: 950px;
+      &.coaching {
+        height: 950px;
+      }
     }
-
+  
     @media (max-width: 991px) {
+      &.coaching {
+        background-position: 0;
+        height: 800px
+      }
+    }
+  
+    @media (max-width: 768px) {
+      &.coaching {
+        background-position: 0;
+        height: 700px
+      }
+    }
+  }
+  
+  &.training{
+    background-image: url('../images/backgrounds/training-and-workshops.jpg');
+    background-repeat: no-repeat;
+    background-position: center 75%;
+    background-size: cover;
+    position: relative;
+    height: 700px;
+  }
+  @media (max-width: 1360px) {
+    &.training {
+      height: 850px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &.training {
       background-position: 0;
       height: 800px
     }
+  }
 
-
+  @media (max-width: 768px) {
+    &.training {
+      background-position: 0;
+      height: 700px
+    }
   }
 }
 

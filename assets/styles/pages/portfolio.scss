@@ -3,6 +3,12 @@
   @media (max-width: 991px) {
     padding:20px;
   }
+  @media (max-width: 535px) {
+    .filter-select {
+
+      width:100%;
+    }
+  }
   .div {
     display: flex;
     flex-direction: column;

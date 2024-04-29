@@ -1098,6 +1098,15 @@ class HomeController extends AbstractController
     }
 
 	/**
+	 * @Route("/{_locale<%app.supported_locales%>}/newsletter", name="app_newsletter", priority=10)
+	 */
+	public function newletter()
+	{
+		return $this->render('home/empty.html.twig', [
+		]);
+	}
+
+	/**
      * @Route("/{_locale<%app.supported_locales%>}/contact", name="contact",  options={"sitemap" = true}, priority=1)
      */
     public function contact(Request $request)

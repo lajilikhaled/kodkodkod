@@ -1,0 +1,75 @@
+.site-header {
+    background: #1e87f0;
+    position: relative;
+    display: block;
+    .header-inner {
+        height: 80px;
+
+        // Logo
+        .site-logo {
+            font-size: 16pt;
+            font-weight: 700;
+            margin: 0;
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: 1rem;
+                margin-left: 1rem;
+                border-left: 1px rgba(233, 236, 239, 0.5) solid;
+                color: #fff;
+            }
+        }
+
+        // Primary Navigation
+        .primary-menu {
+            font-size: 15px;
+            font-weight: 400;
+            letter-spacing: .02rem;
+
+            >.menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                >li {
+                    display: inline-block;
+                    margin-left: 2rem;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        // Toggle Menu
+        .mobile-menu {
+            display: flex;
+            position: relative;
+
+            .trigger {
+                display: flex;
+                align-items: center;
+                height: 30px;
+                margin-left: 2rem;
+                cursor: pointer;
+
+                div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+
+                    span {
+                        width: 26px;
+                        display: block;
+                        height: 1px;
+                        background-color: #fff;
+                        margin: 3px 0;
+                        @include transitions(.2);
+                    }
+                }
+            }
+        }
+    }
+}

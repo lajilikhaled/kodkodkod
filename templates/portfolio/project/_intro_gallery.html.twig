@@ -15,11 +15,27 @@
 			</div>
 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">{{ 'projet.info_gallery.bntPrev' | trans}}</span>
+				<span class="visually-hidden">
+					{% if app.request.locale == 'ko' %}
+						{{ project.title5Ko }}
+					{% elseif app.request.locale == 'fr' %}
+						{{ project.title5Fr }}
+					{% else %}
+						{{ project.title5En }}
+					{% endif %}
+				</span>
 			</button>
 			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">{{ 'projet.info_gallery.btnNext' | trans}}</span>
+				<span class="visually-hidden">
+					{% if app.request.locale == 'ko' %}
+						{{ project.text5Ko }}
+					{% elseif app.request.locale == 'fr' %}
+						{{ project.text5Fr }}
+					{% else %}
+						{{ project.text5En }}
+					{% endif %}
+				</span>
 			</button>
 		</div>
 	</div>

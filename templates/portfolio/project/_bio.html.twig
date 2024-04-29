@@ -3,7 +3,13 @@
 		<div class="col-lg-6 space-grotesk">
 			<h1 class="display-1 mb-5 fw-bolder ">{{project.title}}</h1>
 			<span class="text-decoration-none mt-5" href="#">
-				{{project.description}}
+				{% if app.request.locale == 'ko' %}
+					{{ project.descriptionKo }}
+				{% elseif app.request.locale == 'fr' %}
+					{{ project.description }}
+				{% else %}
+					{{ project.descriptionEn }}
+				{% endif %}
 			</span>
 		</div>
 	</div>

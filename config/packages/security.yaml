@@ -11,7 +11,7 @@ security:
         backend_users:
             memory:
                 users:
-                    kodkodkod: { password: '$2a$12$ZJMCRorW6DF7ojUdTcem9uNWNdeEwYsoHBYn29kWnjnAZPg1bFW4a', roles: [ 'ROLE_ADMIN' ] }
+                    yosra: { password: '$2y$13$KcfxpQuAtmvqr33q/IgCSuBB4fRNvYXKt0Fu1KEhK5SO51VLqxRvC', roles: [ 'ROLE_ADMIN' ] }
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/

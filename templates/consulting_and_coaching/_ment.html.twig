@@ -2,30 +2,11 @@
     <div class="container border-bottom py-5">
                 <h1 class="display-5 space-grotesk text-center fw-medium pb-5">{{ 'coaching.ment.t1'| trans }}  <br> {{ 'coaching.ment.t2'| trans }}</h1>
         <div class="row justify-content-between align-items-center my-3">
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
-            <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
-                <img src="{{ asset('build/images/clients/logo2.png') }}" alt="logo" width="120" class="img-fluid">
-            </div>
+            {% for client in clients %}
+                <div class="col-lg-3 d-flex align-items-center justify-content-center border py-5">
+                    <img src="/images/clients/{{ client.image}}" alt="{{ client.name }}" width="120" class="img-fluid">
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -82,7 +82,7 @@ $(document).ready(function() {
     $('#contactForm').submit(function(event) {
         event.preventDefault();
         var form = $(this);
-        
+
         var isValid = true;
         form.find('input, textarea').each(function() {
             if (!$(this).val()) {
@@ -92,11 +92,11 @@ $(document).ready(function() {
                 $(this).removeClass('is-invalid');
             }
         });
-        
+
         if (isValid) {
             var url = form.data('url');
             var formData = form.serialize();
-            
+
             $.ajax({
                 url: url,
                 method: 'POST',
@@ -128,7 +128,7 @@ $(document).ready(function() {
             });
         }
     });
-    
+
     $('#contactForm input, #contactForm textarea').on('input', function() {
         var inputId = $(this).attr('id');
         var inputValue = $(this).val().trim();
@@ -188,6 +188,29 @@ $(document).ready(function() {
 				breakpoint: 576,
 				settings: {
 					slidesToShow: 1
+				}
+			}
+		]
+	});
+    $('.logo-carousel').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        arrows: false,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 576,
+				settings: {
+					slidesToShow: 4
 				}
 			}
 		]

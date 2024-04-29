@@ -1564,28 +1564,28 @@ chatbot.option3: "Je souhaite vous rejoindre!"
 "People who trust us": "Ils nous font confiance"
 services:
     consulting:
-        title: "Audit & Conseil"
-        description: "Nous vous accompagnons à l’intégration et au déploiement de l’IA dans votre entreprise et au sein de vos équipes, pas à pas."
+        title: "Intégration & API"
+        description: "Nous pouvons intégrer Chat GPT ou tout autre IA dans l’ensemble de vos outils métiers. Nous développons et gérons les API."
         button: "Réserver une consultation"
 
     aiWorkshops:
-        title: "Atelier & Formation"
-        description: "Nous formons vos équipes lors d’ateliers, à comprendre les enjeux liés à l’usage de l’IA ainsi qu’à l’utilisation elle-même de l’IA, dans leur quotidien au travail."
+        title: "Développement de LLM"
+        description: "Nous développons vos LLM en propre. De la création de l’algorithme, en passant par la gestion des jeux de données et l’apprentissage de l’IA. Nous gérons tout."
         button: "Réserver une consultation"
 
     llm:
-        title: "Développement LLM"
-        description: "Nous avons les compétences et développeurs IA pour développer vos LLM sur-mesure. Un besoin ? Nous pouvons le réaliser."
+        title: "Création de Chatbots"
+        description: "Nous développons votre propre chatbot adapté à vos propres problématiques. Que ce soit pour votre SAV, pour vos ressources humaines ou tout autre usage."
         button: "Réserver une consultation"
 
     aiDevelopers:
-        title: "Développeurs IA"
-        description: "Nous pouvons vous mettre à disposition un développeur IA pour vous accompagner au quotidien dans vos développements."
+        title: "Intelligence artificielle prédictive "
+        description: "Grâce à nos ingénieurs IA vous pouvez obtenir des prédictions en intégrant des données externes et internes, sur les cas d’usage qui répondent à vos besoins."
         button: "Réserver une consultation"
 
     integrations:
-        title: "Intégration et API "
-        description: "Nous nous occupons de marier vos outils métiers actuels (CRM, ERP, Service clients…) avec des outils IA existants ou développés sur-mesure."
+        title: "Intelligence artificielle sur-mesure"
+        description: "Quelle que soit votre demande, nous l’étudierons et vous accompagnerons dans la création de votre IA"
         button: "Réserver une consultation"
 
 elevateYourBusiness:
@@ -1685,52 +1685,33 @@ See All Projects: "Voir tout les projets"
 Subscription successful!: "Merci pour votre inscription"
 Subscription failed. Please try again.: "L'inscription a échoué. Veuillez réessayer."
 service:
-    title: "Services"
+    title: "DEVELOPPEMENT IA"
+    title2: "Nos services"
     clients:
         title: "We are proud to support them"
     hero:
-        text1: "Unlock the Power of AI with Our"
-        text2: "Development"
-        text3: "Services"
-        paragraph: "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize
-                    the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique
-                    needs."
+        text1: "Débloquez le pouvoir de l’IA avec nos services de"
+        text2: "développement"
+        paragraph: "Notre équipe de développeurs et ingénieurs IA vous accompagne dans la création de LLM et l’intégration de l’IA dans vos outils métiers. "
     indus:
-        title1 : "INDUSTRIES"
-        title2 :
-            text1: "Industry-Specific"
-            text2: Solutions
-        textBtn: "Manufacturing"
-        collapseOne :
-            item: "Procurement / Logistics"
-            text1: "This is the first item's accordion body."
-            text2: "It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the"
-            text3: "accordion-body"
-            text4: "though the transition does limit overflow."
-        collapseTwo:
-            item: "Procurement / Logistics"
-            text1: "Corps de l'accordéon du deuxième élément."
-            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
-            text3: "corps d'accordéon"
-            text4: "bien que la transition limite le débordement."
-        collapseThree:
-            item: "Procurement / Logistics"
-            text1: "Corps de l'accordéon du troisième élément."
-            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
-            text3: "corps d'accordéon"
-            text4: "bien que la transition limite le débordement."
-        collapseFour:
-            item: "Procurement / Logistics"
-            text1: "Corps de l'accordéon du quatrième élément."
-            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
-            text3: "corps d'accordéon"
-            text4: "bien que la transition limite le débordement."
-        collapseFive:
-            item: "Procurement / Logistics"
-            text1: "Corps de l'accordéon du cinquième élément."
-            text2: "Il est masqué par défaut, jusqu'à ce que le plugin de collapse ajoute les classes appropriées que nous utilisons pour styliser chaque élément. Ces classes contrôlent l'apparence générale, ainsi que l'affichage et le masquage via des transitions CSS. Vous pouvez modifier tout cela avec du CSS personnalisé ou en remplaçant nos variables par défaut. Il convient également de noter que pratiquement n'importe quel HTML peut être placé à l'intérieur de"
-            text3: "corps d'accordéon"
-            text4: "bien que la transition limite le débordement."
+      paragraph: "L'IA est un domaine scientifique qui utilise des techniques mathématiques avancées comme le machine learning et le deep learning pour réaliser des tâches complexes, souvent mieux qu'un humain (souvent quand il s’agit de tâches répétitives ou minutieuses). À la différence des logiciels classiques, les systèmes d'IA apprennent de manière autonome à partir d'exemples et peuvent s'ajuster pour traiter et analyser de nouvelles données efficacement. L’IA est donc l’avenir de beaucoup de secteurs d'activités, métiers et process qu’elle viendra augmenter et non remplacer."
+      title: "Comment Kodkodkod intègre l’intelligence artificielle au sein de votre entreprise ?"
+      collapseOne:
+        item: "Etude de la problématique et traitement des données"
+        text: "Avant d'implémenter des solutions d’IA, il est nécessaire d'analyser vos données pour évaluer la viabilité du projet numérique et les opportunités offertes par l'IA. La phase suivante consistera à identifier les solutions disponibles sur le marché, qu'elles soient open source ou sous licence, pour atteindre vos objectifs. "
+      collapseTwo:
+        item: "Création des jeux de données"
+        text: "Ensuite, il sera essentiel de traiter les données en les harmonisant et en les étiquetant, afin de constituer une base solide pour un apprentissage optimal de l'intelligence artificielle."
+      collapseThree:
+        item: "Développement de la solution IA adaptée"
+        text: "Nos ingénieurs IA développent des modèles pour une variété de domaines, incluant le machine learning et l'apprentissage profond, avec des applications en prévision, segmentation, et plus. Ces modèles trouvent leur utilité dans plusieurs secteurs comme l'industrie, la santé, et le commerce. Après avoir présenté notre preuve de concept (POC) et déterminé comment évaluer ROI, Kodkodkod procède à l'intégration des algorithmes d'IA dans les systèmes d'information ou infrastructures cloud."
+      collapseFour:
+        item: "Suivi du bon déroulement de l’apprentissage de l’IA"
+        text: "L’IA étant en perpétuel cycle d’amélioration, nous suivons avec vous les résultats obtenus et ajustons en fonction."
+      collapseFive:
+        item: "Maintenance après-projet"
+        text: "Nous vous accompagnons même après la livraison finale du projet. Nous sommes pour les collaborations long-terme et engagées c’est pourquoi nous sommes à vos côtés plusieurs semaines/mois après la validation de l’IA."
+
     section:
         title1: "Integration into Your Business"
         title2: "At Kodkokod, we understand the importance of delivering tangible results. Instead of making lofty promises, we focus on what we do best: producing top-quality code that empowers your business to succeed."
@@ -1752,10 +1733,10 @@ service:
             title: "Applications d'IA"
             description: "Améliorez l'efficacité des projets et la prise de décision avec une gestion de projet intelligente."
     team:
-        title: "Meet our Amazing team enriched with Talent"
-        text1 : "We have 4 consultatnts -AI project managers"
-        text2 : "We have 6 experienced -AI expert Ai developers"
-        text3 : "We have 1 lead AI researcher"
+        title: "Notre équipe prête à vous accompagner"
+        text1 : "Consultants et formateurs IA"
+        text2 : "Développeurs IA"
+        text3 : "Directeur technique IA"
 
 projet:
     challenge:
@@ -1789,10 +1770,12 @@ projet:
         text: "Uniting all of Papers offerings under a seamless, patient-centric umbrella brand for an awesome user experience."
 
 training:
+    title: "FORMATION"
     hero :
-        title1 : "Unlock the Potential of AI in Your"
-        title2: "Processes"
-        p1:  "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique needs."
+        title1 : "FORMEZ VOS COLLABORATEURS"
+        title2: " A L'IA "
+        btn: "Contactez-nous"
+        p1:  "Nous vous accompagnons pas à pas à l'intégration de l'IA dans vos process métier pour gagner immédiatement en productivité."
     benifits :
         title: "Who can get benefits?"
         carrosel :
@@ -1805,15 +1788,71 @@ training:
             title4: "Sales Teams"
             p4: "Utilize AI tools for sales forecasting, lead generation, and customer relationship management."
     workshop:
-        title: "Workshop content tailored to your needs"
-        p1: "GPT Chat workshop"
-        p2: "Tailored AI strategies crafted specifically for your company's unique needs and challenges."
+        title: "Une formation créée pour “augmenter” vos collaborateurs"
+        t1: "Chat GPT atelier"
+        p1: "Apprenez à maîtriser GPT et tout son écosystème"
+        t2: "Midjourney atelier "
+        p2: "Formez-vous à l’utilisation de l’IA la plus créative au monde"
+        t3: "Atelier d’intégration à l’IA"
+        p3: "Nous cherchons et trouvons ensemble où l’IA peut avoir le plus d’impact dans votre entreprise"
+        t4: "Cas d’usage concrets"
+        p4: "Nous vous mettons en situation réelle sur vos propres cas d’usage."
+        t5: "Ateliers adaptés à vos besoins"
+        p5: "Nous préparons et adaptons tous nos ateliers à vos collaborateurs et vos problématiques"
+        t6: "Étape par étape"
+        p6: "Nos formateurs savent vous accompagner efficacement tout en s’adaptant à vos équipes et vos enjeux"
+    indus:
+      paragraph: "La formation IA de Kodkodkod booste productivité et innovation via l'intelligence artificielle et l'automatisation des tâches. Destinée aux employés et aux équipes en entreprise, elle développe les compétences pour améliorer l'ensemble de vos process métiers. Guidés par Morgan et son équipe, les participants apprennent à appliquer l'IA efficacement et à cultiver un esprit innovant dans l'usage de l'IA au quotidien. Ce programme transforme vos collaborateurs en acteurs clés de l'innovation, en utilisant l'IA comme levier et outil de performance et non de remplacement de l'humain."
+      title1: "Pourquoi choisir Kodkodkod"
+      title2:
+        text1: "FORMEZ VOS EQUIPES "
+        text2: "A L’IA"
+      collapseOne:
+        item: "Présentation"
+        text: "Nous formons vos collaborateurs à l’utilisation de l’IA au bureau. Nos formations sont faites et adaptées à tout type d’entreprise et tout type de niveau. Nous vous aidons à introduire l’IA avec sérénité et efficacité. "
+      collapseTwo:
+        item: "La promesse"
+        text: "Après notre passage vos collaborateurs auront compris que l’IA est un outil qui va les augmenter et non les remplacer. Ils sauront à quel moment de la journée l’IA peut les aider à gagner du temps et pourront transmettre à toute l’entreprise la charte de bon usage de l’IA."
+      collapseThree:
+        item: "Les objectifs"
+        text: "Les objectifs sont simples : l’acculturation, le gain de productivité, le gain de temps, le gain en sécurité. Nous augmentons l’efficacité de vos process métier. "
+      collapseFour:
+        item: "À qui on s’adresse ?"
+        text: "Nos formations sont calibrées pour accompagner tout type d’équipe ou de service en entreprise : marketing, RH, juridique, direction… Nous étudions en amont et avec vous vos process métier afin d’être le plus pertinent possible. "
+      collapseFive:
+        item: "Prérequis"
+        text: "Aucun. Ou en tout cas seulement la volonté d’intégrer l’IA dans votre entreprise. Toutes nos formations sont adaptées aux débutants."
+      collapseSix:
+        item: "Approche pédagogique"
+        text: "L’action ! L’IA en théorie ca paraît géniale, en pratique, ça l’est vraiment. Nous sommes convaincus que ce n’est qu’en faisant qu’on apprend. Toutes nos formations sont orientées vers vos cas d’usage et vous participez activement à leur construction. "
+      collapseSeven:
+        item: "La durée"
+        text: "C’esr en fonction de vos besoins. Nous avons plusieurs formats : 2h, une journée ou plus. Nous nous adaptons à votre situation."
+
     works:
-        title1 : "How it works?"
-        title2: "How it works?"
-        p1: "We support you on your path to AI by providing our expertise."
-        link: "Schedule a Workshop"
-        p2: "We support you on your path to AI by providing our expertise."
+        title1 : "NOS FORMATIONS"
+        title2: "VOTRE ENTREPRISE"
+        title3: "SOUS IA"
+        t1: "DÉCOUVERTE"
+        p1: "Formation de 2h développant la compréhension des enjeux et usage professionnel de l'IA"
+        points1:
+          point1: "Introduction à l'IA"
+          point2: "Histoire et impact"
+          point3: "Usage et éthique"
+          point4: "Initiation à GPT"
+        t2: "EXPERTE"
+        p2: "Formation d’une journée à l’usage de l'IA au niveau intermédiaire pour améliorer sa productivité"
+        points2:
+          point1: "Introduction à l'IA & Histoire"
+          point2: "Maitrise du prompt séquencé"
+          point3: "Formation avancée à GPT et Perplexity"
+          point4: "Atelier de mise en situation process métier"
+        t3: "SUR-MESURE"
+        p3: "Formation sur-mesure s’adaptant à vos besoins et ceux de vos collaborateurs"
+        points3:
+          point1: "ntroduction à l'IA & Histoire"
+          point2: "Programme sur-mesure"
+          point3: "Atelier de mise en situation process métier"
 contact:
     title: "Contactez-nous"
     firstName: "Prénom"
@@ -1824,21 +1863,45 @@ contact:
     requirement_placeholder: "Ecrivez votre message ici..."
 coaching:
     hero :
-        title1 : "Tailor-made AI"
-        title2: "Assistants"
-        p1:  "Introducing Tailor-made AI Assistants, your personalized digital companion designed to revolutionize the way you navigate the digital landscape. Crafted with precision and tailored to meet your unique needs."
+        title1 : "AUDIT, CONSEIL & "
+        title2: "ACCOMPAGNEMENT"
+        p1:  "Avec nos 25 experts IA, savant mélange de consultants et de développeurs IA, nous pouvons vous accompagner du début à la fin de l’intégration de l’IA dans votre entreprise. Nous savons où et comment l’IA aura le plus d’impact dans vos process métier."
     clients:
-        title: "We are proud to support them"
+        title: "Nous sommes fiers de les accompagner"
+    indus:
+      title1: "INDUSTRIES"
+      title2:
+        text1: "Notre offre"
+        text2: "d’accompagnement"
+      textBtn: "Manufacturing"
+      collapseOne:
+        item: "L’audit"
+        text: "Nous passons du temps avec vous et vos équipes pour identifier et mapper vos process métier."
+      collapseTwo:
+        item: "Les cas d’usage"
+        text: "Nous déterminons et priorisons ensemble les cas d’usage dans lesquels l’IA aura l’impact le plus significatif. Nos métriques : le gain en productivité, qualité, sécurité et créativité."
+      collapseThree:
+        item: "Identification des outils"
+        text: "Une fois les cas d’usage identifiés nous mettons les bons outils en face. Ils doivent correspondre à vos intentions de budgets et niveau de sécurité. "
+      collapseFour:
+        item: "Intégration"
+        text: "il est temps de passer à l’action. Nous vous accompagnons et intégrons l’IA à votre environnement. Ensuite nous formons vos équipes à l’usage des outils mis en place."
     benifits :
-        title: "Who can get benefits?"
+        title: "Qui peut en bénéficier ?"
+        description: "Nos formations sont accessibles à tout type d’entreprises, tout secteur d’activité et tout service. En effet, même si nos formations ont toutes un tronc commun, nous les adaptons ensuite à vos propres cas d’usage. Ainsi, nous nous adaptons à vos problématiques, vos besoins et vos process métiers."
         carrosel :
-            title1 : "Business Leaders"
+            title1 : "Agroalimentaire"
             p1 : "Gain strategic insights into how AI can transform your business operations and drive growth."
-            title2 : "Operations Managers"
+            title2 : "Mode & Luxe"
             p2: "Discover AI-driven solutions to optimize processes, enhance efficiency, and reduce costs."
-            title3 : "Marketing Professionals"
+            title3 : "Banque / Assurance"
             p3: "Leverage AI for targeted marketing campaigns, personalized customer experiences, and improved ROI."
-            title4: "Sales Teams"
+            title4: "Études et conseils"
+            title5: "Services aux entreprises"
+            title6: "Transports / Logistique"
+            title7: "Informatique / Télécoms"
+            title8: "Automobile"
+            title9: "Et toutes les autres"
             p4: "Utilize AI tools for sales forecasting, lead generation, and customer relationship management."
     workshop:
         title: "Workshop content tailored to your needs"
@@ -1871,5 +1934,40 @@ coaching:
             t4: "weeks"
             p: "Kodkokod offers comprehensive AI virtual assistant integration, tailored to your business. Our experts fine-tune GPT models to match your brand and operational needs, seamlessly integrating the assistant into your infrastructure."
     ment:
-        t1: "Where have we been"
-        t2: "mentioned?"
+        t1: "Où avons-nous été"
+        t2: "mentionnés ?"
+    productivity:
+      title: "Gains de productivité"
+      description: "L’IA améliore très rapidement et significativement la productivité et réduit les coûts dans tous vos process métier."
+    quality:
+      title: "Gain en qualité"
+      description: "L’IA fait moins d’erreurs sur des tâches répétitives ou de masse et donc permet une augmentation rapide et significative de la qualité"
+    security:
+      title: "Gains de sécurité"
+      description: "Sans accompagnement et cadre clair vous faites face à un risque de mauvais usage de l’IA, de fuite de données… en bref un usage anarchique d’un outil sensible."
+    talent:
+      title: "Attirer les talents"
+      description: "L’utilisation de l’IA attire et retient les talents pour qui un environnement de travail augmenté est un atout."
+
+    advantage:
+      title: "Les avantages"
+    integration:
+      title1: "Exemples de cas"
+      title2: "d’intégration"
+      text: "Chez Kodkodkod nous avons le sens du concret. L’IA en théorie ne suffit pas. C’est pourquoi nous travaillons avec vous sur des usages de l’IA au quotidien. En voici quelques exemples implémentés chez nos clients."
+      carousel:
+        item1:
+          title: "Rédaction d’emails"
+          Description: "Vous répondez plusieurs fois par semaine au même type d’emails ? Seuls quelques paramètres à l’intérieur changent ? Bien, nous vous créons un Assistant IA qui vous écrira ces emails à votre place."
+        item2:
+          title: "Assistant brainstorming"
+          Description: "On vous demande d’être créatifs ? Alors on se rejoint en salle brainstorming. Mais n’oubliez pas d’inviter le nouvel arrivant : votre assistant IA qui générera 10 idées à la seconde sur votre problématique."
+        item3:
+          title: "Expertise logiciel type Excel"
+          Description: "Vous n’êtes pas BAC+12 Excel ? Nous non plus mais on a trouvé notre allié connaissant toutes les formules par cœur. Même les plus complexes. On utilise Excel comme des pros maintenant."
+        item4:
+          title: "Gestion documentaire"
+          Description: "Vous traitez énormément de devis à la semaine ? Nous avons la solution pour les résumer et comparer de façon automatique, efficace et rapide."
+        item5:
+          title: "Assistant réunion"
+          Description: "Vous avez 20 réunions par semaine et autant de comptes rendus à fournir ? C’est terminé ! Avec l’IA vous avez un assistant qui s’occupe de tout ça."

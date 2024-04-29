@@ -110,6 +110,196 @@ class Project
 	 */
 	private $blockchain = [];
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title4Fr;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title4En;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title4Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text4Fr;
+
+	/**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text4En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text4Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title5Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title5En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title5Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text5Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text5En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text5Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title6Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title6En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title6Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text6Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text6En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text6Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title7Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title7En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title7Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text7Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text7En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text7Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title8Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title8En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $title8Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text8Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text8En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text8Ko;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text9Fr;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text9En;
+
+    /**
+     * @ORM\Column(type="text", nullable=true, options={"default": "Lorem ipsum dolor sit amet"})
+     */
+    private $text9Ko;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $color1;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $color2;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $color3;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $color4;
+
+	/**
+	 * @ORM\Column(type="text", nullable=true)
+	 */
+	private $color5;
+
 	/**
 	 * @ORM\Column(type="text",nullable=true)
 	 */
@@ -714,5 +904,454 @@ class Project
 	public function getSlideThreeImage4RightFile(): ?File
 	{
 		return $this->slideThreeImage4RightFile;
+	}
+ 
+    /**
+     * Get the French title for section 4.
+     *
+     * @return string|null The French title for section 4, or null if not set.
+     */
+    public function getTitle4Fr(): ?string
+    {
+        return $this->title4Fr ?? 'Titre 4';
+    }
+
+    /**
+     * Set the French title for section 4.
+     *
+     * @param string|null $value The new French title for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setTitle4Fr(?string $value): self
+    {
+        $this->title4Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    /**
+     * Get the English title for section 4.
+     *
+     * @return string|null The English title for section 4, or null if not set.
+     */
+    public function getTitle4En(): ?string
+    {
+        return $this->title4En ?? 'Titre 4';
+    }
+
+    /**
+     * Set the English title for section 4.
+     *
+     * @param string|null $value The new English title for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setTitle4En(?string $value): self
+    {
+        $this->title4En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    /**
+     * Get the Korean title for section 4.
+     *
+     * @return string|null The Korean title for section 4, or null if not set.
+     */
+    public function getTitle4Ko(): ?string
+    {
+        return $this->title4Ko ?? 'Titre 4';
+    }
+
+    /**
+     * Set the Korean title for section 4.
+     *
+     * @param string|null $value The new Korean title for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setTitle4Ko(?string $value): self
+    {
+        $this->title4Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+	public function getText4Fr(): ?string {
+		return $this->text4Fr ?? 'Lorem ipsum dolor sit amet';
+	}
+
+    /**
+     * Set the French text for section 4.
+     *
+     * @param string|null $value The new French text for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setText4Fr(?string $value): self
+    {
+        $this->text4Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    /**
+     * Get the English text for section 4.
+     *
+     * @return string|null The English text for section 4, or null if not set.
+     */
+    public function getText4En(): ?string
+    {
+        return $this->text4En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    /**
+     * Set the English text for section 4.
+     *
+     * @param string|null $value The new English text for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setText4En(?string $value): self
+    {
+        $this->text4En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    /**
+     * Get the Korean text for section 4.
+     *
+     * @return string|null The Korean text for section 4, or null if not set.
+     */
+    public function getText4Ko(): ?string
+    {
+        return $this->text4Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    /**
+     * Set the Korean text for section 4.
+     *
+     * @param string|null $value The new Korean text for section 4.
+     * @return self Returns the current instance for method chaining.
+     */
+    public function setText4Ko(?string $value): self
+    {
+        $this->text4Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+	public function getTitle5Fr(): ?string {
+        return $this->title5Fr ?? 'Titre 5';
+    }
+
+    public function setTitle5Fr(?string $value): self {
+        $this->title5Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle5En(): ?string {
+        return $this->title5En ?? 'Title 5';
+    }
+
+    public function setTitle5En(?string $value): self {
+        $this->title5En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle5Ko(): ?string {
+        return $this->title5Ko ?? 'Title 5';
+    }
+
+    public function setTitle5Ko(?string $value): self {
+        $this->title5Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText5Fr(): ?string {
+        return $this->text5Fr ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText5Fr(?string $value): self {
+        $this->text5Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText5En(): ?string {
+        return $this->text5En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText5En(?string $value): self {
+        $this->text5En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText5Ko(): ?string {
+        return $this->text5Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText5Ko(?string $value): self {
+        $this->text5Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle6Fr(): ?string {
+        return $this->title6Fr ?? 'Titre 6';
+    }
+
+    public function setTitle6Fr(?string $value): self {
+        $this->title6Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle6En(): ?string {
+        return $this->title6En ?? 'Title 6';
+    }
+
+    public function setTitle6En(?string $value): self {
+        $this->title6En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle6Ko(): ?string {
+        return $this->title6Ko ?? 'Title 6';
+    }
+
+    public function setTitle6Ko(?string $value): self {
+        $this->title6Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText6Fr(): ?string {
+        return $this->text6Fr ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText6Fr(?string $value): self {
+        $this->text6Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText6En(): ?string {
+        return $this->text6En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText6En(?string $value): self {
+        $this->text6En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText6Ko(): ?string {
+        return $this->text6Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText6Ko(?string $value): self {
+        $this->text6Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle7Fr(): ?string {
+        return $this->title7Fr ?? 'Title 5';
+    }
+
+    public function setTitle7Fr(?string $value): self {
+        $this->title7Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle7En(): ?string {
+        return $this->title7En ?? 'Title 7';
+    }
+
+    public function setTitle7En(?string $value): self {
+        $this->title7En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle7Ko(): ?string {
+        return $this->title7Ko ?? 'Title 7';
+    }
+
+    public function setTitle7Ko(?string $value): self {
+        $this->title7Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText7Fr(): ?string {
+        return $this->text7Fr ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText7Fr(?string $value): self {
+        $this->text7Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText7En(): ?string {
+        return $this->text7En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText7En(?string $value): self {
+        $this->text7En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText7Ko(): ?string {
+        return $this->text7Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText7Ko(?string $value): self {
+        $this->text7Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle8Fr(): ?string {
+        return $this->title8Fr ?? 'Title 8';
+    }
+
+    public function setTitle8Fr(?string $value): self {
+        $this->title8Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle8En(): ?string {
+        return $this->title8En ?? 'Title 8';
+    }
+
+    public function setTitle8En(?string $value): self {
+        $this->title8En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getTitle8Ko(): ?string {
+        return $this->title8Ko ?? 'Title 8';
+    }
+
+    public function setTitle8Ko(?string $value): self {
+        $this->title8Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText8Fr(): ?string {
+        return $this->text8Fr ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText8Fr(?string $value): self {
+        $this->text8Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText8En(): ?string {
+        return $this->text8En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText8En(?string $value): self {
+        $this->text8En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText8Ko(): ?string {
+        return $this->text8Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText8Ko(?string $value): self {
+        $this->text8Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText9Fr(): ?string {
+        return $this->text9Fr ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText9Fr(?string $value): self {
+        $this->text9Fr = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText9En(): ?string {
+        return $this->text9En ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText9En(?string $value): self {
+        $this->text9En = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+    public function getText9Ko(): ?string {
+        return $this->text9Ko ?? 'Lorem ipsum dolor sit amet';
+    }
+
+    public function setText9Ko(?string $value): self {
+        $this->text9Ko = $value ?? 'Lorem ipsum dolor sit amet';
+        return $this;
+    }
+
+	/**
+	 * @return mixed
+	 */
+	public function getColor1()
+	{
+		return $this->color1;
+	}
+
+	/**
+	 * @param mixed $color1
+	 */
+	public function setColor1($color1): void
+	{
+		$this->color1 = $color1;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getColor2()
+	{
+		return $this->color2;
+	}
+
+	/**
+	 * @param mixed $color2
+	 */
+	public function setColor2($color2): void
+	{
+		$this->color2 = $color2;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getColor3()
+	{
+		return $this->color3;
+	}
+
+	/**
+	 * @param mixed $color3
+	 */
+	public function setColor3($color3): void
+	{
+		$this->color3 = $color3;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getColor4()
+	{
+		return $this->color4;
+	}
+
+	/**
+	 * @param mixed $color4
+	 */
+	public function setColor4($color4): void
+	{
+		$this->color4 = $color4;
+	}
+
+	/**
+	 * @return mixed
+	 */
+	public function getColor5()
+	{
+		return $this->color5;
+	}
+
+	/**
+	 * @param mixed $color5
+	 */
+	public function setColor5($color5): void
+	{
+		$this->color5 = $color5;
 	}
 }

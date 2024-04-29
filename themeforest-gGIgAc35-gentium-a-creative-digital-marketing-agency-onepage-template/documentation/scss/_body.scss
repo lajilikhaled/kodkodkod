@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $bodyBgClr;
+    color: $bodyClr;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: $linkClr;
+    text-decoration: none;
+    @include transitions(.2);
+    &:hover {
+        color: $linkClrHr;
+        text-decoration: none;
+    }
+}

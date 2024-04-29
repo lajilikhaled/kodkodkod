@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gentium - Documentation</title>
+    <link rel="stylesheet" media="screen" href="assets/css/floicons.css" />
+    <link rel="stylesheet" media="screen" href="assets/css/normalize.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/css/uikit.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/css/prettify.css" />
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+
+<body class="home front-page page">
+
+    <div class='uk-offcanvas-content'>
+        <header class='site-header uk-light' data-uk-sticky='animation: uk-animation-slide-top;'>
+            <div class='uk-container uk-container-expand'>
+                <nav class='header-inner uk-navbar'>
+                    <div class='uk-navbar-left'>
+                        <h1 class="site-logo">
+                            <a class="navbar-brand site-title" href="index.html">Gentium</a>
+                            <span class="uk-visible@s">Digital Agency Site Template Documentation</span>
+                        </h1>
+                    </div>
+                    <div class='uk-navbar-right'>
+                        <div class='primary-menu uk-visible@l'>
+                            <ul class='menu'>
+                                <li>
+                                    <a href='https://themeforest.net/item/gentium-a-creative-digital-marketing-agency-onepage-template/22860150/support' >
+                                        <span class='uk-text-middle'>Get Help?</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='https://themeforest.net/downloads' >
+                                        <span class='uk-text-middle'>Give us a feedback</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='#changelog-modal' data-uk-toggle=''>
+                                        <span class='uk-text-middle'>Changelog</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mobile-menu uk-hidden@l">
+                            <a class="uk-navbar-toggle trigger" href='#offcanvas' data-uk-toggle=''>
+                                <div>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class='uk-container uk-container-expand'>
+            <div class='uk-grid-large uk-position-relative' data-uk-grid="">
+                <main class='site-main uk-width-expand'>
+                    <div class='uk-container uk-container-small'>
+                        <div class="uk-section" id="overview">
+                            <p class="uk-text-lead uk-margin-large">Thank you for purchasing our theme!</p>
+                            <p><b>Gentium</b> is a well crafted, creative and modern designed Digital & Marketing Agency OnePage Template. This template is ideal for Digital Agencies,
+                            Business, SEO, Content Marketing, Consulting and Financial Companies, Analytical Groups and Large Corporations etc.. It has unique layout and features. It’s design is up to
+                            modern design trends, as it uses Uikit 3 framework to craft beautiful websites.</p>
+                            <table class='uk-table uk-table-small uk-table-divider' style="font-size: 13px;">
+                                <tbody>
+                                    <tr>
+                                        <td>Current Version</td>
+                                        <td>2.2.0 &#8212; See <a href='#changelog-modal' data-uk-toggle=''>changlog</a>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date Created</td>
+                                        <td>13 November, 2018</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date Updated</td>
+                                        <td>4 December, 2018</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Platform</td>
+                                        <td>Site Template (HTML5)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <section class='uk-section' id='file_structure'>
+                            <h3 class='uk-h2'>File structure of the source</h3>
+                            <p>Our template contains all source files which are included into the assets folder. Sass sources are compiled into the
+                                main CSS file <code>style.css</code>. and there is a Scss folder included a Sass files allows you to include
+                                customizations in the build process, rather than manually overwriting a lot of CSS rules by hand.</p>
+                            <table class="uk-table uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th>Folder</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>/assets/css</code></td>
+                                        <td>Contains all needed CSS files.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/assets/js</code></td>
+                                        <td>Contains all JavaScript files included the <code>main.js</code> initial file.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/assets/fonts</code></td>
+                                        <td>Contains a custom icons font <code>Pixeicons</code></td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/assets/images</code></td>
+                                        <td>Contains all image sources.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/scss</code></td>
+                                        <td>Contains sass files which not compiled yet to CSS, updated on every release.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>/includes</code></td>
+                                        <td>Contains functional files.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <hr>
+                        <section class='uk-section' id='html_markup'>
+                            <h3 class='uk-h2'>HTML markup</h3>
+                            <p>In head you will want to change favicon and title.</p>
+<pre class="prettyprint">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;zxx&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;Gentium &mdash; A Creative Digital Agency Site Template&lt;/title&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+        &lt;meta name=&quot;msapplication-TileColor&quot; content=&quot;#E9204F&quot;&gt;
+        &lt;meta name=&quot;theme-color&quot; content=&quot;#E9204F&quot;&gt;
+        &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot; href=&quot;assets/images/apple-touch-icon.png&quot;&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;assets/images/favicon-32x32.png&quot;&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;assets/images/favicon-16x16.png&quot;&gt;
+        &lt;link rel=&quot;manifest&quot; href=&quot;assets/images/site.webmanifest&quot;&gt;
+        &lt;link rel=&quot;mask-icon&quot; href=&quot;images/safari-pinned-tab.svg&quot; color=&quot;#E9204F&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/normalize.min.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/pr.animation.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/owl.carousel.min.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/uikit.min.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/fonts.css&quot; /&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/pixeicons.css&quot; /&gt;
+        &lt;link href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;/head&gt;
+    &lt;body class=&quot;home front-page&quot;&gt;
+        Body markup...
+
+        &lt;!-- Needed Scripts --&gt;
+        &lt;script src=&quot;assets/js/jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/anime.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/pr.animation.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/uikit.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/owl.carousel.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/validate.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;assets/js/main.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                        </section>
+                        <hr>
+                        <section class='uk-section' id='classes'>
+                            <h3 class='uk-h2'>Classes</h3>
+                            <p>A collection of useful classes to style your content, as we built our site template using <strong>UIkit 3</strong> Framework. <a href="https://getuikit.com/docs/" class="uk-button uk-button-link">LEARN MORE</a></p>
+                            <p>And you can use <code>'pr__dark'</code> class to activate Dark Mode for each section!</p>
+                            
+                        </section>
+                        <hr>
+                        <section class='uk-section' id='stylesheets'>
+                            <h3 class='uk-h2'>Stylesheets</h3>
+                            <p>Here's a list of the stylesheet files we are using with this template, you can find more information by opening each file:</p>
+                            <table class="uk-table uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>style.css</code></td>
+                                        <td>The main CSS file of this template, Rules like headings and paragraphs, margins and body and more...</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>uikit.min.css</code></td>
+                                        <td>UIkit 3 Framework CSS file.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>normalize.min.css</code></td>
+                                        <td>Makes browsers render all elements more consistently and in line with modern standards.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>owl.carousel.min.css</code></td>
+                                        <td>Rules for Sliders.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pr.animation.css</code></td>
+                                        <td>Rules for animations.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>pixeicons.css</code></td>
+                                        <td>Rules for font icons.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>fonts.css</code></td>
+                                        <td>Rules for custom font types.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <hr>
+                        <section class='uk-section' id='javascript'>
+                            <h3 class='uk-h2'>JavaScript</h3>
+                            <p>Here's a list of the JavaScript files we are using with this template, you can find more information by opening each file:</p>
+                            <table class="uk-table uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>                                    
+                                    <tr>   
+                                        <td><code>jquery.min.js</code></td>
+                                        <td>JavaScript UI library.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>uikit.min.js</code></td>
+                                        <td>Uikit3 Framework JavaScript file.</td>
+                                    </tr>
+                                    <tr>   
+                                        <td><code>owl.carousel.min.js</code></td>
+                                        <td>A jQuery plugin for Owl Carousel Slider.</td>
+                                    </tr>
+                                    <tr>   
+                                        <td><code>anime.min.js</code></td>
+                                        <td>A jQuery plugin for interactive design or animation.</td>
+                                    </tr>
+                                    <tr>   
+                                        <td><code>pr.animation.js</code></td>
+                                        <td>This file pertains to everything related to interactive design or animation. you can delete it if you don't need animations. Is compatible with <code>anime.js</code> jQuery plugin.</td>
+                                    </tr>
+                                    <tr>   
+                                        <td><code>validate.js</code></td>
+                                        <td>A jQuery plugin for validate inputs on contact form.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>main.js</code></td>
+                                        <td>All custom scripts are initialized from this file.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <hr>
+                        <section class='uk-section' id='php'>
+                            <h3 class='uk-h2'>PHP</h3>
+                            <p>Here's a list of the php files we are using with this template, you can find more information by opening each file:</p>
+                            <table class="uk-table uk-table-divider">
+                                <thead>
+                                    <tr>
+                                        <th>File Name</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>                                    
+                                    <tr>   
+                                        <td><code>sendmail.php</code></td>
+                                        <td>Sendmail function to send mails. <br> Note: The contact form does not work localy, it works only online and you have to set your host email instead of Gmail or any other email services for example (contact@yourdomain.com).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <hr>
+                        <section class='uk-section'>
+                            <p>Once again, thank you so much for purchasing this template and enjoy! If you have any questions that are beyond the scope of this help file, please feel free to email us via our facebook page (By clicking on Get Help on the top). We are here to help you step by step!!</p>
+                        </section>
+                    </div>
+                </main>
+                <aside class='site-sidebar uk-width-1-4@l uk-width-1-6@xl uk-visible@l uk-flex-first@s'>
+                    <div class='uk-sticky' data-uk-sticky='offset: 110'>
+                        <ul class='uk-nav uk-nav-default uk-nav-parent-icon' data-uk-nav='' data-uk-scrollspy-nav='closest: li; scroll: true; offset: 120'>
+                            <li class='uk-nav-header'>Getting started</li>
+                            <li class='uk-active'>
+                                <a href='#overview'>Overview</a>
+                            </li>
+                            <li>
+                                <a href='#file_structure'>File Structure</a>
+                            </li>
+                            <li>
+                                <a href='#html_markup'>HTML Markup</a>
+                            </li>
+                            <li>
+                                <a href='#classes'>Classes</a>
+                            </li>
+                            <li>
+                                <a href='#stylesheets'>Stylesheets</a>
+                            </li>
+                            <li>
+                                <a href='#javascript'>JavaScript</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <footer class='site-footer uk-section uk-section-small uk-text-center'>
+            2018 &#169; All rights reserved by <a href='http://pixerex.com/'>Pixerex</a>.
+        </footer>
+        <div id='offcanvas' data-uk-offcanvas='overlay: true'>
+            <div class='uk-offcanvas-bar'>
+                <button class='uk-offcanvas-close' type='button' data-uk-close=''></button>
+                <div class='sidebar sidebar-offcanvas'>
+                    <div>
+                        <ul class='uk-nav uk-nav-default uk-nav-parent-icon' data-uk-nav='' data-uk-scrollspy-nav='closest: li; scroll: true; offset: 120'>
+                            <li class='uk-nav-header'>Getting started</li>
+                            <li class='uk-active'>
+                                <a href='#overview'>Overview</a>
+                            </li>
+                            <li>
+                                <a href='#file_structure'>File Structure</a>
+                            </li>
+                            <li>
+                                <a href='#html_markup'>HTML Markup</a>
+                            </li>
+                            <li>
+                                <a href='#classes'>Classes</a>
+                            </li>
+                            <li>
+                                <a href='#stylesheets'>Stylesheets</a>
+                            </li>
+                            <li>
+                                <a href='#javascript'>JavaScript</a>
+                            </li>
+                            <li class='uk-nav-header'>Miscellaneous</li>
+                            <li>
+                                <a href='https://themeforest.net/item/gentium-a-creative-digital-marketing-agency-onepage-template/22860150/support' >
+                                    <span class='uk-text-middle'>Get Help?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='https://themeforest.net/downloads' >
+                                    <span class='uk-text-middle'>Give us a feedback</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#changelog-modal' data-uk-toggle=''>
+                                    <span class='uk-text-middle'>Changelog</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- This is the modal with the default close button -->
+    <div id='changelog-modal' data-uk-modal=''>
+        <div class='uk-modal-dialog uk-modal-body'>
+            <button class='uk-modal-close-default' type='button' data-uk-close=''></button>
+            <h2 class='uk-modal-title'>Gentium Changelog</h2>
+            <div class='uk-margin-medium-top'>
+                <h5 class='uk-h5'>2.2.0 <span class='uk-text-muted'>(December 04, 2018)</span></h5>
+                <ul class='uk-list'>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New Homepage.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New service style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New blog style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New works style section (Grid 3 Cols).</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Components page.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Carousel.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Slideshow.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Tabs & Switchers.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Alerts.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Tooltip.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Component: Grid + Filter.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Icons cheat sheet.</li>
+                    <li><span class='uk-label uk-label-info uk-margin-right uk-text-center uk-width-small'>Improved</span> Some responsive issues. </li>
+                    <li><span class='uk-label uk-label-danger uk-margin-right uk-text-center uk-width-small'>Fixed</span> Some minor bugs. </li>
+                </ul>
+            </div><!-- changelog item -->
+            <div class='uk-margin-medium-top'>
+                <h5 class='uk-h5'>2.1.0 <span class='uk-text-muted'>(November 27, 2018)</span></h5>
+                <ul class='uk-list'>
+                    <li>
+                        <span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span>
+                        Sendmail function to send mails via contact form.
+                    </li>
+                    <li>
+                        <span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span>
+                        Validate jQuery plugin for contact form.
+                    </li>
+                </ul>
+            </div><!-- changelog item -->
+            <div class='uk-margin-medium-top'>
+                <h5 class='uk-h5'>2.0.0 <span class='uk-text-muted'>(November 20, 2018)</span></h5>
+                <ul class='uk-list'>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New Homepage.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New service style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New works style section (Masonry + Filter).</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New about style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New clients style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> New testimonials style section.</li>
+                    <li><span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span> Favicon and theme color meta.</li>
+                    <li><span class='uk-label uk-label-info uk-margin-right uk-text-center uk-width-small'>Improved</span> Some responsive issues. </li>
+                    <li><span class='uk-label uk-label-danger uk-margin-right uk-text-center uk-width-small'>Fixed</span> Favicon not found. </li>
+                    <li><span class='uk-label uk-label-danger uk-margin-right uk-text-center uk-width-small'>Fixed</span> Some minor bugs. </li>
+                </ul>
+            </div>
+            <div class='uk-margin-medium-top'>
+                <h5 class='uk-h5'>1.0.0 <span class='uk-text-muted'>(November 13, 2018)</span></h5>
+                <ul class='uk-list'>
+                    <li>
+                        <span class='uk-label uk-label-success uk-margin-right uk-text-center uk-width-small'>Added</span>
+                        Initial release
+                    </li>
+                </ul>
+            </div><!-- changelog item -->
+        </div>
+    </div>
+
+    <script src="assets/js/prettify.js"></script>
+    <script src="assets/js/uikit.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

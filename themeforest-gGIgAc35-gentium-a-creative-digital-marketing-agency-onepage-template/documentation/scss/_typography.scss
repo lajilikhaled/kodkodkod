@@ -1,0 +1,64 @@
+@import 'https://fonts.googleapis.com/css?family=Muli:400,400i,600,600i,700,700i';
+
+// Sofia Pro - 400
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../assets/fonts/sofiapro/regular.eot');
+    src: url('../assets/fonts/sofiapro/regular.eot') format('embedded-opentype'),
+        url('../assets/fonts/sofiapro/regular.ttf') format('truetype'),
+        url('../assets/fonts/sofiapro/regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Sofia Pro - 500
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../assets/fonts/sofiapro/medium.eot');
+    src: url('../assets/fonts/sofiapro/medium.eot') format('embedded-opentype'),
+        url('../assets/fonts/sofiapro/medium.ttf') format('truetype'),
+        url('../assets/fonts/sofiapro/medium.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+// Sofia Pro - 700
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../assets/fonts/sofiapro/bold.eot');
+    src: url('../assets/fonts/sofiapro/bold.eot') format('embedded-opentype'),
+        url('../assets/fonts/sofiapro/bold.ttf') format('truetype'),
+        url('../assets/fonts/sofiapro/bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+// Body
+body {
+    font: 400 15px $bodyFnt;
+    line-height: 1.815;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Heading
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.uk-h1,
+.uk-h2,
+.uk-h3,
+.uk-h4,
+.uk-h5,
+.uk-h6 {
+    font-family: $headingFnt;
+    font-weight: 400;
+    color: $headingClr;
+    letter-spacing: .1px;
+    text-transform: unset;
+    font-style: normal;
+}

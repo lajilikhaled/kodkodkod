@@ -1,0 +1,62 @@
+{% set listUrlPage = [
+    {
+      'pageName': '',
+      'routeName': '/',
+      'linkQuote': 'link-quote'
+    },
+    {
+      'pageName': 'blockchain',
+      'routeName': '/blockchain',
+      'linkQuote': 'link-quote-blockchain'
+    },
+    {
+      'pageName': 'react',
+      'routeName': '/react',
+      'linkQuote': 'link-quote-react'
+    },
+    {
+      'pageName': 'vue',
+      'routeName': '/vue',
+      'linkQuote': 'link-quote-vue'
+    },
+    {
+      'pageName': 'flutter',
+      'routeName': '/flutter',
+      'linkQuote': 'link-quote-flutter'
+    },
+    {
+      'pageName': 'symfony',
+      'routeName': '/symfony',
+      'linkQuote': 'link-quote-symfony'
+    },
+    {
+      'pageName': 'magento',
+      'routeName': '/magento',
+      'linkQuote': 'link-quote-magento'
+    },
+    {
+      'pageName': 'prestashop',
+      'routeName': '/prestashop',
+      'linkQuote': 'link-quote-prestashop'
+    },
+    {
+      'pageName': 'kodwallet',
+      'routeName': '/kodwallet',
+      'linkQuote': 'link-quote'
+    }
+] %}
+
+{% extends 'base.html.twig' %}
+
+{% block ogmetatitle %}{{ "head.meta" | trans }}{% endblock %}
+
+{% block title %}
+	{{ "head.title" | trans }}
+{% endblock %}
+
+{% block description %}
+	{{ "head.desc2" | trans }}
+{% endblock %}
+
+{% block body %}
+{% endblock %}

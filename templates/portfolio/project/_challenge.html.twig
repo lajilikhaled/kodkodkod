@@ -1,18 +1,35 @@
 <section class="container py-5 space-grotesk">
 	<h4 class="fw-bolder text-secondary pt-5">
-		{{ 'projet.challenge.title' | trans}}
+		{% if app.request.locale == 'ko' %}
+			{{ project.title7Ko }}
+		{% elseif app.request.locale == 'fr' %}
+			{{ project.title7Fr }}
+		{% else %}
+			{{ project.title7En }}
+		{% endif %}
 	</h4>
 	<div class="d-flex flex-column flex-lg-row pt-4">
 		<div class="col pr-2">
 			<p class="text-decoration-none fs-4 text-justify">
-				{{ 'projet.challenge.text1' | trans}}
+				{% if app.request.locale == 'ko' %}
+					{{ project.text7Ko }}
+				{% elseif app.request.locale == 'fr' %}
+					{{ project.text7Fr }}
+				{% else %}
+					{{ project.text7En }}
+				{% endif %}
 			</p>
 		</div>
 		<div class="col ps-5">
 			<p class="text-decoration-none fs-4 text-justify">
-				{{ 'projet.challenge.text2' | trans}}
+				{% if app.request.locale == 'ko' %}
+					{{ project.text7Ko }}
+				{% elseif app.request.locale == 'fr' %}
+					{{ project.text7Fr }}
+				{% else %}
+					{{ project.text7En }}
+				{% endif %}
 			</p>
 		</div>
 	</div>
 </section>
- 

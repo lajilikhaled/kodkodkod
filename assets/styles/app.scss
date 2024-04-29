@@ -76,7 +76,6 @@ $primary: #e9204f;
 .training-hero {
   background-size: cover;
   background-position: center;
-  background-image: url('./../images/backgrounds/training-and-workshops.jpg');
 }
 
 
@@ -112,5 +111,26 @@ input:focus {
   }
   &:focus {
     outline: none;
+  }
+}
+
+.slick-slide {
+  img {
+    width: 150px;
+  }
+}
+.item-log  {
+  height: 150px !important;
+}
+.logos-text {
+  display: block !important;
+
+}
+@media (max-width: 768px) {
+  .item-log {
+    height: 85px !important;
+  }
+  .logos-text {
+    font-size: 14px !important;
   }
 }
